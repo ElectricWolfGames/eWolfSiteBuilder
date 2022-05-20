@@ -14,7 +14,7 @@ namespace eWolfSiteBuilder
         {
             InitializeComponent();
 
-            _buildSite.WebSiteRootAddress = @"E:\Projects\ElectricWolfWebBuilder\eWolfSiteBuilder\DemoSite\";
+            _buildSite.WebSiteRootAddress = @"E:\Projects\GitHub\eWolfSiteBuilder\DemoSite\";
 
             SiteBuilderServiceLocator.Instance.InjectService<IPageHeaderDetails>(new SiteHeader());
             SiteBuilderServiceLocator.Instance.InjectService<IBuildSite>(_buildSite);
@@ -23,7 +23,7 @@ namespace eWolfSiteBuilder
             _buildSite.PreProcess(Assembly.GetExecutingAssembly());
             _buildSite.Create();
             _buildSite.OpenHomePage();
-            //BuildSite();
+
             Close();
         }
     }
