@@ -1,0 +1,438 @@
+#rtleft
+{
+	float:left;
+	width:45%;
+	height:200px;
+}
+
+#rtmain
+{
+	margin: 5px 5px 5px 5px;
+	float:left;
+	width:53%;
+	height:200px;
+}
+
+#rtBreak
+{
+	width:95%;
+	float: none;
+}
+
+#rtBreakShort
+{
+	width:95%;
+	height:160px;
+	float: none;
+}
+#rtBreakAds
+{
+	width:95%;
+	height:90px;
+	float: none;
+}
+
+#rt210
+{
+	margin: 5px 5px 5px 5px;
+	float:left;
+	width:210;
+	height:160px;
+	
+}
+
+#rtleftBig
+{
+	float:left;
+	width:45%;
+	height:250px;
+}
+
+#rtmainBig
+{
+	margin: 5px 5px 5px 5px;
+	float:left;
+	width:53%;
+	height:250px;
+}
+
+/*Use a media query to add a breakpoint at 800px:*/
+@media (max-width:800px)
+{
+	#rtleft, #rtmain, #rtleftBig, #rtmainBig
+	{
+		width:100%;
+	}
+	
+	#rtmain, #rtmainBig
+	{
+		height:100px;
+	}
+	#rtBreakShort
+	{
+		height:550px;
+	}
+}
+
+
+/** BASIC */
+
+body {
+	background-image: url(images/Background.png);
+	/*text-align: justify;*/
+	/*font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;*/
+	font-family: Helvetica;
+	//font-size: 11px;
+	color: #274690;
+}
+
+h1 {
+	text-decoration: none;
+	font-size: 32px;
+	font-weight: normal;
+	letter-spacing: -1px;
+	// text-transform: lowercase;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+	color: #274690;
+	//text-transform: lowercase;
+	letter-spacing: -1px;
+}
+
+ul {
+	// margin-left: 0px;
+	// padding-left: 0px;
+	// list-style-type: none;
+}
+
+a {
+	// text-decoration: none;
+	color: #274690;
+	
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #D01414;
+}
+
+/** HEADER */
+
+#header {
+	width: 450px;
+	height: 80px;
+	margin: 0px auto;
+	background: #9AB0E4 url(images/img01.gif) no-repeat left top;
+}
+
+#header h1 {
+	float: left;
+	margin: 0px;
+	padding: 35px 0px 0px 10px;
+}
+
+#header h2 {
+	float: right;
+	margin: 0px;
+	padding: 43px 10px 0px 0px;
+	background: url(images/img02.gif) no-repeat right top;
+}
+
+/** MENU */
+#menu
+{
+	width: 450px;
+	height: 32px;
+	margin: 0px auto;
+	background: url(images/img03.gif) repeat-x left top;
+}
+
+#menu ul
+{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#menu li
+{
+}
+
+#menu a
+{
+	display: block;
+	float: left;
+	padding: 8px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffFFff;
+}
+
+#menu a:hover {
+	color: #000000;
+}
+
+#gameBlock
+{
+	width: 850px;
+	height: 560px;
+	padding: 10px 10px 10px 10px;
+}
+	
+#Current a
+{
+	display: block;
+	float: left;
+	padding: 8px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #456ECD;
+	background: url(images/img07.gif) repeat-x left top;
+}
+
+/** MENU GAME */
+#menu_games
+{
+	width: 450px;
+	height: 64px;
+	margin: 0px auto;
+	background: url(images/img03.gif);
+	clear: left;
+}
+
+#menu_games ul 
+{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#menu_games li
+{
+}
+
+#menu_games a {
+	display: block;
+	float: left;
+	padding: 6px;
+	margin: 2px 0px 3px 0px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #ffFFff;
+}
+
+#menu_games a:hover {
+	color: #000000;
+}
+
+/** CONTENT */
+#content
+{
+	/*position: relative;*/
+	width: 450px;
+	margin: 0px auto;
+	background: url(images/img04.gif) repeat-y left top;
+}
+
+#contentBorderd
+{
+	width: 430px;
+	padding: 0px 10px 0px 10px;
+	margin: 0px auto;
+	background: url(images/img04.gif) repeat-y left top;
+}
+
+#MainView {
+	width: 420px;
+	float: left;
+	padding: 20px;
+	font-size: 12px;
+}
+
+#SubMain {
+	float: left;
+	width: 410px;
+}
+
+#SubFarSide
+{
+	float: left;
+	width: 196px;
+	margin: 0px 5px 0px 5px;
+}
+
+#SubUnder
+{
+	float: left;
+	width: 196px;
+	margin: 5px 5px 5px 5px;
+}
+
+#columnB h2 {
+	font-size: large;
+}
+
+#overlay
+{
+	height: 144px;
+}
+
+/** FOOTER */
+#footer {
+	width: 450px;
+	margin: 0px auto;
+	background: #809CDD url(images/img05.gif) no-repeat left bottom;
+}
+
+#footer p {
+	margin: 0px;
+	padding: 15px 10px;
+	background: url(images/img06.gif) no-repeat right bottom;
+	font-size: smaller;
+	color: #274690;
+}
+
+#GemChaser
+{
+	font-family: Impact;
+	font-size: large;
+}
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+@media only screen and (min-width: 481px)
+{
+	#header
+	{
+		width: 700px;
+	}
+	#menu
+	{
+		width: 700px;
+	}
+	#menu_games
+	{
+		width: 700px;
+		height: 64px;
+		margin: 0px auto;
+		background: url(images/img03.gif);
+		clear: left;
+	}
+	#content
+	{
+		width: 700px;
+	}
+	
+	#contentBorderd
+	{
+		width: 680px;
+	}
+
+	#footer
+	{
+		width: 700px;
+	}
+	
+	#SubMain 
+	{
+		float: center;
+		width: 660px;
+	}
+	#SubFarSide 
+	{
+		float: left;
+		width: 320px;
+		margin: 5px 5px 5px 5px;
+	}
+	#SubUnder
+	{
+		float: left;
+		width: 320px;
+		margin: 5px 5px 5px 5px;
+	}
+	#MainView 
+	{
+		width: 670px;
+	}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+@media only screen and (min-width: 769px)
+{
+	#header
+	{
+		width: 850px;
+	}
+	#menu
+	{
+		width: 850px;
+	}
+	#menu_games
+	{
+		width: 850px;
+		height: 32px;
+		margin: 0px auto;
+		background: url(images/img03.gif) repeat-x left top;
+		clear: left;
+	}
+	#content
+	{
+		width: 850px;
+	}
+	#contentBorderd
+	{
+		width: 830px;
+	}
+	#footer
+	{
+		width: 850px;
+	}
+	
+	#SubMain 
+	{
+		float: left;
+		width: 538px;
+		margin: 0px 5px 8px 5px;
+	}
+	#SubFarSide 
+	{
+		float: right;
+		width: 260px;
+		height: 185px;
+		margin: 0px 5px 0px 5px;
+	}
+	#SubUnder
+	{
+		float: left;
+		width: 263px;
+		margin: 4px 5px 4px 5px;
+	}
+
+	#MainView
+	{
+		width: 820px;
+	}
+}
+
+
+#container{
+    position: relative;
+    width: 0px;
+    height: 0px;
+}
+
+#main_image{
+    width: 100%;
+    height: 100%;
+}

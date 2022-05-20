@@ -1,0 +1,535 @@
+
+<style type=”text/css”>
+
+<!—
+a:link {
+color: #333333;
+}
+a:visited {
+color: #FFFF00;
+}
+a:hover {
+color: #FFFF00;
+
+text-decoration: none;
+}
+a:active {
+color: #FFFFFF;
+}
+–>
+
+</style>
+
+/*  need both bodys */ 
+#body {
+	margin: 0;
+	padding: 0;
+	
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #837669;
+	background: #ff00ff;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+}
+/*  need both bodys */ 
+body {
+	margin: 0;
+	padding: 0;
+	background: url(Background.png);
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #837669;
+	text-align: center;
+	min-width: 500px;
+	background: #00B7FF;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+}
+
+#page_blue
+{
+	height: 1000px;
+}
+
+#main_top
+{
+	margin: 0;
+	padding: 0;
+	background: #00B7FF;
+	height: 1100px;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+	color: #FFFFFF;
+}
+
+#main_top_contact
+{
+	margin: 0;
+	padding: 0;
+	background: #00B7FF;
+	height: 900px;
+	color: #FFFFFF;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+}
+#main_top_contactsoon
+{
+	margin: 0;
+	padding: 0;
+	background: #00B7FF;
+	height: 550px;
+	color: #FFFFFF;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+}
+
+#main_top_short
+{
+	margin: 0;
+	padding: 0;
+	background: #00B7FF;
+	height: 285px;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+}
+
+#main_top_demo
+{
+	margin: 0;
+	padding: 0;
+	background: #00B7FF;
+	height: 32px;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+}
+
+#main_bottom_content
+{
+	margin: 0;
+	padding: 0;
+	background: #370C01;
+	height: 400px;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+	color: #ffffCC;
+}
+
+#main_bottom
+{
+	margin: 0;
+	padding: 0;
+	background: #370C01;
+	height: 1700px;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+	color: #ffffCC;
+}
+
+#main_bottom_demo{
+	margin: 0;
+	padding: 0;
+	background: #370C01;
+	height: 3000px;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+	color: #ffffCC;
+}
+
+#main_bottom_demo_daliy{
+	margin: 0;
+	padding: 0;
+	background: #370C01;
+	height: 3200px;
+	cursor: url("01-MinerMan/cursor.png") , auto;
+	color: #ffffCC;
+
+	/*border : 2px solid #00FF00*/
+}
+
+#content_breaker{
+	margin: 0;
+	background: url(images/breaker.png);
+	
+	height: 124px;
+	
+}
+
+#main_lost{
+	margin: 0;
+	width: 1100px;
+	/*padding: 20px 20px 14px 0px;*/
+	padding: 20px 00px 0px 0px;
+
+}
+
+#wrapper {
+	width: 900px;
+}
+
+#wrapperB {
+	width: 900px;
+}
+/* Header */
+#header-wrapper {
+	width: 638px;
+	/*border : 2px solid #000000*/
+}
+
+#wrapper_demo {
+	width: 1080px;
+}
+
+#wrapper_demo_under {
+	width: 1080px;
+	height: 2850px;
+		
+}
+
+#header { 
+	width: 575px;
+	height: 32px;
+	margin: 0 auto;
+	background: #370C01;
+}
+
+/* Game stuff */
+#game_border {
+	background: url("01-MinerMan/Full_Border.png") no-repeat left top;
+    width: 1024px;
+	height: 686px;
+	padding: 0px 0px;
+	/*margin: 25px 32px 32px 32px;*/
+}
+
+#game
+{
+    padding: 96px 150px 100px 0px;
+	width: 680px;
+	height: 512px;
+}
+
+#menu_side_wrapper{
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	padding: 8px 8px 8px 8px;
+	background: #370C01;
+	}
+	
+	
+#menu_side {
+	float: left;
+	width: 250px;
+	height: 64px;
+}
+#menu_side a {
+	
+	display: block;
+	float: left;
+	margin-right: 20px;
+	padding: 5px 0px;
+	text-decoration: none;
+	font: 16px arial black, "Times New Roman", Times, serif;
+	color: #FFFFFF;
+}
+
+
+/* Menu */
+#menu {
+	float: left;
+	width: 540px;
+	height: 32px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0 0 0 25px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-right: 20px;
+	padding: 5px 0px;
+	text-decoration: none;
+	font: 16px arial black, "Times New Roman", Times, serif;
+	color: #FFFFFF;
+}
+
+#menu h3 {
+	display: block;
+	float: right;
+	margin-right: 17px;
+	padding: 5px 0px;
+	text-decoration: none;
+	font: 14px Georgia, "Times New Roman", Times, serif;
+}
+/* end of menu */
+
+
+
+
+#menu .current_page_item a {
+	color: #ffff77;
+}
+
+/** LOGO SMALL */
+#logosmall {
+	height: 53px;
+	background: url('images/miner man title small.png') no-repeat left top;
+	padding: 0px 0px 0px 0px;
+	border : 2px solid #370C01;
+}
+#logosmallMenu {
+	margin: 2px 20px 0px 20px;
+	/*border : 2px solid #FFFFFF;*/
+	height: 32px;
+}
+#logosmallMenu ul {
+	margin: 00;
+	padding: 0 0 0 25px;
+	list-style: none;
+	line-height: normal;
+}
+
+#logosmallMenu  li {
+	display: block;
+	float: left;
+}
+#logosmallMenu  img {
+	margin: 4px 4px 4px 4px;
+	border : 0px solid #FFFFFF;
+}
+
+/** LOGO */
+#logo {
+	
+	height: 382px;
+	/*width: 575px;*/
+	background: url('images/miner man title.png') no-repeat left top;
+	padding: 0px 0px 0px 0px;
+	/*margin: 25px 32px 32px 32px*/
+	/*border : 2px solid #370C01;*/
+	border : 2px solid #00B7FF;
+}
+
+#logoMenu {
+	margin: 298px 20px 0px 20px;
+	/*border : 2px solid #FFFFFF;*/
+	height: 32px;
+}
+#logoMenu ul {
+	margin: 00;
+	padding: 0 0 0 25px;
+	list-style: none;
+	line-height: normal;
+}
+
+#logoMenu  li {
+	display: block;
+	float: left;
+}
+#logoMenu  img {
+	margin: 4px 4px 4px 4px;
+	border : 0px solid #FFFFFF;
+}
+
+#logo h1, #logo p {
+	float: left;
+	margin: 0;
+	padding: 0 0 0 20px;
+	line-height: normal;
+}
+
+#logo h1 { padding-top: 140px; }
+
+#logo h1 a {
+	text-decoration: none;
+	text-transform: uppercase;	
+}
+
+#logo h1 a:hover { text-decoration: underline; }
+#logo p {
+	padding: 165px 0 0 15px;
+	font: italic 13px Georgia, "Times New Roman", Times, serif;
+}
+
+#logo p a {
+	text-decoration: none;
+}
+
+#logo p a:hover { text-decoration: underline; }
+
+/** !!!!! */ 
+#content_middle_text {
+	margin: 0;
+	padding: 0;
+	width: 500px;
+	float: center;
+}
+
+#content_middle {
+	margin: 0;
+	padding: 0;
+	width: 900px;
+	float: center;
+}
+#content {
+	margin: 0;
+	padding: 0;
+	width: 600px;
+	float: left;
+}
+
+/* Header */
+#content_bottom_demo
+{
+	margin: 0;
+	padding: 0;
+	width: 1000px;
+	clear:both;
+	background: #370C01;
+
+}
+
+#content_bottom {
+	margin: 0;
+	padding: 0;
+	width: 840px;
+	float: left;
+	background: #370C01;
+}
+
+
+#content_bottom_addBox {
+	padding: 0px 0px 0px 0px;
+	margin: 0 auto;
+	
+	border : 2px solid #FFFFFF;
+	width: 800px;
+	
+
+	float: none;
+	height: 160px;
+	
+	
+}
+
+#content_bottom_collection {
+	margin: 0 auto;
+	padding: 0;
+	/* border : 2px solid #00FFFF; */
+	height: 100px;
+}
+
+#content_bottom_collection_pics {
+	margin: 0 auto;
+	padding: 0;
+	/* border : 2px solid #00FFFF; */
+	width : 412px;
+	height: 1300px;
+	float: left;
+}
+#content_bottom_collection_pics img
+{
+	border : 0px solid #FF00ff;
+}
+
+#content_bottom_ad1 {
+	width: 270px;
+	float: left;
+	
+	/*border : 2px solid #FFFFFF;*/
+}
+#content_middle_demo_daliy
+{
+	margin: 0;
+	padding: 0;
+	width: 840px;
+	float: left;
+	height: 1000px;
+	
+	background: #370C01;
+	/*border : 2px solid #FFFFFF;*/
+}
+
+
+#content_middle_demo{
+	margin: 0;
+	padding: 0;
+	width: 840px;
+	float: left;
+	
+	background: #370C01;
+}
+
+#sidebar {
+	/*border : 2px solid #FFFFFF;*/
+	float: right;
+	width: 222px;
+}
+
+#sidebar {
+	/*border : 2px solid #FFFFFF;*/
+	float: right;
+	width: 222px;
+}
+
+#sidebar img{
+	border : 0px solid #FF00ff;
+}
+
+#sidebar_demo {
+	/* border : 2px solid #FFFFFF;*/
+	float: right;
+	width: 222px;
+}
+#sidebar_demo img{
+	border : 0px solid #FF00ff;
+}
+
+#sidebarads {
+	float: right;
+	width: 170px;
+}
+
+
+
+/*   */
+#lost_miner_pic {
+	margin: 0;
+	padding: 32px 0px 0px 196px;
+	width: 100px;
+	float: left;
+	/*border : 2px solid #FFFFFF;*/
+}
+#lost_miner_text {
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: 400px;
+	float: middle;
+	/*border : 2px solid #FFFF00;*/
+}
+
+/* Footer */
+#footer {
+	width: 575px;
+	background: #370C01;
+	/*background: #494336 url(images/img05.jpg) no-repeat left top;*/
+	/*border-left: 10px solid #FFFFFF;
+	border-right: 10px solid #FFFFFF;
+	border-bottom: 10px solid #FFFFFF;*/
+}
+
+#footer p {
+
+	margin: 0;
+	padding: 20px 0;
+	text-align: center;
+	line-height: normal;
+	
+}
+#footer a {
+	
+	color: #B5ADA5;
+}
+

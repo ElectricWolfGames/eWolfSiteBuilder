@@ -1,0 +1,317 @@
+
+<style type=”text/css”>
+
+<!—
+a:link {
+color: #FFFFFF;
+}
+a:visited {
+color: #FFFF00;
+}
+a:hover {
+color: #FFFF00;
+
+text-decoration: none;
+}
+a:active {
+color: #FFFFFF;
+}
+–>
+</style>
+
+#body {
+	margin: 0;
+	padding: 0;
+	
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #000000;
+	background: #7499F8;
+	
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	/*text-align: center;*/
+	min-width: 500px;
+	background: #39660C;
+	
+}
+
+
+#main_top
+{
+	margin: 0;
+	padding: 0;
+	/*height: 1100px;*/
+	color: #FFFFFF;
+}
+
+#main_bottom
+{
+	margin: 0;
+	padding: 0;
+	background: #370C01;
+	height: 1500px;
+	color: #ffffCC;
+}
+
+#wrapper {
+	width: 1100px;
+	/*border : 2px solid #335588*/
+}
+
+/* Header */
+#header-wrapper {
+	width: 638px;
+	font-size: 20px;
+	/*border : 2px solid #000000*/
+}
+
+
+#header { 
+	width: 575px;
+	height: 32px;
+	margin: 0 auto;
+	background: #370C01;
+}
+
+	
+/* Menu */
+#menu {
+	float: left;
+	width: 540px;
+	height: 32px;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 0 0 0 25px;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu li {
+	display: block;
+	float: left;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-right: 20px;
+	padding: 5px 0px;
+	text-decoration: none;
+	font: 16px arial black, "Times New Roman", Times, serif;
+	color: #FFFFFF;
+}
+
+#menu h3 {
+	display: block;
+	float: right;
+	margin-right: 17px;
+	padding: 5px 0px;
+	text-decoration: none;
+	font: 14px Georgia, "Times New Roman", Times, serif;
+}
+#DenMenu {
+
+	margin: 20px 20px 20px 20px;
+	border : 2px solid #FFFFFF;
+	width: 256px;
+	height: 64px;
+	color: #FFFF00;
+	font: 18px Georgia, "Times New Roman", Times, serif;
+}
+#DenMenu ul {
+	border : 2px solid #FFFF00;
+}
+
+#DenMenu  li {
+	border : 1px solid #FF0000;
+	margin: 5px 5px 5px 5px;
+	display: block;
+	float: left;
+}
+#DenMenu  img {
+	margin: 4px 4px 4px 4px;
+	border : 0px solid #FFFFFF;
+}
+/* end of menu */
+
+
+#menu .current_page_item a {
+	color: #ffff77;
+}
+
+/** LOGO */
+#logo {
+	height: 382px;
+	background: url('images/miner man title.png') no-repeat left top;
+	padding: 0px 0px 0px 0px;
+}
+#logoNot {
+	height: 382px;
+	padding: 0px 0px 0px 0px;
+}
+
+#content {
+	/* border : 2px solid #00FF00;*/
+	margin: 0;
+	padding: 0;
+	width: 710px;
+	float: left;
+	height: 2175px;
+}
+
+#game {
+	/*border : 2px solid #00FFFF;*/
+	margin: 0;
+	padding: 0;
+	width: 710px;
+	float: left;
+	height: 430px;
+}
+#gameSmall {
+	/*border : 2px solid #00FFFF;*/
+	margin: 0;
+	padding: 0;
+	width: 710px;
+	float: left;
+	height: 300px;
+}
+#game_left {
+	/*border : 2px solid #FFFFFF;*/
+	width: 420px;
+	float: left;
+	height: 345px;
+}
+#game_right {
+	/*border : 2px solid #FFFFFF;*/
+	width: 250px;
+	float: left;
+	height: 345px;
+}
+#game_leftB {
+	/*border : 2px solid #FFFFFF;*/
+	width: 250px;
+	float: left;
+	height: 345px;
+}
+
+#game_rightB {
+	/*border : 2px solid #FFFFFF;*/
+	width: 420px;
+	
+	float: left;
+	height: 345px;
+}
+
+#game_leftC {
+	/*border : 2px solid #FFFFFF;*/
+	width: 275px;
+	float: left;
+	height: 345px;
+}
+
+#game_rightC {
+	/*border : 2px solid #FFFFFF;*/
+	width: 395px;
+	
+	float: left;
+	height: 345px;
+}
+
+#content_bottom {
+	/* border : 2px solid #00FF00;*/
+	margin: 0;
+	padding: 0;
+	width: 940px;
+	
+}
+
+#content_bottom img{
+	/*border : 5px solid #000000;*/
+}
+
+#content_footer {
+	/*border : 2px solid #00FFFF;*/
+	margin: 0;
+	padding: 0;
+	width: 850px;
+	
+	float: left;
+}
+
+#mainholder {
+	/*border : 2px solid #000000;*/
+	/*float: left;*/
+	height: 1450px;
+	width: 940px;
+	margin: 4px;
+	padding: auto;
+}
+
+#sidebar {
+	/* border : 2px solid #00FFFF;*/
+	float: right;
+	width: 200px;
+
+}
+
+#sidebar img{
+	/* border : 0px solid #FF00ff;*/
+}
+
+}
+
+/* Footer */
+#footer {
+	width: 575px;
+	background: #370C01;
+	/*background: #494336 url(images/img05.jpg) no-repeat left top;*/
+	/*border-left: 10px solid #FFFFFF;
+	border-right: 10px solid #FFFFFF;
+	border-bottom: 10px solid #FFFFFF;*/
+}
+
+#footer p {
+
+	margin: 0;
+	padding: 20px 0;
+	/*text-align: center;*/
+	line-height: normal;
+	
+}
+#footer a {
+	
+	color: #B5ADA5;
+}
+
+
+
+
+#myreel{ /*sample CSS for demo*/
+	border:15px solid black;
+}
+
+.paginate{
+	width: 330px;
+	margin-top:5px;
+	font:bold 14px Arial;
+	text-align:center;
+}
+
+
+
+
+
+
+
+
+
+
+
