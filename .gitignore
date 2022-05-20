@@ -5,3 +5,5 @@
 /.vs/eWolfSiteBuilder/v17
 /eWolfSiteBuilder/bin/Debug/net5.0-windows/ref
 /eWolfSiteBuilder/obj
+/.vs/eWolfSiteBuilder/DesignTimeBuild
+/eWolfSiteBuilder/bin/Debug/net5.0-windows
