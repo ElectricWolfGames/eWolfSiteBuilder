@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using eWolfBootstrap.Builders;
+﻿using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Helpers;
 using eWolfSiteBuilder.zOLD.Configuration;
-
 using System.Collections.Generic;
 
 namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
@@ -49,7 +43,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             items.Add(new HTMLIndexedItems("Corner Pipes", CreateCornerPipes));
             items.Add(new HTMLIndexedItems("Auto Build and Inside Pipes", CreateAutoBuildAndInsidePipes));
             items.Add(new HTMLIndexedItems("Materials", CreateMaterials));
-            items.Add(new HTMLIndexedItems("Example scripts", CreateOtherExampleScripts));
+            items.Add(new HTMLIndexedItems("Create Pipes from Scripts", CreateCreatePipesFromScripts));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
 
             HTMLBuilder options = new HTMLBuilder();
@@ -89,11 +83,11 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             options.Text(@"Pipe builder is ideal for placing pipes around other objects, with tools like Insert/ Delete and Extract, it makes it easy to add, remove modify later.");
             options.NewLine();
+            options.NewLine();
             options.Text(@"That you can get from Unity3D asset store");
             options.NewLine();
             options.NewLine();
             options.Unity3DLink(Unity3DSetting.PipeBuilder);
-            options.NewLine();
             options.NewLine();
             options.EndTextCenter();
 
@@ -189,24 +183,62 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             return outer.Output();
         }
 
+        private string CreateCreatePipesFromScripts(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+            outer.TextBoldText("If you need to create Pipes from your own scripts take a look at the example scene", " CreatePipesFromScript", "");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Run this scene and you will see 3 buttons");
+            outer.NewLine();
+            outer.ImageCenter("EX01_Ingame.PNG", 45);
+            outer.NewLine();
+
+            outer.TextBoldText("The button ", "Create basic pipes", "run this code");
+            outer.NewLine();
+            outer.ImageCenter("CreateBasicPipe.PNG", 45);
+            outer.NewLine();
+
+            outer.OtherDetails("Pipe.AddPipes();", "create a new pipe and returns it");
+            outer.OtherDetails("pipeNode.ExtendPipe();", "Extends the current pipe node - creating the two nodes needed for the first pipe");
+            outer.OtherDetails("Pipe.BuildPipes();", "forced the pipes to build the mesh");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.TextBoldText("The button ", "Create basic pipes", "run this code");
+            outer.NewLine();
+            outer.ImageCenter("CreatePipesFromList.PNG", 45);
+            outer.NewLine();
+            outer.Text("This is doing the same as the above script but just looping through a list of vectors.");
+            outer.NewLine();
+            outer.InspectorDetails("Note", "It still needs to call 'AddPipe' before having any nodes to extend.");
+
+            outer.EndTextCenter();
+            return outer.Output();
+        }
+
         private string CreateCreatingYourFirstPipe(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
 
-            outer.StartTextCenterLeft();
+            outer.StartTextCenter();
             outer.NewLine();
             outer.TextBoldText("To start creating pipes add the main prefab ", "'PipeBase_pf'", " into the map.");
             outer.NewLine();
-            outer.TextBoldText("Then with this prefab selected click on the ", "'Add Pipe'", " button. This will create a simple straight pipe.");
+            outer.TextBoldText("With this prefab selected click on the ", "'Add Pipe'", " button. This will create a simple straight pipe.");
             outer.NewLine();
-            outer.TextBoldText("Now you can start to position your pipe if you need more nodes just click on the ", "'Extend Pipe'", " button and this will create another node in the direction of the pipe.");
+            outer.Text("Now you can start to position your pipe");
             outer.NewLine();
-            outer.Text("You can see a basic pipe creation below.");
+            outer.TextBoldText("If you need more nodes just click on the ", "'Extend Pipe'", " button and this will create another node in the direction of the pipe.");
+            outer.NewLine();
+            outer.Text("You can see a basic pipe creation in this video");
             outer.NewLine();
             outer.NewLine();
             outer.YouTubeLinkBig("SylhKZ2sPhQ");
 
-            outer.EndTextCenterLeft();
+            outer.EndTextCenter();
             return outer.Output();
         }
 
@@ -256,7 +288,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             outer.Text(options.Output());
 
             outer.NewLine();
-            outer.Text("You can see some of the different pipe details In this Video.");
+            outer.Text("You can see some of the different pipe details In this video.");
             outer.NewLine();
             outer.NewLine();
             outer.YouTubeLinkBig("tsG1y81gin0");
@@ -273,7 +305,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             outer.Text("You will get a default set of high-resolution materials included in the package, you will need to drop the resolution if you don't need it.");
             outer.NewLine();
-            outer.ImageCenter("Materials.PNG", 75);
+            outer.ImageCenter("Materials.PNG", 45);
 
             outer.NewLine();
             outer.Text("And you can easily add your own materials if you need.");
@@ -282,16 +314,9 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             outer.TextBoldText("One other material in the package is ", "Bricks", " this is best used as the inside of the pipes.");
             outer.NewLine();
-            outer.ImageCenter("InsidePipes.PNG", 75);
+            outer.ImageCenter("InsidePipes.PNG", 45);
 
             outer.EndTextCenter();
-
-            return outer.Output();
-        }
-
-        private string CreateOtherExampleScripts(string arg)
-        {
-            HTMLBuilder outer = new HTMLBuilder();
 
             return outer.Output();
         }
@@ -299,6 +324,9 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
         private string CreateOverview(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
+
+            outer.ImageCenter("PipeBuilderLogo.PNG", 35);
+            outer.NewLine();
 
             HTMLBuilder options = new HTMLBuilder();
             HTMLSection left = new HTMLSection("col-md-6");
