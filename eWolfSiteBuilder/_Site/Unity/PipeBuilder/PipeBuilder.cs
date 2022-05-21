@@ -48,6 +48,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             items.Add(new HTMLIndexedItems("Inspector Details", CreateInspectorDetails));
             items.Add(new HTMLIndexedItems("Corner Pipes", CreateCornerPipes));
             items.Add(new HTMLIndexedItems("Auto Build and Inside Pipes", CreateAutoBuildAndInsidePipes));
+            items.Add(new HTMLIndexedItems("Materials", CreateMaterials));
             items.Add(new HTMLIndexedItems("Example scripts", CreateOtherExampleScripts));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
 
@@ -103,12 +104,87 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
         {
             HTMLBuilder outer = new HTMLBuilder();
 
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.TextBoldText("Having", " Auto Build ", "set will create the pipes each time you move a node.");
+            outer.NewLine();
+            outer.TextBoldText("", "Inside Pipe", " will create the pipe inside out so you can place the player inside the pipe.");
+
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
             return outer.Output();
         }
 
         private string CreateCornerPipes(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            right.ImageLeft("CornerDetailsA.PNG", 85);
+
+            left.StartTextCenterRight();
+            left.StartTextMiddel(150);
+            left.Text("We have 3 options that define the pipe corners: Size, Steps and Larger");
+            left.EndTextMiddel();
+            left.EndTextCenterRight();
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            right.ImageLeft("CornerDetailsB.PNG", 85);
+
+            left.StartTextCenterRight();
+            left.StartTextMiddel(150);
+            left.TextBoldText("", "Size", " defines the overall size of the corner");
+            left.EndTextMiddel();
+            left.EndTextCenterRight();
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            right.ImageLeft("CornerDetailsC.PNG", 85);
+
+            left.StartTextCenterRight();
+            left.StartTextMiddel(150);
+            left.TextBoldText("", "Steps", " define how may polygon you want. A high number will make it smoother");
+            left.EndTextMiddel();
+            left.EndTextCenterRight();
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            right.ImageLeft("CornerDetailsD.PNG", 85);
+
+            left.StartTextCenterRight();
+            left.StartTextMiddel(150);
+            left.TextBoldText("", "Larger ", " sets whether you want the corner to be large or not");
+            left.EndTextMiddel();
+            left.EndTextCenterRight();
+
+            outer.Text(options.Output());
+            outer.NewLine();
 
             return outer.Output();
         }
@@ -184,6 +260,31 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             outer.NewLine();
             outer.NewLine();
             outer.YouTubeLinkBig("tsG1y81gin0");
+
+            return outer.Output();
+        }
+
+        private string CreateMaterials(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.Text("You will get a default set of high-resolution materials included in the package, you will need to drop the resolution if you don't need it.");
+            outer.NewLine();
+            outer.ImageCenter("Materials.PNG", 75);
+
+            outer.NewLine();
+            outer.Text("And you can easily add your own materials if you need.");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.TextBoldText("One other material in the package is ", "Bricks", " this is best used as the inside of the pipes.");
+            outer.NewLine();
+            outer.ImageCenter("InsidePipes.PNG", 75);
+
+            outer.EndTextCenter();
 
             return outer.Output();
         }
