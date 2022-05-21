@@ -63,7 +63,6 @@ namespace eWolfSiteBuilder._Site
             builder.Text("  <h2>Unity3D Tools</h2>");
 
             builder.Text("  <h3>Check our <span><a href='Unity/index.html'></i>Unity3D projects</a></span></h3>");
-            //builder.Text("  <h3>Check our <span>Unity3D projects</span></h3>");
             builder.Text("  <p>All packages are available on the Assert store.</p>");
             builder.Text("</div>");
 
@@ -111,14 +110,6 @@ namespace eWolfSiteBuilder._Site
 
         public override void CreatePage()
         {
-            /*  HTMLBuilder builder = new HTMLBuilder();
-
-              wb.Append(builder.Output());
-              wb.Append(CreateHero());
-              wb.Append(CreateGallary());
-              wb.AddStickyHeader("myHeader");
-            */
-
             WebPage.AddHeader(this);
             WebPage.AddNavigation(NavigationTypes.Main);
             WebPage.StartBody();
