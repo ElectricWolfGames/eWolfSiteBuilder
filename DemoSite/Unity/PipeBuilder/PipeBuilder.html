@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang='en' >	<head>		<meta charset='UTF-8'>		<title>Pipe Builder</title>		<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>		<meta name='description' content='Pipe Builder'/>		<meta name='keywords' content=''/>		<meta name='title' content='Pipe Builder'/>		<meta name='author' content='Electric Wolf'>		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>		<link rel='stylesheet' href='../../Scripts/style.css'>		<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>		<script src='https://code.jquery.com/jquery-3.3.1.slim.min.js' integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo' crossorigin='anonymous'></script>		<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>		<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src='https://www.googletagmanager.com/gtag/js?id=UA-180928318-1'></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);} gtag('js', new Date());  gtag('config', 'UA-180928318-1');</script></head>             <nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+<a class='navbar-brand' href='../../Index.html'>Home</a>
+<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExample04' aria-controls='navbarsExample04' aria-expanded='false' aria-label='Toggle navigation'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarsExample04'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item active'><a class='nav-link'href='../Index.html'>Unity</a></li>
+</div>
+</li>
+</ul>
+</form>
+</div>
+</nav>
+<Body><div class='container mt-4'><div class='jumbotron'>
+<div class='row'>
+<div class='col-md-12'>
+<h1>Pipe Builder</h1>
+<p class='lead'>Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipe are in the scene. All with in Unity3D no need to swap back to a 3D editor.</p>
+</div>
+</div>
+</div>
+
+<div class='row'>
+<div class='col-md-12'>
+<div class='row'><div class='col-md-2'></div><div class='col-md-8'><div class='text-center'><br /><a href='#Download'>Download</a></br><a href='#Overview'>Overview</a></br><a href='#CreatingyourfirstPipe:'>Creating your first Pipe:</a></br><a href='#InspectorDetails'>Inspector Details</a></br><a href='#CornerPipes'>Corner Pipes</a></br><a href='#AutoBuildandInsidePipes'>Auto Build and Inside Pipes</a></br><a href='#Materials'>Materials</a></br><a href='#Examplescripts'>Example scripts</a></br><a href='#Support'>Support</a></br></div></br></div><div class='col-md-2'></div></div>
+<a id='Download'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Download</h2>
+</div>
+<div class='text-center'></br>Pipe builder is ideal for placing pipes around other objects, with tools like Insert/ Delete and Extract, it makes it easy to add, remove modify later.</br>That you can get from Unity3D asset store</br></br>Available at the <a href='https://assetstore.unity.com/packages/tools/modeling/pipe-builder-139875' target='Blank' >Unity Asset Store</a></br></br></div></div>
+</div>
+</div>
+<br />
+<a id='Overview'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Overview</h2>
+</div>
+<div class='row'><div class='col-md-6'><div class='text-right'><img src='images//PipeAroundPipes.PNG' width=75%px ></div></div><div class='col-md-6'><div class='text-left'><div class='d-flex align-items-center' style='height: 150px'><p>Options allow you to set the size of the corners and with or without Flanges</br></p></div></div></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images//PipeDetails.PNG' width=75%px ></div></div><div class='col-md-6'><div class='text-left'><div class='d-flex align-items-center' style='height: 250px'><p>Adjustable number of the side for the pipes, Flanges have customizable intervals, length, and size.</br></br>Allowing for a large range of custom looks for your pipes</br></br></p></div></div></div></div></div>
+</div>
+</div>
+<br />
+<a id='CreatingyourfirstPipe:'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Creating your first Pipe:</h2>
+</div>
+<div class='text-left'></br>To start creating pipes add the main prefab <strong>'PipeBase_pf'</strong> into the map.</br>Then with this prefab selected click on the <strong>'Add Pipe'</strong> button. This will create a simple straight pipe.</br>Now you can start to position your pipe if you need more nodes just click on the <strong>'Extend Pipe'</strong> button and this will create another node in the direction of the pipe.</br>You can see a basic pipe creation below.</br></br><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/SylhKZ2sPhQ?rel=0' frameborder='0' allowfullscreen></iframe></div></div></div>
+</div>
+</div>
+<br />
+<a id='InspectorDetails'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Inspector Details</h2>
+</div>
+<div class='row'><div class='col-md-6'><div class='text-right'><img src='images//PipeDetailsInspector.PNG' width=70%px ></div></div><div class='col-md-6'><div class='text-left'><div class='d-flex align-items-center' style='height: 450px'><p>Main Details</br><strong>Sides: </strong>Number of sides of the pipe<br /><strong>Radius: </strong>The size of the pipe<br /></br></br>Flange Details</br><strong>Flange: </strong>Whether to add flanges<br /><strong>Length: </strong>The length of the flanges<br /><strong>Interval: </strong>How often to add flanges<br /><strong>Size: </strong>The size of the flanges. Can me negative if needed<br /></br></br>Corners Details</br>We will cover the corners below.</br></p></div></div></div></div></br>You can see some of the different pipe details In this Video.</br></br><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/tsG1y81gin0?rel=0' frameborder='0' allowfullscreen></iframe></div></div>
+</div>
+</div>
+<br />
+<a id='CornerPipes'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Corner Pipes</h2>
+</div>
+<div class='row'><div class='col-md-6'><div class='text-right'><div class='d-flex align-items-center' style='height: 150px'><p>We have 3 options that define the pipe corners: Size, Steps and Larger</p></div></div></div><div class='col-md-6'><div class='text-left'><img src='images//CornerDetailsA.PNG' width=85%px ></div></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><div class='d-flex align-items-center' style='height: 150px'><p><strong>Size</strong> defines the overall size of the corner</p></div></div></div><div class='col-md-6'><div class='text-left'><img src='images//CornerDetailsB.PNG' width=85%px ></div></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><div class='d-flex align-items-center' style='height: 150px'><p><strong>Steps</strong> define how may polygon you want. A high number will make it smoother</p></div></div></div><div class='col-md-6'><div class='text-left'><img src='images//CornerDetailsC.PNG' width=85%px ></div></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><div class='d-flex align-items-center' style='height: 150px'><p><strong>Larger </strong> sets whether you want the corner to be large or not</p></div></div></div><div class='col-md-6'><div class='text-left'><img src='images//CornerDetailsD.PNG' width=85%px ></div></div></div></br></div>
+</div>
+</div>
+<br />
+<a id='AutoBuildandInsidePipes'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Auto Build and Inside Pipes</h2>
+</div>
+<div class='text-center'></br>Having<strong> Auto Build </strong>set will create the pipes each time you move a node.</br><strong>Inside Pipe</strong> will create the pipe inside out so you can place the player inside the pipe.</br></br></div></div>
+</div>
+</div>
+<br />
+<a id='Materials'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Materials</h2>
+</div>
+<div class='text-center'></br>You will get a default set of high-resolution materials included in the package, you will need to drop the resolution if you don't need it.</br><img class='img-fluid rounded mx-auto d-block' src='images//Materials.PNG' width=75%px ></br>And you can easily add your own materials if you need.</br></br>One other material in the package is <strong>Bricks</strong> this is best used as the inside of the pipes.</br><img class='img-fluid rounded mx-auto d-block' src='images//InsidePipes.PNG' width=75%px ></div></div>
+</div>
+</div>
+<br />
+<a id='Examplescripts'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Example scripts</h2>
+</div>
+</div>
+</div>
+</div>
+<br />
+<a id='Support'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Support</h2>
+</div>
+</br>If you need any more help please email me at <strong>Wolf@electricwolf.co.uk</strong></br></br></div>
+</div>
+</div>
+<br />
+
+</div>
+</div></Body>
