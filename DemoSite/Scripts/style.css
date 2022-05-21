@@ -364,11 +364,11 @@ section {
   font-weight: 600;
 }
 
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
   .section-title p {
     width: 50%;
   }
-}
+}*/
 
 /*--------------------------------------------------------------
 # About

@@ -185,16 +185,15 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
         {
             HTMLBuilder outer = new HTMLBuilder();
             HTMLBuilder options = new HTMLBuilder();
-            HTMLSection left = new HTMLSection("col-md-6 ");
-            HTMLSection right = new HTMLSection("col-md-6 ");
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
 
-            //options.StartTextCenter();
             options.SetTwoSections(left, right);
 
             left.ImageRight("Self-Inspector.PNG", 65);
 
             right.StartTextCenterLeft();
-            right.StartTextMiddel(425);
+            right.StartTextMiddel(450);
             right.InspectorDetails("Clear Shelf", "Remove all objects from the shelfs");
             right.InspectorDetails("Fill all Shelves", "Replace objects to all shelf");
             right.InspectorDetails("Update Shelf 1", "Replace objects just to level 1");

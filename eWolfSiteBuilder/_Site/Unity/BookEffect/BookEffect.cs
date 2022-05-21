@@ -38,7 +38,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
 
             items.Add(new HTMLIndexedItems("Example", CreateExample));
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
-            items.Add(new HTMLIndexedItems("Options", CreateOptions));
+            items.Add(new HTMLIndexedItems("Inspector Options", CreateInspectorOptions));
             items.Add(new HTMLIndexedItems("How to use", CreateHowToUse));
             items.Add(new HTMLIndexedItems("Interface options", CreateInterfaceOptions));
             items.Add(new HTMLIndexedItems("Project Layout", CreateProjectLayout));
@@ -130,6 +130,32 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             return options.Output();
         }
 
+        private string CreateInspectorOptions(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("BookInspector.PNG", 90);
+
+            right.StartTextCenterLeft();
+            right.StartTextMiddel(350);
+            // TODO - replace the text 'hooks'
+            right.InspectorDetails("Book Cover Animation", "Hooks in the Book Cover GameObject");
+            right.InspectorDetails("Book Cover Mesh", "hooks in the Book Cover mesh");
+            right.InspectorDetails("Book Animation", "hooks in the Book Page GameObject");
+            right.InspectorDetails("Book Mesh", "hooks in the Book Page mesh");
+            right.InspectorDetails("Details.Pages.Size", "The number of pages in the book.");
+            right.InspectorDetails("Details.Pages.Element [n]", "Each texture in the book.");
+            right.InspectorDetails("Details.Starting Page:", "The starting page when you open the book. This number must be even.");
+
+            right.EndTextMiddel();
+            right.EndTextCenterLeft();
+
+            return options.Output();
+        }
+
         private string CreateInterfaceOptions(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -157,32 +183,6 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.Text("void TurnPageBack();"); options.NewLine();
 
             options.EndTextCenterLeft();
-
-            return options.Output();
-        }
-
-        private string CreateOptions(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            HTMLSection left = new HTMLSection("col-md-6");
-            HTMLSection right = new HTMLSection("col-md-6");
-            options.SetTwoSections(left, right);
-
-            left.ImageRight("BookInspector.PNG", 90);
-
-            right.StartTextCenterLeft();
-            right.StartTextMiddel(400);
-            // TODO - replace the text 'hooks'
-            right.InspectorDetails("Book Cover Animation", "Hooks in the Book Cover GameObject");
-            right.InspectorDetails("Book Cover Mesh", "hooks in the Book Cover mesh");
-            right.InspectorDetails("Book Animation", "hooks in the Book Page GameObject");
-            right.InspectorDetails("Book Mesh", "hooks in the Book Page mesh");
-            right.InspectorDetails("Details.Pages.Size", "The number of pages in the book.");
-            right.InspectorDetails("Details.Pages.Element [n]", "Each texture in the book.");
-            right.InspectorDetails("Details.Starting Page:", "The starting page when you open the book. This number must be even.");
-
-            right.EndTextMiddel();
-            right.EndTextCenterLeft();
 
             return options.Output();
         }

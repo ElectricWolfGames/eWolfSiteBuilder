@@ -139,7 +139,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             options.Text(@"The Colours for the effects are also custom definable");
             options.NewLine();
             options.NewLine();
-            options.Image("Inspector.PNG", 45);
+            options.Image("Inspector.PNG", 35);
 
             options.NewLine();
             options.NewLine();
