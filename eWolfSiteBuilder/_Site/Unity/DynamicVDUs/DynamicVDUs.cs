@@ -151,7 +151,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
         private string CreateSetUp(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.StartTextCenterLeft();
+            options.StartTextCenter();
             options.NewLine();
 
             options.Text("Follow the steps below to use in any game.");
@@ -172,7 +172,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             options.Text("Colour and speed: You can update the colours used for the textures. You can change the speed of the effect by updating Interval");
             options.NewLine();
             options.NewLine();
-            options.EndTextCenterRight();
+            options.EndTextCenter();
 
             return options.Output();
         }
@@ -210,7 +210,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
         private string CreateUsingInGame(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.StartTextCenterLeft();
+            options.StartTextCenter();
             options.NewLine();
 
             options.Text(@"Updating the effect at runtime");
@@ -233,7 +233,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
 
             options.TextBoldText("You can find ", "UpdateAlerts.cs", " as an example of the above code.");
 
-            options.EndTextCenterLeft();
+            options.EndTextCenter();
 
             return options.Output();
         }
