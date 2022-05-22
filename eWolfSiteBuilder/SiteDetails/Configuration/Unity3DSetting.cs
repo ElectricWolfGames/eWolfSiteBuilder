@@ -1,4 +1,4 @@
-﻿namespace eWolfSiteBuilder.zOLD.Configuration
+﻿namespace eWolfSiteBuilder.SiteDetails.Configuration
 {
     public class Unity3DSetting
     {
@@ -10,6 +10,7 @@
         public const string RoadBuilder = "https://assetstore.unity.com/packages/tools/modeling/road-builder-73065";
         public const string ScifiObjectsPack1 = "https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-objects-pack-1-170478";
         public const string ScifiObjectsPack2 = "https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-objects-pack-2-ewolf-208030";
+        public const string SkyboxesVariety = "https://assetstore.unity.com/packages/2d/textures-materials/sky/ten-skyboxes-variety-10991";
         public const string TrafficAndRoadsideObjects = "https://assetstore.unity.com/packages/3d/environments/roadways/traffic-and-roadside-objects-107369";
     }
 }

@@ -4,8 +4,8 @@ using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Helpers;
-using eWolfSiteBuilder.zOLD.Configuration;
 using System.Collections.Generic;
+using eWolfSiteBuilder.SiteDetails.Configuration;
 
 namespace eWolfSiteBuilder._Site.Unity.BookEffect
 {
