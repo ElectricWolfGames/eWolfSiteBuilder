@@ -1,23 +1,30 @@
-﻿using eWolfBootstrap.SiteBuilder.Attributes;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Helpers;
+
 using System.Collections.Generic;
 using System;
+
 using eWolfSiteBuilder.SiteDetails.Configuration;
 
-namespace eWolfSiteBuilder._Site.Unity.SkyboxesVariety
+namespace eWolfSiteBuilder._Site.Unity.SkyboxesSkies
 {
-    [PageTitle("SkyboxesVariety.html")]
+    [PageTitle("SkyboxesSkies.html")]
     public class SkyboxesVariety : PageDetails, IHomePagePreview, IUnityList
     {
         public SkyboxesVariety()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "Skyboxes Variety";
-            MenuTitle = "Skyboxes Variety";
+            DisplayTitle = "Skyboxes Skies";
+            MenuTitle = "Skyboxes Skies";
         }
 
         public int UnityListOrder { get; set; } = 20;
@@ -64,8 +71,8 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesVariety
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\SkyboxesA.png",
-                Description = "Section of 10 Variety skyboxes, " +
+                ImagePath = @$"{WebPage.HtmlPath}\Images\SkyboxesB.png",
+                Description = "Section of 10 Variety skies skyboxes, " +
                 "High quality panoramic scenes that can be used in your game." +
                 "All textures (6 of them) are 1024 by 1024 resolution."
             };
@@ -134,40 +141,20 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesVariety
         {
             HTMLBuilder outer = new HTMLBuilder();
 
-            outer.Text("The Skyboxes included are");
+            outer.Text("This collection contains 10 Skyboxes that are skys only that you can use in any Unity 3D scene.");
             outer.NewLine();
             outer.NewLine();
 
-            outer.Text("Alien Grey Planet");
-            outer.NewLine();
-            outer.Text("Green Hills");
-            outer.NewLine();
-            outer.Text("Snowy mountains");
-            outer.NewLine();
-            outer.Text("Space Station");
-            outer.NewLine();
-            outer.Text("Asteroid Belt");
-            outer.NewLine();
-            outer.Text("Nebula");
-            outer.NewLine();
-            outer.Text("Alien Red planet");
-            outer.NewLine();
-            outer.Text("Gray world");
-            outer.NewLine();
-            outer.Text("Water");
-            outer.NewLine();
-            outer.Text("Water 2");
-
-            outer.Text(AddSkyImages("AlienGrey", "Alien Grey Planet"));
-            outer.Text(AddSkyImages("AsteroidBelt", "Asteroid Belt"));
-            outer.Text(AddSkyImages("GreenHills", "Green Hills"));
-            outer.Text(AddSkyImages("Nebula", "Nebula"));
-            outer.Text(AddSkyImages("RedPlanet", "Alien Red Planet"));
-            outer.Text(AddSkyImages("Sand", "Sand"));
-            outer.Text(AddSkyImages("Snow", "Snow"));
-            outer.Text(AddSkyImages("SpaceStation", "Space Station"));
-            outer.Text(AddSkyImages("Water", "Water"));
-            outer.Text(AddSkyImages("Water2", "Water 2"));
+            outer.Text(AddSkyImages("Sky_01", "Sky 1"));
+            outer.Text(AddSkyImages("Sky_02", "Sky 2"));
+            outer.Text(AddSkyImages("Sky_03", "Sky 3"));
+            outer.Text(AddSkyImages("Sky_04", "Sky 4"));
+            outer.Text(AddSkyImages("Sky_05", "Sky 5"));
+            outer.Text(AddSkyImages("Sky_06", "Sky 6"));
+            outer.Text(AddSkyImages("Sky_07", "Sky 7"));
+            outer.Text(AddSkyImages("Sky_08", "Sky 8"));
+            outer.Text(AddSkyImages("Sky_09", "Sky 9"));
+            outer.Text(AddSkyImages("Sky_10", "Sky 10"));
 
             return outer.Output();
         }

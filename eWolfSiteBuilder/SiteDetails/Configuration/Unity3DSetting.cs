@@ -10,6 +10,8 @@
         public const string RoadBuilder = "https://assetstore.unity.com/packages/tools/modeling/road-builder-73065";
         public const string ScifiObjectsPack1 = "https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-objects-pack-1-170478";
         public const string ScifiObjectsPack2 = "https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-objects-pack-2-ewolf-208030";
+        public const string SkyboxesNebulas = "https://assetstore.unity.com/packages/2d/textures-materials/sky/skyboxes-nebulas-19095";
+        public const string SkyboxesSkies = "https://assetstore.unity.com/packages/2d/textures-materials/sky/ten-skyboxes-skies-11369";
         public const string SkyboxesVariety = "https://assetstore.unity.com/packages/2d/textures-materials/sky/ten-skyboxes-variety-10991";
         public const string TrafficAndRoadsideObjects = "https://assetstore.unity.com/packages/3d/environments/roadways/traffic-and-roadside-objects-107369";
     }
