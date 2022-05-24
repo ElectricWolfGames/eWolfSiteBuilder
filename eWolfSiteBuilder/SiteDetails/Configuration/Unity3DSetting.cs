@@ -6,6 +6,7 @@
         public const string BuildingBuilder = "https://assetstore.unity.com/packages/tools/modeling/building-builder-76000";
         public const string DynamicVDU = "https://assetstore.unity.com/packages/2d/textures-materials/animated-dynamic-vdu-111739";
         public const string FenceWallAndHedgeBuilder = "https://assetstore.unity.com/packages/tools/modeling/fence-wall-and-hedge-builder-91797";
+        public const string GardenFlowers = "https://assetstore.unity.com/packages/3d/vegetation/flowers/garden-flowers-84636";
         public const string PipeBuilder = "https://assetstore.unity.com/packages/tools/modeling/pipe-builder-139875";
         public const string RoadBuilder = "https://assetstore.unity.com/packages/tools/modeling/road-builder-73065";
         public const string ScifiObjectsPack1 = "https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-objects-pack-1-170478";
