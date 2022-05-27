@@ -70,6 +70,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Models,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\SciFiObjectsPack2Ad.png",
                 Description = "Collection of game ready objects you can just use in any sci-fi style game.</br>" +
                 "<strong>Contains:</strong> Cargo, Debris, Desks, Equipment, Living Quarters, Bed, Chairs, Lockers, Scenery, Screens, etc."

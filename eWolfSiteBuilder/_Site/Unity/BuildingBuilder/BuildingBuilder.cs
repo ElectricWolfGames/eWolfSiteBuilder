@@ -70,6 +70,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Builders,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\Builder_Creating_your_first_Buildin.gif",
                 Description = "Building Builder lets you create a variety of Lowpoly buildings from a defined list of settings. Each building is created by a collection of options that can easily be changed or set to use a random set of values"
             };

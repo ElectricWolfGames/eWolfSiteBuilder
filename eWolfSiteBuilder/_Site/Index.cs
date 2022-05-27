@@ -20,38 +20,6 @@ namespace eWolfSiteBuilder._Site
             MenuTitle = "Home";
         }
 
-        public static void Build()
-        {
-            string htmlpath = @"E:\eWolfSiteUploads\";
-            var pageBuilder = new PageBuilder("index.html", htmlpath, new BookEffectHeader());
-
-            HTMLBuilder builder = new HTMLBuilder();
-
-            builder.Text("<header id='header' class='fixed-top'>");
-
-            builder.Text("<div class='container d-flex align-items-center'>");
-            builder.Text("<h1 class='logo mr-auto'><a href='index.html'>Electric Wolf</a></h1>");
-
-            builder.Text("<div class='nav'>");
-            builder.Text("<a href='Unity/UnityPage.html'></i>Unity3D Tools</a>");
-            builder.Text("<a href='#'></i>Games</a>");
-            builder.Text("<a href='#'></i>Contact</a>");
-
-            builder.Text("<div>");
-
-            builder.Text("</header>");
-
-            pageBuilder.Append(builder.Output());
-
-            pageBuilder.Append(CreateHero());
-
-            pageBuilder.Append(CreateGallary());
-
-            pageBuilder.AddStickyHeader("myHeader");
-
-            pageBuilder.Output();
-        }
-
         public static string CreateGallary()
         {
             HTMLBuilder builder = new HTMLBuilder();

@@ -68,6 +68,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Models,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\DynamicVDU_Logo.png",
                 Description = "Dynamic VDU is a collection of animated dynamic monitors, That will show a range of alertness form no alert - all is green to full alert - were most is red"
             };

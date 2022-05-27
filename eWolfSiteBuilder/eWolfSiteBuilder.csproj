@@ -13,6 +13,7 @@
 	<ItemGroup>
 	  <Folder Include="zOLD\Data\" />
 	  <Folder Include="zOLD\Interfaces\" />
+	  <Folder Include="_Site\Unity\NewFolder\" />
 	</ItemGroup>
 
 	<ItemGroup>

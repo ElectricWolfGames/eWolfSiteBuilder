@@ -63,6 +63,7 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesNebulas
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Skyboxes,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\SkyboxesC.png",
                 Description = "Section of 5 Variety skyboxes all Space Nebulas, " +
                 "High quality panoramic scenes that can be used in your game." +

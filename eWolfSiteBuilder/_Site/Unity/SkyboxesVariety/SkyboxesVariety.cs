@@ -63,6 +63,7 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesVariety
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Skyboxes,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\SkyboxesA.png",
                 Description = "Section of 10 Variety skyboxes, " +
                 "High quality panoramic scenes that can be used in your game." +

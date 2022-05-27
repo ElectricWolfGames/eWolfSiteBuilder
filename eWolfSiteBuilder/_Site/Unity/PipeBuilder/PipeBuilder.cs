@@ -68,6 +68,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Builders,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\PipeBuilderAd.png",
                 Description = "Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipe are in the scene. All with in Unity3D no need to swap back to a 3D editor. Pipe builder is ideal for placing pipes around other objects, with tools like Insert/ Delete and Extract, it makes it easy to add, remove modify later."
             };

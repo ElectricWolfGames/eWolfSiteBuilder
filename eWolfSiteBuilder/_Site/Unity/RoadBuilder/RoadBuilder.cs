@@ -31,7 +31,8 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\SciFiObjectsPack1Ad.png",
+                PreviewItemType = PreviewItemType.Builders,
+                ImagePath = @$"{WebPage.HtmlPath}\Images\Unity3d_Road_Builder_Basic_road.gif",
                 Description = "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.",
             };
 

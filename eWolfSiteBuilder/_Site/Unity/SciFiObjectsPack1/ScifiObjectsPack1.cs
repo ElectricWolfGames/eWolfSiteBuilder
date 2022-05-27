@@ -70,6 +70,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Models,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\SciFiObjectsPack1Ad.png",
                 Description = "Collection of game ready objects you can just use in any sci-fi style game <br/>" +
                 "Shelves are placed into the map empty, Then by clicking on the <strong>Fill All Shelves</strong> Button will populate all the shelves.</br>" +

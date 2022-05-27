@@ -19,7 +19,7 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
             MenuTitle = "Traffic and Roadside objects:";
         }
 
-        public int UnityListOrder { get; set; } = 1;
+        public int UnityListOrder { get; set; } = 15;
 
         public override void CreatePage()
         {
@@ -63,6 +63,7 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Models,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\TrafficObjectsAd.png",
                 Description = "A Collection of 42 traffic and roadside objects prefabs, Ideal for any city.</br>" +
                 "<strong>Contains:</strong> Traffic Barriers, Road Barriers, Traffic Cones, Traffic lights (Animated), Crossing lights (Animated), Benches, Bins"

@@ -66,6 +66,7 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             {
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Models,
                 ImagePath = @$"{WebPage.HtmlPath}\Images\GardenFlowers.png",
                 Description = "A collection of low poly garden flowers for Unity3D. Flowers have individual prefabs and also a collection of Flower Beds prefabs with pre-arranged groups of flowers for easy placement"
             };
