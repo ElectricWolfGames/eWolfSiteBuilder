@@ -5,6 +5,7 @@ using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Helpers;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace eWolfSiteBuilder._Site.Unity
 {
@@ -19,7 +20,7 @@ namespace eWolfSiteBuilder._Site.Unity
             MenuTitle = "Unity";
         }
 
-        public static string CreateGallary()
+        public static string CreateGallary(PreviewItemType previewItemType)
         {
             HTMLBuilder builder = new HTMLBuilder();
 
@@ -29,6 +30,8 @@ namespace eWolfSiteBuilder._Site.Unity
             builder.Text("<div class='row'>");
 
             List<PreviewItem> items = PageDetailsHelper.GetPreviewItem();
+
+            items = items.Where(x => x.PreviewItemType == previewItemType).ToList();
 
             foreach (var item in items)
             {
@@ -63,11 +66,31 @@ namespace eWolfSiteBuilder._Site.Unity
 
             WebPage.StartDiv("<div class='container mt-4'>");
             WebPage.Append(CreateHero());
-            WebPage.Append(CreateGallary());
+            WebPage.Append(CreateBuilderHeader());
+            WebPage.Append(CreateModelHeader());
+            WebPage.Append(CreateSkyboxesHeader());
 
             WebPage.CloseAllsDiv();
             WebPage.EndBody();
             WebPage.Output();
+        }
+
+        private string CreateBuilderHeader()
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.Text(@"<h3>Builders</h3>");
+            outer.NewLine();
+            outer.Text(@"Builders let you create worlds or scenes with extra tools to make things easy and fast then doing it by hand.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            outer.Text(CreateGallary(PreviewItemType.Builders));
+
+            return outer.Output();
         }
 
         private string CreateHero()
@@ -82,6 +105,44 @@ namespace eWolfSiteBuilder._Site.Unity
 
             options.Jumbotron(DisplayTitle, heroText);
             return options.Output();
+        }
+
+        private string CreateModelHeader()
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.Text(@"<h3>Models</h3>");
+            outer.NewLine();
+            outer.Text(@"Model Packages are mostly collections of prefabs you can add to any scene.");
+            outer.NewLine();
+            outer.Text(@"Some have scripts and tools for extra options.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            outer.Text(CreateGallary(PreviewItemType.Models));
+
+            return outer.Output();
+        }
+
+        private string CreateSkyboxesHeader()
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.Text(@"<h3>Skyboxes</h3>");
+            outer.NewLine();
+            outer.Text(@"Skyboxes Packages are collections of skyboxs you can add to any camera");
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            outer.Text(CreateGallary(PreviewItemType.Skyboxes));
+
+            return outer.Output();
         }
     }
 }

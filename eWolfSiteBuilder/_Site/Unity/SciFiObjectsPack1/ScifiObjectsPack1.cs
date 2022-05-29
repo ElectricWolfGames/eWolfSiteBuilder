@@ -82,21 +82,21 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
 
         private static string CreateDownload(string data)
         {
-            HTMLBuilder options = new HTMLBuilder();
-            options.StartTextCenter();
-            options.NewLine();
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
 
-            options.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
-            options.NewLine();
-            options.Text(@"That you can get from Unity3D asset store");
-            options.NewLine();
-            options.NewLine();
-            options.Unity3DLink(Unity3DSetting.ScifiObjectsPack1);
-            options.NewLine();
-            options.NewLine();
-            options.EndTextCenter();
+            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.NewLine();
+            outer.Text(@"That you can get from Unity3D asset store");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Unity3DLink(Unity3DSetting.ScifiObjectsPack1);
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
 
-            return options.Output();
+            return outer.Output();
         }
 
         private static string CreateOtherObjects(string data)
