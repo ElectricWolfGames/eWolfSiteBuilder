@@ -246,7 +246,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipe are in the scene. All with in Unity3D no need to swap back to a 3D editor.");
+            options.JumbotronImage(DisplayTitle, "Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipe are in the scene. All with in Unity3D no need to swap back to a 3D editor.", "PipeBuilderLogo.PNG", 35);
             return options.Output();
         }
 
@@ -325,8 +325,6 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
         private string CreateOverview(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
-
-            outer.ImageCenter("PipeBuilderLogo.PNG", 35);
             outer.NewLine();
 
             HTMLBuilder options = new HTMLBuilder();

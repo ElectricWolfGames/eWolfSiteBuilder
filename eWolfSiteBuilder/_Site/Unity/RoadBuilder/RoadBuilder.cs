@@ -104,7 +104,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -118,7 +118,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -130,6 +130,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
+
             outer.NewLine();
 
             outer.TextBoldText("In your scene add the prefab", " 'RoadNetwork_Main_pf' ", "from Assets->eWolfRoadBuilder->PreFabs folder.");
@@ -195,7 +196,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -209,7 +210,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -223,7 +224,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -233,9 +234,9 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
 
         private string CreateHero()
         {
-            HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.");
-            return options.Output();
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.JumbotronImage(DisplayTitle, "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.", "RoadBuilderLogo.PNG", 35);
+            return outer.Output();
         }
 
         private string CreateMaterialsFrequency(string arg)
@@ -350,7 +351,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -364,7 +365,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -378,7 +379,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -392,7 +393,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
