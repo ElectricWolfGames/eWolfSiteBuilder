@@ -196,10 +196,91 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("The look (contour) of the cross section of the road is customizable. With the options below");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("CrossSectionDetails.PNG", 75);
+
+            right.StartTextCenterLeft();
+            right.StartTextMiddel(300);
+            right.InspectorDetails("Road Width", "The width of the road");
+            //right.NewLine();
+            right.InspectorDetails("With Curb", "If ticked will create a Curb");
+            //right.NewLine();
+            right.InspectorDetails("Curb Height", "How high the curb will be above the road");
+            //right.NewLine();
+            right.InspectorDetails("Curb Slope", "How far back the curb starts");
+            //right.NewLine();
+            right.InspectorDetails("Curb Width", "How wide the pavement section is");
+            //right.NewLine();
+            right.InspectorDetails("Curb Edge Drop", "If the curb is raised, then this can be used to fill the gap at the far side of the road");
+            //right.NewLine();
+            //right.NewLine();
+
+            right.EndTextMiddel();
+            right.EndTextCenterLeft();
+
+            outer.Text(options.Output());
+
+            options = new HTMLBuilder();
+            var a = new HTMLSection("col-md-4");
+            var b = new HTMLSection("col-md-4");
+            var c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("Cross_A.PNG", 85);
+            b.ImageCenter("Cross_B.PNG", 85);
+            c.ImageCenter("Cross_C.PNG", 85);
+
+            outer.NewLine();
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            outer.YouTubeLinkBig("_duWhzp-VAk");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.InspectorDetails("Create Collision", "Whether or not you need mesh collision on the road mesh object.");
+            outer.InspectorDetails("Mesh Per Node", "If ticked this will separate the mesh and create it on each of the nodes. This is to help will object culling. if not set it will just add the roads as one mesh on the base object.");
+            outer.InspectorDetails("Drop To Ground", "If ticked will drop the road to any object with layer set to 'Ground'. Note this could be slow for large roads.");
+            outer.InspectorDetails("UV Set", "The main textures used for the roads have the road and pavements, 'ROAD_PAVEMENT' But if you are not using the Curb/Pavement this is wasteful and you should select the 'ROAD_ONLY' option that will use the full width of the texture as the road.");
+
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("Road_Main.PNG", 35);
+
+            options = new HTMLBuilder();
+            a = new HTMLSection("col-md-4");
+            b = new HTMLSection("col-md-4");
+            c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("Road_RoadOnly.PNG", 65);
+            b.ImageCenter("Road_Grass.PNG", 65);
+            c.ImageCenter("Road_Clean.PNG", 65);
+            outer.NewLine();
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            a = new HTMLSection("col-md-4");
+            b = new HTMLSection("col-md-4");
+            c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("Road_Sandy.PNG", 65);
+            b.ImageCenter("Road_RaceTrack.PNG", 65);
+            c.ImageCenter("Road_RailTrack.PNG", 65);
+
+            outer.NewLine();
+            outer.Text(options.Output());
 
             return outer.Output();
         }
@@ -210,10 +291,33 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("With the release of Version 1.1 you can now set the Cross Section details per node. Allowing you to change the width of the road and the curb settings.");
             outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("RoadDifferentWidth.PNG", 65);
+            outer.NewLine();
+            outer.TextBoldText("Each Road Network Node now has the option to", " Override Cross Section", "");
             outer.NewLine();
             outer.EndTextCenter();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("SectionSetting.PNG", 65);
+            right.ImageLeft("CrossSectionDetailsRemove.PNG", 65);
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.TextBoldText("Just Click on the Add", " Override Cross Section ", "to override the settings");
+            outer.NewLine();
+
+            outer.Text("And the new script will be add to the object, that will let you set your Cross Sections Details.");
+            outer.NewLine();
+            outer.TextBoldText("If you need to remove the Cross sections Details just click on the", " Remove Cross Section ", "Button");
+            outer.NewLine();
+            outer.NewLine();
+            outer.YouTubeLinkBig("qAS2fC5gw8o");
 
             return outer.Output();
         }
