@@ -234,18 +234,11 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             right.StartTextCenterLeft();
             right.StartTextMiddel(300);
             right.InspectorDetails("Road Width", "The width of the road");
-            //right.NewLine();
             right.InspectorDetails("With Curb", "If ticked will create a Curb");
-            //right.NewLine();
             right.InspectorDetails("Curb Height", "How high the curb will be above the road");
-            //right.NewLine();
             right.InspectorDetails("Curb Slope", "How far back the curb starts");
-            //right.NewLine();
             right.InspectorDetails("Curb Width", "How wide the pavement section is");
-            //right.NewLine();
             right.InspectorDetails("Curb Edge Drop", "If the curb is raised, then this can be used to fill the gap at the far side of the road");
-            //right.NewLine();
-            //right.NewLine();
 
             right.EndTextMiddel();
             right.EndTextCenterLeft();
@@ -506,7 +499,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.Text("With the release of Version 2.0 you can now modify the terrain to match the road.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("More info can be foud here."); // TODO ADD LINK HERE
+            outer.PageLink("More information about how to use terrains with Road Builder can be", "found Here", "RoadBuilderTerrain.html");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("TerrainExampleBasic.PNG", 45);
