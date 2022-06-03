@@ -104,8 +104,23 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            left.Text("With the release of Version 1.5 you can now use the roads with Baked lighting. Just enable the new Baked Lighting option and adjust the unwrapping options.");
+            left.NewLine();
+            left.NewLine();
+            left.Text("The Unwrapping options are the current default import options on normal mesh import.");
+
+            right.ImageLeft("BakedLightingOptions.PNG", 65);
+
+            outer.Text(options.Output());
             outer.NewLine();
+            outer.NewLine();
+
+            outer.ImageCenter("BakedLightsRoad.PNG", 55);
+
             outer.NewLine();
             outer.EndTextCenter();
 
@@ -118,8 +133,16 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("Updated the mesh generation for junctions and crossroads allowing closer nodes to be much closer.");
             outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("CloserNodes.PNG", 55);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Junctions can now have 5 or 6 connecting roads");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("FiveRoadJunction.PNG", 55);
             outer.NewLine();
             outer.EndTextCenter();
 
@@ -328,9 +351,34 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("The create mesh will now only re-create the mesh if the node has change.");
             outer.NewLine();
             outer.NewLine();
+            outer.Text("This can be seen by the color of the road debug lines, Yellow it will not rebuild the mesh, Cyan it will rebuild the mesh.");
+            outer.NewLine();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.NewLine();
+            left.InspectorDetails("Auto Build", "option, once enabled it will automatically build the roads when the node are moved.");
+            left.NewLine();
+            left.Text("Note the AutoBuild option can only work when");
+            left.NewLine();
+            left.InspectorDetails("Mesh Per Node", "Is ticked");
+            left.InspectorDetails("Drop To Ground", "Is not ticked");
+            left.NewLine();
+            left.Text("You can see the auto build in action below.");
+
+            right.ImageLeft("AutoBuild.PNG", 65);
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.YouTubeLinkBig("KQprfE_wwc4");
+
             outer.EndTextCenter();
 
             return outer.Output();
@@ -455,9 +503,13 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("With the release of Version 2.0 you can now modify the terrain to match the road.");
             outer.NewLine();
             outer.NewLine();
+            outer.Text("More info can be foud here."); // TODO ADD LINK HERE
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("TerrainExampleBasic.PNG", 45);
             outer.EndTextCenter();
 
             return outer.Output();
@@ -469,9 +521,27 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("With the release of Version 1.2 you can now set the material frequency per node.");
+            outer.NewLine();
+            outer.ImageCenter("RoadDifferentMaterials.PNG", 65);
+
+            outer.NewLine();
+            outer.TextBold("Each Road Network Node now has the option to ", "Override Material Details");
             outer.NewLine();
             outer.NewLine();
+            outer.TextBoldText("Just Click on the Add ", "Override Material Details", " to override the settings.");
+            outer.NewLine();
+            outer.Text("And the new script will be add to the object, that will let you set your Material Details.");
+            outer.NewLine();
+            outer.TextBoldText("If you need to remove the Override Material Details just click on the ", "Remove Material Details", " Button");
+            outer.NewLine();
+            outer.NewLine();
+            outer.NewLine();
+            outer.NewLine();
+            outer.YouTubeLinkBig("Oiu7kI0Y6ag");
+            outer.NewLine();
+
+            outer.TextBoldText("", "Please note:", " Override material will not work well for Junction and cross roads. This is due to the way Junctions are created as a mesh.(Future releases may fix this)");
             outer.EndTextCenter();
 
             return outer.Output();
@@ -483,9 +553,45 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("Added an option to allow you too render the under side of the road.");
             outer.NewLine();
             outer.NewLine();
+            outer.ImageCenter("ShowUnderRoad.PNG", 65);
+            outer.NewLine();
+
+            var options = new HTMLBuilder();
+            var left = new HTMLSection("col-md-6");
+            var right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.Text("To render the underside of the road you need to assign a material for it. Just add a another material to the material list. And set the frequency to Under road Texture");
+            right.ImageLeft("UnderRoadTextureSetting.PNG", 65);
+            outer.Text(options.Output());
+
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.Text("After the material is set, you can tick the Under Road flag. On the main RoadNetwork pre-fab or when you override the Cross Section.");
+            right.ImageLeft("UnderRoadSetting.PNG", 65);
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("Two new textures has been added to use as the under side of the road.");
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("BunkerConcrete_albedo.PNG", 45);
+            right.ImageLeft("DamagedConcrete_albedo.PNG", 45);
+
+            outer.Text(options.Output());
+
             outer.EndTextCenter();
 
             return outer.Output();
@@ -497,9 +603,14 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("Crossroads and Junctions can now have smooth rounded inner corners.");
             outer.NewLine();
             outer.NewLine();
+            outer.PageLink("Full release notes for 1.4 can be", "found Here", "RoadBuilderCurves.html");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("CrossRoadCorners.PNG", 65);
+
             outer.EndTextCenter();
 
             return outer.Output();

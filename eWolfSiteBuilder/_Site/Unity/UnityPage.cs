@@ -83,7 +83,7 @@ namespace eWolfSiteBuilder._Site.Unity
 
             outer.Text(@"<h3>Builders</h3>");
             outer.NewLine();
-            outer.Text(@"Builders let you create worlds or scenes with extra tools to make things easy and fast then doing it by hand.");
+            outer.Text(@"Builders let you create worlds or scenes with extra tools to make things easy");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();

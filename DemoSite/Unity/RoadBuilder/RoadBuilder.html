@@ -91,7 +91,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Override road materials</h2>
 </div>
-<div class='text-center'></br></br></br></div></div>
+<div class='text-center'></br>With the release of Version 1.2 you can now set the material frequency per node.</br><img class='img-fluid rounded mx-auto d-block' src='images//RoadDifferentMaterials.PNG' width=65%px ></br>Each Road Network Node now has the option to <strong>Override Material Details</strong></br></br>Just Click on the Add <strong>Override Material Details</strong> to override the settings.</br>And the new script will be add to the object, that will let you set your Material Details.</br>If you need to remove the Override Material Details just click on the <strong>Remove Material Details</strong> Button</br></br></br></br><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/Oiu7kI0Y6ag?rel=0' frameborder='0' allowfullscreen></iframe></div></br><strong>Please note:</strong> Override material will not work well for Junction and cross roads. This is due to the way Junctions are created as a mesh.(Future releases may fix this)</div></div>
 </div>
 </div>
 <br />
@@ -101,7 +101,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Rounded inner corners</h2>
 </div>
-<div class='text-center'></br></br></br></div></div>
+<div class='text-center'></br>Crossroads and Junctions can now have smooth rounded inner corners.</br></br>Full release notes for 1.4 can be <a href='RoadBuilderCurves.html'>found Here</a></br></br><img class='img-fluid rounded mx-auto d-block' src='images//CrossRoadCorners.PNG' width=65%px ></div></div>
 </div>
 </div>
 <br />
@@ -111,7 +111,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Baked Light map support</h2>
 </div>
-<div class='text-center'></br></br></br></div></div>
+<div class='text-center'></br><div class='row'><div class='col-md-6'>With the release of Version 1.5 you can now use the roads with Baked lighting. Just enable the new Baked Lighting option and adjust the unwrapping options.</br></br>The Unwrapping options are the current default import options on normal mesh import.</div><div class='col-md-6'><div class='text-left'><img src='images//BakedLightingOptions.PNG' width=65%px ></div></div></div></br></br><img class='img-fluid rounded mx-auto d-block' src='images//BakedLightsRoad.PNG' width=55%px ></br></div></div>
 </div>
 </div>
 <br />
@@ -121,7 +121,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Modify terrain</h2>
 </div>
-<div class='text-center'></br></br></br></div></div>
+<div class='text-center'></br>With the release of Version 2.0 you can now modify the terrain to match the road.</br></br>More info can be foud here.</br></br><img class='img-fluid rounded mx-auto d-block' src='images//TerrainExampleBasic.PNG' width=45%px ></div></div>
 </div>
 </div>
 <br />
@@ -131,7 +131,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Closer nodes and 5 or 6 road junctions</h2>
 </div>
-<div class='text-center'></br></br></br></div></div>
+<div class='text-center'></br>Updated the mesh generation for junctions and crossroads allowing closer nodes to be much closer.</br></br><img class='img-fluid rounded mx-auto d-block' src='images//CloserNodes.PNG' width=55%px ></br></br>Junctions can now have 5 or 6 connecting roads</br></br><img class='img-fluid rounded mx-auto d-block' src='images//FiveRoadJunction.PNG' width=55%px ></br></div></div>
 </div>
 </div>
 <br />
@@ -141,7 +141,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Faster mesh creation and AutoBuild</h2>
 </div>
-<div class='text-center'></br></br></br></div></div>
+<div class='text-center'></br>The create mesh will now only re-create the mesh if the node has change.</br></br>This can be seen by the color of the road debug lines, Yellow it will not rebuild the mesh, Cyan it will rebuild the mesh.</br><div class='row'><div class='col-md-6'></br><strong>Auto Build: </strong>option, once enabled it will automatically build the roads when the node are moved.<br /></br>Note the AutoBuild option can only work when</br><strong>Mesh Per Node: </strong>Is ticked<br /><strong>Drop To Ground: </strong>Is not ticked<br /></br>You can see the auto build in action below.</div><div class='col-md-6'><div class='text-left'><img src='images//AutoBuild.PNG' width=65%px ></div></div></div></br></br><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/KQprfE_wwc4?rel=0' frameborder='0' allowfullscreen></iframe></div></div></div>
 </div>
 </div>
 <br />
@@ -151,7 +151,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Render underside of the road</h2>
 </div>
-<div class='text-center'></br></br></br></div></div>
+<div class='text-center'></br>Added an option to allow you too render the under side of the road.</br></br><img class='img-fluid rounded mx-auto d-block' src='images//ShowUnderRoad.PNG' width=65%px ></br><div class='row'><div class='col-md-6'>To render the underside of the road you need to assign a material for it. Just add a another material to the material list. And set the frequency to Under road Texture</div><div class='col-md-6'><div class='text-left'><img src='images//UnderRoadTextureSetting.PNG' width=65%px ></div></div></div></br><div class='row'><div class='col-md-6'>After the material is set, you can tick the Under Road flag. On the main RoadNetwork pre-fab or when you override the Cross Section.</div><div class='col-md-6'><div class='text-left'><img src='images//UnderRoadSetting.PNG' width=65%px ></div></div></div></br></br>Two new textures has been added to use as the under side of the road.<div class='row'><div class='col-md-6'><div class='text-right'><img src='images//BunkerConcrete_albedo.PNG' width=45%px ></div></div><div class='col-md-6'><div class='text-left'><img src='images//DamagedConcrete_albedo.PNG' width=45%px ></div></div></div></div></div>
 </div>
 </div>
 <br />
