@@ -118,9 +118,35 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"");
+            outer.Text("From user feedback, I've now added rounded inner corners to the Junctions and CrossRoads");
+            outer.NewLine();
+            outer.Text("Road Builder now has 4 different UV mapping options for Junctions and cross roads");
+            outer.NewLine();
+            outer.NewLine();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            left.Text("Curve A");
+            left.ImageRight("InnerCornerA.PNG", 65);
+            right.Text("Curve B");
+            right.ImageLeft("InnerCornerB.PNG", 65);
+            outer.Text(options.Output());
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            left.Text("Curve C");
+            left.ImageRight("InnerCornerC.PNG", 65);
+            right.Text("Extended");
+            right.ImageLeft("ExtendedUVs.PNG", 65);
+            outer.Text(options.Output());
 
             outer.NewLine();
+            outer.Text("Letting crossroads and junctions have better looking textures.");
+            outer.ImageCenter("CrossRoadCorners.PNG", 45);
             outer.EndTextCenter();
 
             return outer.Output();
@@ -154,8 +180,43 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
             outer.NewLine();
+            outer.TextBoldText("A new folder at ", @"Assets\eWolfRoadBuilder\Prefabs\Extended", " has been added with all the new prefabs for the extended UVs sets.");
+            outer.NewLine();
+            outer.Text("This is to make sure nothing breaks for legacy users.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Each prefab has been names in 3 parts separated by the an underscore.");
+            outer.NewLine();
+            outer.InspectorDetails("RoadNetwork", "is the type of prefab - the main network systems");
+            outer.InspectorDetails("Main", "The type of road, Clean, main, main with damage");
+            outer.InspectorDetails("CurveA", "This is the type of curve it's using - CurveA, CurveB, CurveC or Extended");
+            outer.NewLine();
+            outer.NewLine();
 
-            outer.Text(@"");
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            left.Text("The default detail level on a Crossroad or Junction can be changed. Just change the section value and press on Create Mesh to see the results.");
+            right.ImageLeft("SectionSetting.PNG", 65);
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            left.Text("Here show two different setting of 5");
+            left.ImageRight("CornerSetting_5.PNG", 65);
+            right.Text("and 20");
+            right.ImageLeft("CornerSetting_20.PNG", 65);
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Remember you can select more that on node to change some settings Show below are two nodes selected and");
+            outer.NewLine();
+            outer.ImageCenter("MultiEdit.PNG", 65);
 
             outer.NewLine();
             outer.EndTextCenter();
