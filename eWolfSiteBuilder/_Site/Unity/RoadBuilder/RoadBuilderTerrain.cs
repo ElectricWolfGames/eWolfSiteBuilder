@@ -40,7 +40,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             List<HTMLIndexedItems> items = new List<HTMLIndexedItems>();
 
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
-            items.Add(new HTMLIndexedItems("Terrain modifier", CreateTerrainModifier));
+            items.Add(new HTMLIndexedItems("Terrain Modifier", CreateTerrainModifier));
             items.Add(new HTMLIndexedItems("Terrain Actions", CreateTerrainActions));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
 
@@ -96,9 +96,34 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"");
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            left.NewLine();
+            left.Text("When you have your roads system just as you need it");
+            left.NewLine();
+            left.TextBoldText("Click on the ", "Modify Terrain to match road", " To updated the terrain.");
+            left.NewLine();
+            left.TextBoldText("If you are not happy with the terrain you can press on ", "Restore previous terrain", " to undo the modification.");
+            right.ImageLeft("TerrainModifierActions.PNG", 65);
 
+            outer.Text(options.Output());
             outer.NewLine();
+            outer.NewLine();
+            outer.Text("Terrain Options");
+            outer.NewLine();
+            outer.InspectorDetails("Plateau", "The amount to level off on both side of the road");
+            outer.NewLine();
+            outer.InspectorDetails("Slope", "The amount to smooth out to match the existing terrain");
+            outer.NewLine();
+            outer.InspectorDetails("Flatten Terrain", "Flatten the terrain before modifying");
+            outer.NewLine();
+            outer.InspectorDetails("Details-Off Set", "Off set the height of the terrain from the road (reduces the chances of the terrain clipping the road)");
+            outer.NewLine();
+            outer.InspectorDetails("Details-Divider", "The higher the details on the terrain, the higher this number will need to be.");
+            outer.NewLine();
+
             outer.EndTextCenter();
 
             return outer.Output();
@@ -110,7 +135,78 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"");
+            outer.Text("Using terrain modifier on any road");
+            outer.NewLine();
+            outer.YouTubeLinkBig("TZxMWKg8Qgg");
+            outer.NewLine();
+            outer.NewLine();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            left.ImageRight("AddTerrainModifier.PNG", 65);
+            right.Text("Select the main RoadNetwork_Main_pf (the root object of the road system)");
+            right.NewLine();
+            right.Text("And click on the 'Add Terrain modifier' button to add the terrain modifier");
+
+            outer.Text(options.Output());
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            right.ImageLeft("TerrainModifierDefault.PNG", 65);
+            left.NewLine();
+            left.NewLine();
+            left.Text("Now assign our terrain game object to the Terrain field in the new terrain modifier");
+            left.NewLine();
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            right.ImageLeft("ShowTerrainPlateauA.PNG", 65);
+            left.NewLine();
+            left.NewLine();
+            left.Text("Now you can press the 'Modify Terrain to match road' button to modify the terrain.");
+            left.NewLine();
+            left.TextBoldText("The ", "Plateau", " is set to 8 in this example");
+            left.NewLine();
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            right.ImageLeft("ShowTerrainPlateauB.PNG", 65);
+            left.NewLine();
+            left.NewLine();
+            left.TextBoldText("The ", "Plateau", " is set to 0 in this example.");
+            left.NewLine();
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            right.ImageLeft("ShowTerrainPlateauC.PNG", 65);
+            left.NewLine();
+            left.NewLine();
+            left.TextBoldText("The ", "Plateau", " is set to 8");
+            left.NewLine();
+            left.TextBoldText("The ", "Slope", " is set to 16");
+            left.NewLine();
+
+            outer.Text(options.Output());
+            outer.NewLine();
 
             outer.NewLine();
             outer.EndTextCenter();

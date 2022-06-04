@@ -13,7 +13,7 @@ namespace eWolfSiteBuilder.SiteDetails.Helpers
             // DONE: Contact@electricWolf.co.uk and Wolf@electricwolf.co.uk are both working (2022/06/04)
             HTMLBuilder options = new HTMLBuilder();
             options.NewLine();
-            options.TextBoldText("If you need any more help please email me at ", "Contact@electricWolf.co.uk", "");
+            options.TextBoldText("If you need any more help please email us at ", "Contact@electricWolf.co.uk", "");
             options.NewLine();
             options.NewLine();
             return options.Output();
