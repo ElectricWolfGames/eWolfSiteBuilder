@@ -43,7 +43,6 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             items.Add(new HTMLIndexedItems("Prefabs selection", CreatePrefabsSelection));
             items.Add(new HTMLIndexedItems("Settings", CreateSettings));
             items.Add(new HTMLIndexedItems("Converting Existing Roads", CreateConvertingExistingRoads));
-            items.Add(new HTMLIndexedItems("Dynamic road widths", CreateDynamicRoadWidths));
             items.Add(new HTMLIndexedItems("Creating your own textures", CreateCreatingYourOwnTextures));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
 
@@ -90,7 +89,25 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"");
+            outer.Text("If you all ready have a roads system and need to update it to use the new curves, just decide on the curve you would like.");
+            outer.NewLine();
+            outer.TextBoldText("Then select the main ", "RoadNetwork_Main_pf", " (the root object of the road system),");
+            outer.NewLine();
+            outer.Text("and change the all the materials sets to use the curve materials (All names as CurveA, CurveB, CurveC and Extended),");
+            outer.NewLine();
+            outer.Text("Then update the UV set drop down list to match for choice of curve. Then just create the road mesh again.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Select RoadNetwork_*_pf");
+            outer.ImageCenter("Convert_01.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Change all the materials to use the curve sets");
+            outer.ImageCenter("Convert_02.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Change the UV set to use the new curve code");
+            outer.ImageCenter("Convert_03.PNG", 65);
 
             outer.NewLine();
             outer.EndTextCenter();
@@ -104,7 +121,20 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"");
+            outer.TextBoldText("In the package you will find 4 template textures. at", @" Assets\eWolfRoadBuilder\Textures\TemplateExtended ", "");
+            outer.NewLine();
+            outer.Text("Each Texture is a template for how the road will look.");
+            outer.NewLine();
+            outer.Text("One for each type CurveA, CurveB, CurveC or Extended.");
+            outer.NewLine();
+            outer.ImageCenter("TemplateRoadACurveA.PNG", 45);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("The template is ideal for when you need to create a new look for your road.");
+            outer.NewLine();
+            outer.Text("You can also take any of the over textures and just modify them as you need.");
+            outer.NewLine();
+            outer.ImageCenter("RoadMainCurveA_Diffused.PNG", 45);
 
             outer.NewLine();
             outer.EndTextCenter();
@@ -193,6 +223,17 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.NewLine();
             outer.NewLine();
 
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string CreateSettings(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
             HTMLBuilder options = new HTMLBuilder();
             HTMLSection left = new HTMLSection("col-md-6");
             HTMLSection right = new HTMLSection("col-md-6");
@@ -214,23 +255,11 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.Text(options.Output());
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Remember you can select more that on node to change some settings Show below are two nodes selected and");
+            outer.Text("Remember you can select more that on node to change some settings. Below is two nodes selected.");
             outer.NewLine();
             outer.ImageCenter("MultiEdit.PNG", 65);
 
             outer.NewLine();
-            outer.EndTextCenter();
-
-            return outer.Output();
-        }
-
-        private string CreateSettings(string arg)
-        {
-            HTMLBuilder outer = new HTMLBuilder();
-            outer.StartTextCenter();
-            outer.NewLine();
-
-            outer.Text(@"");
 
             outer.NewLine();
             outer.EndTextCenter();

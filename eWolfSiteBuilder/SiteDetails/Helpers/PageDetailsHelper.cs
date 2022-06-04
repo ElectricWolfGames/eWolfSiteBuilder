@@ -10,10 +10,10 @@ namespace eWolfSiteBuilder.SiteDetails.Helpers
     {
         public static string CreateSupport(string data)
         {
-            // TODO: Do we use Contact@electricWolf.co.uk or Wolf@electricwolf.co.uk
+            // DONE: Contact@electricWolf.co.uk and Wolf@electricwolf.co.uk are both working (2022/06/04)
             HTMLBuilder options = new HTMLBuilder();
             options.NewLine();
-            options.TextBoldText("If you need any more help please email me at ", "Wolf@electricwolf.co.uk", "");
+            options.TextBoldText("If you need any more help please email me at ", "Contact@electricWolf.co.uk", "");
             options.NewLine();
             options.NewLine();
             return options.Output();

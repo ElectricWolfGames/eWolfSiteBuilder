@@ -25,7 +25,7 @@
 <div class='row'>
 <div class='col-md-12'>
 You can find the full documentation for Road Builder <a href='RoadBuilder.html'>here</a></br>
-<div class='row'><div class='col-md-2'></div><div class='col-md-8'><div class='text-center'><br /><a href='#Download'>Download</a></br><a href='#CurveStyles'>Curve Styles</a></br><a href='#Prefabsselection'>Prefabs selection</a></br><a href='#Settings'>Settings</a></br><a href='#ConvertingExistingRoads'>Converting Existing Roads</a></br><a href='#Dynamicroadwidths'>Dynamic road widths</a></br><a href='#Creatingyourowntextures'>Creating your own textures</a></br><a href='#Support'>Support</a></br></div></br></div><div class='col-md-2'></div></div>
+<div class='row'><div class='col-md-2'></div><div class='col-md-8'><div class='text-center'><br /><a href='#Download'>Download</a></br><a href='#CurveStyles'>Curve Styles</a></br><a href='#Prefabsselection'>Prefabs selection</a></br><a href='#Settings'>Settings</a></br><a href='#ConvertingExistingRoads'>Converting Existing Roads</a></br><a href='#Creatingyourowntextures'>Creating your own textures</a></br><a href='#Support'>Support</a></br></div></br></div><div class='col-md-2'></div></div>
 <a id='Download'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
@@ -52,7 +52,7 @@ You can find the full documentation for Road Builder <a href='RoadBuilder.html'>
 <div class='section-title'>
 <div class='text-left'><h2>Prefabs selection</h2>
 </div>
-<div class='text-center'></br>A new folder at <strong>Assets\eWolfRoadBuilder\Prefabs\Extended</strong> has been added with all the new prefabs for the extended UVs sets.</br>This is to make sure nothing breaks for legacy users.</br></br>Each prefab has been names in 3 parts separated by the an underscore.</br><strong>RoadNetwork: </strong>is the type of prefab - the main network systems<br /><strong>Main: </strong>The type of road, Clean, main, main with damage<br /><strong>CurveA: </strong>This is the type of curve it's using - CurveA, CurveB, CurveC or Extended<br /></br></br><div class='row'><div class='col-md-6'>The default detail level on a Crossroad or Junction can be changed. Just change the section value and press on Create Mesh to see the results.</div><div class='col-md-6'><div class='text-left'><img src='images//SectionSetting.PNG' width=65%px ></div></div></div></br></br><div class='row'><div class='col-md-6'>Here show two different setting of 5<div class='text-right'><img src='images//CornerSetting_5.PNG' width=65%px ></div></div><div class='col-md-6'>Here show two different setting of 20<div class='text-left'><img src='images//CornerSetting_20.PNG' width=65%px ></div></div></div></br></br>Remember you can select more that on node to change some settings Show below are two nodes selected and</br><img class='img-fluid rounded mx-auto d-block' src='images//MultiEdit.PNG' width=65%px ></br></div></div>
+<div class='text-center'></br>A new folder at <strong>Assets\eWolfRoadBuilder\Prefabs\Extended</strong> has been added with all the new prefabs for the extended UVs sets.</br>This is to make sure nothing breaks for legacy users.</br></br>Each prefab has been names in 3 parts separated by the an underscore.</br><strong>RoadNetwork: </strong>is the type of prefab - the main network systems<br /><strong>Main: </strong>The type of road, Clean, main, main with damage<br /><strong>CurveA: </strong>This is the type of curve it's using - CurveA, CurveB, CurveC or Extended<br /></br></br></div></div>
 </div>
 </div>
 <br />
@@ -62,7 +62,7 @@ You can find the full documentation for Road Builder <a href='RoadBuilder.html'>
 <div class='section-title'>
 <div class='text-left'><h2>Settings</h2>
 </div>
-<div class='text-center'></br></br></div></div>
+<div class='text-center'></br><div class='row'><div class='col-md-6'>The default detail level on a Crossroad or Junction can be changed. Just change the section value and press on Create Mesh to see the results.</div><div class='col-md-6'><div class='text-left'><img src='images//SectionSetting.PNG' width=65%px ></div></div></div></br></br><div class='row'><div class='col-md-6'>Here show two different setting of 5<div class='text-right'><img src='images//CornerSetting_5.PNG' width=65%px ></div></div><div class='col-md-6'>and 20<div class='text-left'><img src='images//CornerSetting_20.PNG' width=65%px ></div></div></div></br></br>Remember you can select more that on node to change some settings. Below is two nodes selected.</br><img class='img-fluid rounded mx-auto d-block' src='images//MultiEdit.PNG' width=65%px ></br></br></div></div>
 </div>
 </div>
 <br />
@@ -72,17 +72,7 @@ You can find the full documentation for Road Builder <a href='RoadBuilder.html'>
 <div class='section-title'>
 <div class='text-left'><h2>Converting Existing Roads</h2>
 </div>
-<div class='text-center'></br></br></div></div>
-</div>
-</div>
-<br />
-<a id='Dynamicroadwidths'></a>
-<div class ='row bg-light'>
-<div class='col-md-12'>
-<div class='section-title'>
-<div class='text-left'><h2>Dynamic road widths</h2>
-</div>
-<div class='text-center'></br></br></div></div>
+<div class='text-center'></br>If you all ready have a roads system and need to update it to use the new curves, just decide on the curve you would like.</br>Then select the main <strong>RoadNetwork_Main_pf</strong> (the root object of the road system),</br>and change the all the materials sets to use the curve materials (All names as CurveA, CurveB, CurveC and Extended),</br>Then update the UV set drop down list to match for choice of curve. Then just create the road mesh again.</br></br>Select RoadNetwork_*_pf<img class='img-fluid rounded mx-auto d-block' src='images//Convert_01.PNG' width=65%px ></br></br>Change all the materials to use the curve sets<img class='img-fluid rounded mx-auto d-block' src='images//Convert_02.PNG' width=65%px ></br></br>Change the UV set to use the new curve code<img class='img-fluid rounded mx-auto d-block' src='images//Convert_03.PNG' width=65%px ></br></div></div>
 </div>
 </div>
 <br />
@@ -92,7 +82,7 @@ You can find the full documentation for Road Builder <a href='RoadBuilder.html'>
 <div class='section-title'>
 <div class='text-left'><h2>Creating your own textures</h2>
 </div>
-<div class='text-center'></br></br></div></div>
+<div class='text-center'></br>In the package you will find 4 template textures. at<strong> Assets\eWolfRoadBuilder\Textures\TemplateExtended </strong></br>Each Texture is a template for how the road will look.</br>One for each type CurveA, CurveB, CurveC or Extended.</br><img class='img-fluid rounded mx-auto d-block' src='images//TemplateRoadACurveA.PNG' width=45%px ></br></br>The template is ideal for when you need to create a new look for your road.</br>You can also take any of the over textures and just modify them as you need.</br><img class='img-fluid rounded mx-auto d-block' src='images//RoadMainCurveA_Diffused.PNG' width=45%px ></br></div></div>
 </div>
 </div>
 <br />
@@ -102,7 +92,7 @@ You can find the full documentation for Road Builder <a href='RoadBuilder.html'>
 <div class='section-title'>
 <div class='text-left'><h2>Support</h2>
 </div>
-</br>If you need any more help please email me at <strong>Wolf@electricwolf.co.uk</strong></br></br></div>
+</br>If you need any more help please email me at <strong>Contact@electricWolf.co.uk</strong></br></br></div>
 </div>
 </div>
 <br />
