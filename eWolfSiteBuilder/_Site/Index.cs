@@ -31,7 +31,7 @@ namespace eWolfSiteBuilder._Site
             builder.Text("<div class='section-title'>");
             builder.Text("  <h2>Unity3D Tools</h2>");
 
-            builder.Text("  <h3>Check our <span><a href='Unity/index.html'></i>Unity3D projects</a></span></h3>");
+            builder.Text("  <h3>Check our <span><a href='Unity/Index.html'></i>Unity3D projects</a></span></h3>");
             builder.Text("  <p>All packages are available on the Assert store.</p>");
             builder.Text("</div>");
 

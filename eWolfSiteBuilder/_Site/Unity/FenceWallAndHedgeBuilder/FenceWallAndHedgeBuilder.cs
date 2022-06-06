@@ -23,7 +23,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
         public override void CreatePage()
         {
             WebPage.AddHeader(this);
-            WebPage.AddNavigation(NavigationTypes.Main);
+            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
             WebPage.StartDiv("<div class='container mt-4'>");

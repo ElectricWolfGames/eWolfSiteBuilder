@@ -24,7 +24,7 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
         public override void CreatePage()
         {
             WebPage.AddHeader(this);
-            WebPage.AddNavigation(NavigationTypes.Main);
+            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
             WebPage.StartDiv("<div class='container mt-4'>");
