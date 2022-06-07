@@ -49,7 +49,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             items.Add(new HTMLIndexedItems("Fix UV projection and Extra thin wall types", CreateFixUVProjectionAndExtraThinWallTypes));
             items.Add(new HTMLIndexedItems("Update Corner joins on the walls", CreateUpdateCornerJoinsOnTheWalls));
             items.Add(new HTMLIndexedItems("Different Materials pre side", CreateDifferentMaterialsPreSide));
-            items.Add(new HTMLIndexedItems("Updated UV for the walls", CreateUpdatedUVForTheWalls));
+            //items.Add(new HTMLIndexedItems("Updated UV for the walls", CreateUpdatedUVForTheWalls));
             items.Add(new HTMLIndexedItems("Added Castle walls and Mounds", CreateAddedCastleWallsAndMounds));
             items.Add(new HTMLIndexedItems("Example Walls", CreateExampleWalls));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
@@ -107,9 +107,15 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("V3.3 (September 2018) Added Two different castle wall ramparts.");
             outer.NewLine();
             outer.NewLine();
+            outer.ImageCenter("CastleWalls.PNG", 45);
+            outer.NewLine();
+            outer.Text("And some ground effects like mounds");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("Mounds.PNG", 45);
             outer.EndTextCenter();
 
             return outer.Output();
@@ -200,9 +206,61 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("From V3.1 (April 2018) Added some new textures to the wall options.");
             outer.NewLine();
             outer.NewLine();
+
+            var options = new HTMLBuilder();
+            HTMLSection a = new HTMLSection("col-md-4");
+            HTMLSection b = new HTMLSection("col-md-4");
+            HTMLSection c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("PlasterWall_v1.jpg", 65);
+            b.ImageCenter("PlasterWall_v2.jpg", 65);
+            c.ImageCenter("PlasterWall_v3.jpg", 65);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            a = new HTMLSection("col-md-4");
+            b = new HTMLSection("col-md-4");
+            c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("PlasterWall_v4.jpg", 65);
+            b.ImageCenter("RedBrick_v2.jpg", 65);
+            c.ImageCenter("RedBrick_v3.jpg", 65);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            a = new HTMLSection("col-md-4");
+            b = new HTMLSection("col-md-4");
+            c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("RedBrick_v4.jpg", 65);
+            b.ImageCenter("ReinforcedConcrete.jpg", 65);
+            c.ImageCenter("StoneWall_v3.jpg", 65);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            outer.Text("Added an option to allow you to set different material/textures for each face of the wall.");
+            outer.NewLine();
+            outer.Text("Just tick the 'Materials Per Side' options and select the material from the drop-down lists.");
+            outer.NewLine();
+            outer.ImageCenter("FenceBuilder MaterialPreFaceOptions.PNG", 35);
+            outer.NewLine();
+            outer.Text("The original material is still used as the outside of the wall.");
+            outer.NewLine();
+            outer.ImageCenter("FenceBuilder MaterialPreFace.PNG", 65);
+
             outer.EndTextCenter();
 
             return outer.Output();
@@ -227,9 +285,64 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            var options = new HTMLBuilder();
+            HTMLSection a = new HTMLSection("col-md-4");
+            HTMLSection b = new HTMLSection("col-md-4");
+            HTMLSection c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("BrickWall_Brick.PNG", 85);
+            b.ImageCenter("BrickWall_Stone.PNG", 85);
+            c.ImageCenter("Hedge.PNG", 85);
+
+            outer.Text(options.Output());
             outer.NewLine();
             outer.NewLine();
+
+            options = new HTMLBuilder();
+            a = new HTMLSection("col-md-4");
+            b = new HTMLSection("col-md-4");
+            c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("KneeHeighFence.PNG", 85);
+            b.ImageCenter("FarmFence.PNG", 85);
+            c.ImageCenter("MetalRailingA.PNG", 85);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            a = new HTMLSection("col-md-4");
+            b = new HTMLSection("col-md-4");
+            c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("PicketFenceA.PNG", 85);
+            b.ImageCenter("PicketFenceB.PNG", 85);
+            c.ImageCenter("PicketFenceC.PNG", 85);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            a = new HTMLSection("col-md-4");
+            b = new HTMLSection("col-md-4");
+            c = new HTMLSection("col-md-4");
+            options.SetThreeSections(a, b, c);
+
+            a.ImageCenter("WoodenPannelA.PNG", 85);
+            b.ImageCenter("WoodenPannelB.PNG", 85);
+            c.ImageCenter("WoodenPannelC.PNG", 85);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.ImageCenter("BrickWallTowers.PNG", 45);
+
             outer.EndTextCenter();
 
             return outer.Output();
@@ -241,9 +354,37 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("Temporary Fences have been added.");
+            outer.NewLine();
+            outer.Text("Each temporary fence has extra feet under the fence to look like it's only a temporary structure");
             outer.NewLine();
             outer.NewLine();
+            outer.Text("4 new version of the temporary fence are available");
+            outer.NewLine();
+            outer.Bold("TemporaryWireFence");
+            outer.NewLine();
+            outer.Bold("TemporaryWireFenceB");
+            outer.NewLine();
+            outer.Bold("TemporaryBluePannelFence");
+            outer.NewLine();
+            outer.Bold("TemporaryWhitePannelFence");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("TemporaryFences.PNG", 65);
+            outer.NewLine();
+            outer.Text("Temporary Fences in game..");
+            outer.NewLine();
+            outer.ImageCenter("FenceBuilder_TemporaryFenceInGame.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("New Thin walls The thin wall are just one brick wide");
+            outer.NewLine();
+            outer.ImageCenter("FenceBuilder_ThinBrickWalls.PNG", 65);
+            outer.NewLine();
+            outer.Text("Improved UV mapping for walls and Hedges");
+            outer.NewLine();
+            outer.YouTubeLinkBig("RpnxKxzuEKU");
+
             outer.EndTextCenter();
 
             return outer.Output();
@@ -370,9 +511,15 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text("");
+            outer.Text("Connected corners are shaped to make each section of the wall join.");
             outer.NewLine();
             outer.NewLine();
+            outer.ImageCenter("Fence Builder-Corner Walls.PNG", 35);
+            outer.NewLine();
+            outer.Text("Work even when walls have different thinness");
+            outer.NewLine();
+            outer.ImageCenter("Fence Builder-Corner Walls Thin.PNG", 35);
+
             outer.EndTextCenter();
 
             return outer.Output();
