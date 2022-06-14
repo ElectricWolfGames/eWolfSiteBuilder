@@ -177,13 +177,29 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.Text(options.Output());
 
             outer.NewLine();
-
-            outer.TextBoldText("", "1. Place all objects under right parents", " Will place all the rooms in to level folders, This is to just make things easyer to find if you have a map with different levels");
             outer.NewLine();
-            outer.ImageCenter("RoomsLevel00Folder.PNG", 55);
+
+            outer.TextBoldText("", "1. Place all objects under right parents", " Will place all the rooms in to level folders");
+            outer.NewLine();
+            outer.Text("This is to just make things easyer to find if you have a map with different levels");
+            outer.NewLine();
+            outer.ImageCenter("RoomsLevel00Folder.PNG", 45);
             outer.NewLine();
             outer.NewLine();
             outer.TextBoldText("", "2. Randomize All Fillers", " Will add extra random details to some rooms (see more later)");
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBoldText("", "3. Add Missing Doors & Effects", " Will add the doors to the map");
+            outer.NewLine();
+            outer.NewLine();
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("AddedDoor.PNG", 65);
+            right.ImageLeft("AddedDoorList.PNG.", 75);
+            outer.Text(options.Output());
 
             outer.EndTextCenter();
 
