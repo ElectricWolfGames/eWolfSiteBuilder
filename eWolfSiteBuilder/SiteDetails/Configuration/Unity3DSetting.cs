@@ -9,6 +9,7 @@
         public const string GardenFlowers = "https://assetstore.unity.com/packages/3d/vegetation/flowers/garden-flowers-84636";
         public const string PipeBuilder = "https://assetstore.unity.com/packages/tools/modeling/pipe-builder-139875";
         public const string RoadBuilder = "https://assetstore.unity.com/packages/tools/modeling/road-builder-73065";
+        public const string SciFi_Rooms_Pack1_eWolf = "";
         public const string ScifiObjectsPack1 = "https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-objects-pack-1-170478";
         public const string ScifiObjectsPack2 = "https://assetstore.unity.com/packages/3d/environments/sci-fi/sci-fi-objects-pack-2-ewolf-208030";
         public const string SkyboxesNebulas = "https://assetstore.unity.com/packages/2d/textures-materials/sky/skyboxes-nebulas-19095";

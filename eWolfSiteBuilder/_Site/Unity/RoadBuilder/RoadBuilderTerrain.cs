@@ -85,7 +85,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.JumbotronImage(DisplayTitle,
                     "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.",
-                    "RoadBuilderLogo.PNG", 35);
+                    "RoadBuilderLogo.png", 35);
             return outer.Output();
         }
 
@@ -105,7 +105,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             left.TextBoldText("Click on the ", "Modify Terrain to match road", " To updated the terrain.");
             left.NewLine();
             left.TextBoldText("If you are not happy with the terrain you can press on ", "Restore previous terrain", " to undo the modification.");
-            right.ImageLeft("TerrainModifierActions.PNG", 65);
+            right.ImageLeft("TerrainModifierActions.png", 65);
 
             outer.Text(options.Output());
             outer.NewLine();
@@ -144,7 +144,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLSection left = new HTMLSection("col-md-6");
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
-            left.ImageRight("AddTerrainModifier.PNG", 65);
+            left.ImageRight("AddTerrainModifier.png", 65);
             right.Text("Select the main RoadNetwork_Main_pf (the root object of the road system)");
             right.NewLine();
             right.Text("And click on the 'Add Terrain modifier' button to add the terrain modifier");
@@ -155,7 +155,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             left = new HTMLSection("col-md-6");
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
-            right.ImageLeft("TerrainModifierDefault.PNG", 65);
+            right.ImageLeft("TerrainModifierDefault.png", 65);
             left.NewLine();
             left.NewLine();
             left.Text("Now assign our terrain game object to the Terrain field in the new terrain modifier");
@@ -168,7 +168,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             left = new HTMLSection("col-md-6");
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
-            right.ImageLeft("ShowTerrainPlateauA.PNG", 65);
+            right.ImageLeft("ShowTerrainPlateauA.png", 65);
             left.NewLine();
             left.NewLine();
             left.Text("Now you can press the 'Modify Terrain to match road' button to modify the terrain.");
@@ -183,7 +183,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             left = new HTMLSection("col-md-6");
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
-            right.ImageLeft("ShowTerrainPlateauB.PNG", 65);
+            right.ImageLeft("ShowTerrainPlateauB.png", 65);
             left.NewLine();
             left.NewLine();
             left.TextBoldText("The ", "Plateau", " is set to 0 in this example.");
@@ -196,7 +196,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             left = new HTMLSection("col-md-6");
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
-            right.ImageLeft("ShowTerrainPlateauC.PNG", 65);
+            right.ImageLeft("ShowTerrainPlateauC.png", 65);
             left.NewLine();
             left.NewLine();
             left.TextBoldText("The ", "Plateau", " is set to 8");

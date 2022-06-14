@@ -69,7 +69,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Models,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\DynamicVDU_Logo.png",
+                ImagePath = @$"{WebPage.HtmlPath}\images\DynamicVDU_Logo.png",
                 Description = "Dynamic VDU is a collection of animated dynamic monitors, That will show a range of alertness form no alert - all is green to full alert - were most is red"
             };
 
@@ -112,10 +112,10 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
         {
             HTMLBuilder options = new HTMLBuilder();
 
-            options.ImageCenter("Effect_Part1.PNG", 45);
+            options.ImageCenter("Effect_Part1.png", 45);
 
             options.NewLine();
-            options.ImageCenter("Effect_Part2.PNG", 45);
+            options.ImageCenter("Effect_Part2.png", 45);
 
             options.NewLine();
 
@@ -133,14 +133,14 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             options.Text(@"Any number of effects can be placed on to one texture.");
             options.NewLine();
             options.NewLine();
-            options.Image("CombinedEffects.PNG", 45);
+            options.Image("CombinedEffects.png", 45);
 
             options.NewLine();
             options.NewLine();
             options.Text(@"The Colours for the effects are also custom definable");
             options.NewLine();
             options.NewLine();
-            options.Image("Inspector.PNG", 35);
+            options.Image("Inspector.png", 35);
 
             options.NewLine();
             options.NewLine();
@@ -197,7 +197,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            right.ImageLeft("InspectorSprite.PNG", 75);
+            right.ImageLeft("InspectorSprite.png", 75);
             left.Text(@"The Sprite render need to use the Sprite that matches the Monitor Sprite Textures Setting");
             left.NewLine();
             left.NewLine();

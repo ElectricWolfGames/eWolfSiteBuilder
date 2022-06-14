@@ -77,7 +77,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Builders,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\FenceWallAndHedgeBuilder.gif",
+                ImagePath = @$"{WebPage.HtmlPath}\images\FenceWallAndHedgeBuilder.gif",
                 Description = "Fence Wall And Hedge Builder Lets you quickly place walls in your game, using a user-friendly UI from within the scene editor or the inspector, Select from a list defined wall types and then select the style of that type"
             };
 
@@ -110,12 +110,12 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.Text("V3.3 (September 2018) Added Two different castle wall ramparts.");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("CastleWalls.PNG", 45);
+            outer.ImageCenter("CastleWalls.png", 45);
             outer.NewLine();
             outer.Text("And some ground effects like mounds");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("Mounds.PNG", 45);
+            outer.ImageCenter("Mounds.png", 45);
             outer.EndTextCenter();
 
             return outer.Output();
@@ -132,7 +132,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("MaterialLists.PNG", 45);
+            left.ImageRight("MaterialLists.png", 45);
             right.NewLine();
             right.NewLine();
             right.Text("When you need to add or replace the materials for the walls.");
@@ -167,7 +167,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            right.ImageLeft("BakedLighting.PNG", 45);
+            right.ImageLeft("BakedLighting.png", 45);
 
             left.NewLine();
             left.TextBoldText("If you are using baked light in your project you will also need enable by ticking the Baked Lighting option on the ", "WallBuilder_pf", " object.");
@@ -193,7 +193,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.TextBoldText("just change the Building Units on the ", "Wall_Builder_pf", " object");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("ShowScale.PNG", 65);
+            outer.ImageCenter("ShowScale.png", 65);
 
             outer.EndTextCenter();
 
@@ -231,8 +231,8 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             options.SetThreeSections(a, b, c);
 
             a.ImageCenter("PlasterWall_v4.jpg", 65);
-            b.ImageCenter("RedBrick_v2.jpg", 65);
-            c.ImageCenter("RedBrick_v3.jpg", 65);
+            b.ImageCenter("RedBrick_v2.JPG", 65);
+            c.ImageCenter("RedBrick_v3.JPG", 65);
 
             outer.Text(options.Output());
             outer.NewLine();
@@ -255,11 +255,11 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.NewLine();
             outer.Text("Just tick the 'Materials Per Side' options and select the material from the drop-down lists.");
             outer.NewLine();
-            outer.ImageCenter("FenceBuilder MaterialPreFaceOptions.PNG", 35);
+            outer.ImageCenter("FenceBuilder MaterialPreFaceOptions.png", 35);
             outer.NewLine();
             outer.Text("The original material is still used as the outside of the wall.");
             outer.NewLine();
-            outer.ImageCenter("FenceBuilder MaterialPreFace.PNG", 65);
+            outer.ImageCenter("FenceBuilder MaterialPreFace.png", 65);
 
             outer.EndTextCenter();
 
@@ -291,9 +291,9 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             HTMLSection c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("BrickWall_Brick.PNG", 85);
-            b.ImageCenter("BrickWall_Stone.PNG", 85);
-            c.ImageCenter("Hedge.PNG", 85);
+            a.ImageCenter("BrickWall_Brick.png", 85);
+            b.ImageCenter("BrickWall_Stone.png", 85);
+            c.ImageCenter("Hedge.png", 85);
 
             outer.Text(options.Output());
             outer.NewLine();
@@ -305,9 +305,9 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("KneeHeighFence.PNG", 85);
-            b.ImageCenter("FarmFence.PNG", 85);
-            c.ImageCenter("MetalRailingA.PNG", 85);
+            a.ImageCenter("KneeHeighFence.png", 85);
+            b.ImageCenter("FarmFence.png", 85);
+            c.ImageCenter("MetalRailingA.png", 85);
 
             outer.Text(options.Output());
             outer.NewLine();
@@ -319,9 +319,9 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("PicketFenceA.PNG", 85);
-            b.ImageCenter("PicketFenceB.PNG", 85);
-            c.ImageCenter("PicketFenceC.PNG", 85);
+            a.ImageCenter("PicketFenceA.png", 85);
+            b.ImageCenter("PicketFenceB.png", 85);
+            c.ImageCenter("PicketFenceC.png", 85);
 
             outer.Text(options.Output());
             outer.NewLine();
@@ -333,15 +333,15 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("WoodenPannelA.PNG", 85);
-            b.ImageCenter("WoodenPannelB.PNG", 85);
-            c.ImageCenter("WoodenPannelC.PNG", 85);
+            a.ImageCenter("WoodenPannelA.png", 85);
+            b.ImageCenter("WoodenPannelB.png", 85);
+            c.ImageCenter("WoodenPannelC.png", 85);
 
             outer.Text(options.Output());
             outer.NewLine();
             outer.NewLine();
 
-            outer.ImageCenter("BrickWallTowers.PNG", 45);
+            outer.ImageCenter("BrickWallTowers.png", 45);
 
             outer.EndTextCenter();
 
@@ -370,16 +370,16 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.Bold("TemporaryWhitePannelFence");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("TemporaryFences.PNG", 65);
+            outer.ImageCenter("TemporaryFences.png", 65);
             outer.NewLine();
             outer.Text("Temporary Fences in game..");
             outer.NewLine();
-            outer.ImageCenter("FenceBuilder_TemporaryFenceInGame.PNG", 65);
+            outer.ImageCenter("FenceBuilder_TemporaryFenceInGame.png", 65);
             outer.NewLine();
             outer.NewLine();
             outer.Text("New Thin walls The thin wall are just one brick wide");
             outer.NewLine();
-            outer.ImageCenter("FenceBuilder_ThinBrickWalls.PNG", 65);
+            outer.ImageCenter("FenceBuilder_ThinBrickWalls.png", 65);
             outer.NewLine();
             outer.Text("Improved UV mapping for walls and Hedges");
             outer.NewLine();
@@ -415,7 +415,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.NewLine();
             outer.Text("With all the new feature types we now have extra options.");
             outer.NewLine();
-            outer.ImageCenter("FenceBuilder -FeatureInspector.PNG", 35);
+            outer.ImageCenter("FenceBuilder -FeatureInspector.png", 35);
             outer.NewLine();
             outer.NewLine();
 
@@ -427,11 +427,11 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.NewLine();
 
             outer.Text("Example of the new features styles");
-            outer.ImageCenter("Fence Builder Gap Features Styles.PNG", 65);
+            outer.ImageCenter("Fence Builder Gap Features Styles.png", 65);
             outer.NewLine();
             outer.NewLine();
             outer.Text("Example of the Hole Round with different Off Set Y and Widths");
-            outer.ImageCenter("Fence Builder Off Set Y Holes.PNG", 65);
+            outer.ImageCenter("Fence Builder Off Set Y Holes.png", 65);
             outer.NewLine();
             outer.NewLine();
             outer.YouTubeLinkBig("lHCONd1qkWg");
@@ -514,11 +514,11 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.Text("Connected corners are shaped to make each section of the wall join.");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("Fence Builder-Corner Walls.PNG", 35);
+            outer.ImageCenter("Fence Builder-Corner Walls.png", 35);
             outer.NewLine();
             outer.Text("Work even when walls have different thinness");
             outer.NewLine();
-            outer.ImageCenter("Fence Builder-Corner Walls Thin.PNG", 35);
+            outer.ImageCenter("Fence Builder-Corner Walls Thin.png", 35);
 
             outer.EndTextCenter();
 
@@ -550,7 +550,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("WallBaseTypes.PNG", 45);
+            left.ImageRight("WallBaseTypes.png", 45);
             right.NewLine();
             right.NewLine();
             right.Text("The look of each wall type is defined by the Wall Base Type.");
@@ -569,7 +569,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             left.Text("When you have picked your wall type. You can now select the style of that wall.");
             left.NewLine();
             left.Text("Each wall type will have a different style selection.");
-            right.ImageLeft("WallStyle.PNG", 45);
+            right.ImageLeft("WallStyle.png", 45);
 
             outer.Text(options.Output());
 
@@ -578,7 +578,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("WallMaterial.PNG", 45);
+            left.ImageRight("WallMaterial.png", 45);
             right.NewLine();
             right.NewLine();
             right.Text("Other textures variation are also available.");

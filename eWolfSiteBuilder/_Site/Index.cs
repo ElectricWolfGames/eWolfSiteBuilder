@@ -8,9 +8,7 @@ using System.Collections.Generic;
 
 namespace eWolfSiteBuilder._Site
 {
-    // TODO: Links to railway don't work when on thoer pages.
-
-    [PageTitle("Index.html")]
+    [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 0)]
     public class Index : PageDetails
     {

@@ -64,7 +64,7 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesSkies
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Skyboxes,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\SkyboxesB.png",
+                ImagePath = @$"{WebPage.HtmlPath}\images\SkyboxesB.png",
                 Description = "Section of 10 Variety skies skyboxes, " +
                 "High quality panoramic scenes that can be used in your game." +
                 "All textures (6 of them) are 1024 by 1024 resolution."
@@ -102,9 +102,9 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesSkies
 
             a.TextBoldText("", name, "");
             a.NewLine();
-            a.Images(23, $"{skyBox}\\{skyBox}_Back.PNG", $"{skyBox}\\{skyBox}_Right.PNG", $"{skyBox}\\{skyBox}_Front.PNG", $"{skyBox}\\{skyBox}_Left.PNG");
+            a.Images(23, $"{skyBox}\\{skyBox}_Back.png", $"{skyBox}\\{skyBox}_Right.png", $"{skyBox}\\{skyBox}_Front.png", $"{skyBox}\\{skyBox}_Left.png");
             b.NewLine();
-            b.ImageCenter($"{skyBox}\\{skyBox}_Up.PNG", 45);
+            b.ImageCenter($"{skyBox}\\{skyBox}_Up.png", 45);
 
             return options.Output();
         }

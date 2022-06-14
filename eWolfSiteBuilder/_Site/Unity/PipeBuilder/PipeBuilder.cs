@@ -69,7 +69,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Builders,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\PipeBuilderAd.png",
+                ImagePath = @$"{WebPage.HtmlPath}\images\PipeBuilderAd.png",
                 Description = "Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipe are in the scene. All with in Unity3D no need to swap back to a 3D editor. Pipe builder is ideal for placing pipes around other objects, with tools like Insert/ Delete and Extract, it makes it easy to add, remove modify later."
             };
 
@@ -122,7 +122,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            right.ImageLeft("CornerDetailsA.PNG", 85);
+            right.ImageLeft("CornerDetailsA.png", 85);
 
             left.StartTextCenterRight();
             left.StartTextMiddel(150);
@@ -138,7 +138,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            right.ImageLeft("CornerDetailsB.PNG", 85);
+            right.ImageLeft("CornerDetailsB.png", 85);
 
             left.StartTextCenterRight();
             left.StartTextMiddel(150);
@@ -154,7 +154,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            right.ImageLeft("CornerDetailsC.PNG", 85);
+            right.ImageLeft("CornerDetailsC.png", 85);
 
             left.StartTextCenterRight();
             left.StartTextMiddel(150);
@@ -170,7 +170,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            right.ImageLeft("CornerDetailsD.PNG", 85);
+            right.ImageLeft("CornerDetailsD.png", 85);
 
             left.StartTextCenterRight();
             left.StartTextMiddel(150);
@@ -199,7 +199,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             outer.TextBoldText("The button ", "Create basic pipes", "run this code");
             outer.NewLine();
-            outer.ImageCenter("CreateBasicPipe.PNG", 45);
+            outer.ImageCenter("CreateBasicPipe.png", 45);
             outer.NewLine();
 
             outer.OtherDetails("Pipe.AddPipes();", "create a new pipe and returns it");
@@ -210,7 +210,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             outer.TextBoldText("The button ", "Create basic pipes", "run this code");
             outer.NewLine();
-            outer.ImageCenter("CreatePipesFromList.PNG", 45);
+            outer.ImageCenter("CreatePipesFromList.png", 45);
             outer.NewLine();
             outer.Text("This is doing the same as the above script but just looping through a list of vectors.");
             outer.NewLine();
@@ -246,7 +246,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.JumbotronImage(DisplayTitle, "Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipe are in the scene. All with in Unity3D no need to swap back to a 3D editor.", "PipeBuilderLogo.PNG", 35);
+            options.JumbotronImage(DisplayTitle, "Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipe are in the scene. All with in Unity3D no need to swap back to a 3D editor.", "PipeBuilderLogo.png", 35);
             return options.Output();
         }
 
@@ -259,7 +259,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("PipeDetailsInspector.PNG", 70);
+            left.ImageRight("PipeDetailsInspector.png", 70);
 
             right.StartTextCenterLeft();
             right.StartTextMiddel(450);
@@ -306,7 +306,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             outer.Text("You will get a default set of high-resolution materials included in the package, you will need to drop the resolution if you don't need it.");
             outer.NewLine();
-            outer.ImageCenter("Materials.PNG", 45);
+            outer.ImageCenter("Materials.png", 45);
 
             outer.NewLine();
             outer.Text("And you can easily add your own materials if you need.");
@@ -315,7 +315,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             outer.TextBoldText("One other material in the package is ", "Bricks", " this is best used as the inside of the pipes.");
             outer.NewLine();
-            outer.ImageCenter("InsidePipes.PNG", 45);
+            outer.ImageCenter("InsidePipes.png", 45);
 
             outer.EndTextCenter();
 
@@ -332,7 +332,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("PipeAroundPipes.PNG", 75);
+            left.ImageRight("PipeAroundPipes.png", 75);
 
             right.StartTextCenterLeft();
             right.StartTextMiddel(150);
@@ -349,7 +349,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("PipeDetails.PNG", 75);
+            left.ImageRight("PipeDetails.png", 75);
 
             right.StartTextCenterLeft();
             right.StartTextMiddel(250);

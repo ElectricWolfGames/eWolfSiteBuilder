@@ -71,7 +71,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Models,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\SciFiObjectsPack1Ad.png",
+                ImagePath = @$"{WebPage.HtmlPath}\images\SciFiObjectsPack1Ad.png",
                 Description = "Collection of game ready objects you can just use in any sci-fi style game <br/>" +
                 "Shelves are placed into the map empty, Then by clicking on the <strong>Fill All Shelves</strong> Button will populate all the shelves.</br>" +
                 "The prefab <strong>ObjectsOnFloor_pf</strong> will let you place lots of random objects on the floor quickly."
@@ -340,7 +340,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
             HTMLBuilder outer = new HTMLBuilder();
             outer.TextBoldText("All of the objects, scripts and prefabs are under the", " eWolf ", "folder");
             outer.NewLine();
-            outer.ImageCenter("Folders.png", 30);
+            outer.ImageCenter("Folders.PNG", 30);
             outer.Text("And all the scripts are contained with in the two namespace's");
             outer.NewLine();
             outer.Bold("eWolf.Common");

@@ -67,7 +67,7 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Models,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\GardenFlowers.png",
+                ImagePath = @$"{WebPage.HtmlPath}\images\GardenFlowers.png",
                 Description = "A collection of low poly garden flowers for Unity3D. Flowers have individual prefabs and also a collection of Flower Beds prefabs with pre-arranged groups of flowers for easy placement"
             };
 
@@ -130,9 +130,9 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             HTMLSection c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("AstersA_pf.PNG", 85);
-            b.ImageCenter("GreenShrubA_pf.PNG", 85);
-            c.ImageCenter("Hosta_DevonGreenA_pf.PNG", 85);
+            a.ImageCenter("AstersA_pf.png", 85);
+            b.ImageCenter("GreenShrubA_pf.png", 85);
+            c.ImageCenter("Hosta_DevonGreenA_pf.png", 85);
             outer.Text(options.Output());
 
             outer.NewLine();
@@ -142,9 +142,9 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("LavenderA_pf.PNG", 85);
-            b.ImageCenter("RhododendronB_pf.PNG", 85);
-            c.ImageCenter("RoseB_pf.PNG", 85);
+            a.ImageCenter("LavenderA_pf.png", 85);
+            b.ImageCenter("RhododendronB_pf.png", 85);
+            c.ImageCenter("RoseB_pf.png", 85);
             outer.Text(options.Output());
 
             outer.NewLine();
@@ -154,9 +154,9 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("SunFlowerA_pf.PNG", 85);
-            b.ImageCenter("TulipB_Red_pf.PNG", 85);
-            c.ImageCenter("AstersB_pf.PNG", 85);
+            a.ImageCenter("SunFlowerA_pf.png", 85);
+            b.ImageCenter("TulipB_Red_pf.png", 85);
+            c.ImageCenter("AstersB_pf.png", 85);
             outer.Text(options.Output());
 
             return outer.Output();
@@ -207,9 +207,9 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             HTMLSection c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("FlowerBed_A_pf.PNG", 85);
-            b.ImageCenter("FlowerBed_B_pf.PNG", 85);
-            c.ImageCenter("FlowerBed_C_pf.PNG", 85);
+            a.ImageCenter("FlowerBed_A_pf.png", 85);
+            b.ImageCenter("FlowerBed_B_pf.png", 85);
+            c.ImageCenter("FlowerBed_C_pf.png", 85);
             outer.Text(options.Output());
 
             outer.NewLine();
@@ -219,9 +219,9 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("FlowerBed_D_pf.PNG", 85);
-            b.ImageCenter("FlowerBed_E_pf.PNG", 85);
-            c.ImageCenter("FlowerBed_Oval_A_pf.PNG", 85);
+            a.ImageCenter("FlowerBed_D_pf.png", 85);
+            b.ImageCenter("FlowerBed_E_pf.png", 85);
+            c.ImageCenter("FlowerBed_Oval_A_pf.png", 85);
             outer.Text(options.Output());
 
             outer.NewLine();
@@ -231,9 +231,9 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("FlowerBed_Oval_B_pf.PNG", 85);
-            b.ImageCenter("FlowerBed_Round_A_pf.PNG", 85);
-            c.ImageCenter("FlowerBed_Round_B_pf.PNG", 85);
+            a.ImageCenter("FlowerBed_Oval_B_pf.png", 85);
+            b.ImageCenter("FlowerBed_Round_A_pf.png", 85);
+            c.ImageCenter("FlowerBed_Round_B_pf.png", 85);
             outer.Text(options.Output());
 
             return outer.Output();
@@ -246,10 +246,10 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             outer.NewLine();
             outer.NewLine();
 
-            outer.ImageCenter("ShowInGameA.PNG", 65);
+            outer.ImageCenter("ShowInGameA.png", 65);
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("ShowInGameB.PNG", 65);
+            outer.ImageCenter("ShowInGameB.png", 65);
 
             outer.EndTextCenter();
             return outer.Output();
@@ -270,7 +270,7 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             outer.Text("Render optimization has a batch count of 22");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("NewRenderSpeed.PNG", 65);
+            outer.ImageCenter("NewRenderSpeed.png", 65);
             outer.EndTextCenter();
             return outer.Output();
         }

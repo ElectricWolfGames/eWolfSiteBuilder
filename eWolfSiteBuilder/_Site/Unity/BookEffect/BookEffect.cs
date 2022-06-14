@@ -67,7 +67,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Models,
-                ImagePath = $@"{WebPage.HtmlPath}\Images\BookEffect.png",
+                ImagePath = $@"{WebPage.HtmlPath}\images\BookEffect.png",
                 Description = "Book Effect, Lets you add a book with turning pages into any unity game. </br>" +
                 "Just add the prefab book object and then add all of your textures in the Inspector. Add as many as you need.",
             };
@@ -194,7 +194,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             outer.TextBoldText("All of the objects, scripts and prefabs are under the", " eWolf ", "folder");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("Folders.png", 30);
+            outer.ImageCenter("Folders.PNG", 30);
             outer.NewLine();
             outer.NewLine();
 

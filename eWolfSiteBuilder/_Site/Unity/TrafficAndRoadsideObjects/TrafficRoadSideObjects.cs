@@ -64,7 +64,7 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Models,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\TrafficObjectsAd.png",
+                ImagePath = @$"{WebPage.HtmlPath}\images\TrafficObjectsAd.png",
                 Description = "A Collection of 42 traffic and roadside objects prefabs, Ideal for any city.</br>" +
                 "<strong>Contains:</strong> Traffic Barriers, Road Barriers, Traffic Cones, Traffic lights (Animated), Crossing lights (Animated), Benches, Bins"
             };
@@ -134,17 +134,17 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
 
             options.YouTubeLinkBig("Y0xcCifv8ZA");
 
-            options.ImageCenter("ShowAll.PNG", 80);
+            options.ImageCenter("ShowAll.png", 80);
 
             options.NewLine();
-            options.Text(PageDetailsHelper.TwoImages("TrafficLights.PNG", "TrafficLights-Chained.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("TrafficLights.png", "TrafficLights-Chained.png"));
             options.NewLine();
 
             options.YouTubeLinkBig("mEwTMT2C25Y");
             options.NewLine();
-            options.Text(PageDetailsHelper.TwoImages("BarriersInGameC.PNG", "BarriersInGame.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("BarriersInGameC.png", "BarriersInGame.png"));
             options.NewLine();
-            options.ImageCenter("BarriersInGameB.PNG", 40);
+            options.ImageCenter("BarriersInGameB.png", 40);
             options.NewLine();
 
             options.EndTextCenter();

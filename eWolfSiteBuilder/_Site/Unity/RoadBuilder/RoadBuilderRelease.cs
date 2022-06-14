@@ -84,7 +84,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.JumbotronImage(DisplayTitle,
                     "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.",
-                    "RoadBuilderLogo.PNG", 35);
+                    "RoadBuilderLogo.png", 35);
             return outer.Output();
         }
 

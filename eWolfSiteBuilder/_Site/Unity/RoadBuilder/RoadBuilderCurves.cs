@@ -99,15 +99,15 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.NewLine();
             outer.NewLine();
             outer.Text("Select RoadNetwork_*_pf");
-            outer.ImageCenter("Convert_01.PNG", 65);
+            outer.ImageCenter("Convert_01.png", 65);
             outer.NewLine();
             outer.NewLine();
             outer.Text("Change all the materials to use the curve sets");
-            outer.ImageCenter("Convert_02.PNG", 65);
+            outer.ImageCenter("Convert_02.png", 65);
             outer.NewLine();
             outer.NewLine();
             outer.Text("Change the UV set to use the new curve code");
-            outer.ImageCenter("Convert_03.PNG", 65);
+            outer.ImageCenter("Convert_03.png", 65);
 
             outer.NewLine();
             outer.EndTextCenter();
@@ -127,14 +127,14 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.NewLine();
             outer.Text("One for each type CurveA, CurveB, CurveC or Extended.");
             outer.NewLine();
-            outer.ImageCenter("TemplateRoadACurveA.PNG", 45);
+            outer.ImageCenter("TemplateRoadACurveA.png", 45);
             outer.NewLine();
             outer.NewLine();
             outer.Text("The template is ideal for when you need to create a new look for your road.");
             outer.NewLine();
             outer.Text("You can also take any of the over textures and just modify them as you need.");
             outer.NewLine();
-            outer.ImageCenter("RoadMainCurveA_Diffused.PNG", 45);
+            outer.ImageCenter("RoadMainCurveA_Diffused.png", 45);
 
             outer.NewLine();
             outer.EndTextCenter();
@@ -159,9 +159,9 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
             left.Text("Curve A");
-            left.ImageRight("InnerCornerA.PNG", 65);
+            left.ImageRight("InnerCornerA.png", 65);
             right.Text("Curve B");
-            right.ImageLeft("InnerCornerB.PNG", 65);
+            right.ImageLeft("InnerCornerB.png", 65);
             outer.Text(options.Output());
 
             options = new HTMLBuilder();
@@ -169,14 +169,14 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
             left.Text("Curve C");
-            left.ImageRight("InnerCornerC.PNG", 65);
+            left.ImageRight("InnerCornerC.png", 65);
             right.Text("Extended");
-            right.ImageLeft("ExtendedUVs.PNG", 65);
+            right.ImageLeft("ExtendedUVs.png", 65);
             outer.Text(options.Output());
 
             outer.NewLine();
             outer.Text("Letting crossroads and junctions have better looking textures.");
-            outer.ImageCenter("CrossRoadCorners.PNG", 45);
+            outer.ImageCenter("CrossRoadCorners.png", 45);
             outer.EndTextCenter();
 
             return outer.Output();
@@ -201,7 +201,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.JumbotronImage(DisplayTitle,
                     "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.",
-                    "RoadBuilderLogo.PNG", 35);
+                    "RoadBuilderLogo.png", 35);
             return outer.Output();
         }
 
@@ -239,7 +239,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
             left.Text("The default detail level on a Crossroad or Junction can be changed. Just change the section value and press on Create Mesh to see the results.");
-            right.ImageLeft("SectionSetting.PNG", 65);
+            right.ImageLeft("SectionSetting.png", 65);
             outer.Text(options.Output());
             outer.NewLine();
             outer.NewLine();
@@ -249,15 +249,15 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
             left.Text("Here show two different setting of 5");
-            left.ImageRight("CornerSetting_5.PNG", 65);
+            left.ImageRight("CornerSetting_5.png", 65);
             right.Text("and 20");
-            right.ImageLeft("CornerSetting_20.PNG", 65);
+            right.ImageLeft("CornerSetting_20.png", 65);
             outer.Text(options.Output());
             outer.NewLine();
             outer.NewLine();
             outer.Text("Remember you can select more that on node to change some settings. Below is two nodes selected.");
             outer.NewLine();
-            outer.ImageCenter("MultiEdit.PNG", 65);
+            outer.ImageCenter("MultiEdit.png", 65);
 
             outer.NewLine();
 

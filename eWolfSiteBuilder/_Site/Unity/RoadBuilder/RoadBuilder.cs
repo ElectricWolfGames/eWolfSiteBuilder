@@ -74,7 +74,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Builders,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\Unity3d_Road_Builder_Basic_road.gif",
+                ImagePath = @$"{WebPage.HtmlPath}\images\Unity3d_Road_Builder_Basic_road.gif",
                 Description = "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.",
             };
 
@@ -113,13 +113,13 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             left.NewLine();
             left.Text("The Unwrapping options are the current default import options on normal mesh import.");
 
-            right.ImageLeft("BakedLightingOptions.PNG", 65);
+            right.ImageLeft("BakedLightingOptions.png", 65);
 
             outer.Text(options.Output());
             outer.NewLine();
             outer.NewLine();
 
-            outer.ImageCenter("BakedLightsRoad.PNG", 55);
+            outer.ImageCenter("BakedLightsRoad.png", 55);
 
             outer.NewLine();
             outer.EndTextCenter();
@@ -136,13 +136,13 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.Text("Updated the mesh generation for junctions and crossroads allowing closer nodes to be much closer.");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("CloserNodes.PNG", 55);
+            outer.ImageCenter("CloserNodes.png", 55);
             outer.NewLine();
             outer.NewLine();
             outer.Text("Junctions can now have 5 or 6 connecting roads");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("FiveRoadJunction.PNG", 55);
+            outer.ImageCenter("FiveRoadJunction.png", 55);
             outer.NewLine();
             outer.EndTextCenter();
 
@@ -166,7 +166,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("1-3-FirstRoad.PNG", 65);
+            left.ImageRight("1-3-FirstRoad.png", 65);
 
             right.StartTextCenterLeft();
             right.StartTextMiddel(350);
@@ -186,7 +186,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            right.ImageLeft("1-4-MoreRoads.PNG", 65);
+            right.ImageLeft("1-4-MoreRoads.png", 65);
 
             left.StartTextCenterLeft();
             left.StartTextMiddel(350);
@@ -229,7 +229,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("CrossSectionDetails.PNG", 75);
+            left.ImageRight("CrossSectionDetails.png", 75);
 
             right.StartTextCenterLeft();
             right.StartTextMiddel(300);
@@ -251,9 +251,9 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             var c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("Cross_A.PNG", 85);
-            b.ImageCenter("Cross_B.PNG", 85);
-            c.ImageCenter("Cross_C.PNG", 85);
+            a.ImageCenter("Cross_A.png", 85);
+            b.ImageCenter("Cross_B.png", 85);
+            c.ImageCenter("Cross_C.png", 85);
 
             outer.NewLine();
             outer.Text(options.Output());
@@ -270,7 +270,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
 
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("Road_Main.PNG", 35);
+            outer.ImageCenter("Road_Main.png", 35);
 
             options = new HTMLBuilder();
             a = new HTMLSection("col-md-4");
@@ -278,9 +278,9 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("Road_RoadOnly.PNG", 65);
-            b.ImageCenter("Road_Grass.PNG", 65);
-            c.ImageCenter("Road_Clean.PNG", 65);
+            a.ImageCenter("Road_RoadOnly.png", 65);
+            b.ImageCenter("Road_Grass.png", 65);
+            c.ImageCenter("Road_Clean.png", 65);
             outer.NewLine();
             outer.Text(options.Output());
             outer.NewLine();
@@ -291,9 +291,9 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("Road_Sandy.PNG", 65);
-            b.ImageCenter("Road_RaceTrack.PNG", 65);
-            c.ImageCenter("Road_RailTrack.PNG", 65);
+            a.ImageCenter("Road_Sandy.png", 65);
+            b.ImageCenter("Road_RaceTrack.png", 65);
+            c.ImageCenter("Road_RailTrack.png", 65);
 
             outer.NewLine();
             outer.Text(options.Output());
@@ -310,7 +310,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.Text("With the release of Version 1.1 you can now set the Cross Section details per node. Allowing you to change the width of the road and the curb settings.");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("RoadDifferentWidth.PNG", 65);
+            outer.ImageCenter("RoadDifferentWidth.png", 65);
             outer.NewLine();
             outer.TextBoldText("Each Road Network Node now has the option to", " Override Cross Section", "");
             outer.NewLine();
@@ -321,8 +321,8 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLSection right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("SectionSetting.PNG", 65);
-            right.ImageLeft("CrossSectionDetailsRemove.PNG", 65);
+            left.ImageRight("SectionSetting.png", 65);
+            right.ImageLeft("CrossSectionDetailsRemove.png", 65);
             outer.Text(options.Output());
             outer.NewLine();
             outer.TextBoldText("Just Click on the Add", " Override Cross Section ", "to override the settings");
@@ -365,7 +365,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             left.NewLine();
             left.Text("You can see the auto build in action below.");
 
-            right.ImageLeft("AutoBuild.PNG", 65);
+            right.ImageLeft("AutoBuild.png", 65);
             outer.Text(options.Output());
             outer.NewLine();
             outer.NewLine();
@@ -380,7 +380,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
         private string CreateHero()
         {
             HTMLBuilder outer = new HTMLBuilder();
-            outer.JumbotronImage(DisplayTitle, "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.", "RoadBuilderLogo.PNG", 35);
+            outer.JumbotronImage(DisplayTitle, "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.", "RoadBuilderLogo.png", 35);
             return outer.Output();
         }
 
@@ -402,16 +402,16 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLSection c = new HTMLSection("col-md-4");
             options.SetThreeSections(a, b, c);
 
-            a.ImageCenter("DevRoadA.PNG", 45);
-            b.ImageCenter("DevRoadB.PNG", 45);
-            c.ImageCenter("DevRoadC.PNG", 45);
+            a.ImageCenter("DevRoadA.png", 45);
+            b.ImageCenter("DevRoadB.png", 45);
+            c.ImageCenter("DevRoadC.png", 45);
 
             outer.NewLine();
             outer.Text(options.Output());
 
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("3-Once.PNG", 65);
+            outer.ImageCenter("3-Once.png", 65);
             outer.NewLine();
             outer.Text("The look of the road is defined from the set of material frequency items.");
             outer.NewLine();
@@ -424,14 +424,14 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.NewLine();
             outer.OtherDetails("Random 50 Percent", "Will replace the current material about 50 percent of the time.");
             outer.NewLine();
-            outer.ImageCenter("3-50p.PNG", 65);
+            outer.ImageCenter("3-50p.png", 65);
             outer.NewLine();
             outer.Text("This option is ideal for more common details like road damage etc..");
             outer.NewLine();
             outer.NewLine();
             outer.Text("All the options here can be stacked, adding a new 'Once per road' to our example will always set the once material on top of the other settings.");
             outer.NewLine();
-            outer.ImageCenter("3-50pOnce.PNG", 65);
+            outer.ImageCenter("3-50pOnce.png", 65);
             outer.NewLine();
             outer.Text("So here you will get the Blue material on each road (Once per road), but you will get a mix of Yellow (Main) and Green (Random 50%)");
             outer.NewLine();
@@ -471,10 +471,10 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             options.SetTwoSections(left, right);
 
             left.Text("Single Node selected");
-            left.ImageRight("2-1-SingleNode.PNG", 65);
+            left.ImageRight("2-1-SingleNode.png", 65);
 
             right.Text("Double Node selected");
-            right.ImageLeft("2-1-DoubleNode.PNG", 65);
+            right.ImageLeft("2-1-DoubleNode.png", 65);
             outer.Text(options.Output());
 
             outer.NewLine();
@@ -502,7 +502,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.PageLink("More information about how to use terrains with Road Builder can be", "found Here", "RoadBuilderTerrain.html");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("TerrainExampleBasic.PNG", 45);
+            outer.ImageCenter("TerrainExampleBasic.png", 45);
             outer.EndTextCenter();
 
             return outer.Output();
@@ -516,7 +516,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
 
             outer.Text("With the release of Version 1.2 you can now set the material frequency per node.");
             outer.NewLine();
-            outer.ImageCenter("RoadDifferentMaterials.PNG", 65);
+            outer.ImageCenter("RoadDifferentMaterials.png", 65);
 
             outer.NewLine();
             outer.TextBold("Each Road Network Node now has the option to ", "Override Material Details");
@@ -549,7 +549,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.Text("Added an option to allow you too render the under side of the road.");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("ShowUnderRoad.PNG", 65);
+            outer.ImageCenter("ShowUnderRoad.png", 65);
             outer.NewLine();
 
             var options = new HTMLBuilder();
@@ -558,7 +558,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             options.SetTwoSections(left, right);
 
             left.Text("To render the underside of the road you need to assign a material for it. Just add a another material to the material list. And set the frequency to Under road Texture");
-            right.ImageLeft("UnderRoadTextureSetting.PNG", 65);
+            right.ImageLeft("UnderRoadTextureSetting.png", 65);
             outer.Text(options.Output());
 
             outer.NewLine();
@@ -569,7 +569,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             options.SetTwoSections(left, right);
 
             left.Text("After the material is set, you can tick the Under Road flag. On the main RoadNetwork pre-fab or when you override the Cross Section.");
-            right.ImageLeft("UnderRoadSetting.PNG", 65);
+            right.ImageLeft("UnderRoadSetting.png", 65);
             outer.Text(options.Output());
             outer.NewLine();
 
@@ -580,8 +580,8 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("BunkerConcrete_albedo.PNG", 45);
-            right.ImageLeft("DamagedConcrete_albedo.PNG", 45);
+            left.ImageRight("BunkerConcrete_albedo.png", 45);
+            right.ImageLeft("DamagedConcrete_albedo.png", 45);
 
             outer.Text(options.Output());
 
@@ -602,7 +602,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.PageLink("Full release notes for 1.4 can be", "found Here", "RoadBuilderCurves.html");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("CrossRoadCorners.PNG", 65);
+            outer.ImageCenter("CrossRoadCorners.png", 65);
 
             outer.EndTextCenter();
 

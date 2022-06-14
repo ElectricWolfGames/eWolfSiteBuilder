@@ -71,7 +71,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Builders,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\Builder_Creating_your_first_Buildin.gif",
+                ImagePath = @$"{WebPage.HtmlPath}\images\Builder_Creating_your_first_Buildin.gif",
                 Description = "Building Builder lets you create a variety of Lowpoly buildings from a defined list of settings. Each building is created by a collection of options that can easily be changed or set to use a random set of values"
             };
 
@@ -96,6 +96,27 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.StartTextCenterLeft();
+            left.StartTextMiddel(300);
+            left.NewLine();
+            left.NewLine();
+            left.Text("With the release of Version 1.2 (June 2017) you can now use the building with Baked lighting. Just enable the new Baked Lighting option and adjust the unwrapping options.");
+            left.NewLine();
+            left.NewLine();
+            left.Text("The Unwrapping options are the current default import options on normal mesh import.");
+            left.EndTextMiddel();
+            left.EndTextCenterLeft();
+            right.ImageLeft("BakedLightingOptions.png", 55);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.ImageCenter("BakedLightsTest.png", 55);
 
             outer.EndTextCenter();
             return outer.Output();
@@ -136,7 +157,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             outer.TextBold("You can set the size of each building sections by changing the", " Building Units.");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("ShowScale.PNG", 65);
+            outer.ImageCenter("ShowScale.png", 65);
             outer.NewLine();
             outer.NewLine();
             outer.Text("This means you don't need to change the transform scale size so it's more likely to get batched when rendering.");
@@ -149,6 +170,10 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
+
+            outer.Text("Here is an example of using a few building together to make one large building.");
+            outer.NewLine();
+            outer.YouTubeLinkBig("7fqrVVaMljw");
 
             outer.EndTextCenter();
             return outer.Output();
@@ -166,6 +191,22 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
 
+            outer.NewLine();
+
+            outer.Text("To help you quickly set-up different styles of building you have the House Style options");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Here you can select the kind of building you wish to create like ");
+            outer.NewLine();
+            outer.Text("Village House");
+            outer.NewLine();
+            outer.Text("Town House");
+            outer.NewLine();
+            outer.Text("Tower Block");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("This will set-up all the randomization details for that type of building. But it will not change the materials you have defined.");
+
             outer.EndTextCenter();
             return outer.Output();
         }
@@ -174,6 +215,12 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
+
+            outer.Text("When a building is created / randomized it will pick one of the materials from this list. For most building you may only have one material, but for others you may wish to make the building look differently. So just add as many variations as you need to this list. And the randomiser will pick one for you. If you wanted to make 1 out of ten build look like it’s made of stone and not brick, you will need to add 10 materials to this list, 9 of them redbrick, and 1 stone. This will let the randomization pick 1 out of ten building could like like it’s made of stone. See the 'VillageHouse(Variety)_pf' prefab for an example of this.");
+
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("You can add / use materials, textures and shaders as you need. Because Building builder will assign the material form the list it lets you set-up any normal maps and specular maps as you would for a normal asset.");
 
             outer.EndTextCenter();
             return outer.Output();
@@ -198,6 +245,27 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
 
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("Randomization.png", 45);
+
+            right.StartTextCenterLeft();
+            right.StartTextMiddel(400);
+            right.NewLine();
+            right.NewLine();
+            right.Text("When you have a building or group of buildings selected you should see all the randomization options in the inspector. This area can be used to help define the look of the house when you press the randomize building options.");
+            right.NewLine();
+            right.NewLine();
+            right.Text("If you don't want an option to be randomized just un-tick the option.");
+            right.NewLine();
+            right.EndTextMiddel();
+            right.EndTextCenterLeft();
+
+            outer.Text(options.Output());
+
             outer.EndTextCenter();
             return outer.Output();
         }
@@ -207,6 +275,49 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
 
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.StartTextCenterLeft();
+            left.StartTextMiddel(300);
+            left.NewLine();
+            left.NewLine();
+            left.Text("You can re-randomise the arrangement of textures by using the “Randomize Textures” button. You can also edit them manually by changing the letters in the Textures Details section. Here each texture used is represented with a letter.");
+            left.NewLine();
+            left.NewLine();
+            left.OtherDetails("W", "Wall");
+            left.OtherDetails("D", "Door");
+            left.OtherDetails("G", "Window (Glass)");
+            left.EndTextMiddel();
+            left.EndTextCenterLeft();
+            right.ImageLeft("TextureDetails.png", 65);
+
+            outer.Text(options.Output());
+
+            outer.Text("Letter are arranged by each wall and then the floor. so...");
+            outer.NewLine();
+            outer.Bold("GD,WW,GG,WW");
+            outer.NewLine();
+            outer.Text("Is for a single floor building with the with of 2 and the depth of 2.");
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("The front of the building will have a door and a window [GD]");
+            outer.NewLine();
+            outer.Text("The side has just walls [WW]");
+            outer.NewLine();
+            outer.Text("The back has two windows [GG]");
+            outer.NewLine();
+            outer.Text("The other side has two walls [WW]");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.YouTubeLinkBig("Z4SgXE8BxRU");
+            outer.NewLine();
+            outer.Text("Note : If you now change the size of the house this list will have to be recreated and you will lose your changes.");
+
             outer.EndTextCenter();
             return outer.Output();
         }
@@ -215,6 +326,26 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
+
+            outer.Text("The each building will only need one texture, and it use different parts of that texture for the different features of the building.");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.Text("So each texture is split-up into a 4 by 4 grid and each cell represents a different type of wall. When you have the Building style as 'Village House' or 'Town House' The texture maps is as follows.");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.ImageCenter("TableA.PNG", 65);
+
+            outer.NewLine();
+
+            outer.Text("When you have the Building style as 'Tower Block' The texture maps is as follows. (Tower block us a flat roof style.)");
+            outer.NewLine();
+            outer.ImageCenter("TableB.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.Text("Note : You can create textures of any size, just as long as the textures follow the template above. And all the empty sections have been left for future additions.");
 
             outer.EndTextCenter();
             return outer.Output();

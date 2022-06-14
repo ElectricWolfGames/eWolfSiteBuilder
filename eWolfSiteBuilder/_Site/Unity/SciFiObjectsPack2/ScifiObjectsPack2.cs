@@ -71,7 +71,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
                 HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Models,
-                ImagePath = @$"{WebPage.HtmlPath}\Images\SciFiObjectsPack2Ad.png",
+                ImagePath = @$"{WebPage.HtmlPath}\images\SciFiObjectsPack2Ad.png",
                 Description = "Collection of game ready objects you can just use in any sci-fi style game.</br>" +
                 "<strong>Contains:</strong> Cargo, Debris, Desks, Equipment, Living Quarters, Bed, Chairs, Lockers, Scenery, Screens, etc."
             };
@@ -143,7 +143,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.Text(@"A selection of Debris");
             options.EndTextCenter();
             options.NewLine();
-            options.Text(PageDetailsHelper.TwoImages("DebrisA.PNG", "DebrisB.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("DebrisA.png", "DebrisB.png"));
 
             return options.Output();
         }
@@ -156,7 +156,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.Text(@"A selection of Desks");
             options.EndTextCenter();
             options.NewLine();
-            options.Text(PageDetailsHelper.TwoImages("DesksA.PNG", "DesksB.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("DesksA.png", "DesksB.png"));
 
             return options.Output();
         }
@@ -170,7 +170,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.EndTextCenter();
             options.NewLine();
 
-            options.Text(PageDetailsHelper.TwoImages("EquipmentA.PNG", "EquipmentB.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("EquipmentA.png", "EquipmentB.png"));
 
             return options.Output();
         }
@@ -192,9 +192,9 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.NewLine();
             options.EndTextCenter();
 
-            options.Text(PageDetailsHelper.TwoImages("LivingQuartersA.PNG", "LivingQuartersB.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("LivingQuartersA.png", "LivingQuartersB.png"));
             options.NewLine();
-            options.Text(PageDetailsHelper.TwoImages("LivingQuartersC.PNG", "LivingQuartersD.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("LivingQuartersC.png", "LivingQuartersD.png"));
 
             return options.Output();
         }
@@ -209,7 +209,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.Text(@"All 3 animate and will save the state (Remember if they are open or closed)");
             options.EndTextCenter();
             options.NewLine();
-            options.Text(PageDetailsHelper.TwoImages("LockersA.PNG", "LockersB.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("LockersA.png", "LockersB.png"));
             options.NewLine();
             options.ImageCenter("LockersC.png", 35);
 
@@ -225,7 +225,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.NewLine();
             options.EndTextCenter();
             options.NewLine();
-            options.Text(PageDetailsHelper.TwoImages("SceneryB.PNG", "SceneryA.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("SceneryB.png", "SceneryA.png"));
 
             return options.Output();
         }
@@ -239,7 +239,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.EndTextCenter();
             options.NewLine();
             options.NewLine();
-            options.Text(PageDetailsHelper.TwoImages("ScreensB.PNG", "ScreensA.PNG"));
+            options.Text(PageDetailsHelper.TwoImages("ScreensB.png", "ScreensA.png"));
             options.NewLine();
             return options.Output();
         }
