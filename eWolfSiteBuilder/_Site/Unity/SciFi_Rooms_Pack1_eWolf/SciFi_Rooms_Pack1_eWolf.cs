@@ -4,7 +4,6 @@ using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
-using System;
 using System.Collections.Generic;
 
 namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
@@ -41,9 +40,10 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             items.Add(new HTMLIndexedItems("Create First Rooms", CreateCreateFirstRooms));
             items.Add(new HTMLIndexedItems("Player setup", CreatePlayerSetUp));
 
-            //items.Add(new HTMLIndexedItems("Connection Types", CreateConnectionTypes));
-            //items.Add(new HTMLIndexedItems("Lighting", CreateLighting));
-            //items.Add(new HTMLIndexedItems("Randomize All Fillers", CreateRandomizeAllFillers));
+            items.Add(new HTMLIndexedItems("Connection Types", CreateConnectionTypes));
+
+            items.Add(new HTMLIndexedItems("Lighting", CreateLighting));
+            items.Add(new HTMLIndexedItems("Randomize All Fillers", CreateRandomizeAllFillers));
 
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
 
@@ -63,6 +63,71 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             WebPage.Output();
         }
 
+        private static string CreateConnectionTypes(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("Currently this package has 4 different connection types.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.OtherDetails("R01_Door", "Single width door - places small door on connection");
+            outer.OtherDetails("R01_Corridor", "Corridor connection (No door)");
+            outer.OtherDetails("R01_Window", "Window connection - places window on connection");
+            outer.OtherDetails("R01_CorridorBlastDoor", "Blast door Corridor connection - places Blast door on connection");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.ImageCenter("Room2Links.PNG", 45);
+            outer.NewLine();
+            outer.Text("Rooms links will only allow you to add a room/corridor with the same connection type.");
+            outer.NewLine();
+            outer.NewLine();
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.Text("Small door");
+            left.ImageRight("DoorType-Small.PNG", 65);
+            right.Text("Blast door");
+            right.ImageLeft("DoorType-Blast.PNG", 70);
+            outer.Text(options.Output());
+
+            outer.Text("Window");
+            outer.ImageCenter("DoorType-Window.PNG", 45);
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.Text("Door list");
+            left.ImageRight("Item_List-Door.PNG", 50);
+            right.Text("Corridor list");
+            right.ImageLeft("Item_List-Corridors.PNG", 50);
+
+            outer.Text(options.Output());
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.Text("Blast Door list");
+            left.ImageRight("Item_List-BlastDoor.PNG", 50);
+            right.Text("Windos list");
+            right.ImageLeft("Item_List-Window.PNG", 50);
+
+            outer.Text(options.Output());
+
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
         private static string CreateDownload(string data)
         {
             HTMLBuilder outer = new HTMLBuilder();
@@ -74,6 +139,36 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.NewLine();
             outer.NewLine();
             outer.Unity3DLink(Unity3DSetting.SciFi_Rooms_Pack1_eWolf);
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private static string CreateLighting(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("Currently this package has 4 different connection types.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private static string CreateRandomizeAllFillers(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("Currently this package has 4 different connection types.");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
