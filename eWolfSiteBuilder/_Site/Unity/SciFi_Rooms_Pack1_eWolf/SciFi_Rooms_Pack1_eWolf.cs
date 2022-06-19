@@ -80,7 +80,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.NewLine();
             outer.NewLine();
 
-            outer.ImageCenter("Room2Links.PNG", 45);
+            outer.ImageCenter("Room2Links.PNG", 30);
             outer.NewLine();
             outer.Text("Rooms links will only allow you to add a room/corridor with the same connection type.");
             outer.NewLine();
@@ -118,10 +118,20 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
 
             left.Text("Blast Door list");
             left.ImageRight("Item_List-BlastDoor.PNG", 50);
-            right.Text("Windos list");
+            right.Text("Windows list");
             right.ImageLeft("Item_List-Window.PNG", 50);
 
             outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("All doors have two different versions, Normal and Fake.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.OtherDetails("Normal Doors", "Have a green light on them and will open.");
+            outer.NewLine();
+            outer.OtherDetails("Fake Doors", "Are added when the door leads nowhere.");
+            outer.Text("They can't open and have no green light");
+            outer.ImageCenter("FakeAndNormalDoors.PNG", 65);
 
             outer.EndTextCenter();
 
@@ -153,7 +163,66 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("Currently this package has 4 different connection types.");
+            outer.Text("The prefabs in this package are all using Baked Lights");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("I wouldn't try to give expert light advice here, But I would like to show how to create a basic set-up in you scene.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("First, remove any default lights from the scene.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Open the Lighting Window.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("Lighting-Create.PNG", 65);
+            outer.NewLine();
+            outer.Text("And create a new lightmap setting file.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Make sure you have Mixed Lighting - Baked Global Illumination - ticked");
+            outer.NewLine();
+            outer.Text("And the LightMapper should be Progressice CPU.");
+            outer.NewLine();
+            outer.Text("And also tick the Ambient Occlusion.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("Lighting-Settings.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Other options here can be used to change the speed/detail of the bake.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("And then to add a light fog, Click on the Enviroment tab.");
+            outer.NewLine();
+            outer.Text("Then just set the Fog Color and Density.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("Lighting-SettingsFog.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("And that should be all you need, Now you can click on the Generate lighting.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("I've added some simple lighting setting that you can use.");
+            outer.NewLine();
+            outer.Bold("BasicFast");
+            outer.NewLine();
+            /*outer.Bold("BasicLightFog");
+            outer.NewLine();
+            outer.Bold("BasicDeepFog");
+            outer.NewLine();*/
+            outer.NewLine();
+
+            outer.Text("All the lights in this package have flares, that will auto rotate to face the player.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("You may need to update the code with the name of the place in the code");
+            outer.NewLine();
+            outer.Bold(@"\Assets\eWolf\Common\Scripts\FacePlayer.cs");
+            outer.NewLine();
+
+            // note about face player code.
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -168,7 +237,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("Currently this package has 4 different connection types.");
+            outer.Text("");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -389,6 +458,11 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.NewLine();
             outer.Text("If you move more in to the room, the door will close and hide the rooms behind it.");
             outer.ImageCenter("RunningDoorInRoom.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("This also works for more then one player");
+            outer.ImageCenter("MoreThenOnePlayer.PNG", 65);
+            outer.Text("Each player will keep the room active.");
 
             outer.EndTextCenter();
 
