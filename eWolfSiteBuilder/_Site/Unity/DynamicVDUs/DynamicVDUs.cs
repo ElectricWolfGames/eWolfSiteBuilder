@@ -45,7 +45,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
 
             items.Add(new HTMLIndexedItems("Using Sprites", CreateSprite));
             items.Add(new HTMLIndexedItems("More Examples", CreateMoreExample));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
             HTMLBuilder options = new HTMLBuilder();
 
             options.CreateIndex(items);

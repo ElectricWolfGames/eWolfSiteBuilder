@@ -49,7 +49,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             items.Add(new HTMLIndexedItems("Closer nodes and 5 or 6 road junctions", CreateCloserModesAnd5or6RoadJunctions));
             items.Add(new HTMLIndexedItems("Faster mesh creation and AutoBuild", CreateFasterMeshCreationAndAutoBuild));
             items.Add(new HTMLIndexedItems("Render underside of the road", CreateRenderUndersideOfTheRoad));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 

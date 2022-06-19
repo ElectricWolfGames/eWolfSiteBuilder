@@ -40,7 +40,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
 
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
             items.Add(new HTMLIndexedItems("Release Details", CreateReleaseDetails));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             options = new HTMLBuilder();
 

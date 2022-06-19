@@ -42,7 +42,7 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             items.Add(new HTMLIndexedItems("Render Optimization", CreateRenderOptimization));
             items.Add(new HTMLIndexedItems("Examples", CreateExamples));
             items.Add(new HTMLIndexedItems("Demo", CreateDemo));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 

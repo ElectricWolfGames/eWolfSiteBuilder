@@ -46,7 +46,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             items.Add(new HTMLIndexedItems("Baked Light Map Support", CreateBakedLightMapSupport));
             items.Add(new HTMLIndexedItems("Textures Templates", CreateTexturesTemplates));
             items.Add(new HTMLIndexedItems("Custom Build example", CreateCustomBuildExample));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 

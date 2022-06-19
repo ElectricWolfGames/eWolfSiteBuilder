@@ -42,7 +42,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             items.Add(new HTMLIndexedItems("How to use", CreateHowToUse));
             items.Add(new HTMLIndexedItems("Interface options", CreateInterfaceOptions));
             items.Add(new HTMLIndexedItems("Project Layout", CreateProjectLayout));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 

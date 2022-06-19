@@ -35,17 +35,19 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
 
             List<HTMLIndexedItems> items = new List<HTMLIndexedItems>();
 
-            items.Add(new HTMLIndexedItems("Overview", CreateOverview));
-            items.Add(new HTMLIndexedItems("Download", CreateDownload));
-            items.Add(new HTMLIndexedItems("Create First Rooms", CreateCreateFirstRooms));
-            items.Add(new HTMLIndexedItems("Player setup", CreatePlayerSetUp));
+            items.Add(new HTMLIndexedItems("Overview", AddSectionOverview));
+            items.Add(new HTMLIndexedItems("Download", AddSectionDownload));
+            items.Add(new HTMLIndexedItems("Create First Rooms", AddSectionCreateFirstRooms));
+            items.Add(new HTMLIndexedItems("Player setup", AddSectionPlayerSetUp));
 
-            items.Add(new HTMLIndexedItems("Connection Types", CreateConnectionTypes));
+            items.Add(new HTMLIndexedItems("Connection Types", AddSectionConnectionTypes));
 
-            items.Add(new HTMLIndexedItems("Lighting", CreateLighting));
-            items.Add(new HTMLIndexedItems("Randomize All Fillers", CreateRandomizeAllFillers));
+            items.Add(new HTMLIndexedItems("Lighting", AddSectionLighting));
+            items.Add(new HTMLIndexedItems("Randomize All Fillers", AddSectionRandomizeAllFillers));
+            items.Add(new HTMLIndexedItems("Adding you own Rooms", AddSectionAddYouOwnRoom));
+            items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
 
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 
@@ -63,7 +65,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             WebPage.Output();
         }
 
-        private static string CreateConnectionTypes(string arg)
+        private static string AddSectionConnectionTypes(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
@@ -138,7 +140,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             return outer.Output();
         }
 
-        private static string CreateDownload(string data)
+        private static string AddSectionDownload(string data)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
@@ -156,7 +158,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             return outer.Output();
         }
 
-        private static string CreateLighting(string arg)
+        private static string AddSectionLighting(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
@@ -230,7 +232,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             return outer.Output();
         }
 
-        private static string CreateRandomizeAllFillers(string arg)
+        private static string AddSectionRandomizeAllFillers(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
@@ -245,7 +247,22 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             return outer.Output();
         }
 
-        private string CreateCreateFirstRooms(string arg)
+        private string AddSectionAddYouOwnRoom(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("");
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string AddSectionCreateFirstRooms(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
@@ -397,14 +414,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             return outer.Output();
         }
 
-        private string CreateHero()
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms, Lets you easyly create sci fi base rooms and corridors with a helpful selection and snapping system.");
-            return options.Output();
-        }
-
-        private string CreateOverview(string arg)
+        private string AddSectionOverview(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
@@ -420,7 +430,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             return outer.Output();
         }
 
-        private string CreatePlayerSetUp(string arg)
+        private string AddSectionPlayerSetUp(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
@@ -463,10 +473,37 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.Text("This also works for more then one player");
             outer.ImageCenter("MoreThenOnePlayer.PNG", 65);
             outer.Text("Each player will keep the room active.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("This also works for other things like CCTV.");
+            outer.NewLine();
+            outer.Text("Just make sure your object has the RoomInteractor Script to keep the room active.");
 
             outer.EndTextCenter();
 
             return outer.Output();
+        }
+
+        private string AddSectionProjectLayout(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("");
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string CreateHero()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms, Lets you easyly create sci fi base rooms and corridors with a helpful selection and snapping system.");
+            return options.Output();
         }
     }
 }

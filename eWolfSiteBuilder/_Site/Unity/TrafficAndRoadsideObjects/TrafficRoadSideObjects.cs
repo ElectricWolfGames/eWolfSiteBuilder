@@ -39,7 +39,7 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
             items.Add(new HTMLIndexedItems("Details", CreateDetails));
 
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 

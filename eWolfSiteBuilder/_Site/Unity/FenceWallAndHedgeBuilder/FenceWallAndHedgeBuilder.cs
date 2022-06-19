@@ -52,7 +52,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             //items.Add(new HTMLIndexedItems("Updated UV for the walls", CreateUpdatedUVForTheWalls));
             items.Add(new HTMLIndexedItems("Added Castle walls and Mounds", CreateAddedCastleWallsAndMounds));
             items.Add(new HTMLIndexedItems("Example Walls", CreateExampleWalls));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 

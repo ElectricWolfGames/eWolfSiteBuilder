@@ -46,7 +46,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
             items.Add(new HTMLIndexedItems("Materials", CreateMaterials));
             items.Add(new HTMLIndexedItems("More Images", CreateMoreImages));
             items.Add(new HTMLIndexedItems("Project Layout", CreateProjectLayout));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 

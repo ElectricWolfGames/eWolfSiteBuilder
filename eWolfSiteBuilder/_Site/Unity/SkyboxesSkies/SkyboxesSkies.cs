@@ -39,7 +39,7 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesSkies
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
             items.Add(new HTMLIndexedItems("How to Use", CreateHowToUse));
             items.Add(new HTMLIndexedItems("Previews", CreatePreviews));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 

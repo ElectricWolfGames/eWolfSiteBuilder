@@ -8,7 +8,7 @@ namespace eWolfSiteBuilder.SiteDetails.Helpers
 {
     public static class PageDetailsHelper
     {
-        public static string CreateSupport(string data)
+        public static string AddSectionSupport(string data)
         {
             // DONE: Contact@electricWolf.co.uk and Wolf@electricwolf.co.uk are both working (2022/06/04)
             HTMLBuilder options = new HTMLBuilder();

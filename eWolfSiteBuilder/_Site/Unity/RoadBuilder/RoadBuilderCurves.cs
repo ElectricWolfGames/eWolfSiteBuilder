@@ -44,7 +44,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             items.Add(new HTMLIndexedItems("Settings", CreateSettings));
             items.Add(new HTMLIndexedItems("Converting Existing Roads", CreateConvertingExistingRoads));
             items.Add(new HTMLIndexedItems("Creating your own textures", CreateCreatingYourOwnTextures));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.CreateSupport));
+            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             options = new HTMLBuilder();
 
