@@ -239,9 +239,30 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("");
+            outer.Text("Rooms can look a bit empty when first created.");
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.ImageCenter("RoomFillerEmpty.PNG", 55);
             outer.NewLine();
             outer.NewLine();
+            outer.Text("So I've added an option to add extra details to the empty walls.");
+            outer.NewLine();
+            outer.ImageCenter("RoomFillerV1.PNG", 45);
+            outer.NewLine();
+            outer.ImageCenter("RoomFillerV2.PNG", 45);
+            outer.TextBoldText("Clicking on the ", "2. Randomize All Fillers", " Will randomize the fillers on the walls.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Sometimes you will need to keep some walls clear.");
+            outer.NewLine();
+            outer.Text("You can easily just turn off the wall fillers.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("RoomFillerOptions.PNG", 45);
+            outer.NewLine();
+            outer.Text("Unticking the Enabled option will stop the wall filers from appearing");
+
             outer.EndTextCenter();
 
             return outer.Output();
