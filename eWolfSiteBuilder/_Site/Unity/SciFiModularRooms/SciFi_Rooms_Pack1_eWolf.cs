@@ -6,16 +6,18 @@ using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
 using System.Collections.Generic;
 
-namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
+namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 {
+    // TODO : Talk about the materials being standerd
+
     [PageTitle("SciFiModularRooms.html")]
-    public class SciFi_Rooms_Pack1_eWolf : PageDetails
+    public class SciFi_Rooms_Pack1_eWolf : PageDetails /*IHomePagePreview, IUnityList*/
     {
         public SciFi_Rooms_Pack1_eWolf()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "Sci-Fi Modular Rooms - eWolf";
-            MenuTitle = "Sci-Fi Modular Rooms - eWolf";
+            DisplayTitle = "Sci-Fi Modular Rooms";
+            MenuTitle = "Sci-Fi Modular Rooms";
         }
 
         public int UnityListOrder { get; set; } = 1;
@@ -41,10 +43,12 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             items.Add(new HTMLIndexedItems("Player setup", AddSectionPlayerSetUp));
 
             items.Add(new HTMLIndexedItems("Connection Types", AddSectionConnectionTypes));
+            items.Add(new HTMLIndexedItems("Doors", AddSectionDoors));
 
             items.Add(new HTMLIndexedItems("Lighting", AddSectionLighting));
             items.Add(new HTMLIndexedItems("Randomize All Fillers", AddSectionRandomizeAllFillers));
             items.Add(new HTMLIndexedItems("Adding you own Rooms", AddSectionAddYouOwnRoom));
+            items.Add(new HTMLIndexedItems("Adding you own Wall Fillers", AddSectionAddYouOwnWallFillers));
             items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
 
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
@@ -150,7 +154,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.Text(@"That you can get from Unity3D asset store");
             outer.NewLine();
             outer.NewLine();
-            outer.Unity3DLink(Unity3DSetting.SciFi_Rooms_Pack1_eWolf);
+            outer.Unity3DLink(Unity3DSetting.SciFiModularRooms_eWolf);
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -269,6 +273,88 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
         }
 
         private string AddSectionAddYouOwnRoom(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("You can also added new rooms to the system.");
+            outer.NewLine();
+            outer.Text("If you would like a copy of the Blender file uesd to create the rooms in this package. please email me, (Email below)");
+            outer.NewLine();
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("When you have your new model in the project");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Unselect ");
+            outer.NewLine();
+            outer.OtherDetails("Import BlendShapes", "");
+            outer.OtherDetails("Import Visiblity", "");
+            outer.OtherDetails("Import Cameras", "");
+            outer.OtherDetails("Import Lights", "");
+            outer.NewLine();
+
+            outer.ImageCenter("NewRoomSettingA.PNG", 30);
+            outer.NewLine();
+            outer.Text("And tick the Generate Light UVs (As you this is needed for the light baking)");
+            outer.ImageCenter("NewRoomSettingB.PNG", 30);
+
+            outer.NewLine();
+            outer.Text("And finally, On the Materials Tab and select None on the Material Creation Mode.");
+            outer.NewLine();
+            outer.ImageCenter("NewRoomSettingC.PNG", 30);
+
+            outer.NewLine();
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Next, We need to create the prefab, (sometime it's quicker to copy an existing prefab.)");
+            outer.NewLine();
+            outer.NewLine();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("RoomPrefabLayout.PNG", 55);
+            right.StartTextMiddel(300);
+
+            right.OtherDetails("Art", "This holder the mesh for the room.");
+            right.OtherDetails("Links", "All the Connection links to others rooms");
+            right.OtherDetails("RoomIDCollision", "Box Collider that outlines the room.");
+            right.OtherDetails("Lights", "All the lights for the room");
+            right.OtherDetails("Collision", "The full mesh collider");
+            right.OtherDetails("RoomObjects", "Is for any extra objects you want to add to the room.");
+            right.OtherDetails("Effects", "For extra effects, Light Flare are added here.");
+            right.EndTextMiddel();
+
+            outer.NewLine();
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.TextBoldText("And the base object will need the script ", "Room", "");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.TextBoldText("Once added you will need to update ", "RoomInfomation.cs", "");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("CodeRoomInfomation.PNG", 55);
+            outer.NewLine();
+            outer.Text("RoomInfomation contains a list of all the rooms, with the door connection linl types.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Just add your new room to the section where you would like it to appear.");
+
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string AddSectionAddYouOwnWallFillers(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
@@ -435,6 +521,37 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             return outer.Output();
         }
 
+        private string AddSectionDoors(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.TextBold("When the doors are added they are all added to the folder", " RoomDoors");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("DoorShowAll.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("DoorInspector.PNG", 55);
+            outer.NewLine();
+            outer.OtherDetails("Door Action", "Lets you set how the operate when you get close.");
+            outer.OtherDetails("Door Action Range", "Is how close you need to be to action the door.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Only Fake, and AutoOpen work, the rest of the options are for your Implementation");
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBold("You can override the default doors actions, by settting", " Action&lt;Door&gt; DoorOpenLogic");
+            outer.NewLine();
+            outer.Text("If DoorOpenLogic is set it will get called instead of the normal door code.");
+
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
         private string AddSectionOverview(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
@@ -461,7 +578,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.Text("To make the doors open you just need two things");
             outer.NewLine();
             outer.NewLine();
-            outer.TextBoldText("Your player object needs to have the script ", "RoomInteractor", " ");
+            outer.TextBoldText("Your player object needs to have the script ", "RoomInteractor", " or at least something that is using IRoomInteractor");
             outer.NewLine();
             outer.TextBoldText("And the script ", "MainGameFlow", " anywhere in the project");
             outer.NewLine();
@@ -499,6 +616,9 @@ namespace eWolfSiteBuilder._Site.Unity.SciFi_Rooms_Pack1_eWolf
             outer.Text("This also works for other things like CCTV.");
             outer.NewLine();
             outer.Text("Just make sure your object has the RoomInteractor Script to keep the room active.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("RoomInteractor also has the option to open doors, turn this off and RoomInteractor will not open the door, but still still keep the room active.");
 
             outer.EndTextCenter();
 
