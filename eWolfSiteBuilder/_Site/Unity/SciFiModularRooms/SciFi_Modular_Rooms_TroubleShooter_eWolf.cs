@@ -89,6 +89,23 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.ImageCenter("MagentaMaterials.png", 45);
             outer.NewLine();
             outer.NewLine();
+            outer.Text("We will need to update our material to match the project reneder pipeline.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Sci-Fi Modular Rooms is using Standard Shader for the materials,");
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBoldText("If your project is using ", "Universal Render Pipeline", " Then we can update our materials");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text(@"Open the materail Rooms001 (eWolf\SciFi_Rooms_Pack1\Art\Materials)");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Select Universal Render Pipeline -> Backed Lit shader");
+            outer.NewLine();
+            outer.TextBoldText("Then just update the BaseMap with the", " Room001_albedo ", "Texture");
+            outer.ImageCenter("UpdateMaterials.PNG", 35);
+
             outer.EndTextCenter();
 
             return outer.Output();
