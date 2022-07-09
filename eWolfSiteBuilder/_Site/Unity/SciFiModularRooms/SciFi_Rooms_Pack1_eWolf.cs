@@ -361,9 +361,20 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("");
+            outer.Text("We currenly have 5 wall fillers");
             outer.NewLine();
             outer.NewLine();
+            outer.Text("Should you wish to add more, just follow the add room steps to get the model in unity3d.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Then place your new wall Fillter in the R01-RoomFillers/Resources folder with the others");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Now add the name of the prefab in to the list of fillers.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("NewWallFillers.PNG", 45);
+
             outer.EndTextCenter();
 
             return outer.Output();
@@ -503,18 +514,10 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("All lights in prefabs are set-up as Baked.");
             outer.NewLine();
             outer.NewLine();
-            options = new HTMLBuilder();
-            left = new HTMLSection("col-md-6");
-            right = new HTMLSection("col-md-6");
-            options.SetTwoSections(left, right);
 
-            left.Text("Before Bake");
-            left.ImageRight("PreLightBake.PNG", 80);
-
-            right.Text("After Bake");
-            right.ImageLeft("PostLightBake.PNG.", 80);
-            outer.Text(options.Output());
-            outer.Text("While, not a lot of different - it's much faster as the lighting is fully backed in.");
+            outer.Text("After Bake");
+            outer.ImageCenter("PostLightBake.PNG.", 45);
+            outer.Text("it's much faster as the lighting is fully backed in.");
 
             outer.EndTextCenter();
 
@@ -632,9 +635,22 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("");
+            outer.Text("All the assests for this project are under the eWolf folder");
             outer.NewLine();
             outer.NewLine();
+            outer.ImageCenter("ProjectLayoutTop.PNG", 50);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("All the code is under two NameSpace");
+            outer.NewLine();
+            outer.Text("namespace eWolf.Common");
+            outer.NewLine();
+            outer.Text("namespace eWolf.SciFi_Rooms_System");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("So when its imported in to you project, you will know where to find it");
+            outer.NewLine();
+
             outer.EndTextCenter();
 
             return outer.Output();
