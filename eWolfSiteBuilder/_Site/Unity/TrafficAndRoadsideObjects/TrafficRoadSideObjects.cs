@@ -80,9 +80,6 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
 
             options.Text(@"A Collection of 42 traffic and roadside objects prefabs, Ideal for any city.");
             options.NewLine();
-            options.Text(@"That you can get from Unity3D asset store");
-            options.NewLine();
-            options.NewLine();
             options.Unity3DLink(Unity3DSetting.TrafficAndRoadsideObjects);
             options.NewLine();
             options.NewLine();

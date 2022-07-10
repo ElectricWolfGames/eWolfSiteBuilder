@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 {
-    // TODO : Talk about the materials being standerd
+    // TODO : Talk about the materials being standard
 
     [PageTitle("SciFiModularRooms.html")]
     public class SciFi_Rooms_Pack1_eWolf : PageDetails /*IHomePagePreview, IUnityList*/
@@ -40,7 +40,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Overview", AddSectionOverview));
             items.Add(new HTMLIndexedItems("Download", AddSectionDownload));
             items.Add(new HTMLIndexedItems("Create First Rooms", AddSectionCreateFirstRooms));
-            items.Add(new HTMLIndexedItems("Player setup", AddSectionPlayerSetUp));
+            items.Add(new HTMLIndexedItems("Player set-up", AddSectionPlayerSetUp));
 
             items.Add(new HTMLIndexedItems("Connection Types", AddSectionConnectionTypes));
             items.Add(new HTMLIndexedItems("Doors", AddSectionDoors));
@@ -144,24 +144,6 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             return outer.Output();
         }
 
-        private static string AddSectionDownload(string data)
-        {
-            HTMLBuilder outer = new HTMLBuilder();
-            outer.StartTextCenter();
-            outer.NewLine();
-
-            outer.NewLine();
-            outer.Text(@"That you can get from Unity3D asset store");
-            outer.NewLine();
-            outer.NewLine();
-            outer.Unity3DLink(Unity3DSetting.SciFiModularRooms_eWolf);
-            outer.NewLine();
-            outer.NewLine();
-            outer.EndTextCenter();
-
-            return outer.Output();
-        }
-
         private static string AddSectionLighting(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
@@ -188,7 +170,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.Text("Make sure you have Mixed Lighting - Baked Global Illumination - ticked");
             outer.NewLine();
-            outer.Text("And the LightMapper should be Progressice CPU.");
+            outer.Text("And the LightMapper should be Progressive CPU.");
             outer.NewLine();
             outer.Text("And also tick the Ambient Occlusion.");
             outer.NewLine();
@@ -199,9 +181,9 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("Other options here can be used to change the speed/detail of the bake.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("And then to add a light fog, Click on the Enviroment tab.");
+            outer.Text("And then to add a light fog, Click on the Environment tab.");
             outer.NewLine();
-            outer.Text("Then just set the Fog Color and Density.");
+            outer.Text("Then just set the Fog Colour and Density.");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("Lighting-SettingsFog.PNG", 65);
@@ -265,7 +247,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.ImageCenter("RoomFillerOptions.PNG", 45);
             outer.NewLine();
-            outer.Text("Unticking the Enabled option will stop the wall filers from appearing");
+            outer.Text("Disabled the option will stop the wall filers from appearing");
 
             outer.EndTextCenter();
 
@@ -281,7 +263,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.Text("You can also added new rooms to the system.");
             outer.NewLine();
-            outer.Text("If you would like a copy of the Blender file uesd to create the rooms in this package. please email me, (Email below)");
+            outer.Text("If you would like a copy of the Blender file used to create the rooms in this package. please email me, (Email below)");
             outer.NewLine();
             outer.NewLine();
             outer.NewLine();
@@ -291,7 +273,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("Unselect ");
             outer.NewLine();
             outer.OtherDetails("Import BlendShapes", "");
-            outer.OtherDetails("Import Visiblity", "");
+            outer.OtherDetails("Import Visibility", "");
             outer.OtherDetails("Import Cameras", "");
             outer.OtherDetails("Import Lights", "");
             outer.NewLine();
@@ -323,7 +305,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             right.OtherDetails("Art", "This holder the mesh for the room.");
             right.OtherDetails("Links", "All the Connection links to others rooms");
-            right.OtherDetails("RoomIDCollision", "Box Collider that outlines the room.");
+            right.OtherDetails("RoomIDCollision", "Box collider that outlines the room.");
             right.OtherDetails("Lights", "All the lights for the room");
             right.OtherDetails("Collision", "The full mesh collider");
             right.OtherDetails("RoomObjects", "Is for any extra objects you want to add to the room.");
@@ -344,7 +326,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.ImageCenter("CodeRoomInfomation.PNG", 55);
             outer.NewLine();
-            outer.Text("RoomInfomation contains a list of all the rooms, with the door connection linl types.");
+            outer.Text("RoomInfomation contains a list of all the rooms, with the door connection link types.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Just add your new room to the section where you would like it to appear.");
@@ -361,13 +343,13 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("We currenly have 5 wall fillers");
+            outer.Text("We currently have 5 wall fillers");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Should you wish to add more, just follow the add room steps to get the model in unity3d.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Then place your new wall Fillter in the R01-RoomFillers/Resources folder with the others");
+            outer.Text("Then place your new wall filler in the R01-RoomFillers/Resources folder with the others");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Now add the name of the prefab in to the list of fillers.");
@@ -427,31 +409,41 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("RoomLinks.PNG", 45);
+            left.ImageRight("RoomLinks.PNG", 64);
             right.Text("The room links drop down lists allow you to select what room/corridor you would like to add");
             right.NewLine();
             right.Text("It will only give you the options for that connection type.");
 
             outer.Text(options.Output());
-            outer.Text("When selected just click add to add it to the scene.");
-            outer.ImageCenter("RoomLinksAdd.PNG", 25);
             outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            right.ImageLeft("RoomLinksAdd.PNG", 64);
+            left.NewLine();
+            left.Text("When selected just click add to add it to the scene.");
+
+            outer.Text(options.Output());
             outer.NewLine();
-            outer.Text("It will add it and select it");
             outer.NewLine();
 
             outer.ImageCenter("Room2.PNG", 45);
             outer.OtherDetails("NOTE:", "You may need to move or rotate the new room/corridor to make it snap in place");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("The new rooms - rooms links will show the new options, but also show where a room is all ready connected");
+            outer.Text("When you select a room it will show you what options you have to add next room.");
+            outer.NewLine();
+            outer.Text("It will also show where a room is all ready connected");
             outer.NewLine();
             outer.ImageCenter("Room2Links.PNG", 25);
             outer.NewLine();
             outer.Text("This also show the different connection types - 'Door' and 'corridor'");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Now you can continue to add as many roos and corridors as you like.");
+            outer.Text("Now you can continue to add as many rooms and corridors as you like.");
 
             outer.NewLine();
             outer.NewLine();
@@ -473,7 +465,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             right.OtherDetails("2. Randomize All Fillers", "Some rooms have extra random details");
             right.OtherDetails("3. Add Missing Doors & Effects", "To add the Door at the points of the links");
             right.OtherDetails("4. Generate Lighting", "Generate lighting for the rooms");
-            right.OtherDetails("1 - 4 Do all", "Handy do all the aboce in one step");
+            right.OtherDetails("1 - 4 Do all", "Handy do all the above in one step");
 
             outer.Text(options.Output());
 
@@ -482,7 +474,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             outer.OtherDetails("1. Place all objects under right parents", " Will place all the rooms in to level folders");
             outer.NewLine();
-            outer.Text("This is to just make things easyer to find if you have a map with different levels");
+            outer.Text("This is to just make things easier to find if you have a map with different levels");
             outer.NewLine();
             outer.ImageCenter("RoomsLevel00Folder.PNG", 45);
             outer.NewLine();
@@ -546,10 +538,25 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("Only Fake, and AutoOpen work, the rest of the options are for your Implementation");
             outer.NewLine();
             outer.NewLine();
-            outer.TextBold("You can override the default doors actions, by settting", " Action&lt;Door&gt; DoorOpenLogic");
+            outer.TextBold("You can override the default doors actions, by stetting", " Action&lt;Door&gt; DoorOpenLogic");
             outer.NewLine();
             outer.Text("If DoorOpenLogic is set it will get called instead of the normal door code.");
 
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string AddSectionDownload(string data)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.Text($"{DisplayTitle} Is a collection of easy to fix sci-fi rooms and corridors.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Unity3DLink(Unity3DSetting.SciFiModularRooms_eWolf);
+            outer.NewLine();
+            outer.NewLine();
             outer.EndTextCenter();
 
             return outer.Output();
@@ -562,8 +569,42 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("");
-            // what this pack can do!
+            outer.TextBoldText("", DisplayTitle, "Is a collection of easy to fix rooms and corridors.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("All rooms snap together saving time on aligning objects");
+            outer.NewLine();
+            outer.Text("It also has a step by step builder that only gives to options to add rooms you can connect");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("ExampleRoomsA.PNG", 45);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Giving you nearly endless layout options");
+            outer.NewLine();
+
+            var options = new HTMLBuilder();
+            var left = new HTMLSection("col-md-6");
+            var right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("MapA.PNG", 80);
+            right.ImageLeft("MapB.PNG.", 80);
+            left.NewLine();
+            right.NewLine();
+            left.ImageRight("MapA.PNG", 80);
+            right.ImageLeft("MapB.PNG.", 80);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+            outer.Text("When the rooms are in place, it's just one click to add all the doors to connect them");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("And the doors will hide the rooms behind them when closed, saving render time");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.NewLine();
 
             outer.NewLine();
             outer.EndTextCenter();
@@ -621,7 +662,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("Just make sure your object has the RoomInteractor Script to keep the room active.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("RoomInteractor also has the option to open doors, turn this off and RoomInteractor will not open the door, but still still keep the room active.");
+            outer.Text("RoomInteractor also has the option to open doors, turn this off and RoomInteractor will not open the door, but still keep the room active.");
 
             outer.EndTextCenter();
 
@@ -659,7 +700,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms, Lets you easyly create sci fi base rooms and corridors with a helpful selection and snapping system.");
+            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms, Lets you easily create sci fi base rooms and corridors with a helpful selection and snapping system.");
             return options.Output();
         }
     }

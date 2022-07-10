@@ -90,9 +90,6 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             options.StartTextCenter();
             options.NewLine();
 
-            options.Text(@"That you can get from Unity3D asset store");
-            options.NewLine();
-            options.NewLine();
             options.Unity3DLink(Unity3DSetting.FenceWallAndHedgeBuilder);
             options.NewLine();
             options.NewLine();
@@ -272,7 +269,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.OtherDetails("Drop all Courners to the ground", "option from the main Wall_Builder_pf object. This will drop all the wall corners down to any object with collision and has the 'Ground' layer set.");
+            outer.OtherDetails("Drop all corners to the ground", "option from the main Wall_Builder_pf object. This will drop all the wall corners down to any object with collision and has the 'Ground' layer set.");
             outer.NewLine();
             outer.EndTextCenter();
 
@@ -449,7 +446,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
 
             outer.TextBoldText("Just place the wall prefab into your scene and then click", " Add Wall ", "button");
             outer.NewLine();
-            outer.Text("Then use the dropdown list to select the type of wall (BrickWall, Hedge, Panel wall, etc)");
+            outer.Text("Then use the dropdown list to select the type of wall (BrickWall, Hedge, Panel wall, etc.)");
             outer.NewLine();
             outer.Text("And then pick the style of the wall (Large, Medium, small and unkept or aged).");
             outer.NewLine();
@@ -474,7 +471,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             outer.NewLine();
             outer.Text(" Then using the two circular handles you can set the start and end point of the wall.");
             outer.NewLine();
-            outer.Text(" With the AutoBuild Options ticked you will see the wall update in realtime.");
+            outer.Text(" With the AutoBuild Options ticked you will see the wall update in real-time.");
             outer.NewLine();
             outer.Text(" And you can add extra features to the wall like gap or arches.");
             outer.NewLine();

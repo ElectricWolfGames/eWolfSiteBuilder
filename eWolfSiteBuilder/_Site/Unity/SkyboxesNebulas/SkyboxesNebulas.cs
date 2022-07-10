@@ -79,9 +79,6 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesNebulas
             options.StartTextCenter();
             options.NewLine();
 
-            options.Text(@"That you can get from Unity3D asset store");
-            options.NewLine();
-            options.NewLine();
             options.Unity3DLink(Unity3DSetting.SkyboxesNebulas);
             options.NewLine();
             options.NewLine();
@@ -124,7 +121,7 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesNebulas
             outer.Text("This collection contains 5 Space Nebulas Skyboxes that you can use in any Unity 3D scene.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Just add the SkyBox component to the camera and then just drag one of my martials on it.");
+            outer.Text("Just add the SkyBox component to the camera and then just drag one of my materials on it.");
             outer.NewLine();
             outer.NewLine();
             return outer.Output();

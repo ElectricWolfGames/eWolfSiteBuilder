@@ -38,7 +38,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
 
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
             items.Add(new HTMLIndexedItems("Overview", CreateOverview));
-            items.Add(new HTMLIndexedItems("Create Create First Building", CreateCreateFirstBuilding));
+            items.Add(new HTMLIndexedItems("Create First Building", CreateCreateFirstBuilding));
             items.Add(new HTMLIndexedItems("House Style", CreateHouseStyle));
             items.Add(new HTMLIndexedItems("Randomization", CreateRandomization));
             items.Add(new HTMLIndexedItems("Setting Textures", CreateSettingTextures));
@@ -72,7 +72,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Builders,
                 ImagePath = @$"{WebPage.HtmlPath}\images\Builder_Creating_your_first_Buildin.gif",
-                Description = "Building Builder lets you create a variety of Lowpoly buildings from a defined list of settings. Each building is created by a collection of options that can easily be changed or set to use a random set of values"
+                Description = "Building Builder lets you create a variety of Low-poly buildings from a defined list of settings. Each building is created by a collection of options that can easily be changed or set to use a random set of values"
             };
 
             return pi;
@@ -134,7 +134,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             outer.NewLine();
             outer.NewLine();
             outer.OtherDetails("Village house", "(basic)");
-            outer.OtherDetails("Townhouse", "(basic)");
+            outer.OtherDetails("Town house", "(basic)");
             outer.OtherDetails("Town Block", "(basic)");
             outer.OtherDetails("Village house", "(variety)");
             outer.OtherDetails("Tudor house", "(variety)");
@@ -182,7 +182,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Building Builder lets you create a variety of Lowpoly buildings from a defined list of settings. Each building is created by a collection of options that can easy be changed or set to use a random set of values.");
+            options.Jumbotron(DisplayTitle, "Building Builder lets you create a variety of Low-poly buildings from a defined list of settings. Each building is created by a collection of options that can easy be changed or set to use a random set of values.");
             return options.Output();
         }
 
@@ -216,7 +216,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
 
-            outer.Text("When a building is created / randomized it will pick one of the materials from this list. For most building you may only have one material, but for others you may wish to make the building look differently. So just add as many variations as you need to this list. And the randomiser will pick one for you. If you wanted to make 1 out of ten build look like it’s made of stone and not brick, you will need to add 10 materials to this list, 9 of them redbrick, and 1 stone. This will let the randomization pick 1 out of ten building could like like it’s made of stone. See the 'VillageHouse(Variety)_pf' prefab for an example of this.");
+            outer.Text("When a building is created / randomized it will pick one of the materials from this list. For most building you may only have one material, but for others you may wish to make the building look differently. So just add as many variations as you need to this list. And the randomiser will pick one for you. If you wanted to make 1 out of ten build look like it’s made of stone and not brick, you will need to add 10 materials to this list, 9 of them redbrick, and 1 stone. This will let the randomization pick 1 out of ten building could like it’s made of stone. See the 'VillageHouse(Variety)_pf' prefab for an example of this.");
 
             outer.NewLine();
             outer.NewLine();
@@ -231,7 +231,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
             outer.NewLine();
-            outer.Text("You just set the style of house to use and then let the randomizer create a build within the parameters of your chosen building style. After you have created you random building you can tweak the options to make is just as you need it.");
+            outer.Text("You just set the style of house to use and then let the randomiser create a build within the parameters of your chosen building style. After you have created you random building you can tweak the options to make is just as you need it.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Building builder is ideal for any low poly games that need a lot of buildings, or just as a background building for higher details games.");

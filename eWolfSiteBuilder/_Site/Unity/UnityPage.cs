@@ -135,7 +135,7 @@ namespace eWolfSiteBuilder._Site.Unity
 
             outer.Text(@"<h3>Skyboxes</h3>");
             outer.NewLine();
-            outer.Text(@"Skyboxes Packages are collections of skyboxs you can add to any camera");
+            outer.Text(@"Skyboxes Packages are collections of skyboxes you can add to any camera");
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();

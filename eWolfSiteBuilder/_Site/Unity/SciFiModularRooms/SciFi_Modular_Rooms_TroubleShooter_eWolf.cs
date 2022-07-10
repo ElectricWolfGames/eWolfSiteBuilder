@@ -57,24 +57,6 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             WebPage.Output();
         }
 
-        private static string AddSectionDownload(string data)
-        {
-            HTMLBuilder outer = new HTMLBuilder();
-            outer.StartTextCenter();
-            outer.NewLine();
-
-            outer.NewLine();
-            outer.Text(@"That you can get from Unity3D asset store");
-            outer.NewLine();
-            outer.NewLine();
-            outer.Unity3DLink(Unity3DSetting.SciFiModularRooms_eWolf);
-            outer.NewLine();
-            outer.NewLine();
-            outer.EndTextCenter();
-
-            return outer.Output();
-        }
-
         private static string AddSectionMagenta(string data)
         {
             HTMLBuilder outer = new HTMLBuilder();
@@ -83,13 +65,13 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             outer.NewLine();
             outer.NewLine();
-            outer.Text("If you inport Sci-Fi Modular Rooms in to a project and find the material are megenta.");
+            outer.Text("If you import Sci-Fi Modular Rooms in to a project and find the material are magenta.");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("MagentaMaterials.png", 45);
             outer.NewLine();
             outer.NewLine();
-            outer.Text("We will need to update our material to match the project reneder pipeline.");
+            outer.Text("We will need to update our material to match the project render pipeline.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Sci-Fi Modular Rooms is using Standard Shader for the materials,");
@@ -98,7 +80,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.TextBoldText("If your project is using ", "Universal Render Pipeline", " Then we can update our materials");
             outer.NewLine();
             outer.NewLine();
-            outer.Text(@"Open the materail Rooms001 (eWolf\SciFi_Rooms_Pack1\Art\Materials)");
+            outer.Text(@"Open the material Rooms001 (eWolf\SciFi_Rooms_Pack1\Art\Materials)");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Select Universal Render Pipeline -> Backed Lit shader");
@@ -118,13 +100,13 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text(@"If you get the messagse");
+            outer.Text(@"If you get the messages");
             outer.NewLine();
             outer.NewLine();
             outer.Bold(@"You are trying to read Input using the UnityEngine.Input class, but you have switched active Input handling to Input System package in Player Settings.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Then goto Project Setting -> Player");
+            outer.Text("Then go to Project Setting -> Player");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("PlayerSettings.png", 45);
@@ -161,6 +143,21 @@ eWolf.SciFi_Rooms_System.Players.RoomInteractor.Update () (at Assets/eWolf/SciFi
             outer.NewLine();
             outer.ImageCenter("SetCameraColor.PNG", 30);
 
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string AddSectionDownload(string data)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.Text($"{DisplayTitle} Is a collection of easy to fix Sci-Fi rooms and corridors.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Unity3DLink(Unity3DSetting.SciFiModularRooms_eWolf);
+            outer.NewLine();
+            outer.NewLine();
             outer.EndTextCenter();
 
             return outer.Output();

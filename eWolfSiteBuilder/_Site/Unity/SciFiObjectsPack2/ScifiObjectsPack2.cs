@@ -87,9 +87,6 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
 
             options.Text(@"Sci-Fi Objects pack 2 is a collection of game ready objects you can just use in any sci-fi style game.");
             options.NewLine();
-            options.Text(@"That you can get from Unity3D asset store");
-            options.NewLine();
-            options.NewLine();
             options.Unity3DLink(Unity3DSetting.ScifiObjectsPack2);
             options.NewLine();
             options.NewLine();

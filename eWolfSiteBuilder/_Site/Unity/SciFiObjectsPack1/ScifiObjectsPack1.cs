@@ -88,9 +88,6 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
 
             outer.Text(@"Sci-Fi Objects pack 1 is a collection of game ready objects you can just use in any sci-fi style game.");
             outer.NewLine();
-            outer.Text(@"That you can get from Unity3D asset store");
-            outer.NewLine();
-            outer.NewLine();
             outer.Unity3DLink(Unity3DSetting.ScifiObjectsPack1);
             outer.NewLine();
             outer.NewLine();
@@ -195,7 +192,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
 
             right.StartTextCenterLeft();
             right.StartTextMiddel(450);
-            right.InspectorDetails("Clear Shelf", "Remove all objects from the shelfs");
+            right.InspectorDetails("Clear Shelf", "Remove all objects from the shelf");
             right.InspectorDetails("Fill all Shelves", "Replace objects to all shelf");
             right.InspectorDetails("Update Shelf 1", "Replace objects just to level 1");
             right.InspectorDetails("Update Shelf 2", "Replace objects just to level 2");

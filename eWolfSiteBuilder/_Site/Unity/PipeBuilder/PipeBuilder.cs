@@ -85,9 +85,6 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             options.Text(@"Pipe builder is ideal for placing pipes around other objects, with tools like Insert/ Delete and Extract, it makes it easy to add, remove modify later.");
             options.NewLine();
             options.NewLine();
-            options.Text(@"That you can get from Unity3D asset store");
-            options.NewLine();
-            options.NewLine();
             options.Unity3DLink(Unity3DSetting.PipeBuilder);
             options.NewLine();
             options.EndTextCenter();

@@ -81,9 +81,6 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.StartTextCenter();
             options.NewLine();
 
-            options.Text(@"That you can get from Unity3D asset store");
-            options.NewLine();
-            options.NewLine();
             options.Unity3DLink(Unity3DSetting.BookEffect);
             options.NewLine();
             options.NewLine();

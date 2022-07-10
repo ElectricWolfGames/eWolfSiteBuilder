@@ -87,7 +87,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.Text(@"This package has all you need to create 7 different road types from normal (with and with-out pavement), grass, sandy, race track and even a rail track. And you can add more road textures/materials as you need. You don’t need any programming skills to create amazing looking roads.");
+            outer.Text(@"This package has all you need to create 7 different road types from normal (with and with-out pavement), grass, sandy, race track and even a rail track. And you can add more road textures/materials as you need. You don't need any programming skills to create amazing looking roads.");
             outer.NewLine();
             outer.NewLine();
             outer.Unity3DLink(Unity3DSetting.RoadBuilder);
@@ -347,7 +347,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             outer.Text("The create mesh will now only re-create the mesh if the node has change.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("This can be seen by the color of the road debug lines, Yellow it will not rebuild the mesh, Cyan it will rebuild the mesh.");
+            outer.Text("This can be seen by the colour of the road debug lines, Yellow it will not rebuild the mesh, Cyan it will rebuild the mesh.");
             outer.NewLine();
 
             HTMLBuilder options = new HTMLBuilder();
