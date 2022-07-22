@@ -194,12 +194,12 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.Text("I've added some simple lighting setting that you can use.");
             outer.NewLine();
-            outer.Bold("BasicFast");
+            outer.Bold("HighDetailSlow");
             outer.NewLine();
-            /*outer.Bold("BasicLightFog");
+            outer.Bold("LowBasicFast");
             outer.NewLine();
-            outer.Bold("BasicDeepFog");
-            outer.NewLine();*/
+            outer.Bold("VeryLovBasicFast");
+            outer.NewLine();
             outer.NewLine();
 
             outer.Text("All the lights in this package have flares, that will auto rotate to face the player.");
@@ -569,7 +569,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.TextBoldText("", DisplayTitle, "Is a collection of easy to fix rooms and corridors.");
+            outer.TextBoldText("", DisplayTitle, " Is a collection of easy to fix rooms and corridors.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("All rooms snap together saving time on aligning objects");
@@ -592,8 +592,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             right.ImageLeft("MapB.PNG.", 80);
             left.NewLine();
             right.NewLine();
-            left.ImageRight("MapA.PNG", 80);
-            right.ImageLeft("MapB.PNG.", 80);
+            left.ImageRight("MapC.PNG", 80);
+            right.ImageLeft("MapD.PNG.", 80);
 
             outer.Text(options.Output());
             outer.NewLine();
@@ -679,7 +679,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("All the assests for this project are under the eWolf folder");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("ProjectLayoutTop.PNG", 50);
+            outer.ImageCenter("ProjectLayoutTop.PNG", 25);
             outer.NewLine();
             outer.NewLine();
             outer.Text("All the code is under two NameSpace");
