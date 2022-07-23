@@ -191,7 +191,7 @@ eWolf.SciFi_Rooms_System.Players.RoomInteractor.Update () (at Assets/eWolf/SciFi
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms TroubleShooter, TroubleShooter Guide");
+            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms TroubleShooter Guide");
             return options.Output();
         }
     }

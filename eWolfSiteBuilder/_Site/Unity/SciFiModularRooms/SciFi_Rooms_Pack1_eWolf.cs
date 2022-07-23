@@ -16,11 +16,26 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
         public SciFi_Rooms_Pack1_eWolf()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "Sci-Fi Modular Rooms";
-            MenuTitle = "Sci-Fi Modular Rooms";
+            DisplayTitle = "Sci-Fi Modular Rooms Pack 1";
+            MenuTitle = "Sci-Fi Modular Rooms Pack 1";
         }
 
         public int UnityListOrder { get; set; } = 1;
+
+        public static string AddSectionSupport(string data)
+        {
+            // DONE: Contact@electricWolf.co.uk and Wolf@electricwolf.co.uk are both working (2022/06/04)
+            HTMLBuilder options = new HTMLBuilder();
+            options.NewLine();
+            options.NewLine();
+            options.PageLink("Trouble Shooter list can be ", "found Here", "SciFiModularRoomsTroubleShooter.html");
+            options.NewLine();
+            options.NewLine();
+            options.TextBoldText("If you need any more help please email us at ", "Contact@electricWolf.co.uk", "");
+            options.NewLine();
+            options.NewLine();
+            return options.Output();
+        }
 
         public override void CreatePage()
         {
@@ -51,7 +66,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Adding you own Wall Fillers", AddSectionAddYouOwnWallFillers));
             items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
 
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
+            items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
 
@@ -511,6 +526,11 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.ImageCenter("PostLightBake.PNG.", 45);
             outer.Text("it's much faster as the lighting is fully backed in.");
 
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text($"Overview on using the {DisplayTitle}");
+            outer.YouTubeLinkBig("");// trailer
+
             outer.EndTextCenter();
 
             return outer.Output();
@@ -605,6 +625,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
+            outer.Text($"{DisplayTitle} trailer");
+            outer.YouTubeLinkBig("");// trailer
 
             outer.NewLine();
             outer.EndTextCenter();
