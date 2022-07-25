@@ -2,16 +2,15 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
 using System.Collections.Generic;
 
 namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 {
-    // TODO : Talk about the materials being standard
-
     [PageTitle("SciFiModularRooms.html")]
-    public class SciFi_Rooms_Pack1_eWolf : PageDetails /*IHomePagePreview, IUnityList*/
+    public class SciFi_Rooms_Pack1_eWolf : PageDetails, IHomePagePreview, IUnityList
     {
         public SciFi_Rooms_Pack1_eWolf()
         {
@@ -21,21 +20,6 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
         }
 
         public int UnityListOrder { get; set; } = 1;
-
-        public static string AddSectionSupport(string data)
-        {
-            // DONE: Contact@electricWolf.co.uk and Wolf@electricwolf.co.uk are both working (2022/06/04)
-            HTMLBuilder options = new HTMLBuilder();
-            options.NewLine();
-            options.NewLine();
-            options.PageLink("Trouble Shooter list can be ", "found Here", "SciFiModularRoomsTroubleShooter.html");
-            options.NewLine();
-            options.NewLine();
-            options.TextBoldText("If you need any more help please email us at ", "Contact@electricWolf.co.uk", "");
-            options.NewLine();
-            options.NewLine();
-            return options.Output();
-        }
 
         public override void CreatePage()
         {
@@ -62,6 +46,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             items.Add(new HTMLIndexedItems("Lighting", AddSectionLighting));
             items.Add(new HTMLIndexedItems("Randomize All Fillers", AddSectionRandomizeAllFillers));
+            items.Add(new HTMLIndexedItems("Extra Room Objects", AddSectionRoomObjects));
             items.Add(new HTMLIndexedItems("Adding you own Rooms", AddSectionAddYouOwnRoom));
             items.Add(new HTMLIndexedItems("Adding you own Wall Fillers", AddSectionAddYouOwnWallFillers));
             items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
@@ -82,6 +67,20 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             WebPage.EndBody();
             WebPage.Output();
+        }
+
+        public PreviewItem GetHomePagePreview()
+        {
+            PreviewItem pi = new PreviewItem()
+            {
+                HRef = $"{WebPage.HtmlPath}\\{WebPage.HtmlTitle}",
+                Name = DisplayTitle,
+                PreviewItemType = PreviewItemType.Builders,
+                ImagePath = @$"{WebPage.HtmlPath}\images\ModularRoomsAd.PNG",
+                Description = "Sci-Fi Modular Rooms, Sci-Fi Modular Rooms, Lets you easily create sci fi rooms and corridors scene, with a helpful selection and snapping system.",
+            };
+
+            return pi;
         }
 
         private static string AddSectionConnectionTypes(string arg)
@@ -267,6 +266,41 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.EndTextCenter();
 
             return outer.Output();
+        }
+
+        private static string AddSectionRoomObjects(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+            outer.Text("We also have a small selection of large room objects.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("RoomFillerObjectsList.PNG", 45);
+            outer.NewLine();
+            outer.NewLine();
+            outer.ImageCenter("RoomFillerObjects.PNG", 64);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("The objects can be placed in any room, to add extra variety to the rooms.");
+
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private static string AddSectionSupport(string data)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.NewLine();
+            options.NewLine();
+            options.PageLink("Trouble Shooter list can be ", "found Here", "SciFiModularRoomsTroubleShooter.html");
+            options.NewLine();
+            options.NewLine();
+            options.TextBoldText("If you need any more help please email us at ", "Contact@electricWolf.co.uk", "");
+            options.NewLine();
+            options.NewLine();
+            return options.Output();
         }
 
         private string AddSectionAddYouOwnRoom(string arg)
@@ -529,7 +563,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.NewLine();
             outer.Text($"Overview on using the {DisplayTitle}");
-            outer.YouTubeLinkBig("");// trailer
+            outer.YouTubeLinkBig("nvF-_t8CsEU");// Overview
 
             outer.EndTextCenter();
 
@@ -588,13 +622,14 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.StartTextCenter();
             outer.NewLine();
 
+            outer.ImageCenter("Logo.PNG", 55);
             outer.NewLine();
             outer.TextBoldText("", DisplayTitle, " Is a collection of easy to fix rooms and corridors.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("All rooms snap together saving time on aligning objects");
             outer.NewLine();
-            outer.Text("It also has a step by step builder that only gives to options to add rooms you can connect");
+            outer.Text("It also has a step by step builder that only gives options to add rooms you can connect");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("ExampleRoomsA.PNG", 45);
@@ -626,7 +661,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             outer.NewLine();
             outer.Text($"{DisplayTitle} trailer");
-            outer.YouTubeLinkBig("");// trailer
+            outer.YouTubeLinkBig("YIdkRAclC8o");// trailer
 
             outer.NewLine();
             outer.EndTextCenter();
@@ -722,7 +757,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms, Lets you easily create sci fi base rooms and corridors with a helpful selection and snapping system.");
+            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms, Lets you easily create sci fi rooms and corridors scene, with a helpful selection and snapping system.");
             return options.Output();
         }
     }
