@@ -4,7 +4,6 @@ using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
-using eWolfSiteBuilder.SiteDetails.Helpers;
 using System.Collections.Generic;
 
 namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
@@ -168,7 +167,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("The prefabs in this package are all using Baked Lights");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("I wouldn't try to give expert light advice here, But I would like to show how to create a basic set-up in you scene.");
+            outer.Text("I wouldn't try to give expert light advice here, But I would like to show how to create a basic set-up in your scene.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("First, remove any default lights from the scene.");
@@ -401,7 +400,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("Then place your new wall filler in the R01-RoomFillers/Resources folder with the others");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Now add the name of the prefab in to the list of fillers.");
+            outer.Text("Now add the name of the prefab into the list of fillers.");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("NewWallFillers.PNG", 45);
@@ -421,7 +420,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.TextBoldText("To start creating room, We just need to add the prefab ", @"Assets\eWolf\SciFi_Rooms_System\Scripts\Prefabs\Map_pf.prefab", "");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("in to your scenes, and with it selected you will see.");
+            outer.Text("into your scenes, and with it selected you will see.");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("Map-Inspector.PNG", 25);
@@ -444,7 +443,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             right.ImageLeft("Hierarchy.PNG", 45);
             outer.Text(options.Output());
             outer.NewLine();
-            outer.Text("And select it by default.");
+            outer.Text("And this new item will be selected by default.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("From here you can add more");
@@ -483,9 +482,9 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.OtherDetails("NOTE:", "You may need to move or rotate the new room/corridor to make it snap in place");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("When you select a room it will show you what options you have to add next room.");
+            outer.Text("When you select a room it will show you what options you have to add to the next room.");
             outer.NewLine();
-            outer.Text("It will also show where a room is all ready connected");
+            outer.Text("It will also show where a room is already connected");
             outer.NewLine();
             outer.ImageCenter("Room2Links.PNG", 25);
             outer.NewLine();
@@ -510,7 +509,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             left.ImageRight("Options.PNG", 65);
             right.Text("");
             right.NewLine();
-            right.OtherDetails("1. Place all objects under right parents", "This is to move all the object under the map_pf object, in to folders.");
+            right.OtherDetails("1. Place all objects under right parents", "This is to move all the objects under the map_pf object, into folders.");
             right.OtherDetails("2. Randomize All Fillers", "Some rooms have extra random details");
             right.OtherDetails("3. Add Missing Doors & Effects", "To add the Door at the points of the links");
             right.OtherDetails("4. Generate Lighting", "Generate lighting for the rooms");
@@ -521,7 +520,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.NewLine();
 
-            outer.OtherDetails("1. Place all objects under right parents", " Will place all the rooms in to level folders");
+            outer.OtherDetails("1. Place all objects under right parents", " Will place all the rooms into level folders");
             outer.NewLine();
             outer.Text("This is to just make things easier to find if you have a map with different levels");
             outer.NewLine();
@@ -543,14 +542,14 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             right.ImageLeft("AddedDoorList.PNG.", 75);
             outer.Text(options.Output());
 
-            outer.Text("It's created the door as a Fake door, this is due to the door leading now where.");
+            outer.Text("It's created the door as a Fake door, this is due to the door leading nowhere.");
             outer.NewLine();
             outer.Text("And will not open.");
             outer.NewLine();
             outer.NewLine();
             outer.OtherDetails("4. Generate Lighting", " Will bake in the lighting for the rooms.");
             outer.NewLine();
-            outer.Bold("NOTE: Scene need to be set to use light map/backing - see Setting up Lighting section");
+            outer.Bold("NOTE: Scene need to be set to use light map/baking - see Setting up Lighting section");
             outer.NewLine();
             outer.Text("All lights in prefabs are set-up as Baked.");
             outer.NewLine();
@@ -577,7 +576,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.TextBold("When the doors are added they are all added to the folder", " RoomDoors");
+            outer.TextBoldText("When the doors are added they are all added to the folder", " RoomDoors ", "folder");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("DoorShowAll.PNG", 65);
@@ -585,14 +584,14 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.ImageCenter("DoorInspector.PNG", 55);
             outer.NewLine();
-            outer.OtherDetails("Door Action", "Lets you set how the operate when you get close.");
+            outer.OtherDetails("Door Action", "Lets you set how they operate when you get close.");
             outer.OtherDetails("Door Action Range", "Is how close you need to be to action the door.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Only Fake, and AutoOpen work, the rest of the options are for your Implementation");
             outer.NewLine();
             outer.NewLine();
-            outer.TextBold("You can override the default doors actions, by stetting", " Action&lt;Door&gt; DoorOpenLogic");
+            outer.TextBold("You can override the default doors actions, by setting", " Action&lt;Door&gt; DoorOpenLogic");
             outer.NewLine();
             outer.Text("If DoorOpenLogic is set it will get called instead of the normal door code.");
 
@@ -690,6 +689,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.OtherDetails("MainGameFlow_pf", "This can live anywhere in the scene");
             outer.OtherDetails("TempPlayer_pf", "This needs to be under map_pf object.(This is just a camera, no player control)");
             outer.NewLine();
+            outer.TextBoldText("both can be found in ", @"Assets\eWolf\SciFi_Rooms_System\Prefabs\", " folder");
             outer.NewLine();
             outer.ImageCenter("AddedPlayerMain.PNG", 35);
             outer.NewLine();
@@ -705,7 +705,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("And the room behind the door will unhide, but for the door opens");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("If you move more in to the room, the door will close and hide the rooms behind it.");
+            outer.Text("If you move more into the room, the door will close and hide the rooms behind it.");
             outer.ImageCenter("RunningDoorInRoom.PNG", 65);
             outer.NewLine();
             outer.NewLine();
@@ -746,7 +746,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("namespace eWolf.SciFi_Rooms_System");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("So when its imported in to you project, you will know where to find it");
+            outer.Text("So when its imported into you project, you will know where to find it");
             outer.NewLine();
 
             outer.EndTextCenter();
