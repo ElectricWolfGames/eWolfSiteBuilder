@@ -38,7 +38,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Overview", AddSectionOverview));
             items.Add(new HTMLIndexedItems("Download", AddSectionDownload));
             items.Add(new HTMLIndexedItems("Create First Rooms", AddSectionCreateFirstRooms));
-            items.Add(new HTMLIndexedItems("Player set-up", AddSectionPlayerSetUp));
+            items.Add(new HTMLIndexedItems("Player set up", AddSectionPlayerSetUp));
 
             items.Add(new HTMLIndexedItems("Connection Types", AddSectionConnectionTypes));
             items.Add(new HTMLIndexedItems("Doors", AddSectionDoors));
@@ -46,8 +46,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Lighting", AddSectionLighting));
             items.Add(new HTMLIndexedItems("Randomize All Fillers", AddSectionRandomizeAllFillers));
             items.Add(new HTMLIndexedItems("Extra Room Objects", AddSectionRoomObjects));
-            items.Add(new HTMLIndexedItems("Adding you own Rooms", AddSectionAddYouOwnRoom));
-            items.Add(new HTMLIndexedItems("Adding you own Wall Fillers", AddSectionAddYouOwnWallFillers));
+            items.Add(new HTMLIndexedItems("Adding your own Rooms", AddSectionAddYouOwnRoom));
+            items.Add(new HTMLIndexedItems("Adding your own Wall Fillers", AddSectionAddYouOwnWallFillers));
             items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
 
             items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
@@ -167,7 +167,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("The prefabs in this package are all using Baked Lights");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("I wouldn't try to give expert light advice here, But I would like to show how to create a basic set-up in your scene.");
+            outer.Text("I wouldn't try to give expert light advice here, But I would like to show how to create a basic set up in your scene.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("First, remove any default lights from the scene.");
@@ -205,7 +205,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("And that should be all you need, Now you can click on the Generate lighting.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("I've added some simple lighting setting that you can use.");
+            outer.Text("I've added some simple lighting settings that you can use.");
             outer.NewLine();
             outer.Bold("HighDetailSlow");
             outer.NewLine();
@@ -215,7 +215,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.NewLine();
 
-            outer.Text("All the lights in this package have flares, that will auto rotate to face the player.");
+            outer.Text("All the lights in this package have flares, that will auto-rotate to face the player.");
             outer.NewLine();
             outer.NewLine();
             outer.Text("You may need to update the code with the name of the place in the code");
@@ -309,7 +309,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("You can also added new rooms to the system.");
+            outer.Text("You can also add new rooms to the system.");
             outer.NewLine();
             outer.Text("If you would like a copy of the Blender file used to create the rooms in this package. please email me, (Email below)");
             outer.NewLine();
@@ -339,7 +339,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Next, We need to create the prefab, (sometime it's quicker to copy an existing prefab.)");
+            outer.Text("Next, We need to create the prefab, (sometimes it's quicker to copy an existing prefab.)");
             outer.NewLine();
             outer.NewLine();
 
@@ -351,13 +351,13 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             left.ImageRight("RoomPrefabLayout.PNG", 55);
             right.StartTextMiddel(300);
 
-            right.OtherDetails("Art", "This holder the mesh for the room.");
-            right.OtherDetails("Links", "All the Connection links to others rooms");
+            right.OtherDetails("Art", "This holds the mesh for the room.");
+            right.OtherDetails("Links", "All the Connection links to other rooms");
             right.OtherDetails("RoomIDCollision", "Box collider that outlines the room.");
             right.OtherDetails("Lights", "All the lights for the room");
             right.OtherDetails("Collision", "The full mesh collider");
-            right.OtherDetails("RoomObjects", "Is for any extra objects you want to add to the room.");
-            right.OtherDetails("Effects", "For extra effects, Light Flare are added here.");
+            right.OtherDetails("RoomObjects", "Are for any extra objects you want to add to the room.");
+            right.OtherDetails("Effects", "For extra effects, Light Flare is added here.");
             right.EndTextMiddel();
 
             outer.NewLine();
@@ -488,7 +488,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.ImageCenter("Room2Links.PNG", 25);
             outer.NewLine();
-            outer.Text("This also show the different connection types - 'Door' and 'corridor'");
+            outer.Text("This also shows the different connection types - 'Door' and 'corridor'");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Now you can continue to add as many rooms and corridors as you like.");
@@ -539,7 +539,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             options.SetTwoSections(left, right);
 
             left.ImageRight("AddedDoor.PNG", 65);
-            right.ImageLeft("AddedDoorList.PNG.", 75);
+            right.ImageLeft("AddedDoorList.PNG", 75);
             outer.Text(options.Output());
 
             outer.Text("It's created the door as a Fake door, this is due to the door leading nowhere.");
@@ -551,12 +551,12 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.Bold("NOTE: Scene need to be set to use light map/baking - see Setting up Lighting section");
             outer.NewLine();
-            outer.Text("All lights in prefabs are set-up as Baked.");
+            outer.Text("All lights in prefabs are set up as Baked.");
             outer.NewLine();
             outer.NewLine();
 
             outer.Text("After Bake");
-            outer.ImageCenter("PostLightBake.PNG.", 45);
+            outer.ImageCenter("PostLightBake.PNG", 45);
             outer.Text("it's much faster as the lighting is fully backed in.");
 
             outer.NewLine();
@@ -643,11 +643,11 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             options.SetTwoSections(left, right);
 
             left.ImageRight("MapA.PNG", 80);
-            right.ImageLeft("MapB.PNG.", 80);
+            right.ImageLeft("MapB.PNG", 80);
             left.NewLine();
             right.NewLine();
             left.ImageRight("MapC.PNG", 80);
-            right.ImageLeft("MapD.PNG.", 80);
+            right.ImageLeft("MapD.PNG", 80);
 
             outer.Text(options.Output());
             outer.NewLine();
@@ -733,7 +733,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("All the assests for this project are under the eWolf folder");
+            outer.Text("All the assets for this project are under the eWolf folder");
             outer.NewLine();
             outer.NewLine();
             outer.ImageCenter("ProjectLayoutTop.PNG", 25);
@@ -746,7 +746,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("namespace eWolf.SciFi_Rooms_System");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("So when its imported into you project, you will know where to find it");
+            outer.Text("So when it's imported into your project, you will know where to find it");
             outer.NewLine();
 
             outer.EndTextCenter();

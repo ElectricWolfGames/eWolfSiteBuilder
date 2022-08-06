@@ -68,7 +68,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("If you import Sci-Fi Modular Rooms in to a project and find the material are magenta.");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("MagentaMaterials.png", 45);
+            outer.ImageCenter("MagentaMaterials.PNG", 45);
             outer.NewLine();
             outer.NewLine();
             outer.Text("We will need to update our material to match the project render pipeline.");
@@ -109,7 +109,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Text("Then go to Project Setting -> Player");
             outer.NewLine();
             outer.NewLine();
-            outer.ImageCenter("PlayerSettings.png", 45);
+            outer.ImageCenter("PlayerSettings.PNG", 45);
             outer.TextBoldText("Update ", "Active Input Handing", " to use Both");
             outer.NewLine();
 
