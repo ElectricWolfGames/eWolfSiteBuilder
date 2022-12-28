@@ -2,7 +2,9 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfCommon.Helpers;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
@@ -29,17 +31,14 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
 
             WebPage.Append("<div class='row'>");
             WebPage.Append($"<div class='col-md-12'>");
-
+            HTMLBuilder options = new HTMLBuilder();
             List<HTMLIndexedItems> items = new List<HTMLIndexedItems>();
 
-            items.Add(new HTMLIndexedItems("People", AddSectionItems));
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
+            AddAllEmails(options, items);
 
             options = new HTMLBuilder();
             options.CreateIndexItems(items);
+
             WebPage.Append(options.Output());
             WebPage.Append("</div>");
 
@@ -49,32 +48,60 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
             WebPage.Output();
         }
 
-        private string AddSectionItems(string data)
+        private void AddAllEmails(HTMLBuilder options, List<HTMLIndexedItems> items)
+        {
+            //items.Add(new HTMLIndexedItems("People", AddSectionItems));
+            //options.CreateIndex(items);
+            //WebPage.Append(options.Output());
+            string unity3dDllPath = "C:\\Unity3d\\SpaceSalvager\\SpaceSalvager_UD\\Library\\ScriptAssemblies\\Assembly-CSharp.dll";
+            Assembly unityAssembly = Assembly.LoadFrom(unity3dDllPath);
+            dynamic ph = unityAssembly.CreateInstance("eWolf.SpaceSalvager.Story.Email.EmailHolder");
+            var emails = ph.Emails;
+
+            List<string> ids = new List<string>();
+            foreach (dynamic email in emails)
+            {
+                ids.Add(email.EmailIds.ToString());
+            }
+
+            ids = ids.Distinct().ToList();
+
+            foreach (string id in ids)
+            {
+                List<dynamic> emailGroup = new List<dynamic>();
+
+                foreach (dynamic email in emails)
+                {
+                    if (email.EmailIds.ToString() == id)
+                    {
+                        emailGroup.Add(email);
+                    }
+                }
+
+                items.Add(new HTMLIndexedItems(TextHelper.ToSentenceCase(id), AddSectionEmail(emailGroup)));
+            }
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+        }
+
+        private string AddSectionEmail(List<dynamic> enails)
         {
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
             outer.NewLine();
 
-            string unity3dDllPath = "C:\\Unity3d\\SpaceSalvager\\SpaceSalvager_UD\\Library\\ScriptAssemblies\\Assembly-CSharp.dll";
-
-            Assembly unityAssembly = Assembly.LoadFrom(unity3dDllPath);
-
-            dynamic ph = unityAssembly.CreateInstance("eWolf.SpaceSalvager.Story.Email.EmailHolder");
-
-            var emails = ph.Emails;
-
-            foreach (dynamic person in emails)
+            foreach (var email in enails)
             {
-                outer.InspectorDetails("Title", person.Title);
-                outer.InspectorDetails("From", person.From.ToString());
-                outer.InspectorDetails("To", string.Join("; ", person.To));
-                outer.InspectorDetails("Body", person.Body);
-                outer.InspectorDetails("Part", person.Part.ToString());
+                outer.InspectorDetails("ID", email.EmailIds.ToString());
+                outer.InspectorDetails("Title", email.Title);
+                outer.InspectorDetails("From", TextHelper.ToSentenceCase(email.From.ToString()));
+                outer.InspectorDetails("To", string.Join("; ", TextHelper.ToSentenceCase(email.To.ToString())));
+                outer.InspectorDetails("Body", email.Body);
+                outer.InspectorDetails("Part", email.Part.ToString());
 
                 outer.NewLine();
                 outer.NewLine();
             }
-
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
