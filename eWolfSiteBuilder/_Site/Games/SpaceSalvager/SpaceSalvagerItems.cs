@@ -2,11 +2,11 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.Attributes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Reflection;
 
 namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
 {
@@ -36,13 +36,6 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
             List<HTMLIndexedItems> items = new List<HTMLIndexedItems>();
 
             items.Add(new HTMLIndexedItems("Items", AddSectionItems));
-            /*items.Add(new HTMLIndexedItems("Download", CreateDownload));
-            items.Add(new HTMLIndexedItems("Inspector Options", CreateInspectorOptions));
-            items.Add(new HTMLIndexedItems("How to use", CreateHowToUse));
-            items.Add(new HTMLIndexedItems("Interface options", CreateInterfaceOptions));
-            items.Add(new HTMLIndexedItems("Project Layout", CreateProjectLayout));
-            items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
-*/
             HTMLBuilder options = new HTMLBuilder();
 
             options.CreateIndex(items);
@@ -61,24 +54,49 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
 
         private string AddSectionItems(string data)
         {
+            string unity3dDllPath = "C:\\Unity3d\\SpaceSalvager\\SpaceSalvager_UD\\Library\\ScriptAssemblies\\Assembly-CSharp.dll";
+
+            Assembly unityAssembly = Assembly.LoadFrom(unity3dDllPath);
+            Type pickupEnum = unityAssembly.GetType("eWolf.SpaceSalvager.Enums.PickupItems");
+
+            MemberInfo[] pickupObjects = pickupEnum.GetMembers(BindingFlags.Public | BindingFlags.Static);
+
+            List<Pickup> pickups = new List<Pickup>();
+
+            foreach (var pickupObject in pickupObjects)
+            {
+                var customAttributes = pickupObject.GetCustomAttributesData();
+
+                Pickup pickup = new Pickup();
+
+                pickup.Name = pickupObject.Name;
+                foreach (var at in customAttributes)
+                {
+                    if (at.AttributeType.Name == typeof(DescriptionAttribute).Name)
+                    {
+                        pickup.Description = at.ConstructorArguments[0].ToString();
+                    }
+                    if (at.AttributeType.Name == typeof(TitleAttribute).Name)
+                    {
+                        pickup.Title = at.ConstructorArguments[0].ToString();
+                    }
+                }
+                if (pickup.Title != null)
+                {
+                    pickups.Add(pickup);
+                }
+            }
+
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
             outer.NewLine();
 
-            outer.InspectorDetails($"Red Key Card", "Door pass");
-            outer.ImageCenter("PersonPassRed.PNG", 16);
+            foreach (var p in pickups)
+            {
+                outer.InspectorDetails(p.Title, p.Description);
+                outer.ImageCenter($"{p.Name}.PNG", 16);
+            }
 
-            outer.InspectorDetails($"Cyan Key Card", "Door pass");
-            outer.ImageCenter("PersonPassCyan.PNG", 16);
-
-            outer.InspectorDetails($"Green Key Card", "Door pass");
-            outer.ImageCenter("PersonPassGreen.PNG", 16);
-
-            outer.InspectorDetails($"Purple Key Card", "Door pass");
-            outer.ImageCenter("PersonPassPurple.PNG", 16);
-
-            outer.InspectorDetails($"PowerBoard", "no value");
-            outer.ImageCenter("PowerBoard.PNG", 16);
             outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
@@ -91,6 +109,13 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "Space Salvager Items");
             return options.Output();
+        }
+
+        public class Pickup
+        {
+            public string Description { get; set; }
+            public string Name { get; set; }
+            public string Title { get; set; }
         }
     }
 }

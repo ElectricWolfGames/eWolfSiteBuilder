@@ -11,6 +11,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Helpers\" />
 	  <Folder Include="zOLD\Data\" />
 	  <Folder Include="zOLD\Interfaces\" />
 	  <Folder Include="_Site\Unity\NewFolder\" />
