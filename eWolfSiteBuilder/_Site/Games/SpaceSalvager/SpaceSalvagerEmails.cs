@@ -19,6 +19,19 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
             MenuTitle = "Space Salvager Emails";
         }
 
+        public static string CreateLinks()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.NewLine();
+            options.PageLink(" ", "Items,", "SpaceSalvagerItems.html");
+            options.PageLink(" ", "Emails,", "SpaceSalvagerEmails.html");
+            options.PageLink(" ", "People,", "SpaceSalvagerPeople.html");
+            options.PageLink(" ", "Quests,", "SpaceSalvagerQuests.html");
+            options.NewLine();
+
+            return options.Output();
+        }
+
         public override void CreatePage()
         {
             WebPage.AddHeader(this);
@@ -28,6 +41,7 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
             WebPage.StartDiv("<div class='container mt-4'>");
 
             WebPage.Append(CreateHero());
+            WebPage.Append(SpaceSalvagerEmails.CreateLinks());
 
             WebPage.Append("<div class='row'>");
             WebPage.Append($"<div class='col-md-12'>");

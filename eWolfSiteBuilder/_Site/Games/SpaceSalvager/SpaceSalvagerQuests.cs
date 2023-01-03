@@ -7,14 +7,14 @@ using System.Reflection;
 
 namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
 {
-    [PageTitle("SpaceSalvagerPeople.html")]
-    public class SpaceSalvagerPeople : PageDetails
+    [PageTitle("SpaceSalvagerQuests.html")]
+    public class SpaceSalvagerQuests : PageDetails
     {
-        public SpaceSalvagerPeople()
+        public SpaceSalvagerQuests()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "Space Salvager People";
-            MenuTitle = "Space Salvager People";
+            DisplayTitle = "Space Salvager Quests";
+            MenuTitle = "Space Salvager Quests";
         }
 
         public override void CreatePage()
@@ -33,7 +33,7 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
 
             List<HTMLIndexedItems> items = new List<HTMLIndexedItems>();
 
-            items.Add(new HTMLIndexedItems("People", AddSectionItems));
+            items.Add(new HTMLIndexedItems("Quests", AddSectionItems));
             HTMLBuilder options = new HTMLBuilder();
 
             options.CreateIndex(items);
@@ -60,18 +60,16 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
 
             Assembly unityAssembly = Assembly.LoadFrom(unity3dDllPath);
 
-            dynamic ph = unityAssembly.CreateInstance("eWolf.SpaceSalvager.Story.People.PeopleHolder");
+            dynamic qh = unityAssembly.CreateInstance("eWolf.SpaceSalvager.Story.Quests.QuestHolder");
 
-            var people = ph.People;
+            var quests = qh.Quests;
 
-            foreach (dynamic person in people)
+            foreach (dynamic quest in quests)
             {
-                outer.InspectorDetails("Name", person.Name);
-                outer.InspectorDetails("Department", person.Department.ToString());
-                outer.InspectorDetails("Role", person.Department.ToString());
-                outer.InspectorDetails("Emails", person.Email.ToString());
-                outer.InspectorDetails("Ship", person.ShipID.ToString());
-                outer.InspectorDetails("Class", person.Class.ToString());
+                outer.InspectorDetails("Name", quest.Name);
+                outer.InspectorDetails("Description", quest.Description);
+                outer.InspectorDetails("Level", quest.Level);
+                outer.InspectorDetails("QuestIds", quest.QuestIds.ToString());
 
                 outer.NewLine();
                 outer.NewLine();
@@ -87,7 +85,7 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Space Salvager Items");
+            options.Jumbotron(DisplayTitle, "Space Salvager Quests");
             return options.Output();
         }
     }

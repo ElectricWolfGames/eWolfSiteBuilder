@@ -29,6 +29,7 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
             WebPage.StartDiv("<div class='container mt-4'>");
 
             WebPage.Append(CreateHero());
+            WebPage.Append(SpaceSalvagerEmails.CreateLinks());
 
             WebPage.Append("<div class='row'>");
             WebPage.Append($"<div class='col-md-12'>");
