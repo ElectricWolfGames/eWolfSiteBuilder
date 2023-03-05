@@ -57,7 +57,6 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
             outer.NewLine();
 
             string unity3dDllPath = "C:\\Unity3d\\SpaceSalvager\\SpaceSalvager_UD\\Library\\ScriptAssemblies\\Assembly-CSharp.dll";
-
             Assembly unityAssembly = Assembly.LoadFrom(unity3dDllPath);
 
             dynamic qh = unityAssembly.CreateInstance("eWolf.SpaceSalvager.Story.Quests.QuestHolder");

@@ -67,7 +67,6 @@ namespace eWolfSiteBuilder._Site
             builder.Text("<h2>Electric wolf excels at creating user friendly tools with Unity3D </h2>");
             builder.Text("<div class='d-flex'>");
             builder.Text("<a href='#services' class='btn-get-started scrollto'>Take a look</a>");
-            //builder.Text("<a href='https://www.youtube.com/watch?v=jDDaplaOz7Q' class='venobox btn-watch-video' data-vbtype='video' data-autoplay='true'> Watch Video <i class='icofont-play-alt-2'></i></a>");
             builder.Text("</div>");
             builder.Text("</div>");
             builder.Text("</section>");
