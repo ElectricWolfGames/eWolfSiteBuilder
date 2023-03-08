@@ -49,6 +49,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Adding your own Rooms", AddSectionAddYouOwnRoom));
             items.Add(new HTMLIndexedItems("Adding your own Wall Fillers", AddSectionAddYouOwnWallFillers));
             items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
+            items.Add(new HTMLIndexedItems("Version 2", AddSectionVersion2));
 
             items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
 
@@ -636,6 +637,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.Text("Giving you nearly endless layout options");
             outer.NewLine();
+            outer.NewLine();
 
             var options = new HTMLBuilder();
             var left = new HTMLSection("col-md-6");
@@ -747,6 +749,71 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.NewLine();
             outer.Text("So when it's imported into your project, you will know where to find it");
+            outer.NewLine();
+
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string AddSectionVersion2(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("Version 2 Adds more rooms and extra lighting options. (Coming soon)");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.Text("Corridors and rooms can now have different light settings");
+            outer.NewLine();
+            outer.Image("LightOptionsv2.PNG", 35);
+            outer.NewLine();
+
+            outer.TextBoldText("Just set the light colour in the Map controller and then click on the new ", "Set Light Colour", ".");
+            outer.NewLine();
+            outer.Text("Each room and corridor has different lights setting for different areas.Top, floor, ground and special.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Then just back the lights as normal.");
+
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Some examples of different lights used");
+            outer.NewLine();
+
+            var options = new HTMLBuilder();
+            var left = new HTMLSection("col-md-6");
+            var right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("Colors_SetA.PNG", 80);
+            right.ImageLeft("Colors_SetC.PNG", 80);
+            left.NewLine();
+            right.NewLine();
+            left.ImageRight("Colors_SetD.PNG", 80);
+            right.ImageLeft("Colors_SetE.PNG", 80);
+
+            outer.Text(options.Output());
+
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Two new corridor types have been added");
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBold("", "Air Lock");
+            outer.NewLine();
+            outer.Image("CORR-AirLock.png", 60);
+            outer.NewLine();
+            outer.Text("NOTE: This is not a working door - just a nice way to end a corridor.");
+
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBold("", "Lift");
+            outer.NewLine();
+            outer.Image("CORR-AirLock.png", 60);
             outer.NewLine();
 
             outer.EndTextCenter();
