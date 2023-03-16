@@ -9,7 +9,7 @@ using System.Collections.Generic;
 
 namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
 {
-    [PageTitle("SciFiObjectsIndex.html")]
+    [PageTitle("FenceWallAndHedgeBuilder.html")]
     internal class FenceWallAndHedgeBuilder : PageDetails, IHomePagePreview, IUnityList
     {
         public FenceWallAndHedgeBuilder()

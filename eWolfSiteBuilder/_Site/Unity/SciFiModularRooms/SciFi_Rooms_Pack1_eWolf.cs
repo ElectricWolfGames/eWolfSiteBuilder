@@ -77,7 +77,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
                 Name = DisplayTitle,
                 PreviewItemType = PreviewItemType.Builders,
                 ImagePath = @$"{WebPage.HtmlPath}\images\ModularRoomsAd.PNG",
-                Description = "Sci-Fi Modular Rooms, Sci-Fi Modular Rooms, Lets you easily create sci fi rooms and corridors scene, with a helpful selection and snapping system.",
+                Description = "Sci-Fi Modular Rooms, Lets you easily create Sci-Fi scenes using prefab rooms and corridors, with a helpful selection and snapping system.",
             };
 
             return pi;
@@ -772,12 +772,12 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.Image("LightOptionsv2.PNG", 35);
             outer.NewLine();
 
-            outer.TextBoldText("Just set the light colour in the Map controller and then click on the new ", "Set Light Colour", ".");
+            outer.TextBoldText("Just set the light colour in the Map controller and then click on the new ", "Set Light Colour", " button");
             outer.NewLine();
-            outer.Text("Each room and corridor has different lights setting for different areas.Top, floor, ground and special.");
+            outer.Text("Each room and corridor has different lights setting for different areas. Top, floor, ground and special.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Then just back the lights as normal.");
+            outer.Text("Then just bake the lights as normal.");
 
             outer.NewLine();
             outer.NewLine();
@@ -789,33 +789,70 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             var right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("Colors_SetA.PNG", 80);
-            right.ImageLeft("Colors_SetC.PNG", 80);
+            left.ImageRight("Colors_SetA.png", 80);
+            right.ImageLeft("Colors_SetC.png", 80);
             left.NewLine();
             right.NewLine();
-            left.ImageRight("Colors_SetD.PNG", 80);
-            right.ImageLeft("Colors_SetE.PNG", 80);
+            left.ImageRight("Colors_SetD.png", 80);
+            right.ImageLeft("Colors_SetE.png", 80);
 
             outer.Text(options.Output());
 
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Two new corridor types have been added");
+            outer.Bold("Two new corridor types have been added");
             outer.NewLine();
             outer.NewLine();
             outer.TextBold("", "Air Lock");
             outer.NewLine();
-            outer.Image("CORR-AirLock.png", 60);
+            outer.Image("CORR-AirLock.png", 50);
             outer.NewLine();
             outer.Text("NOTE: This is not a working door - just a nice way to end a corridor.");
 
             outer.NewLine();
             outer.NewLine();
-            outer.TextBold("", "Lift");
-            outer.NewLine();
-            outer.Image("CORR-AirLock.png", 60);
+            outer.TextBoldText("", "Lift", " (This is a full working door)");
             outer.NewLine();
 
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("InSideLift.png", 80);
+            left.Text("In side the lift");
+            right.ImageLeft("LiftDoors.png", 80);
+            right.Text("Outside the lift");
+
+            outer.Text(options.Output());
+            // --
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBold("", "Storage Room (With Blast Doors)");
+            outer.NewLine();
+
+            // --
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("StoreRoomView.png", 80);
+            right.ImageLeft("StoreRoom.PNG", 80);
+
+            outer.Text(options.Output());
+
+            outer.NewLine();
+            outer.NewLine();
+            outer.Bold("Tool Update");
+            outer.NewLine();
+            outer.TextBoldText("The button ", "Reload prefabs into scene", " Has been updated");
+            outer.NewLine();
+            outer.Text("And will now keep any objects you have in the room.");
+            outer.NewLine();
+            outer.TextBoldText("", "Reload prefabs into scene", " Can be used when you update existing maps with this update.");
+            outer.NewLine();
+            outer.Text("or any other time you think the prefabs have changed.");
             outer.EndTextCenter();
 
             return outer.Output();
@@ -824,7 +861,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms, Lets you easily create sci fi rooms and corridors scene, with a helpful selection and snapping system.");
+            options.Jumbotron(DisplayTitle, "Lets you easily create Sci-Fi scenes using prefab rooms and corridors, with a helpful selection and snapping system.");
             return options.Output();
         }
     }
