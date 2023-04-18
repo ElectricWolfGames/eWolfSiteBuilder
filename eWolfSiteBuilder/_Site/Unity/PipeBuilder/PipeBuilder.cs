@@ -44,6 +44,11 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             items.Add(new HTMLIndexedItems("Auto Build and Inside Pipes", CreateAutoBuildAndInsidePipes));
             items.Add(new HTMLIndexedItems("Materials", CreateMaterials));
             items.Add(new HTMLIndexedItems("Create Pipes from Scripts", CreateCreatePipesFromScripts));
+            items.Add(new HTMLIndexedItems("Version 2", CreateVersion2));
+            items.Add(new HTMLIndexedItems("v2 Fittings", CreateV2Fittings));
+            items.Add(new HTMLIndexedItems("v2 New Materials", CreateV2Materials));
+            items.Add(new HTMLIndexedItems("v2 Bake Lighting", CreateV2BakeLighting));
+
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             HTMLBuilder options = new HTMLBuilder();
@@ -360,6 +365,171 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             right.EndTextCenterLeft();
 
             outer.Text(options.Output());
+
+            return outer.Output();
+        }
+
+        private string CreateV2BakeLighting(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+
+            outer.StartTextCenter();
+            outer.NewLine();
+            outer.Text("Bake Lighting");
+            outer.NewLine();
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string CreateV2Fittings(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+
+            outer.StartTextCenter();
+            outer.NewLine();
+            outer.TextBoldText("Fitting type are ", "Box, Flange, Value Wheel, Value Leaver.", "");
+            outer.NewLine();
+            outer.Text("Added in Version 2");
+            outer.NewLine();
+
+            var options = new HTMLBuilder();
+            var left = new HTMLSection("col-md-6");
+            var right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("Fitting Box.png", 80);
+            right.ImageLeft("Fitting Flange.png", 80);
+            left.NewLine();
+            right.NewLine();
+            left.ImageRight("Fitting Leaver Red.png", 80);
+            right.ImageLeft("Fitting Wheel Blue.png", 80);
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            outer.TextBold("To add a fitting to a pipe, just select a pipe node and click ", "'Add Fittings'");
+            outer.NewLine();
+            outer.Text("If you select two nodes it will add the fitting at the mid point between the two nodes");
+            outer.NewLine();
+            outer.Image("NodeDetailsInspector-AddFitting.png", 35);
+            outer.NewLine();
+            outer.Text("Any fitting can be move in 3d space - but it will always link to the closet point along the pipe.");
+            outer.NewLine();
+            outer.Text("And when you release it - it will jump to that location.");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.NewLine();
+
+            outer.Text("<h3>Fitting Options</h3>");
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("FittingInspector.png", 80);
+            right.InspectorDetails("Direction", "The Direction of the fitting*");
+            right.InspectorDetails("Extra Radius", "How far out from the pipe");
+            right.InspectorDetails("Fitting Type", "The type of fitting");
+            right.InspectorDetails("Length", "Length of the fitting along the pipe");
+            right.InspectorDetails("Object Scale Modifier", "Wheels and Leavers scale adjuster*");
+            right.InspectorDetails("Stem Length", "The length of the stem*");
+            right.InspectorDetails("Stem Radius", "The radius of the stem*");
+            right.Text("* Only on selected types");
+            right.NewLine();
+            right.NewLine();
+
+            right.TextBoldText("Click ", "'Build mesh'", " to create the mesh");
+            right.NewLine();
+            right.TextBoldText("Click ", "'Duplicate Fitting'", " to Duplicate Fitting the current fitting.");
+
+            outer.Text(options.Output());
+
+            outer.NewLine();
+
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.Text("Wheel Gates - 4 Directions");
+            left.ImageRight("Fitting Show Wheels.png", 80);
+            right.Text("leaver Gates - 4 Directions");
+            right.ImageLeft("Fitting Show Leavers.png", 80);
+            left.NewLine();
+            right.NewLine();
+
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string CreateV2Materials(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+
+            outer.StartTextCenter();
+            outer.Text("New Materials added in Version 2");
+            outer.NewLine();
+            outer.Bold("Dented Copper");
+            outer.NewLine();
+            outer.Bold("Old Paint Blue");
+            outer.NewLine();
+            outer.Bold("Old Paint Green");
+            outer.NewLine();
+            outer.Bold("Old Paint Yellow");
+            outer.NewLine();
+            outer.Bold("Plastic Black");
+            outer.NewLine();
+            outer.Bold("Plastic Yellow");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Image("New materials v2.png", 65);
+
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string CreateVersion2(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.Text("Version 2 Adds");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Fittings like Wheel Gate, Leaver gates and others");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("More materials");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Bake Lighting Options");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Fixed some bugs:");
+            outer.NewLine();
+
+            outer.Text("Update on the UV mapping to keep it more balanced.");
+            outer.NewLine();
+            outer.Text("Update name of buttons in the inspectors");
+            outer.NewLine();
+            outer.Text("Some button now work when selecting more than one GameObject.");
+
+            outer.NewLine();
+
+            outer.EndTextCenter();
 
             return outer.Output();
         }

@@ -24,7 +24,7 @@
 
 <div class='row'>
 <div class='col-md-12'>
-<div class='row'><div class='col-md-2'></div><div class='col-md-8'><div class='text-center'><br /><a href='#Download'>Download</a></br><a href='#Overview'>Overview</a></br><a href='#CreatingyourfirstPipe:'>Creating your first Pipe:</a></br><a href='#InspectorDetails'>Inspector Details</a></br><a href='#CornerPipes'>Corner Pipes</a></br><a href='#AutoBuildandInsidePipes'>Auto Build and Inside Pipes</a></br><a href='#Materials'>Materials</a></br><a href='#CreatePipesfromScripts'>Create Pipes from Scripts</a></br><a href='#Support'>Support</a></br></div></br></div><div class='col-md-2'></div></div>
+<div class='row'><div class='col-md-2'></div><div class='col-md-8'><div class='text-center'><br /><a href='#Download'>Download</a></br><a href='#Overview'>Overview</a></br><a href='#CreatingyourfirstPipe:'>Creating your first Pipe:</a></br><a href='#InspectorDetails'>Inspector Details</a></br><a href='#CornerPipes'>Corner Pipes</a></br><a href='#AutoBuildandInsidePipes'>Auto Build and Inside Pipes</a></br><a href='#Materials'>Materials</a></br><a href='#CreatePipesfromScripts'>Create Pipes from Scripts</a></br><a href='#Version2'>Version 2</a></br><a href='#v2Fittings'>v2 Fittings</a></br><a href='#v2NewMaterials'>v2 New Materials</a></br><a href='#v2BakeLighting'>v2 Bake Lighting</a></br><a href='#Support'>Support</a></br></div></br></div><div class='col-md-2'></div></div>
 <a id='Download'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
@@ -102,6 +102,46 @@
 <div class='text-left'><h2>Create Pipes from Scripts</h2>
 </div>
 <div class='text-center'></br>If you need to create Pipes from your own scripts take a look at the example scene<strong> CreatePipesFromScript</strong></br></br>Run this scene and you will see 3 buttons</br><img class='img-fluid rounded mx-auto d-block' src='images/EX01_Ingame.PNG' width=45%px ></br>The button <strong>Create basic pipes</strong>run this code</br><img class='img-fluid rounded mx-auto d-block' src='images/CreateBasicPipe.png' width=45%px ></br><strong>Pipe.AddPipes(); </strong>create a new pipe and returns it<br /><strong>pipeNode.ExtendPipe(); </strong>Extends the current pipe node - creating the two nodes needed for the first pipe<br /><strong>Pipe.BuildPipes(); </strong>forced the pipes to build the mesh<br /></br></br>The button <strong>Create basic pipes</strong>run this code</br><img class='img-fluid rounded mx-auto d-block' src='images/CreatePipesFromList.png' width=45%px ></br>This is doing the same as the above script but just looping through a list of vectors.</br><strong>Note: </strong>It still needs to call 'AddPipe' before having any nodes to extend.<br /></div></div>
+</div>
+</div>
+<br />
+<a id='Version2'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Version 2</h2>
+</div>
+<div class='text-center'></br>Version 2 Adds</br></br>Fittings like Wheel Gate, Leaver gates and others</br></br>More materials</br></br>Bake Lighting Options</br></br>Fixed some bugs:</br>Update on the UV mapping to keep it more balanced.</br>Update name of buttons in the inspectors</br>Some button now work when selecting more than one pipe base.</br></div></div>
+</div>
+</div>
+<br />
+<a id='v2Fittings'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>v2 Fittings</h2>
+</div>
+<div class='text-center'></br>Fitting type are <strong>Box, Flange, Value Wheel, Value Leaver.</strong></br>Added in Version 2</br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/Fitting Box.png' width=80%px ></div></br><div class='text-right'><img src='images/Fitting Leaver Red.png' width=80%px ></div></div><div class='col-md-6'><div class='text-left'><img src='images/Fitting Flange.png' width=80%px ></div></br><div class='text-left'><img src='images/Fitting Wheel Blue.png' width=80%px ></div></div></div></br>To add a fitting to a pipe, just select a pipe node and click <strong>'Add Fittings'</strong></br>If you select two nodes it will add the fitting at the mid point between the two nodes</br><img src='images/NodeDetailsInspector-AddFitting.png' width=35%px ></br>Any fitting can be move in 3d space - but it will always link to the closet point along the pipe.</br>And when you release it - it will jump to that location.</br></br></br><h3>Fitting Options</h3><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/FittingInspector.png' width=80%px ></div></div><div class='col-md-6'><strong>Direction: </strong>The Direction of the fitting*<br /><strong>Extra Radius: </strong>How far out from the pipe<br /><strong>Fitting Type: </strong>The type of fitting<br /><strong>Length: </strong>Length of the fitting along the pipe<br /><strong>Object Scale Modifier: </strong>Wheels and Leavers scale adjuster*<br /><strong>Stem Length: </strong>The length of the stem*<br /><strong>Stem Radius: </strong>The radius of the stem*<br />* Only on selected types</br></br>Click <strong>'Build mesh'</strong> to create the mesh</br>Click <strong>'Duplicate Fitting'</strong> to Duplicate Fitting the current fitting.</div></div></br><div class='row'><div class='col-md-6'>Wheel Gates - 4 Directions<div class='text-right'><img src='images/Fitting Show Wheels.png' width=80%px ></div></br></div><div class='col-md-6'>leaver Gates - 4 Directions<div class='text-left'><img src='images/Fitting Show Leavers.png' width=80%px ></div></br></div></div></br></div></div>
+</div>
+</div>
+<br />
+<a id='v2NewMaterials'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>v2 New Materials</h2>
+</div>
+<div class='text-center'>New Materials added in Version 2</br><strong>Dented Copper</strong></br><strong>Old Paint Blue</strong></br><strong>Old Paint Green</strong></br><strong>Old Paint Yellow</strong></br><strong>Plastic Black</strong></br><strong>Plastic Yellow</strong></br></br><img src='images/New materials v2.png' width=65%px ></br></div></div>
+</div>
+</div>
+<br />
+<a id='v2BakeLighting'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>v2 Bake Lighting</h2>
+</div>
+<div class='text-center'></br>Bake Lighting</br></br></br></div></div>
 </div>
 </div>
 <br />
