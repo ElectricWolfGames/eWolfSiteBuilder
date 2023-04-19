@@ -45,9 +45,9 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             items.Add(new HTMLIndexedItems("Materials", CreateMaterials));
             items.Add(new HTMLIndexedItems("Create Pipes from Scripts", CreateCreatePipesFromScripts));
             items.Add(new HTMLIndexedItems("Version 2", CreateVersion2));
-            items.Add(new HTMLIndexedItems("v2 Fittings", CreateV2Fittings));
-            items.Add(new HTMLIndexedItems("v2 New Materials", CreateV2Materials));
-            items.Add(new HTMLIndexedItems("v2 Bake Lighting", CreateV2BakeLighting));
+            items.Add(new HTMLIndexedItems("Fittings (version 2)", CreateV2Fittings));
+            items.Add(new HTMLIndexedItems("New Materials (version 2)", CreateV2Materials));
+            items.Add(new HTMLIndexedItems("Bake Lighting (version 2)", CreateV2BakeLighting));
 
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
@@ -236,6 +236,8 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             outer.NewLine();
             outer.TextBoldText("If you need more nodes just click on the ", "'Extend Pipe'", " button and this will create another node in the direction of the pipe.");
             outer.NewLine();
+            outer.TextBold("After you have positioned all your nodes just press ", "Generate pipe Mesh");
+            outer.NewLine();
             outer.Text("You can see a basic pipe creation in this video");
             outer.NewLine();
             outer.NewLine();
@@ -269,6 +271,9 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             right.NewLine();
             right.InspectorDetails("Sides", "Number of sides of the pipe");
             right.InspectorDetails("Radius", "The size of the pipe");
+            right.InspectorDetails("UV Modifier", "Scale the UVs");
+            right.InspectorDetails("Auto Build", "Rebuild the mesh each time you move a node");
+            right.InspectorDetails("Inside Pipe", "Flips the normals, So you are inside the pipe");
             right.NewLine();
             right.NewLine();
 
@@ -284,6 +289,14 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             right.Text("Corners Details");
             right.NewLine();
             right.Text("We will cover the corners below.");
+            right.NewLine();
+            right.NewLine();
+            right.Text("Bake Lighting Details");
+            right.NewLine();
+
+            right.Text("We will cover the bake lighting below.");
+            right.NewLine();
+            right.NewLine();
             right.NewLine();
 
             right.EndTextMiddel();
@@ -375,10 +388,14 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             outer.StartTextCenter();
             outer.NewLine();
-            outer.Text("Bake Lighting");
+            outer.Text("Should you want to use Bake lights in your scenes, you can turn this on at the base pipe object.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("You also have the option set if you need the pipe to cast shadows");
             outer.NewLine();
             outer.NewLine();
             outer.NewLine();
+            outer.TextBold("After you have update the lighting options just rebuild the mesh by clicking ", "Generate pipe Mesh");
 
             outer.EndTextCenter();
 
