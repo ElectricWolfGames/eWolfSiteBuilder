@@ -378,6 +378,12 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             right.EndTextCenterLeft();
 
             outer.Text(options.Output());
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Here is an overview video.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.YouTubeLinkBig("SylhKZ2sPhQ"); // TODO : Update with new Video.
 
             return outer.Output();
         }
@@ -391,11 +397,17 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             outer.Text("Should you want to use Bake lights in your scenes, you can turn this on at the base pipe object.");
             outer.NewLine();
             outer.NewLine();
-            outer.Text("You also have the option set if you need the pipe to cast shadows");
+            outer.Text("You also have the option set if you need the pipe to cast shadows and receive shadow");
             outer.NewLine();
+            outer.Image("BakeLightingOptions.PNG", 45);
             outer.NewLine();
             outer.NewLine();
             outer.TextBold("After you have update the lighting options just rebuild the mesh by clicking ", "Generate pipe Mesh");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Just remember to bake the scene after any changes.");
+            outer.NewLine();
+            outer.TextBoldText("We have added a ", "Generate bake Lighting", " Option on the base Pipe build to make it easy to find");
 
             outer.EndTextCenter();
 
