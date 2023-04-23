@@ -160,7 +160,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             left.StartTextCenterRight();
             left.StartTextMiddel(150);
-            left.TextBoldText("", "Steps", " define how may polygon you want. A high number will make it smoother");
+            left.TextBoldText("", "Steps", " define how many polygons you want. A high number will make it smoother");
             left.EndTextMiddel();
             left.EndTextCenterRight();
 
@@ -250,7 +250,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.JumbotronImage(DisplayTitle, "Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipe are in the scene. All with in Unity3D no need to swap back to a 3D editor.", "PipeBuilderLogo.png", 35);
+            options.JumbotronImage(DisplayTitle, "Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipes are in the scene. All within Unity3D no need to swap back to a 3D editor.", "PipeBuilderLogo.png", 35);
             return options.Output();
         }
 
@@ -446,7 +446,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             outer.NewLine();
             outer.Image("NodeDetailsInspector-AddFitting.png", 35);
             outer.NewLine();
-            outer.Text("Any fitting can be move in 3d space - but it will always link to the closet point along the pipe.");
+            outer.Text("Any fitting can be moved in 3d space - but it will always link to the closest point along the pipe.");
             outer.NewLine();
             outer.Text("And when you release it - it will jump to that location.");
             outer.NewLine();
