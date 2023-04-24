@@ -431,7 +431,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             options.SetTwoSections(left, right);
 
             left.ImageRight("Fitting Box.png", 80);
-            right.ImageLeft("Fitting Flange.png", 80);
+            right.ImageLeft("Fitting flange.png", 80);
             left.NewLine();
             right.NewLine();
             left.ImageRight("Fitting Leaver Red.png", 80);
