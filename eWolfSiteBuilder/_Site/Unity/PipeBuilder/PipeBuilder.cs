@@ -380,10 +380,10 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             outer.Text(options.Output());
             outer.NewLine();
             outer.NewLine();
-            outer.Text("Here is an overview video.");
+            outer.Text("Here is an full overview video.");
             outer.NewLine();
             outer.NewLine();
-            outer.YouTubeLinkBig("SylhKZ2sPhQ"); // TODO : Update with new Video.
+            outer.YouTubeLinkBig("o3rYiB2Sd2g");
 
             return outer.Output();
         }
