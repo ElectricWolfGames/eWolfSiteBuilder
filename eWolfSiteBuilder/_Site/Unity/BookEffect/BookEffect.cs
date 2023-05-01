@@ -27,7 +27,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
-            WebPage.StartDiv("<div class='container mt-4'>");
+            WebPage.StartDiv("<div class='container mt-12'>");
 
             WebPage.Append(CreateHero());
 
