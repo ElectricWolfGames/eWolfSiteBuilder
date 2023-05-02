@@ -41,17 +41,7 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesVariety
             items.Add(new HTMLIndexedItems("Previews", CreatePreviews));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -125,6 +115,21 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesVariety
             outer.NewLine();
             outer.NewLine();
             return outer.Output();
+        }
+
+        private void CreateIndexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreatePreviews(string arg)

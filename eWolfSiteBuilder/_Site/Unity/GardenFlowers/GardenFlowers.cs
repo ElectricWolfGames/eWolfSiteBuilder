@@ -44,17 +44,7 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             items.Add(new HTMLIndexedItems("Demo", CreateDemo));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -257,6 +247,21 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "A collection of low poly garden flowers for Unity3D. Flowers have individual prefabs and also a collection of Flower Beds prefabs with pre-arranged groups of flowers for easy placement");
             return options.Output();
+        }
+
+        private void CreateIndexItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreateRenderOptimization(string arg)

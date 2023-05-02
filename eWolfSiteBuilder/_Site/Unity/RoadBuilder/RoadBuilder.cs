@@ -51,17 +51,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             items.Add(new HTMLIndexedItems("Render underside of the road", CreateRenderUndersideOfTheRoad));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -382,6 +372,21 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.JumbotronImage(DisplayTitle, "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.", "RoadBuilderLogo.png", 35);
             return outer.Output();
+        }
+
+        private void CreateIndexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreateMaterialsFrequency(string arg)

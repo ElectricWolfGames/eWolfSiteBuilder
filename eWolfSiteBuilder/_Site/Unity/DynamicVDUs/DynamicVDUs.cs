@@ -46,17 +46,8 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             items.Add(new HTMLIndexedItems("Using Sprites", CreateSprite));
             items.Add(new HTMLIndexedItems("More Examples", CreateMoreExample));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
-            HTMLBuilder options = new HTMLBuilder();
 
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -103,6 +94,21 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "Dynamic VDU is a collection of animated dynamic monitors, That will show a range of alertness form no alert - all is green to full alert - were most is red");
             return options.Output();
+        }
+
+        private void CreateIndexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreateMoreExample(string arg)

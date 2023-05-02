@@ -41,17 +41,7 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
 
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -154,6 +144,21 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "A Collection of 42 prefabs for Unity3D, All with collision");
             return options.Output();
+        }
+
+        private void CreateIndexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
     }
 }

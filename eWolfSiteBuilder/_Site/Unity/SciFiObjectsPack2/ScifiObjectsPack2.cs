@@ -49,17 +49,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             items.Add(new HTMLIndexedItems("Scripts Used", CreateScriptsUsed));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
+            AddIndexItemsWithSideBar(items);
 
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
             WebPage.EndBody();
             WebPage.Output();
         }
@@ -177,6 +168,21 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "Sci-Fi Objects Pack 2 is a collection of game ready objects you can just use in any sci-fi style game.");
             return options.Output();
+        }
+
+        private void CreateIndexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreateLivingQuarters(string arg)

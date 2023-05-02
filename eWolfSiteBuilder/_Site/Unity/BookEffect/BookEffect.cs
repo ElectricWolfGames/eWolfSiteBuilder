@@ -44,17 +44,8 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             items.Add(new HTMLIndexedItems("Project Layout", CreateProjectLayout));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
+            //CreateIndexedItems(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -126,6 +117,21 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.EndTextCenterLeft();
 
             return options.Output();
+        }
+
+        private void CreateIndexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreateInspectorOptions(string arg)

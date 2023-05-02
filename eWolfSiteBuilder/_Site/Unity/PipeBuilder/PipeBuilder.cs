@@ -35,7 +35,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
             items.Add(new HTMLIndexedItems("Overview", CreateOverview));
-            items.Add(new HTMLIndexedItems("Creating your first Pipe:", CreateCreatingYourFirstPipe));
+            items.Add(new HTMLIndexedItems("Creating your first Pipe", CreateCreatingYourFirstPipe));
             items.Add(new HTMLIndexedItems("Inspector Details", CreateInspectorDetails));
             items.Add(new HTMLIndexedItems("Corner Pipes", CreateCornerPipes));
             items.Add(new HTMLIndexedItems("Auto Build and Inside Pipes", CreateAutoBuildAndInsidePipes));

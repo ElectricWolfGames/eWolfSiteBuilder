@@ -48,17 +48,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
             items.Add(new HTMLIndexedItems("Project Layout", CreateProjectLayout));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -177,6 +167,21 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "Sci-Fi Objects is a collection of game ready objects you can just use in any sci-fi style game.");
             return options.Output();
+        }
+
+        private void CreateindexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreateInspector(string data)

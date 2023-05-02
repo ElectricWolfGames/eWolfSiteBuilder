@@ -54,17 +54,7 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             items.Add(new HTMLIndexedItems("Example Walls", CreateExampleWalls));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -392,6 +382,21 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "Fence, Wall and Hedge Builder Lets you quickly place walls in you game, using a user friendly UI from within the scene editor or the inspector, Select from a list of defined wall types and then select the style for that type.");
             return options.Output();
+        }
+
+        private void CreateIndexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreateNewGapFeatureTypesAndNewWallType(string arg)

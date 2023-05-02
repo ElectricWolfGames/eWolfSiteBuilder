@@ -34,6 +34,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             HTMLBuilder options = new HTMLBuilder();
             options.PageLink("You can find the full documentation for Road Builder", "here", "RoadBuilder.html");
             options.NewLine();
+            options.NewLine();
             WebPage.Append(options.Output());
 
             List<HTMLIndexedItems> items = new List<HTMLIndexedItems>();
@@ -43,17 +44,7 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             items.Add(new HTMLIndexedItems("Terrain Actions", CreateTerrainActions));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -87,6 +78,20 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
                     "Road Builder Lets you create non-linear roads easily by using a network of nodes. With easy to use buttons to extrude, join, insert nodes and create mesh. Building new roads has never been so easy.",
                     "RoadBuilderLogo.png", 35);
             return outer.Output();
+        }
+
+        private HTMLBuilder CreateIndexItems(HTMLBuilder options, List<HTMLIndexedItems> items)
+        {
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
+            return options;
         }
 
         private string CreateTerrainActions(string arg)
