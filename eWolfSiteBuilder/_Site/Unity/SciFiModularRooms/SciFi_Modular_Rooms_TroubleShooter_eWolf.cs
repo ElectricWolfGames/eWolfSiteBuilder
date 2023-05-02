@@ -41,17 +41,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            //CreateItemsIndex(items);
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -193,6 +184,20 @@ eWolf.SciFi_Rooms_System.Players.RoomInteractor.Update () (at Assets/eWolf/SciFi
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "Sci-Fi Modular Rooms TroubleShooter Guide");
             return options.Output();
+        }
+
+        private void CreateItemsIndex(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
     }
 }

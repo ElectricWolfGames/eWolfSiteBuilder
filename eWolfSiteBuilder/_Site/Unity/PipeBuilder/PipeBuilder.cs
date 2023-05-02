@@ -31,9 +31,6 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             WebPage.Append(CreateHero());
 
-            WebPage.Append("<div class='row'>");
-            WebPage.Append($"<div class='col-md-12'>");
-
             List<HTMLIndexedItems> items = new List<HTMLIndexedItems>();
 
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
@@ -51,17 +48,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -335,6 +322,24 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             outer.EndTextCenter();
 
             return outer.Output();
+        }
+
+        private void CreateOldPage(List<HTMLIndexedItems> items)
+        {
+            WebPage.Append("<div class='row'>");
+            WebPage.Append($"<div class='col-md-12'>");
+
+            // Create Index
+            HTMLBuilder options = new HTMLBuilder();
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
 
         private string CreateOverview(string arg)

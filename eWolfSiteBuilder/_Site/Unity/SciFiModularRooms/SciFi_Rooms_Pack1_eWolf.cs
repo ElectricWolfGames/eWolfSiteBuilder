@@ -53,17 +53,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
 
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
+            //CreateItemIndexs(items);
+            AddIndexItemsWithSideBar(items);
 
             WebPage.EndBody();
             WebPage.Output();
@@ -863,6 +854,21 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             HTMLBuilder options = new HTMLBuilder();
             options.Jumbotron(DisplayTitle, "Lets you easily create Sci-Fi scenes using prefab rooms and corridors, with a helpful selection and snapping system.");
             return options.Output();
+        }
+
+        private void CreateItemIndexs(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
         }
     }
 }
