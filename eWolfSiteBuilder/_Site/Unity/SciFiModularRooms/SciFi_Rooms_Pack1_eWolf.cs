@@ -51,6 +51,10 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
             items.Add(new HTMLIndexedItems("Version 2", AddSectionVersion2));
 
+            // Added Damaged corridors
+            // Fix: Bug with door are active at the start even when they can't be seen.
+            // TODO: Add keep filter options when - replacing objs.
+
             items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
 
             //CreateItemIndexs(items);
