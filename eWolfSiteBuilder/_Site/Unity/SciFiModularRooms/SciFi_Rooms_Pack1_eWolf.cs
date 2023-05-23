@@ -5,6 +5,9 @@ using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using System.Collections.Generic;
+using System.Net.Sockets;
+using System.Security.Policy;
+using System.Windows.Media.Media3D;
 
 namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 {
@@ -50,11 +53,11 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Adding your own Wall Fillers", AddSectionAddYouOwnWallFillers));
             items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
             items.Add(new HTMLIndexedItems("Version 2", AddSectionVersion2));
+            items.Add(new HTMLIndexedItems("Version 2.1", AddSectionVersion21));
 
             // Added Damaged corridors
             // Fix: Bug with door are active at the start even when they can't be seen.
             // TODO: Add keep filter options when - replacing objs.
-
             items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
 
             //CreateItemIndexs(items);
@@ -758,7 +761,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
 
             outer.NewLine();
-            outer.Text("Version 2 Adds more rooms and extra lighting options. (Coming soon)");
+            outer.Text("Version 2 Adds more rooms and extra lighting options.");
             outer.NewLine();
             outer.NewLine();
 
@@ -852,6 +855,76 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             return outer.Output();
         }
+
+        private string AddSectionVersion21(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.Text("Version 2.1 Adds a damaged corridor and display panels on doors");
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.TextBold("", "Damaged Corridor");
+            outer.NewLine();
+
+            var options = new HTMLBuilder();
+            var left = new HTMLSection("col-md-6");
+            var right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("DamagedCorr.PNG", 60);
+            right.ImageLeft("DamagedCorrView.PNG", 80);
+
+            outer.Text(options.Output()); outer.NewLine();
+
+            outer.TextBold("", "Door Panels");
+            outer.NewLine();
+            options = new HTMLBuilder();
+            left = new HTMLSection("col-md-6");
+            right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("DoorPanel-Keypad.png", 80);
+            right.ImageLeft("DoorPanel-NeedsPower.png", 80);
+
+            outer.Text(options.Output()); outer.NewLine();
+            outer.NewLine();
+            outer.Text("Just set the door action to change the icon displayed");
+            outer.NewLine();
+            outer.Image("SetDoorAction.PNG",45);
+            outer.NewLine();
+
+
+            outer.Text("We have icons for different door actions");
+            outer.NewLine();
+            outer.TextNewLine("KeepOpen");
+            outer.TextNewLine("Locked");
+            outer.TextNewLine("NeedFixing");
+            outer.TextNewLine("NeverOpen");
+            outer.TextNewLine("PadLock");
+            outer.TextNewLine("ReadyToOpen");
+            outer.TextNewLine("NeedsPower");
+            outer.NewLine();
+
+            outer.NewLine();
+            outer.Text("If you don't want door panels at all just untick the option in the Map_pf");
+            outer.NewLine();
+            outer.Image("MapDoorOptions.PNG", 45);
+            outer.NewLine();
+            outer.Text("If you change this option you will need to re-set all the doors");
+            outer.NewLine();
+            outer.TextBoldText("Just click on ", "Remove all doors and effects", " ");
+            outer.NewLine();
+            outer.TextBoldText("And then ", "3. Add Missing Doors & Effects", "");
+
+
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
 
         private string CreateHero()
         {
