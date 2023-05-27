@@ -5,9 +5,6 @@ using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using System.Collections.Generic;
-using System.Net.Sockets;
-using System.Security.Policy;
-using System.Windows.Media.Media3D;
 
 namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 {
@@ -19,6 +16,12 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             WebPage = new WebPage(this);
             DisplayTitle = "Sci-Fi Modular Rooms Pack 1";
             MenuTitle = "Sci-Fi Modular Rooms Pack 1";
+            Keywords.Add(DisplayTitle);
+            Keywords.Add("Corridors and rooms");
+            Keywords.Add("Unity3d Modular rooms");
+            Keywords.Add("easy snap rooms");
+            Keywords.Add("sci fi layouts");
+            Keywords.Add("sci fi levels");
         }
 
         public int UnityListOrder { get; set; } = 1;

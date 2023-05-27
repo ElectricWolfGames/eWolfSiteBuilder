@@ -18,7 +18,7 @@ namespace eWolfSiteBuilder.SiteDetails
             _stringBuilder.Append($"		<title>{pageDetails.DisplayTitle}</title>");
             _stringBuilder.Append("		<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>");
             _stringBuilder.Append($"		<meta name='description' content='{pageDetails.DisplayTitle}'/>");
-            _stringBuilder.Append("		<meta name='keywords' content=''/>");
+            _stringBuilder.Append($"		<meta name='keywords' content='{string.Join(",",pageDetails.Keywords)}'/>");
             _stringBuilder.Append($"		<meta name='title' content='{pageDetails.DisplayTitle}'/>");
             _stringBuilder.Append("		<meta name='author' content='Electric Wolf'>");
             _stringBuilder.Append("		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>");
@@ -28,12 +28,7 @@ namespace eWolfSiteBuilder.SiteDetails
             _stringBuilder.Append("		<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js' integrity='sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1' crossorigin='anonymous'></script>");
             //Dont't need the charts _stringBuilder.Append($"		<script type='text/javascript' src='{offSet}Scripts/chart.js'></script>");
             /*_stringBuilder.Append("		<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js' integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM' crossorigin='anonymous'></script>");
-            _stringBuilder.Append("<!-- Global site tag (gtag.js) - Google Analytics -->");
-            _stringBuilder.Append("<script async src='https://www.googletagmanager.com/gtag/js?id=UA-180928318-1'></script>");
-            _stringBuilder.Append("<script>");
-            _stringBuilder.Append("  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);} gtag('js', new Date());  gtag('config', 'UA-180928318-1');");
-            _stringBuilder.Append("</script>");*/
-            _stringBuilder.Append("</head>");
+            _stringBuilder.Append("</head>");*/
 
             return _stringBuilder.ToString();
         }

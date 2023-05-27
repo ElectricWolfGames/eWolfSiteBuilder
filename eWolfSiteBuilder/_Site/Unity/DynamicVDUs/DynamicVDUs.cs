@@ -17,6 +17,11 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             WebPage = new WebPage(this);
             DisplayTitle = "Animated Dynamic VUD";
             MenuTitle = "Dynamic VUD";
+            Keywords.Add(DisplayTitle);
+            Keywords.Add("animated dynamic monitors");
+            Keywords.Add("ingame monitors");
+            Keywords.Add("display screens");
+            Keywords.Add("unity monitors");
         }
 
         public int UnityListOrder { get; set; } = 15;

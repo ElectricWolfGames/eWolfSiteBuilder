@@ -17,6 +17,12 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             WebPage = new WebPage(this);
             DisplayTitle = "Pipe Builder";
             MenuTitle = "Pipe Builder";
+            Keywords.Add(DisplayTitle);
+            Keywords.Add("Create pipes");
+            Keywords.Add("dynamically create pipes");
+            Keywords.Add("pipes for games");
+            Keywords.Add("Unity3d Pipes");
+            Keywords.Add("Unity3d edit Pipes");
         }
 
         public int UnityListOrder { get; set; } = 3;

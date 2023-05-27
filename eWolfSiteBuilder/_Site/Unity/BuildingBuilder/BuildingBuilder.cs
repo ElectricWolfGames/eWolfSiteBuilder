@@ -17,6 +17,11 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             WebPage = new WebPage(this);
             DisplayTitle = "Building Builder";
             MenuTitle = "Building Builder";
+            Keywords.Add(DisplayTitle);
+            Keywords.Add("add building");
+            Keywords.Add("unity3d building");
+            Keywords.Add("background building");
+            Keywords.Add("unity3d house");
         }
 
         public int UnityListOrder { get; set; } = 15;

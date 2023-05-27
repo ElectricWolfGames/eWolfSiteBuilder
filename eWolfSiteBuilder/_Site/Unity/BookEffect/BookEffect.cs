@@ -17,6 +17,10 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             WebPage = new WebPage(this);
             DisplayTitle = "Book Effect";
             MenuTitle = "Book Effect";
+            Keywords.Add(DisplayTitle);
+            Keywords.Add("book with turning pages");
+            Keywords.Add("unity book");
+            Keywords.Add("unity3d turning pages");
         }
 
         public int UnityListOrder { get; set; } = 3;
