@@ -6,6 +6,7 @@ using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
 {
@@ -17,6 +18,23 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             WebPage = new WebPage(this);
             DisplayTitle = "Garden Flowers";
             MenuTitle = "Garden Flowers";
+            Keywords.Add(DisplayTitle);
+            Keywords.AddRange(
+                 new string[]
+                 {
+                    "Asters",
+                    "EvergreenShrubs",
+                    "Hosta - Devon Green",
+                    "Lavender",
+                    "Rhododendron",
+                    "Rose",
+                    "SunFlower",
+                    "Tulips",
+                    "plante",
+                    "flowers",
+                    "flowers models",
+                    "vegetation",
+                 });
         }
 
         public int UnityListOrder { get; set; } = 15;

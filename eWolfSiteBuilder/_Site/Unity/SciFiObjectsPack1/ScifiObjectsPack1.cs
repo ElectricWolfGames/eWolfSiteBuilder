@@ -17,6 +17,17 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
             WebPage = new WebPage(this);
             DisplayTitle = "Sci-Fi Objects Pack 1";
             MenuTitle = "Sci-fi Pack1";
+            Keywords.Add(DisplayTitle);
+            Keywords.AddRange(
+                 new string[]
+                 {
+                    "Shelves",
+                    "sci fi objects",
+                    "Shelves with items",
+                    "sci fi ground objects",
+                    "sci fi background",
+                    "sci fi gameready",
+                 });
         }
 
         public int UnityListOrder { get; set; } = 10;

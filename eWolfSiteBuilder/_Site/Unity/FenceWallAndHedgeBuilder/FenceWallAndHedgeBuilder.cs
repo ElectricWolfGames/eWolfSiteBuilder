@@ -17,6 +17,14 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             WebPage = new WebPage(this);
             DisplayTitle = "Fence, Wall and Hedge Builder";
             MenuTitle = "Fence, Wall and Hedge Builder";
+            Keywords.Add(DisplayTitle);
+            Keywords.Add("Create in game fences");
+            Keywords.Add("unity3d walls");
+            Keywords.Add("Add walls to unity games");
+            Keywords.Add("Add hedges to unity games");
+            Keywords.Add("define walls");
+            Keywords.Add("build walls");
+            Keywords.Add("build fences");
         }
 
         public int UnityListOrder { get; set; } = 5;

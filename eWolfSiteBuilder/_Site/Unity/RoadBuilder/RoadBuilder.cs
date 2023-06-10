@@ -17,6 +17,20 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             WebPage = new WebPage(this);
             DisplayTitle = "Road Builder";
             MenuTitle = "Road Builder";
+            Keywords.Add(DisplayTitle);
+            Keywords.AddRange(
+                 new string[]
+                 {
+                    "unity3d roads",
+                    "in game roads",
+                    "road with pavement",
+                    "road with curb",
+                    "road with kerb",
+                    "road networks",
+                    "road junctions",
+                    "build roads",
+                    "create roads"
+                 });
         }
 
         public int UnityListOrder { get; set; } = 1;
