@@ -17,6 +17,15 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             WebPage = new WebPage(this);
             DisplayTitle = "Sci-Fi Objects Pack 2";
             MenuTitle = "Sci-fi Pack2";
+
+            Keywords.Add(DisplayTitle);
+            Keywords.AddRange(
+                 new string[]
+                 {
+                    "Space objects",
+                    "Sci-Fi Objects",
+                    "Game Ready Objects",
+                 });
         }
 
         public int UnityListOrder { get; set; } = 11;
@@ -37,6 +46,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             List<HTMLIndexedItems> items = new List<HTMLIndexedItems>();
 
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
+            items.Add(new HTMLIndexedItems("Overview", CreateOverview));
             items.Add(new HTMLIndexedItems("Cargo", CreateCargo));
             items.Add(new HTMLIndexedItems("Debris", CreateDebris));
             items.Add(new HTMLIndexedItems("Desk", CreateDesk));
@@ -45,7 +55,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             items.Add(new HTMLIndexedItems("Lockers", CreateLockers));
             items.Add(new HTMLIndexedItems("Scenery", CreateScenery));
             items.Add(new HTMLIndexedItems("Screens", CreateScreens));
-            items.Add(new HTMLIndexedItems("Animations", CreateAnimations));
+            items.Add(new HTMLIndexedItems("Folders", CreateFolders));
             items.Add(new HTMLIndexedItems("Scripts Used", CreateScriptsUsed));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
@@ -79,26 +89,6 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.Text(@"Sci-Fi Objects pack 2 is a collection of game ready objects you can just use in any sci-fi style game.");
             options.NewLine();
             options.Unity3DLink(Unity3DSetting.ScifiObjectsPack2);
-            options.NewLine();
-            options.NewLine();
-            options.EndTextCenter();
-
-            return options.Output();
-        }
-
-        private string CreateAnimations(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            options.StartTextCenter();
-            options.NewLine();
-            options.TextBoldText("All of the objects, scripts and prefabs are under the ", "eWolf", " folder");
-            options.NewLine();
-            options.NewLine();
-            options.ImageCenter("Project.PNG", 35);
-            options.NewLine();
-            options.Text("And all the scripts are contained with in the two namespace's");
-            options.NewLine();
-            options.Text("<strong>eWolf.Common</strong> and <strong>eWolf.SciFiObjects_Pack2</strong>");
             options.NewLine();
             options.NewLine();
             options.EndTextCenter();
@@ -163,6 +153,26 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             return options.Output();
         }
 
+        private string CreateFolders(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.StartTextCenter();
+            options.NewLine();
+            options.TextBoldText("All of the objects, scripts and prefabs are under the ", "eWolf", " folder");
+            options.NewLine();
+            options.NewLine();
+            options.ImageCenter("Project.PNG", 35);
+            options.NewLine();
+            options.Text("And all the scripts are contained with in the two namespace's");
+            options.NewLine();
+            options.Text("<strong>eWolf.Common</strong> and <strong>eWolf.SciFiObjects_Pack2</strong>");
+            options.NewLine();
+            options.NewLine();
+            options.EndTextCenter();
+
+            return options.Output();
+        }
+
         private string CreateHero()
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -216,6 +226,57 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.NewLine();
             options.ImageCenter("LockersC.png", 35);
 
+            return options.Output();
+        }
+
+        private string CreateOverview(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.StartTextCenter();
+            options.NewLine();
+
+            options.Text("Most prefabs have the option to randomize the materials used on the objects.");
+            options.NewLine();
+            options.NewLine();
+            options.Image("INSPECTOR.PNG", 45);
+
+            options.NewLine();
+            options.Text("Each material has different colour on a few parts.");
+            options.NewLine();
+            options.Text("You are also free to add more if you wish.");
+            options.NewLine();
+            options.NewLine();
+            options.TextBoldText("", "Randomize Colour:", " Randomize the materials from the list");
+            options.NewLine();
+            options.TextBoldText("", "Set first Color:", " Use the first material from the list");
+            options.NewLine();
+            options.TextBoldText("", "Set to use bake lights:", " Only used when/if you add new objects to a prefab and need to set the lighting options.");
+            options.NewLine();
+            options.NewLine();
+            options.TextBoldText("To set randomize all the materials in the scenes, you can use the prefab ", "eWolf/Common/Controller_pf", "");
+            options.NewLine();
+            options.Text("It has the options");
+            options.NewLine();
+            options.Image("Options.PNG", 45);
+            options.NewLine();
+            options.Text("That are applied to all objects.");
+
+            options.NewLine();
+            options.TextBoldText("", "Randomize All:", " Randomize all objects in the scene*");
+            options.NewLine();
+            options.TextBoldText("", "Randomize Visual:", " Randomize the materials from the list");
+            options.NewLine();
+            options.TextBoldText("", "Fix all:", " Fix all items*");
+            options.NewLine();
+            options.TextBoldText("", "Set the default state:", " re-set all items*");
+            options.NewLine();
+            options.TextBoldText("", "Set Bake Lighting:", " Update all objects with <ISetLighting> to use bake lighting");
+            options.NewLine();
+            options.TextBoldText("", "Generate Lighting:", " Calls the unity Generate Lighting for the scene.");
+            options.NewLine();
+            options.TextBoldText("", "*", " Not needed in this package.");
+
+            options.EndTextCenter();
             return options.Output();
         }
 
