@@ -58,9 +58,10 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Version 2", AddSectionVersion2));
             items.Add(new HTMLIndexedItems("Version 2.1", AddSectionVersion21));
 
-            // Added Damaged corridors
-            // Fix: Bug with door are active at the start even when they can't be seen.
-            // TODO: Add keep filter options when - replacing objs.
+            // Versin 2.2
+            // Added quick remove for Wall Fillers.
+            // Added Fluctuate Light options.
+
             items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
 
             //CreateItemIndexs(items);
