@@ -51,7 +51,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             items.Add(new HTMLIndexedItems("Fittings (version 2)", CreateV2Fittings));
             items.Add(new HTMLIndexedItems("New Materials (version 2)", CreateV2Materials));
             items.Add(new HTMLIndexedItems("Bake Lighting (version 2)", CreateV2BakeLighting));
-
+            items.Add(new HTMLIndexedItems("Version 2.1", CreateVersion21));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);
@@ -569,6 +569,24 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 
             outer.NewLine();
 
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string CreateVersion21(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.Text("Version 2.1");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Fixes a release build problem.");
+            outer.NewLine();
+            outer.NewLine();
             outer.EndTextCenter();
 
             return outer.Output();
