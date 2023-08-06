@@ -57,10 +57,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Project layout", AddSectionProjectLayout));
             items.Add(new HTMLIndexedItems("Version 2", AddSectionVersion2));
             items.Add(new HTMLIndexedItems("Version 2.1", AddSectionVersion21));
-
-            // Versin 2.2
-            // Added quick remove for Wall Fillers.
-            // Added Fluctuate Light options.
+            items.Add(new HTMLIndexedItems("Version 2.2", AddSectionVersion22));
 
             items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
 
@@ -928,7 +925,60 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
             return outer.Output();
         }
+        private string AddSectionVersion22(string arg)
+        {
+            // Versin 2.2
+            // Added quick remove for Wall Fillers.
+            // Added Fluctuate Light options.
+            // Update on the place in in room logic
 
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+            outer.Text("Version 2.2 New Room, new Fluctuate lights Options, Button for quick removal of wall fillers, and updated the 'Place in room' logic.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.TextBoldText("","Fluctuate lights value", "");
+            outer.NewLine();
+            outer.Text("You can now set the Colour and Intensity randmoness value");
+            outer.NewLine();
+            outer.Image("FluctuateLights.PNG",55);
+            outer.NewLine();
+            outer.Text("This is to help create a more natral lighting, where you get differeneces in lights.");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.TextBoldText("", "Wall Filler Options", "");
+            outer.NewLine();
+            outer.Image("WallFillerButtons.PNG", 55);
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBoldText("", "Randomize Wall Filler:", " Randomize the wall fillers");
+            outer.NewLine();
+            outer.TextBoldText("", "Clear Wall Fillers (temp):", " Clears the current wall fillers");
+            outer.NewLine();
+            outer.TextBoldText("", "Turn off Wall Fillers (forever):", " Clear fillers and stops them coming back");
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.TextBoldText("", "New Room to add to the WalkWay types", "");
+            outer.NewLine();
+            outer.Text("Added a long walk way room with doors at each wall.");
+            outer.NewLine();
+            outer.Image("R01-Room-Box-WalkWay-X.PNG", 55);
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.TextBoldText("", "'Place in room' logic", "");
+            outer.NewLine();
+            outer.Text("'Place in room' code has been updated, to work better with nested objects.");
+            outer.NewLine();
+
+            outer.EndTextCenter();
+            return outer.Output();
+        }
 
         private string CreateHero()
         {
