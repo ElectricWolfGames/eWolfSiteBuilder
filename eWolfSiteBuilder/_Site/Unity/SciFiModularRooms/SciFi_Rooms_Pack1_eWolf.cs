@@ -927,11 +927,6 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
         }
         private string AddSectionVersion22(string arg)
         {
-            // Versin 2.2
-            // Added quick remove for Wall Fillers.
-            // Added Fluctuate Light options.
-            // Update on the place in in room logic
-
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
             outer.NewLine();
