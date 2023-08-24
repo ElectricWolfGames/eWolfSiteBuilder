@@ -6,6 +6,7 @@ using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
 {
@@ -56,6 +57,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             items.Add(new HTMLIndexedItems("Scenery", CreateScenery));
             items.Add(new HTMLIndexedItems("Screens", CreateScreens));
             items.Add(new HTMLIndexedItems("Folders", CreateFolders));
+            items.Add(new HTMLIndexedItems("Version v2.1", CreateVersion2p1));
+            items.Add(new HTMLIndexedItems("Cables (v2.1)", CreateVersion2p1Cables));
             items.Add(new HTMLIndexedItems("Scripts Used", CreateScriptsUsed));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
@@ -312,12 +315,91 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
         {
             HTMLBuilder options = new HTMLBuilder();
             options.NewLine();
+            options.InspectorDetails("eWolf.SciFiObjects_Pack2.ScifiObject2Base", "Base file for most objects, lets you Randomize Visual"); 
             options.InspectorDetails("eWolf.Common.FacePlayer", "Used to rotate an object to face the player.");
             options.InspectorDetails("eWolf.Common.PlaceInRoom", "Uses a ServiceLocator, so you can add anything you want it to do here, by just using an IMapController");
             options.InspectorDetails("eWolf.SciFiObjects_Pack2.InteractiveObjects", "Just set Operate when you want the object to do it's action. It also saves it's state.");
             options.InspectorDetails("eWolf.SciFiObjects_Pack2.FanBlades", "Spins the fan blades, with speed options");
+            options.InspectorDetails("eWolf.SciFiObjects_Pack2.Cables", "Allows you to add cables");
+            
             options.NewLine();
             return options.Output();
+        }
+
+        private string CreateVersion2p1Cables(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+            outer.TextBoldText("", "Version 2.1: Cables", "");
+            outer.NewLine();
+            outer.Text("When you add an prefab that supports Cables");
+            outer.NewLine();
+            outer.Text("You will see the options below (when you select the object)");
+            outer.NewLine();
+            outer.Image("INSPECTOR-Cables-Start.PNG", 55);
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBoldText("Clicking on the ", "Add Starting Cable", " button");
+            outer.NewLine();
+            outer.Image("Cable-Start.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("This will now open up the options to add different cable types");
+            outer.NewLine();
+            outer.Image("CablesOptions.PNG", 50);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Click on any button will add that type of cable");
+            outer.NewLine();
+            outer.Image("TwoCables.PNG", 50);
+            outer.NewLine();
+            outer.Text("And you can add as many as you like.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Example Cables Types");
+            outer.NewLine();
+            outer.Image("ShowCablesAll.png", 85);
+
+            outer.EndTextCenter();
+            return outer.Output();
+        }
+
+        private string CreateVersion2p1(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+            outer.TextBoldText("", "Version 2.1", " Adds New Objects, and new cable system.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("5 new Room Objects have been added");
+            outer.NewLine();
+            outer.TextBoldText("In the Folder ","Assets\\eWolf\\Sci-Fi_Objects_Pack2\\Prefabs\\RoomObjects", "");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Image("RoomObjectsA.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Image("RoomObjectsB.PNG", 65);
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.Text("Each room object has the option to attach cables");
+
+            var options = new HTMLBuilder();
+            var left = new HTMLSection("col-md-6");
+            var right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("ShowCablesB.PNG", 65);
+            right.ImageLeft("ShowCablesA.PNG", 65);
+            outer.Text(options.Output());
+            outer.NewLine();
+
+
+            outer.EndTextCenter();
+            return outer.Output();
         }
     }
 }

@@ -35,7 +35,7 @@
 <div class="border-end bg-white col-md-2" id="sidebar-wrapper">
 <div class="sticky-top">
 <div class="list-group list-group-flush">
-<a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Overview">Overview</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Cargo">Cargo</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Debris">Debris</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Desk">Desk</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Equipment">Equipment</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#LivingQuarters">Living Quarters</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Lockers">Lockers</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Scenery">Scenery</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Screens">Screens</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Folders">Folders</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#ScriptsUsed">Scripts Used</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a>
+<a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Overview">Overview</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Cargo">Cargo</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Debris">Debris</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Desk">Desk</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Equipment">Equipment</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#LivingQuarters">Living Quarters</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Lockers">Lockers</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Scenery">Scenery</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Screens">Screens</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Folders">Folders</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Versionv2.1">Version v2.1</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Cables(v2.1)">Cables (v2.1)</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#ScriptsUsed">Scripts Used</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a>
 </div>
 </div>
 </div>
@@ -150,13 +150,33 @@
 </div>
 </div>
 <br />
+<a id='Versionv2.1'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Version v2.1</h2>
+</div>
+<div class='text-center'></br><strong>Version 2.1</strong> Adds New Objects, and new cable system.</br></br>5 new Room Objects have been added</br>In the Folder <strong>Assets\eWolf\Sci-Fi_Objects_Pack2\Prefabs\RoomObjects</strong></br></br><img src='images/RoomObjectsA.PNG' width=65%px ></br></br><img src='images/RoomObjectsB.PNG' width=65%px ></br></br>Each room object has the option to attach cables<div class='row'><div class='col-md-6'><div class='text-right'><img src='images/ShowCablesB.PNG' width=65%px ></div></div><div class='col-md-6'><div class='text-left'><img src='images/ShowCablesA.PNG' width=65%px ></div></div></div></br></div></div>
+</div>
+</div>
+<br />
+<a id='Cables(v2.1)'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Cables (v2.1)</h2>
+</div>
+<div class='text-center'></br><strong>Version 2.1: Cables</strong></br>When you add an prefab that supports Cables</br>You will see the options below (when you select the object)</br><img src='images/INSPECTOR-Cables-Start.PNG' width=55%px ></br></br>Clicking on the <strong>Add Starting Cable</strong> button</br><img src='images/Cable-Start.PNG' width=65%px ></br></br>This will now open up the options to add different cable types</br><img src='images/CablesOptions.PNG' width=50%px ></br></br>Click on any button will add that type of cable</br><img src='images/TwoCables.PNG' width=50%px ></br>And you can add as many as you like.</br></br>Example Cables Types</br><img src='images/ShowCablesAll.png' width=85%px ></div></div>
+</div>
+</div>
+<br />
 <a id='ScriptsUsed'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
 <div class='text-left'><h2>Scripts Used</h2>
 </div>
-</br><strong>eWolf.Common.FacePlayer: </strong>Used to rotate an object to face the player.<br /><strong>eWolf.Common.PlaceInRoom: </strong>Uses a ServiceLocator, so you can add anything you want it to do here, by just using an IMapController<br /><strong>eWolf.SciFiObjects_Pack2.InteractiveObjects: </strong>Just set Operate when you want the object to do it's action. It also saves it's state.<br /><strong>eWolf.SciFiObjects_Pack2.FanBlades: </strong>Spins the fan blades, with speed options<br /></br></div>
+</br><strong>eWolf.SciFiObjects_Pack2.ScifiObject2Base: </strong>Base file for most objects, lets you Randomize Visual<br /><strong>eWolf.Common.FacePlayer: </strong>Used to rotate an object to face the player.<br /><strong>eWolf.Common.PlaceInRoom: </strong>Uses a ServiceLocator, so you can add anything you want it to do here, by just using an IMapController<br /><strong>eWolf.SciFiObjects_Pack2.InteractiveObjects: </strong>Just set Operate when you want the object to do it's action. It also saves it's state.<br /><strong>eWolf.SciFiObjects_Pack2.FanBlades: </strong>Spins the fan blades, with speed options<br /><strong>eWolf.SciFiObjects_Pack2.Cables: </strong>Allows you to add cables<br /></br></div>
 </div>
 </div>
 <br />
