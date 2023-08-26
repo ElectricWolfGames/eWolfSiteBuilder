@@ -6,7 +6,6 @@ using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
 using System.Collections.Generic;
-using System.Threading;
 
 namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
 {
@@ -89,7 +88,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.StartTextCenter();
             options.NewLine();
 
-            options.Text(@"Sci-Fi Objects pack 2 is a collection of game ready objects you can just use in any sci-fi style game.");
+            options.Text(@"Sci-Fi Objects pack 2 is a collection of game ready objects you can use in any sci-fi style game.");
             options.NewLine();
             options.Unity3DLink(Unity3DSetting.ScifiObjectsPack2);
             options.NewLine();
@@ -256,7 +255,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             options.TextBoldText("", "Set to use bake lights:", " Only used when/if you add new objects to a prefab and need to set the lighting options.");
             options.NewLine();
             options.NewLine();
-            options.TextBoldText("To set randomize all the materials in the scenes, you can use the prefab ", "eWolf/Common/Controller_pf", "");
+            options.TextBoldText("To randomize all the materials in the scenes, you can use the prefab ", "eWolf/Common/Controller_pf", "");
             options.NewLine();
             options.Text("It has the options");
             options.NewLine();
@@ -333,7 +332,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             outer.NewLine();
             outer.TextBoldText("", "Version 2.1: Cables", "");
             outer.NewLine();
-            outer.Text("When you add an prefab that supports Cables");
+            outer.Text("When you add a prefab that supports Cables");
             outer.NewLine();
             outer.Text("You will see the options below (when you select the object)");
             outer.NewLine();
@@ -345,7 +344,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             outer.Image("Cable-Start.PNG", 65);
             outer.NewLine();
             outer.NewLine();
-            outer.Text("This will now open up the options to add different cable types");
+            outer.Text("This will now open up the option to add different cable types");
             outer.NewLine();
             outer.Image("CablesOptions.PNG", 50);
             outer.NewLine();
@@ -378,10 +377,10 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             outer.TextBoldText("In the Folder ","Assets\\eWolf\\Sci-Fi_Objects_Pack2\\Prefabs\\RoomObjects", "");
             outer.NewLine();
             outer.NewLine();
-            outer.Image("RoomObjectsA.PNG", 65);
+            outer.Image("RoomObjectsA.png", 65);
             outer.NewLine();
             outer.NewLine();
-            outer.Image("RoomObjectsB.PNG", 65);
+            outer.Image("RoomObjectsB.png", 65);
             outer.NewLine();
             outer.NewLine();
 
@@ -392,8 +391,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             var right = new HTMLSection("col-md-6");
             options.SetTwoSections(left, right);
 
-            left.ImageRight("ShowCablesB.PNG", 65);
-            right.ImageLeft("ShowCablesA.PNG", 65);
+            left.ImageRight("ShowCablesB.png", 65);
+            right.ImageLeft("ShowCablesA.png", 65);
             outer.Text(options.Output());
             outer.NewLine();
 
