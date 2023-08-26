@@ -27,6 +27,8 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesSkies
                     "unity sky boxes",
                     "background sky",
                 });
+
+            LinkedThePackages("Road Builder", "Traffic and Roadside objects", "Fence, Wall and Hedge Builder", "Skyboxes Skies");
         }
 
         public int UnityListOrder { get; set; } = 20;
@@ -49,6 +51,8 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesSkies
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
             items.Add(new HTMLIndexedItems("How to Use", CreateHowToUse));
             items.Add(new HTMLIndexedItems("Previews", CreatePreviews));
+
+            items.Add(new HTMLIndexedItems("You may also like", CreateAddLinkedPackages));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);

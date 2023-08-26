@@ -26,6 +26,8 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             Keywords.Add("define walls");
             Keywords.Add("build walls");
             Keywords.Add("build fences");
+
+            LinkedThePackages("Road Builder", "Traffic and Roadside objects", "Fence, Wall and Hedge Builder", "Skyboxes Skies");
         }
 
         public int UnityListOrder { get; set; } = 5;
@@ -61,6 +63,8 @@ namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
             //items.Add(new HTMLIndexedItems("Updated UV for the walls", CreateUpdatedUVForTheWalls));
             items.Add(new HTMLIndexedItems("Added Castle walls and Mounds", CreateAddedCastleWallsAndMounds));
             items.Add(new HTMLIndexedItems("Example Walls", CreateExampleWalls));
+
+            items.Add(new HTMLIndexedItems("You may also like", CreateAddLinkedPackages));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);

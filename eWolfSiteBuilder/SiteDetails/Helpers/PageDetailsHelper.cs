@@ -55,6 +55,9 @@ namespace eWolfSiteBuilder.SiteDetails.Helpers
             List<PreviewItem> items = PageDetailsHelper.GetPreviewItem();
             foreach (var item in items)
             {
+                if (item.Name == pageDetails.DisplayTitle)
+                    continue;
+
                 if (pageDetails.LinkedPackages.Contains(item.Name))
                 {
                     builder.Text("<div class='col-lg-4 col-md-6' >");

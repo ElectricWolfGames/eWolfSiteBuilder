@@ -18,6 +18,20 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
             WebPage = new WebPage(this);
             DisplayTitle = "Traffic and Roadside objects";
             MenuTitle = "Traffic and Roadside objects:";
+
+            Keywords.AddRange(
+               new string[]
+               {
+                   "Traffic Barriers",
+                   "Road Barriers",
+                   "Traffic Cones",
+                   "Traffic lights",
+                   "Crossing lights",
+                   "Benches",
+                   "Bins"
+               });
+
+            LinkedThePackages("Road Builder", "Traffic and Roadside objects", "Fence, Wall and Hedge Builder", "Skyboxes Skies");
         }
 
         public int UnityListOrder { get; set; } = 15;
@@ -40,6 +54,7 @@ namespace eWolfSiteBuilder._Site.Unity.TrafficAndRoadsideObjects
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
             items.Add(new HTMLIndexedItems("Details", CreateDetails));
 
+            items.Add(new HTMLIndexedItems("You may also like", CreateAddLinkedPackages));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);

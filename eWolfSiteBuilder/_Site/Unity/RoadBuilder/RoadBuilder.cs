@@ -32,6 +32,8 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
                     "build roads",
                     "create roads"
                  });
+
+            LinkedThePackages("Road Builder", "Traffic and Roadside objects", "Fence, Wall and Hedge Builder", "Skyboxes Skies");
         }
 
         public int UnityListOrder { get; set; } = 1;
