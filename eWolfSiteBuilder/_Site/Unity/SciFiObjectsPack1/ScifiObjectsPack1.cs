@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.Helpers;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
@@ -10,7 +11,7 @@ using System.Collections.Generic;
 namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
 {
     [PageTitle("SciFiObjectsIndex.html")]
-    public partial class ScifiObjectsPack1 : PageDetails, IHomePagePreview, IUnityList
+    public partial class ScifiObjectsPack1 : PageDetailsWolfSite, IHomePagePreview, IUnityList
     {
         public ScifiObjectsPack1()
         {
@@ -28,6 +29,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
                     "sci fi background",
                     "sci fi gameready",
                  });
+            LinkedThePackages("Sci-Fi Objects Pack 2", "Sci-Fi Modular Rooms Pack 1", "Skyboxes Nebulas");
         }
 
         public int UnityListOrder { get; set; } = 10;
@@ -57,6 +59,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack1
             items.Add(new HTMLIndexedItems("Materials", CreateMaterials));
             items.Add(new HTMLIndexedItems("More Images", CreateMoreImages));
             items.Add(new HTMLIndexedItems("Project Layout", CreateProjectLayout));
+
+            items.Add(new HTMLIndexedItems("You may also like", CreateAddLinkedPackages));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);

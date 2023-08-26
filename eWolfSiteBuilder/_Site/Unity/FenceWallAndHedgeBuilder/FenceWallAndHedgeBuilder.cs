@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.Helpers;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
@@ -10,7 +11,7 @@ using System.Collections.Generic;
 namespace eWolfSiteBuilder._Site.Unity.FenceWallAndHedgeBuilder
 {
     [PageTitle("FenceWallAndHedgeBuilder.html")]
-    internal class FenceWallAndHedgeBuilder : PageDetails, IHomePagePreview, IUnityList
+    internal class FenceWallAndHedgeBuilder : PageDetailsWolfSite, IHomePagePreview, IUnityList
     {
         public FenceWallAndHedgeBuilder()
         {

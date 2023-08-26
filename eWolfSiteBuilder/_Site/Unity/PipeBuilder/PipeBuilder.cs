@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.Helpers;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
@@ -10,7 +11,7 @@ using System.Collections.Generic;
 namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
 {
     [PageTitle("PipeBuilder.html")]
-    internal class PipeBuilder : PageDetails, IHomePagePreview, IUnityList
+    internal class PipeBuilder : PageDetailsWolfSite, IHomePagePreview, IUnityList
     {
         public PipeBuilder()
         {

@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.Helpers;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
@@ -10,13 +11,25 @@ using System.Collections.Generic;
 namespace eWolfSiteBuilder._Site.Unity.SkyboxesNebulas
 {
     [PageTitle("SkyboxesNebulas.html")]
-    public class SkyboxesNebulas : PageDetails, IHomePagePreview, IUnityList
+    public class SkyboxesNebulas : PageDetailsWolfSite, IHomePagePreview, IUnityList
     {
         public SkyboxesNebulas()
         {
             WebPage = new WebPage(this);
             DisplayTitle = "Skyboxes Nebulas";
             MenuTitle = "Skyboxes Nebulas";
+
+            Keywords.AddRange(
+                new string[]
+                {
+                    "Skyboxes",
+                    "game skys",
+                    "unity sky boxes",
+                    "background sky",
+                    "sci fi background",
+                });
+
+            LinkedThePackages("Sci-Fi Objects Pack 1", "Sci-Fi Objects Pack 2", "Sci-Fi Modular Rooms Pack 1");
         }
 
         public int UnityListOrder { get; set; } = 20;
@@ -39,6 +52,8 @@ namespace eWolfSiteBuilder._Site.Unity.SkyboxesNebulas
             items.Add(new HTMLIndexedItems("Download", CreateDownload));
             items.Add(new HTMLIndexedItems("How to Use", CreateHowToUse));
             items.Add(new HTMLIndexedItems("Previews", CreatePreviews));
+
+            items.Add(new HTMLIndexedItems("You may also like", CreateAddLinkedPackages));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);

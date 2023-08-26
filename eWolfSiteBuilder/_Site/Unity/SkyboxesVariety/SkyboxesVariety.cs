@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.Helpers;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
@@ -10,13 +11,22 @@ using System.Collections.Generic;
 namespace eWolfSiteBuilder._Site.Unity.SkyboxesVariety
 {
     [PageTitle("SkyboxesVariety.html")]
-    public class SkyboxesVariety : PageDetails, IHomePagePreview, IUnityList
+    public class SkyboxesVariety : PageDetailsWolfSite, IHomePagePreview, IUnityList
     {
         public SkyboxesVariety()
         {
             WebPage = new WebPage(this);
             DisplayTitle = "Skyboxes Variety";
             MenuTitle = "Skyboxes Variety";
+
+            Keywords.AddRange(
+                new string[]
+                {
+                    "Skyboxes",
+                    "game skys",
+                    "unity sky boxes",
+                    "background sky",
+                });
         }
 
         public int UnityListOrder { get; set; } = 20;

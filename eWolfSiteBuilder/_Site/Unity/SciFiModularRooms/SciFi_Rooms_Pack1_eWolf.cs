@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.Helpers;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Collections.Generic;
 namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 {
     [PageTitle("SciFiModularRooms.html")]
-    public class SciFi_Rooms_Pack1_eWolf : PageDetails, IHomePagePreview, IUnityList
+    public class SciFi_Rooms_Pack1_eWolf : PageDetailsWolfSite, IHomePagePreview, IUnityList
     {
         public SciFi_Rooms_Pack1_eWolf()
         {
@@ -22,6 +23,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             Keywords.Add("easy snap rooms");
             Keywords.Add("sci fi layouts");
             Keywords.Add("sci fi levels");
+
+            LinkedThePackages("Sci-Fi Objects Pack 1", "Sci-Fi Objects Pack 2", "Skyboxes Nebulas");
         }
 
         public int UnityListOrder { get; set; } = 1;
@@ -59,6 +62,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             items.Add(new HTMLIndexedItems("Version 2.1", AddSectionVersion21));
             items.Add(new HTMLIndexedItems("Version 2.2", AddSectionVersion22));
 
+            items.Add(new HTMLIndexedItems("You may also like", CreateAddLinkedPackages));
             items.Add(new HTMLIndexedItems("Support", AddSectionSupport));
 
             //CreateItemIndexs(items);
@@ -894,9 +898,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.Text("Just set the door action to change the icon displayed");
             outer.NewLine();
-            outer.Image("SetDoorAction.PNG",45);
+            outer.Image("SetDoorAction.PNG", 45);
             outer.NewLine();
-
 
             outer.Text("We have icons for different door actions");
             outer.NewLine();
@@ -920,11 +923,11 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.TextBoldText("And then ", "3. Add Missing Doors & Effects", "");
 
-
             outer.EndTextCenter();
 
             return outer.Output();
         }
+
         private string AddSectionVersion22(string arg)
         {
             HTMLBuilder outer = new HTMLBuilder();
@@ -935,11 +938,11 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
             outer.NewLine();
             outer.NewLine();
 
-            outer.TextBoldText("","Fluctuate lights value", "");
+            outer.TextBoldText("", "Fluctuate lights value", "");
             outer.NewLine();
             outer.Text("You can now set the Colour and Intensity randmoness value");
             outer.NewLine();
-            outer.Image("FluctuateLights.PNG",55);
+            outer.Image("FluctuateLights.PNG", 55);
             outer.NewLine();
             outer.Text("This is to help create a more natral lighting, where you get differeneces in lights.");
             outer.NewLine();

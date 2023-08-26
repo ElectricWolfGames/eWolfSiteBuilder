@@ -2,6 +2,7 @@
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfSiteBuilder.Helpers;
 using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
@@ -10,7 +11,7 @@ using System.Collections.Generic;
 namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
 {
     [PageTitle("SciFiObjects2Index.html")]
-    internal class ScifiObjectsPack2 : PageDetails, IHomePagePreview, IUnityList
+    internal class ScifiObjectsPack2 : PageDetailsWolfSite, IHomePagePreview, IUnityList
     {
         public ScifiObjectsPack2()
         {
@@ -26,6 +27,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
                     "Sci-Fi Objects",
                     "Game Ready Objects",
                  });
+            LinkedThePackages("Sci-Fi Objects Pack 1", "Sci-Fi Modular Rooms Pack 1", "Skyboxes Nebulas");
         }
 
         public int UnityListOrder { get; set; } = 11;
@@ -59,6 +61,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             items.Add(new HTMLIndexedItems("Version v2.1", CreateVersion2p1));
             items.Add(new HTMLIndexedItems("Cables (v2.1)", CreateVersion2p1Cables));
             items.Add(new HTMLIndexedItems("Scripts Used", CreateScriptsUsed));
+
+            items.Add(new HTMLIndexedItems("You may also like", CreateAddLinkedPackages));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);
@@ -314,15 +318,51 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
         {
             HTMLBuilder options = new HTMLBuilder();
             options.NewLine();
-            options.InspectorDetails("eWolf.SciFiObjects_Pack2.ScifiObject2Base", "Base file for most objects, lets you Randomize Visual"); 
+            options.InspectorDetails("eWolf.SciFiObjects_Pack2.ScifiObject2Base", "Base file for most objects, lets you Randomize Visual");
             options.InspectorDetails("eWolf.Common.FacePlayer", "Used to rotate an object to face the player.");
             options.InspectorDetails("eWolf.Common.PlaceInRoom", "Uses a ServiceLocator, so you can add anything you want it to do here, by just using an IMapController");
             options.InspectorDetails("eWolf.SciFiObjects_Pack2.InteractiveObjects", "Just set Operate when you want the object to do it's action. It also saves it's state.");
             options.InspectorDetails("eWolf.SciFiObjects_Pack2.FanBlades", "Spins the fan blades, with speed options");
             options.InspectorDetails("eWolf.SciFiObjects_Pack2.Cables", "Allows you to add cables");
-            
+
             options.NewLine();
             return options.Output();
+        }
+
+        private string CreateVersion2p1(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+            outer.StartTextCenter();
+            outer.NewLine();
+            outer.TextBoldText("", "Version 2.1", " Adds New Objects, and new cable system.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("5 new Room Objects have been added");
+            outer.NewLine();
+            outer.TextBoldText("In the Folder ", "Assets\\eWolf\\Sci-Fi_Objects_Pack2\\Prefabs\\RoomObjects", "");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Image("RoomObjectsA.png", 65);
+            outer.NewLine();
+            outer.NewLine();
+            outer.Image("RoomObjectsB.png", 65);
+            outer.NewLine();
+            outer.NewLine();
+
+            outer.Text("Each room object has the option to attach cables");
+
+            var options = new HTMLBuilder();
+            var left = new HTMLSection("col-md-6");
+            var right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+
+            left.ImageRight("ShowCablesB.png", 65);
+            right.ImageLeft("ShowCablesA.png", 65);
+            outer.Text(options.Output());
+            outer.NewLine();
+
+            outer.EndTextCenter();
+            return outer.Output();
         }
 
         private string CreateVersion2p1Cables(string arg)
@@ -359,43 +399,6 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiObjectsPack2
             outer.Text("Example Cables Types");
             outer.NewLine();
             outer.Image("ShowCablesAll.png", 85);
-
-            outer.EndTextCenter();
-            return outer.Output();
-        }
-
-        private string CreateVersion2p1(string arg)
-        {
-            HTMLBuilder outer = new HTMLBuilder();
-            outer.StartTextCenter();
-            outer.NewLine();
-            outer.TextBoldText("", "Version 2.1", " Adds New Objects, and new cable system.");
-            outer.NewLine();
-            outer.NewLine();
-            outer.Text("5 new Room Objects have been added");
-            outer.NewLine();
-            outer.TextBoldText("In the Folder ","Assets\\eWolf\\Sci-Fi_Objects_Pack2\\Prefabs\\RoomObjects", "");
-            outer.NewLine();
-            outer.NewLine();
-            outer.Image("RoomObjectsA.png", 65);
-            outer.NewLine();
-            outer.NewLine();
-            outer.Image("RoomObjectsB.png", 65);
-            outer.NewLine();
-            outer.NewLine();
-
-            outer.Text("Each room object has the option to attach cables");
-
-            var options = new HTMLBuilder();
-            var left = new HTMLSection("col-md-6");
-            var right = new HTMLSection("col-md-6");
-            options.SetTwoSections(left, right);
-
-            left.ImageRight("ShowCablesB.png", 65);
-            right.ImageLeft("ShowCablesA.png", 65);
-            outer.Text(options.Output());
-            outer.NewLine();
-
 
             outer.EndTextCenter();
             return outer.Output();
