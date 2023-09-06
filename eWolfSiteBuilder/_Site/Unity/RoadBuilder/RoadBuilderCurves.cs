@@ -48,7 +48,6 @@ namespace eWolfSiteBuilder._Site.Unity.RoadBuilder
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);
-            options = CreateIndexItems(items);
 
             WebPage.EndBody();
             WebPage.Output();
