@@ -20,7 +20,7 @@
 </ul>
 </div>
 </nav>
-<Body><!--06/09/2023--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--08/09/2023--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>Animated Dynamic VUD</h1>
@@ -28,7 +28,7 @@
 </div>
 </div>
 </div>
-<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Example">Example</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Options">Options</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Set-up">Set-up</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#UpdateEffectsInGame">Update Effects In Game</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#UsingSprites">Using Sprites</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#MoreExamples">More Examples</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='Example'></a>
+<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Example">Example</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Options">Options</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Set-up">Set-up</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#UpdateEffectsInGame">Update Effects In Game</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#MoreExamples">More Examples</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Version1.2">Version 1.2</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='Example'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
@@ -54,7 +54,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Options</h2>
 </div>
-<div class='text-center'></br>Any number of effects can be placed on to one texture.</br></br><img src='images/CombinedEffects.png' width=45%px ></br></br>The Colours for the effects are also custom definable</br></br><img src='images/Inspector.png' width=35%px ></br></br></div></div>
+<div class='text-center'></br>Any number of effects can be placed on one texture.</br></br><img src='images/CombinedEffects.png' width=45%px ></br></br>The Colours for the effects are also custom definable</br></br><img src='images/Inspector.png' width=35%px ></br></br></div></div>
 </div>
 </div>
 <br />
@@ -64,7 +64,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Set-up</h2>
 </div>
-<div class='text-center'></br>Follow the steps below to use in any game.</br></br>Select the base prefab: From the folder Assets\eWolf\eWolfDynamicVDU\Prefabs\ Select the size of the texture you wish to use (this can be changed any time later) Drag it in to the scene and place it where you need it.</br></br>Define the effect: In the Inspector, use the Effect drop download list to select the effect from the list.</br></br>Define the size: Use the Rect setting to define the size as a percentage of the image. a width of 1 is the full width of the texture, 0.5 is half the width. And you can tick Apply Border if you want to have a border around the effect.</br></br>Extra Effects: If you wish to have more then one effect per texture, Increase the Size and repeat the previous two steps. However many time you like.</br></br>Colour and speed: You can update the colours used for the textures. You can change the speed of the effect by updating Interval</br></br></div></div>
+<div class='text-center'></br>Follow the steps below to use in any game.</br></br>Select the base prefab: From the folder Assets\eWolf\eWolfDynamicVDU\Prefabs\ Select the size of the texture you wish to use (this can be changed any time later) Drag it in to the scene and place it where you need it.</br></br>Define the effect: In the Inspector, use the Effect drop download list to select the effect from the list.</br></br>Define the size: Use the Rect setting to define the size as a percentage of the image. a width of 1 is the full width of the texture, 0.5 is half the width. And you can tick Apply Border if you want to have a border around the effect.</br></br>Extra Effects: If you wish to have more than one effect per texture, Increase the Size and repeat the previous two steps. However many times you like.</br></br>Colour and speed: You can update the colours used for the textures. You can change the speed of the effect by updating the Interval</br></br></div></div>
 </div>
 </div>
 <br />
@@ -74,17 +74,7 @@
 <div class='section-title'>
 <div class='text-left'><h2>Update Effects In Game</h2>
 </div>
-<div class='text-center'></br>Updating the effect at runtime</br></br>You can change the Alert value at run time by using the</br>go.SendMessage(MonitorDefines.UpdateAlertMessage, newAlert);</br>Where go is the monitor object.</br></br>You can pause an un-pause the effect with</br>go.SendMessage(MonitorDefines.SetPauseMessage, true);</br>And</br>go.SendMessage(MonitorDefines.SetPauseMessage, false);</br>Where go is the monitor object.</br></br>You can find <strong>UpdateAlerts.cs</strong> as an example of the above code.</div></div>
-</div>
-</div>
-<br />
-<a id='UsingSprites'></a>
-<div class ='row bg-light'>
-<div class='col-md-12'>
-<div class='section-title'>
-<div class='text-left'><h2>Using Sprites</h2>
-</div>
-<div class='text-left'></br>With the latest version, Dynamic VDU now allows you to use this effect on a sprite</br></br>Demo scene has been added as <strong> 'ShowSprites'</strong></br></br></div><div class='row'><div class='col-md-6'>The Sprite render need to use the Sprite that matches the Monitor Sprite Textures Setting</br></br>As the Monitor Sprite will be updating the texture set.</div><div class='col-md-6'><div class='text-left'><img src='images/InspectorSprite.png' width=75%px ></div></div></div></div>
+<div class='text-center'></br>Updating the effect at runtime</br></br>You can change the Alert value at run time by using the</br>go.SendMessage(MonitorDefines.UpdateAlertMessage, newAlert);</br></br></br>You can pause and un-pause the effect with</br>go.SendMessage(MonitorDefines.SetPauseMessage, true);</br>And</br>go.SendMessage(MonitorDefines.SetPauseMessage, false);</br></br></br>You can find <strong>UpdateAlerts.cs</strong> as an example of the above code.</div></div>
 </div>
 </div>
 <br />
@@ -95,6 +85,16 @@
 <div class='text-left'><h2>More Examples</h2>
 </div>
 <img class='img-fluid rounded mx-auto d-block' src='images/Effect_Part1.png' width=45%px ></br><img class='img-fluid rounded mx-auto d-block' src='images/Effect_Part2.png' width=45%px ></br><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/tUED5Jngmow?rel=0' frameborder='0' allowfullscreen></iframe></div></div>
+</div>
+</div>
+<br />
+<a id='Version1.2'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Version 1.2</h2>
+</div>
+This version is now using PNG and not Jpgs</br>And updated to use Unity 2021.3.16f1</div>
 </div>
 </div>
 <br />
