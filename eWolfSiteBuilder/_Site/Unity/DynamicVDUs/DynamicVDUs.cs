@@ -16,7 +16,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
         public DynamicVDUs()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "Animated Dynamic VUD";
+            DisplayTitle = "Animated Dynamic VDU";
             MenuTitle = "Dynamic VUD";
             Keywords.Add(DisplayTitle);
             Keywords.Add("animated dynamic monitors");
@@ -47,6 +47,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
 
             items.Add(new HTMLIndexedItems("Options", CreateOptions));
             items.Add(new HTMLIndexedItems("Set-up", CreateSetUp));
+            items.Add(new HTMLIndexedItems("How To Use In Your Own Games", CreateHowToUseInYourOwnGames));
             items.Add(new HTMLIndexedItems("Update Effects In Game", CreateUsingInGame));
 
             //items.Add(new HTMLIndexedItems("Using Sprites", CreateSprite));
@@ -169,6 +170,49 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             return options.Output();
         }
 
+        private string CreateHowToUseInYourOwnGames(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.StartTextCenter();
+            options.NewLine();
+
+            options.TextNewLine("After inporting the package in to your unity Project.");
+            
+            options.NewLine();
+
+            options.TextNewLine("Added the prefab of the resolution you wish to use (32,64,128,256) ");
+            options.NewLine();
+            options.Image("AddPrefab64.PNG", 65);
+            options.NewLine();
+            options.NewLine();
+            options.TextNewLine("Resize and roation the panel to set where it appears");
+            options.NewLine();
+            options.Image("SetSize.PNG", 65);
+            options.NewLine();
+            options.NewLine();
+            options.TextNewLine("Running the game will show the basic default DMU");
+            options.Image("ShowInGame.png", 65);
+            options.NewLine();
+            options.TextNewLine("Now to update the display");
+            options.NewLine();
+            options.Image("MonitorDetails.PNG", 65);
+            options.NewLine();
+            options.NewLine();
+            options.TextNewLine("Now add two more elements to this section.");
+            options.TextNewLine("Set the interval as 10");
+            options.TextNewLine("Then set all 3 elements as shown here");
+            options.Image("SetMonitorDetails.PNG", 65);
+            options.NewLine();
+            options.NewLine();
+
+            options.TextNewLine("And in game you can see the 3 panels.");
+            options.Image("ShowInGameB.png", 65);
+
+            options.EndTextCenter();
+
+            return options.Output();
+        }
+
         private string CreateSetUp(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -259,3 +303,4 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
         }
     }
 }
+;
