@@ -53,6 +53,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             //items.Add(new HTMLIndexedItems("Using Sprites", CreateSprite));
             items.Add(new HTMLIndexedItems("More Examples", CreateMoreExample));
             items.Add(new HTMLIndexedItems("Version 1.2", CreateVerson1p2));
+            items.Add(new HTMLIndexedItems("Version 1.3", CreateVerson1p3));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);
@@ -129,6 +130,15 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             return options.Output();
         }
 
+        private string CreateVerson1p3(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.Text("No changes, only meta images and Documentation updated.");
+
+            return options.Output();
+        }
+
         private string CreateMoreExample(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -139,9 +149,11 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             options.ImageCenter("Effect_Part2.png", 45);
 
             options.NewLine();
-
             options.YouTubeLinkBig("tUED5Jngmow");
 
+            options.NewLine();
+            options.YouTubeLinkBig("Fj079FXF594");
+            
             return options.Output();
         }
 
