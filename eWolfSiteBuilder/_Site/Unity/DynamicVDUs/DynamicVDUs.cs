@@ -93,6 +93,8 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
         private string CreateExample(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
+            options.YouTubeLinkBig("nIU7Vn2CtjE");
+            options.NewLine();
             options.YouTubeLinkBig("0eZLgcZVWQY");
 
             return options.Output();
