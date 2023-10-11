@@ -42,15 +42,10 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             var items = new List<HTMLIndexedItems>
             {
                 new HTMLIndexedItems("Demo Video", CreateExample),
+                new HTMLIndexedItems("Download", CreateDownload),
                 new HTMLIndexedItems("How to use Unity", CreateHowToUseNew),
                 new HTMLIndexedItems("How to use from Code", CreateUseFromCode),
                 new HTMLIndexedItems("Code Control Options", CreateCodeOptions),
-                
-                /*new HTMLIndexedItems("Download", CreateDownload),
-                new HTMLIndexedItems("Inspector Options", CreateInspectorOptions),
-                new HTMLIndexedItems("How to use", CreateHowToUse),
-                new HTMLIndexedItems("Interface options", CreateInterfaceOptions),
-                new HTMLIndexedItems("Project Layout", CreateProjectLayout),*/
                 new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport)
             };
 
@@ -188,7 +183,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.Text("And in the Start methods get the IBookControl");
             options.NewLine();
             options.NewLine();
-            options.CodeText("private void Start()</br>{</br>&nbsp&nbsp&nbsp&nbsp_bookControl = Book.GetComponent<IBookControl>();</br>}");
+            options.CodeText("private void Start()</br>{</br>&nbsp&nbsp&nbsp&nbsp_bookControl = Book.GetComponent&ltIBookControl&gt();</br>}");
             options.NewLine();
             options.Text("In the Update code you can open the book with ");
             options.NewLine();
