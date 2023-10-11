@@ -14,13 +14,11 @@
 <div class='collapse navbar-collapse' id='navbarsExample04'>
 <ul class='navbar-nav mr-auto'>
 <li class='nav-item active'><a class='nav-link'href='../../Unity/Index.html'>Unity</a></li>
-<li class='nav-item active'><a class='nav-link'href='../../Railways/index.html'>Railways</a></li>
-<li class='nav-item active'><a class='nav-link'href='../../VintageSciFi/index.html'>Vintage Sci-Fi</a></li>
 </div>
 </ul>
 </div>
 </nav>
-<Body><!--16/09/2023--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--11/10/2023--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>Book Effect</h1>
@@ -28,11 +26,11 @@
 </div>
 </div>
 </div>
-<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Example">Example</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#InspectorOptions">Inspector Options</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Howtouse">How to use</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Interfaceoptions">Interface options</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#ProjectLayout">Project Layout</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='Example'></a>
+<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#DemoVideo">Demo Video</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#HowtouseUnity">How to use Unity</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#HowtousefromCode">How to use from Code</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CodeControlOptions">Code Control Options</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='DemoVideo'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
-<div class='text-left'><h2>Example</h2>
+<div class='text-left'><h2>Demo Video</h2>
 </div>
 <div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/OAkJZ9Tj9UU?rel=0' frameborder='0' allowfullscreen></iframe></div></div>
 </div>
@@ -48,43 +46,33 @@
 </div>
 </div>
 <br />
-<a id='InspectorOptions'></a>
+<a id='HowtouseUnity'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
-<div class='text-left'><h2>Inspector Options</h2>
+<div class='text-left'><h2>How to use Unity</h2>
 </div>
-<div class='row'><div class='col-md-6'><div class='text-right'><img src='images/BookInspector.PNG' width=90%px ></div></div><div class='col-md-6'><div class='text-left'><div class='d-flex align-items-middle' style='height: 350px'><p><strong>Book Cover Animation: </strong>Hooks in the Book Cover GameObject<br /><strong>Book Cover Mesh: </strong>hooks in the Book Cover mesh<br /><strong>Book Animation: </strong>hooks in the Book Page GameObject<br /><strong>Book Mesh: </strong>hooks in the Book Page mesh<br /><strong>Details.Pages.Size: </strong>The number of pages in the book.<br /><strong>Details.Pages.Element [n]: </strong>Each texture in the book.<br /><strong>Details.Starting Page:: </strong>The starting page when you open the book. This number must be even.<br /></p></div></div></div></div></div>
+<div class='text-center'>Add the <strong>eWolf\BookEffectV2\Prefabs\Book_Normal_pf.prefab</strong> into your scene.</br></br>Next you will need add the pages</br><img src='images/InspectorStart.png' width=45%px ></br></br>Set the number of pages size for wish to use</br></br>Then add all the pages in to the array</br></br><img src='images/InspectorEnd.png' width=45%px ></br></br>You can quicky test the book by adding the prefab</br><strong>eWolf\BookEffectV2\Prefabs\BookHudControl_pf</strong></br></br>Then link this to your book.</br></br><img src='images/InspectorHud.png' width=45%px ></br></br>And run the game and use the HUD options to use the book.</br></br><img src='images/InGameTest.PNG' width=45%px ></div></div>
 </div>
 </div>
 <br />
-<a id='Howtouse'></a>
+<a id='HowtousefromCode'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
-<div class='text-left'><h2>How to use</h2>
+<div class='text-left'><h2>How to use from Code</h2>
 </div>
-<div class='text-left'></br></br>Add the <strong>eWolf\BookEffectV2\Prefabs\Book_Normal_pf.prefab</strong> into your scene.</br></br>Update <strong>Details.Pages.Size</strong> with how many pages you have.Add all the textures into the <strong>Details.Pages.Element</strong> sections</br></br>Set the starting pages if you want the book to open at a page other than the first page. To control the Book you will need to get access to the IBookControl interface with<strong>IBookControl bookControl = BookObject.GetComponent();</strong>This will give you access to all the action in the interface. (examples of this can be seen in BookHud.cs)</div></div>
+<div class='text-center'>To access the book from code you will need to get the IBookControl from the Book (GameObject)</br></br>Example Code</br></br><div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">public GameObject Book;</br>private IBookControl _bookControl;</div></div></div></br>And in the Start methods get the IBookControl</br></br><div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">private void Start()</br>{</br>&nbsp&nbsp&nbsp&nbsp_bookControl = Book.GetComponent&ltIBookControl&gt();</br>}</div></div></div></br>In the Update code you can open the book with </br></br><div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">private void Update()</br>{<br>&nbsp&nbsp&nbsp&nbspif (Input.GetKeyDown("o"))</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.OpenBook();</br>&nbsp&nbsp&nbsp&nbsp}</br>}</div></div></div></br>Back in Unity3D, create an empty object and add this script and then link the book game object to the Book in this script.</br>When you run that in game it will open the book when you press 'o'</br></br>Now you have access to the book you can add extra options like turning the pages with</br></br><div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">_bookControl.TurnPage();</div></div></div></br>To make it safe we will first need to check the book can turn to the next page.</br>Here is the code to make the page turn from another keypress</br></br><div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">if (Input.GetKeyDown("p"))</br>{</br>&nbsp&nbsp&nbsp&nbspif (_bookControl.CanTurnPageForward)</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.TurnPage();</br>&nbsp&nbsp&nbsp&nbsp}</br>}</div></div></div></br></br></div></div>
 </div>
 </div>
 <br />
-<a id='Interfaceoptions'></a>
+<a id='CodeControlOptions'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
-<div class='text-left'><h2>Interface options</h2>
+<div class='text-left'><h2>Code Control Options</h2>
 </div>
-<div class='text-left'></br></br>All book actions are controlled through an interface.</br></br>The interface<strong> IBookControl </strong>contains</br></br>bool CanTurnPageBackWard { get; }</br>bool CanTurnPageForward { get; }</br>Details GetDetails { get; }</br>bool IsBookOpen { get; }</br>void CloseBook();</br>void OpenBook();</br>void OpenBookAtPage(int pageIndex);</br>void SetSpeed(float speed);</br>void TurnPage();</br>void TurnPageBack();</br></div></div>
-</div>
-</div>
-<br />
-<a id='ProjectLayout'></a>
-<div class ='row bg-light'>
-<div class='col-md-12'>
-<div class='section-title'>
-<div class='text-left'><h2>Project Layout</h2>
-</div>
-All of the objects, scripts and prefabs are under the<strong> eWolf </strong>folder</br></br><img class='img-fluid rounded mx-auto d-block' src='images/Folders.PNG' width=30%px ></br></br></div>
+<div class='text-center'>With access to the IBookControl</br></br>You have access to </br></br></div><div class='text-left'>Can we turn the back backwards<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool CanTurnPageBackWard  { get; }</div></div></div></br></br>Can we turn the back forward (normal direction)<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool CanTurnPageForward  { get; }</div></div></div></br></br>Get the book details<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">IDetails GetDetails { get; }</div></div></div></br></br>Is the book currently open<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool IsBookOpen { get; }</div></div></div></br></br>Close the Book<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void CloseBook();</div></div></div></br></br>Open the Book<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void OpenBook();</div></div></div></br></br>Open the book at a set page<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void OpenBookAtPage(int pageIndex);</div></div></div></br></br>Set the animation speed for the book<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void SetSpeed(float speed);</div></div></div></br></br>Trun the page forward (normal)<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void TurnPage();</div></div></div></br></br>Turn the page backwards<div class='col-md-6'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void TurnPageBack();</div></div></div></div></div>
 </div>
 </div>
 <br />
