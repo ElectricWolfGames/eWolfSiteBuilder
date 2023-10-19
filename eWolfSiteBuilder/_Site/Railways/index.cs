@@ -13,12 +13,10 @@ namespace eWolfSiteBuilder._Site.Railways
             WebPage = new WebPage(this);
             DisplayTitle = "";
             MenuTitle = "Railways";
-            DontBuildPage = true;
         }
 
         public override void CreatePage()
         {
-            WebPage.Output();
         }
     }
 }

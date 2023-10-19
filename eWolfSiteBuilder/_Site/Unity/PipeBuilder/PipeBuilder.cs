@@ -53,6 +53,7 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             items.Add(new HTMLIndexedItems("New Materials (version 2)", CreateV2Materials));
             items.Add(new HTMLIndexedItems("Bake Lighting (version 2)", CreateV2BakeLighting));
             items.Add(new HTMLIndexedItems("Version 2.1", CreateVersion21));
+            items.Add(new HTMLIndexedItems("Version 2.2", CreateVersion22));
             items.Add(new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport));
 
             AddIndexItemsWithSideBar(items);
@@ -588,6 +589,28 @@ namespace eWolfSiteBuilder._Site.Unity.PipeBuilder
             outer.Text("Fixes a release build problem.");
             outer.NewLine();
             outer.NewLine();
+            outer.EndTextCenter();
+
+            return outer.Output();
+        }
+
+        private string CreateVersion22(string arg)
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+
+            outer.StartTextCenter();
+            outer.NewLine();
+
+            outer.Text("Version 2.2");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("Optimised the Components used.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("If No Collection was selected, then all MeshCollider Components are removed.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text("And if an object hasn't got any mesh it will remove the MeshFilter and MeshRenderer Components.");
             outer.EndTextCenter();
 
             return outer.Output();

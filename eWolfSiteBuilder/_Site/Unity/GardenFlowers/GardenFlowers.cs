@@ -46,7 +46,6 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
             WebPage.StartBody();
 
             WebPage.StartDiv("<div class='container mt-12'>");
-
             WebPage.Append(CreateHero());
 
             WebPage.Append("<div class='row'>");

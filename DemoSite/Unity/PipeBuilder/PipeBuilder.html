@@ -14,18 +14,21 @@
 <div class='collapse navbar-collapse' id='navbarsExample04'>
 <ul class='navbar-nav mr-auto'>
 <li class='nav-item active'><a class='nav-link'href='../../Unity/Index.html'>Unity</a></li>
+<li class='nav-item active'><a class='nav-link'href='../../CodeExamples/index.html'>Code Examples</a></li>
+<li class='nav-item active'><a class='nav-link'href='../../Railways/index.html'>Railways</a></li>
+<li class='nav-item active'><a class='nav-link'href='../../VintageSciFi/index.html'>Vintage Sci-Fi</a></li>
 </div>
 </ul>
 </div>
 </nav>
-<Body><!--13/10/2023--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--19/10/2023--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <img class='rounded mx-auto d-block' src='images/PipeBuilderLogo.png' width=35%px ><p class='lead'>Pipe Builder lets you quickly add pipes into any scene. You can define how many sides you wish to have on the pipes and you can also refine exactly where the pipes are in the scene. All within Unity3D no need to swap back to a 3D editor.</p>
 </div>
 </div>
 </div>
-<div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Overview">Overview</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CreatingyourfirstPipe">Creating your first Pipe</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#InspectorDetails">Inspector Details</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CornerPipes">Corner Pipes</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#AutoBuildandInsidePipes">Auto Build and Inside Pipes</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Materials">Materials</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CreatePipesfromScripts">Create Pipes from Scripts</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Version2">Version 2</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Fittings(version2)">Fittings (version 2)</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#NewMaterials(version2)">New Materials (version 2)</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#BakeLighting(version2)">Bake Lighting (version 2)</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Version2.1">Version 2.1</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='Download'></a>
+<div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Overview">Overview</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CreatingyourfirstPipe">Creating your first Pipe</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#InspectorDetails">Inspector Details</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CornerPipes">Corner Pipes</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#AutoBuildandInsidePipes">Auto Build and Inside Pipes</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Materials">Materials</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CreatePipesfromScripts">Create Pipes from Scripts</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Version2">Version 2</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Fittings(version2)">Fittings (version 2)</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#NewMaterials(version2)">New Materials (version 2)</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#BakeLighting(version2)">Bake Lighting (version 2)</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Version2.1">Version 2.1</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Version2.2">Version 2.2</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='Download'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
@@ -152,6 +155,16 @@
 <div class='text-left'><h2>Version 2.1</h2>
 </div>
 <div class='text-center'></br>Version 2.1</br></br>Fixes a release build problem.</br></br></div></div>
+</div>
+</div>
+<br />
+<a id='Version2.2'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Version 2.2</h2>
+</div>
+<div class='text-center'></br>Version 2.2</br></br>Optimised the Components used.</br></br>If No Collection was selected, then all MeshCollider Components are removed.</br></br>And if an object hasn't got any mesh it will remove the MeshFilter and MeshRenderer Components.</div></div>
 </div>
 </div>
 <br />

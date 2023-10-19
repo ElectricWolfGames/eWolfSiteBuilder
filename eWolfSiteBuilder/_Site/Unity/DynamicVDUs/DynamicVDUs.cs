@@ -107,83 +107,6 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             return options.Output();
         }
 
-        private void CreateIndexedItems(List<HTMLIndexedItems> items)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.CreateIndex(items);
-            WebPage.Append(options.Output());
-
-            options = new HTMLBuilder();
-            options.CreateIndexItems(items);
-            WebPage.Append(options.Output());
-            WebPage.Append("</div>");
-
-            WebPage.CloseAllsDiv();
-        }
-        private string CreateVerson1p2(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.Text("This version is now using PNG and not Jpgs");
-            options.NewLine();
-            options.Text("And updated to use Unity 2021.3.16f1");
-
-            return options.Output();
-        }
-
-        private string CreateVerson1p3(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.Text("No changes, only meta images and Documentation updated.");
-
-            return options.Output();
-        }
-
-        private string CreateMoreExample(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.ImageCenter("Effect_Part1.png", 45);
-
-            options.NewLine();
-            options.ImageCenter("Effect_Part2.png", 45);
-
-            options.NewLine();
-            options.YouTubeLinkBig("tUED5Jngmow");
-
-            options.NewLine();
-            options.YouTubeLinkBig("Fj079FXF594");
-            
-            return options.Output();
-        }
-
-        private string CreateOptions(string data)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            options.StartTextCenter();
-            options.NewLine();
-
-            options.Text(@"Any number of effects can be placed on one texture.");
-            options.NewLine();
-            options.NewLine();
-            options.Image("CombinedEffects.png", 45);
-
-            options.NewLine();
-            options.NewLine();
-            options.Text(@"The Colours for the effects are also custom definable");
-            options.NewLine();
-            options.NewLine();
-            options.Image("Inspector.png", 35);
-
-            options.NewLine();
-            options.NewLine();
-            options.EndTextCenter();
-
-            return options.Output();
-        }
-
         private string CreateHowToUseInYourOwnGames(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -191,7 +114,7 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             options.NewLine();
 
             options.TextNewLine("After inporting the package in to your unity Project.");
-            
+
             options.NewLine();
 
             options.TextNewLine("Added the prefab of the resolution you wish to use (32,64,128,256) ");
@@ -222,6 +145,64 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             options.TextNewLine("And in game you can see the 3 panels.");
             options.Image("ShowInGameB.png", 65);
 
+            options.EndTextCenter();
+
+            return options.Output();
+        }
+
+        private void CreateIndexedItems(List<HTMLIndexedItems> items)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.CreateIndex(items);
+            WebPage.Append(options.Output());
+
+            options = new HTMLBuilder();
+            options.CreateIndexItems(items);
+            WebPage.Append(options.Output());
+            WebPage.Append("</div>");
+
+            WebPage.CloseAllsDiv();
+        }
+
+        private string CreateMoreExample(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.ImageCenter("Effect_Part1.png", 45);
+
+            options.NewLine();
+            options.ImageCenter("Effect_Part2.png", 45);
+
+            options.NewLine();
+            options.YouTubeLinkBig("tUED5Jngmow");
+
+            options.NewLine();
+            options.YouTubeLinkBig("Fj079FXF594");
+
+            return options.Output();
+        }
+
+        private string CreateOptions(string data)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.StartTextCenter();
+            options.NewLine();
+
+            options.Text(@"Any number of effects can be placed on one texture.");
+            options.NewLine();
+            options.NewLine();
+            options.Image("CombinedEffects.png", 45);
+
+            options.NewLine();
+            options.NewLine();
+            options.Text(@"The Colours for the effects are also custom definable");
+            options.NewLine();
+            options.NewLine();
+            options.Image("Inspector.png", 35);
+
+            options.NewLine();
+            options.NewLine();
             options.EndTextCenter();
 
             return options.Output();
@@ -298,7 +279,6 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
 
             options.Text(@"You can change the Alert value at run time by using the"); options.NewLine();
             options.Text(@"go.SendMessage(MonitorDefines.UpdateAlertMessage, newAlert);"); options.NewLine();
-            
 
             options.NewLine();
             options.NewLine();
@@ -312,6 +292,26 @@ namespace eWolfSiteBuilder._Site.Unity.DynamicVDUs
             options.TextBoldText("You can find ", "UpdateAlerts.cs", " as an example of the above code.");
 
             options.EndTextCenter();
+
+            return options.Output();
+        }
+
+        private string CreateVerson1p2(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.Text("This version is now using PNG and not Jpgs");
+            options.NewLine();
+            options.Text("And updated to use Unity 2021.3.16f1");
+
+            return options.Output();
+        }
+
+        private string CreateVerson1p3(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.Text("No changes, only meta images and Documentation updated.");
 
             return options.Output();
         }

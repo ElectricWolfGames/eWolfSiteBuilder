@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang='en' >	<head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XCYJV6WSHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XCYJV6WSHD');
+</script>		<meta charset='UTF-8'>		<title>Customizing the inspector for your game objects</title>		<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>		<meta name='description' content='Customizing the inspector for your game objects'/>		<meta name='keywords' content=''/>		<meta name='title' content='Customizing the inspector for your game objects'/>		<meta name='author' content='Electric Wolf'>		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>		<link rel='stylesheet' href='../Scripts/style.css'><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css'><script src='https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js'></script><script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script><script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js'></script></head><nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+<a class='navbar-brand' href='../index.html'>Home</a>
+<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExample04' aria-controls='navbarsExample04' aria-expanded='false' aria-label='Toggle navigation'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarsExample04'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item active'><a class='nav-link'href='../Unity/Index.html'>Unity</a></li>
+<li class='nav-item active'><a class='nav-link'href='../CodeExamples/index.html'>Code Examples</a></li>
+<li class='nav-item active'><a class='nav-link'href='../Railways/index.html'>Railways</a></li>
+<li class='nav-item active'><a class='nav-link'href='../VintageSciFi/index.html'>Vintage Sci-Fi</a></li>
+</div>
+</ul>
+</div>
+</nav>
+<Body><!--19/10/2023--><div class='container mt-12'><div class='jumbotron'>
+<div class='row'>
+<div class='col-md-12'>
+<h1>Customizing the inspector for your game objects</h1>
+<p class='lead'></p>
+</div>
+</div>
+</div>
+<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Overview">Overview</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Downloads">Downloads</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Files">Files</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='Overview'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Overview</h2>
+</div>
+<div class='text-center'>In the video below I show you how to take a basic inspector..</br></br><img src='U3DEditorPart001/OldInspector.PNG' width=45%px ></br></br>And turn it in to </br><img src='U3DEditorPart001/FullInspector.PNG' width=35%px ></br></br><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/1UQrQ6xgsIY?rel=0' frameborder='0' allowfullscreen></iframe></div></div></div>
+</div>
+</div>
+<br />
+<a id='Downloads'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Downloads</h2>
+</div>
+<div class='text-center'>You can download the the files..</br><a href="U3DEditorPart001/Data/U3DEditorPart001.unitypackage" download>Unity3D package</a></br></br><a href="U3DEditorPart001/Data/ShowInspector.cs" download>ShowInspector.cs</a></br><a href="U3DEditorPart001/Data/UsableItems.cs" download>UsableItems.cs</a></br></br><a href="U3DEditorPart001/Data/ShowInspector_UI.cs" download>ShowInspector_UI.cs</a></br></div></div>
+</div>
+</div>
+<br />
+<a id='Files'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Files</h2>
+</div>
+<div class='text-center'>ShowInspector.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System;</br>using UnityEngine;</br></br>public class ShowInspector : MonoBehaviour</br>{</br>&nbsp&nbsp&nbsp&nbsp[Range(1, 10)]</br>&nbsp&nbsp&nbsp&nbsppublic float Price = 5;</br></br>&nbsp&nbsp&nbsp&nbsppublic ExtraData ExtraData = new ExtraData();</br>&nbsp&nbsp&nbsp&nbsppublic UsableItems UsableItems = UsableItems.None;</br></br>&nbsp&nbsp&nbsp&nbsppublic void ResetValues()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUsableItems = UsableItems.None;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrice = 5;</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></br>[Serializable]</br>public class ExtraData</br>{</br>&nbsp&nbsp&nbsp&nbsppublic bool ShowIcon = true;</br></br>&nbsp&nbsp&nbsp&nbsp[Range(32.0f, 256)]</br>&nbsp&nbsp&nbsp&nbsppublic float IconSize = 96;</br></br>}</br></br></div></div></div></br></br>ShowInspector_UI.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System.Collections;</br>using System.Collections.Generic;</br>using UnityEditor;</br>using UnityEngine;</br></br>[CustomEditor(typeof(ShowInspector)), CanEditMultipleObjects]</br>public class ShowInspector_UI : Editor</br>{</br>&nbsp&nbsp&nbsp&nbspprivate ShowInspector _showInspector;</br>&nbsp&nbsp&nbsp&nbspprivate string _oldName;</br>&nbsp&nbsp&nbsp&nbspprivate Texture2D _showItem = null;</br></br>&nbsp&nbsp&nbsp&nbspprivate static Texture2D GetTexture(string name)</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptry</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTexture2D go = (Texture2D)Resources.Load(name);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn go;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcatch</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn null;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br></br></br>&nbsp&nbsp&nbsp&nbsppublic override void OnInspectorGUI()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDrawDefaultInspector();</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_showInspector.ExtraData.ShowIcon)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_showItem == null ||</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_oldName != _showInspector.UsableItems.ToString())</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_showItem = GetTexture(_showInspector.UsableItems.ToString());</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_oldName = _showInspector.UsableItems.ToString();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_showItem != null)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGUILayout.Label(</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_showItem,</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGUILayout.Width(_showInspector.ExtraData.IconSize),</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGUILayout.Height(_showInspector.ExtraData.IconSize));</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_showInspector.UsableItems != UsableItems.None)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGUI.color = Color.green;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (GUILayout.Button("Reset Values"))</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_showInspector.ResetValues();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbspprivate void OnEnable()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_showInspector = (ShowInspector)target;</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></br></div></div></div></br></br></div></div>
+</div>
+</div>
+<br />
+</div></div></div></Body>

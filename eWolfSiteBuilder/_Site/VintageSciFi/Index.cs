@@ -13,12 +13,10 @@ namespace eWolfSiteBuilder._Site.VintageSciFi
             WebPage = new WebPage(this);
             DisplayTitle = "";
             MenuTitle = "Vintage Sci-Fi";
-            DontBuildPage = true;
         }
 
         public override void CreatePage()
         {
-            WebPage.Output();
         }
     }
 }

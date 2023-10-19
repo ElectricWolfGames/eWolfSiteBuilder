@@ -7,7 +7,6 @@ using eWolfSiteBuilder.SiteDetails;
 using eWolfSiteBuilder.SiteDetails.Configuration;
 using eWolfSiteBuilder.SiteDetails.Helpers;
 using System.Collections.Generic;
-using System.Threading;
 
 namespace eWolfSiteBuilder._Site.Unity.BookEffect
 {
@@ -85,21 +84,6 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             return options.Output();
         }
 
-        private string CreateExample(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            options.YouTubeLinkBig("OAkJZ9Tj9UU");
-
-            return options.Output();
-        }
-
-        private string CreateHero()
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            options.Jumbotron(DisplayTitle, "Book effect lets you add a book to your scene with turning pages. And by using the interface you have actions to open, close the book and turn the pages forward and back. All pages are added to the Inspector as textures.");
-            return options.Output();
-        }
-
         private string CreateCodeOptions(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -164,74 +148,45 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.EndTextLeft();
 
             return options.Output();
-
         }
 
-        private string CreateUseFromCode(string arg)
+        private string CreateExample(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
-            options.StartTextCenter();
-            
+            options.YouTubeLinkBig("OAkJZ9Tj9UU");
 
-            options.Text("To access the book from code you will need to get the IBookControl from the Book (GameObject)");
-            options.NewLine();
-            options.NewLine();
-            options.Text("Example Code");
-            options.NewLine();
-            options.NewLine();
-            options.CodeText("public GameObject Book;</br>private IBookControl _bookControl;");
-            options.NewLine();
-            options.Text("And in the Start methods get the IBookControl");
-            options.NewLine();
-            options.NewLine();
-            options.CodeText("private void Start()</br>{</br>&nbsp&nbsp&nbsp&nbsp_bookControl = Book.GetComponent&ltIBookControl&gt();</br>}");
-            options.NewLine();
-            options.Text("In the Update code you can open the book with ");
-            options.NewLine();
-            options.NewLine();
-            options.CodeText("" +
-                "private void Update()</br>" +
-                "{<br>" +
-                "&nbsp&nbsp&nbsp&nbspif (Input.GetKeyDown(\"o\"))</br>" +
-                "&nbsp&nbsp&nbsp&nbsp{</br>" +
-                "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.OpenBook();</br>" +
-                "&nbsp&nbsp&nbsp&nbsp}</br>" +
-                "}");
-
-            options.NewLine();
-            options.Text("Back in Unity3D, create an empty object and add this script and then link the book game object to the Book in this script.");
-
-            options.NewLine();
-            options.Text("When you run that in game it will open the book when you press 'o'");
-            options.NewLine();
-            options.NewLine();
-            options.Text("Now you have access to the book you can add extra options like turning the pages with");
-            options.NewLine();
-            options.NewLine();
-            options.CodeText("_bookControl.TurnPage();");
-            options.NewLine();
-            options.Text("To make it safe we will first need to check the book can turn to the next page.");
-            options.NewLine();
-            options.Text("Here is the code to make the page turn from another keypress");
-            options.NewLine();
-            options.NewLine();
-            options.CodeText("" +
-                "if (Input.GetKeyDown(\"p\"))</br>" +
-                "{</br>" +
-                "&nbsp&nbsp&nbsp&nbspif (_bookControl.CanTurnPageForward)</br>" +
-                "&nbsp&nbsp&nbsp&nbsp{</br>" +
-                "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.TurnPage();</br>" +
-                "&nbsp&nbsp&nbsp&nbsp}</br>" +
-                "}");
-            options.NewLine();
-            options.NewLine();
-
-
-            options.YouTubeLinkBig("Lm6nuxJ3a54");
-
-            options.EndTextCenter();
             return options.Output();
+        }
 
+        private string CreateHero()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.Jumbotron(DisplayTitle, "Book effect lets you add a book to your scene with turning pages. And by using the interface you have actions to open, close the book and turn the pages forward and back. All pages are added to the Inspector as textures.");
+            return options.Output();
+        }
+
+        private string CreateHowToUse(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.StartTextCenterLeft();
+            options.NewLine();
+            options.NewLine();
+
+            options.TextBoldText("Add the ", @"eWolf\BookEffectV2\Prefabs\Book_Normal_pf.prefab", " into your scene.");
+            options.NewLine();
+            options.NewLine();
+            options.TextBoldText("Update ", "Details.Pages.Size", " with how many pages you have.");
+            options.TextBoldText("Add all the textures into the ", "Details.Pages.Element", " sections");
+            options.NewLine();
+            options.NewLine();
+            options.Text("Set the starting pages if you want the book to open at a page other than the first page. To control the Book you will need to get access to the IBookControl interface with");
+            options.Bold("IBookControl bookControl = BookObject.GetComponent();");
+            options.Text("This will give you access to all the action in the interface. (examples of this can be seen in BookHud.cs)");
+
+            options.EndTextCenterLeft();
+
+            return options.Output();
         }
 
         private string CreateHowToUseNew(string arg)
@@ -273,30 +228,6 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.Image("InGameTest.PNG", 45);
 
             options.EndTextCenter();
-            return options.Output();
-        }
-
-        private string CreateHowToUse(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-
-            options.StartTextCenterLeft();
-            options.NewLine();
-            options.NewLine();
-
-            options.TextBoldText("Add the ", @"eWolf\BookEffectV2\Prefabs\Book_Normal_pf.prefab", " into your scene.");
-            options.NewLine();
-            options.NewLine();
-            options.TextBoldText("Update ", "Details.Pages.Size", " with how many pages you have.");
-            options.TextBoldText("Add all the textures into the ", "Details.Pages.Element", " sections");
-            options.NewLine();
-            options.NewLine();
-            options.Text("Set the starting pages if you want the book to open at a page other than the first page. To control the Book you will need to get access to the IBookControl interface with");
-            options.Bold("IBookControl bookControl = BookObject.GetComponent();");
-            options.Text("This will give you access to all the action in the interface. (examples of this can be seen in BookHud.cs)");
-
-            options.EndTextCenterLeft();
-
             return options.Output();
         }
 
@@ -383,6 +314,70 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             outer.NewLine();
 
             return outer.Output();
+        }
+
+        private string CreateUseFromCode(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.StartTextCenter();
+
+            options.Text("To access the book from code you will need to get the IBookControl from the Book (GameObject)");
+            options.NewLine();
+            options.NewLine();
+            options.Text("Example Code");
+            options.NewLine();
+            options.NewLine();
+            options.CodeText("public GameObject Book;</br>private IBookControl _bookControl;");
+            options.NewLine();
+            options.Text("And in the Start methods get the IBookControl");
+            options.NewLine();
+            options.NewLine();
+            options.CodeText("private void Start()</br>{</br>&nbsp&nbsp&nbsp&nbsp_bookControl = Book.GetComponent&ltIBookControl&gt();</br>}");
+            options.NewLine();
+            options.Text("In the Update code you can open the book with ");
+            options.NewLine();
+            options.NewLine();
+            options.CodeText("" +
+                "private void Update()</br>" +
+                "{<br>" +
+                "&nbsp&nbsp&nbsp&nbspif (Input.GetKeyDown(\"o\"))</br>" +
+                "&nbsp&nbsp&nbsp&nbsp{</br>" +
+                "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.OpenBook();</br>" +
+                "&nbsp&nbsp&nbsp&nbsp}</br>" +
+                "}");
+
+            options.NewLine();
+            options.Text("Back in Unity3D, create an empty object and add this script and then link the book game object to the Book in this script.");
+
+            options.NewLine();
+            options.Text("When you run that in game it will open the book when you press 'o'");
+            options.NewLine();
+            options.NewLine();
+            options.Text("Now you have access to the book you can add extra options like turning the pages with");
+            options.NewLine();
+            options.NewLine();
+            options.CodeText("_bookControl.TurnPage();");
+            options.NewLine();
+            options.Text("To make it safe we will first need to check the book can turn to the next page.");
+            options.NewLine();
+            options.Text("Here is the code to make the page turn from another keypress");
+            options.NewLine();
+            options.NewLine();
+            options.CodeText("" +
+                "if (Input.GetKeyDown(\"p\"))</br>" +
+                "{</br>" +
+                "&nbsp&nbsp&nbsp&nbspif (_bookControl.CanTurnPageForward)</br>" +
+                "&nbsp&nbsp&nbsp&nbsp{</br>" +
+                "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.TurnPage();</br>" +
+                "&nbsp&nbsp&nbsp&nbsp}</br>" +
+                "}");
+            options.NewLine();
+            options.NewLine();
+
+            options.YouTubeLinkBig("Lm6nuxJ3a54");
+
+            options.EndTextCenter();
+            return options.Output();
         }
     }
 }
