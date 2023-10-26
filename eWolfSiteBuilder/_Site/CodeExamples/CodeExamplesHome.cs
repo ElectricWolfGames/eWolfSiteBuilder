@@ -31,6 +31,12 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             string displayText = "Customizing the inspector for your game objects";
             WebPage.Append($"<li><a href='U3DEditorPart001.html'>{displayText}</a></li>");
 
+            //displayText = "Basic API Request";
+            //WebPage.Append($"<li><a href='BasicAPIRequest.html'>{displayText}</a></li>");
+
+            //displayText = "Adding extra data on to Enums";
+            //WebPage.Append($"<li><a href='U3DEnumsAttribute.html'>{displayText}</a></li>");
+
             // U3DEditorPart001
             // U3DEditorPart002
             // U3DEditorPart003
