@@ -37,6 +37,10 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             //displayText = "Adding extra data on to Enums";
             //WebPage.Append($"<li><a href='U3DEnumsAttribute.html'>{displayText}</a></li>");
 
+            displayText = "Testing Internals Methods";
+            WebPage.Append($"<li><a href='TestingInternalsMethods.html'>{displayText}</a></li>");
+
+
             // U3DEditorPart001
             // U3DEditorPart002
             // U3DEditorPart003
