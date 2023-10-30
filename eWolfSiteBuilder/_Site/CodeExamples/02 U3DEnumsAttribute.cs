@@ -7,7 +7,6 @@ using System.Collections.Generic;
 
 namespace eWolfSiteBuilder._Site.CodeExamples
 {
-
     [PageTitle("U3DEnumsAttribute.html")]
     [Navigation(NavigationTypes.Main, 2)]
     public class U3DEnumsAttribute : PageDetailsWolfSite
@@ -65,7 +64,7 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             options.NewLine();
             options.Text("<a href=\"02 U3DEnumsAttribute/Data/ShowEnumData_UI.cs\" download>ShowEnumData_UI.cs</a>");
             options.NewLine();
-            
+
             options.EndTextCenter();
             return options.Output();
         }

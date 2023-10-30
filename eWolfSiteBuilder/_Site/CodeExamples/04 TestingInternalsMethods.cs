@@ -42,29 +42,6 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             WebPage.Output();
         }
 
-        private string CreateOverview(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            options.StartTextCenter();
-
-            options.Text("How to Unit test Internals Methods");
-            options.NewLine();
-            options.NewLine();
-            
-            options.YouTubeLinkBig("IgTyOo473zw");
-
-            options.EndTextCenter();
-            return options.Output();
-        }
-
-        private string CreateHero()
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            string heroText = $"";
-            options.Jumbotron(DisplayTitle, heroText);
-            return options.Output();
-        }
-
         private string CreateDownloadFiles(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -83,6 +60,7 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             options.EndTextCenter();
             return options.Output();
         }
+
         private string CreateExmapleFiles(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -100,6 +78,28 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             options.NewLine();
             options.NewLine();
 
+            options.EndTextCenter();
+            return options.Output();
+        }
+
+        private string CreateHero()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            string heroText = $"";
+            options.Jumbotron(DisplayTitle, heroText);
+            return options.Output();
+        }
+
+        private string CreateOverview(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.StartTextCenter();
+
+            options.Text("How to Unit test Internals Methods");
+            options.NewLine();
+            options.NewLine();
+
+            options.YouTubeLinkBig("IgTyOo473zw");
 
             options.EndTextCenter();
             return options.Output();

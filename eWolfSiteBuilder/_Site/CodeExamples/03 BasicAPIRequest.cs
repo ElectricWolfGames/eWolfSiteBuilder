@@ -42,34 +42,6 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             WebPage.Output();
         }
 
-        private string CreateOverview(string arg)
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            options.StartTextCenter();
-
-            options.Text("Here is a Basic API (application programming interface) requst");
-            options.NewLine();
-            options.NewLine();
-            options.Text("In this example I used the Exchange Rate API");
-            options.NewLine();
-            options.Text("<a href='https://www.exchangerate-api.com/docs/c-sharp-currency-api'>here</a>");
-
-            options.NewLine();
-            options.NewLine();
-            options.YouTubeLinkBig("oDzBU4_tG-k");
-
-            options.EndTextCenter();
-            return options.Output();
-        }
-
-        private string CreateHero()
-        {
-            HTMLBuilder options = new HTMLBuilder();
-            string heroText = $"";
-            options.Jumbotron(DisplayTitle, heroText);
-            return options.Output();
-        }
-
         private string CreateDownloadFiles(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -88,6 +60,7 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             options.EndTextCenter();
             return options.Output();
         }
+
         private string CreateExmapleFiles(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -98,7 +71,34 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             options.CodeText("using APITests;\r\nusing APITests.Model;\r\nusing Newtonsoft.Json;\r\n\r\n// Demo API request\r\n// https://www.exchangerate-api.com/docs/c-sharp-currency-api\r\n\r\nnamespace APIs\r\n{\r\n    public class ExchangeEateAPIS\r\n    {\r\n        public void MakeRequest()\r\n        {\r\n            string urlString = $\"https://v6.exchangerate-api.com/v6/{Consts.APIKey}/latest/USD\";\r\n            using (var webClient = new System.Net.WebClient())\r\n            {\r\n                var json = webClient.DownloadString(urlString);\r\n                var exchangerateRates = JsonConvert.DeserializeObject<ExchangerateRateResponse>(json);\r\n\r\n                Console.WriteLine($\"BaseCode: {exchangerateRates.base_code}\");\r\n                Console.WriteLine($\"GBP: {exchangerateRates.conversion_rates.GBP}\");\r\n                Console.WriteLine($\"EUR: {exchangerateRates.conversion_rates.EUR}\");\r\n            }\r\n        }\r\n    }\r\n}");
             options.NewLine();
             options.NewLine();
-            
+
+            options.EndTextCenter();
+            return options.Output();
+        }
+
+        private string CreateHero()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            string heroText = $"";
+            options.Jumbotron(DisplayTitle, heroText);
+            return options.Output();
+        }
+
+        private string CreateOverview(string arg)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.StartTextCenter();
+
+            options.Text("Here is a Basic API (application programming interface) requst");
+            options.NewLine();
+            options.NewLine();
+            options.Text("In this example I used the Exchange Rate API");
+            options.NewLine();
+            options.Text("<a href='https://www.exchangerate-api.com/docs/c-sharp-currency-api'>here</a>");
+
+            options.NewLine();
+            options.NewLine();
+            options.YouTubeLinkBig("oDzBU4_tG-k");
 
             options.EndTextCenter();
             return options.Output();
