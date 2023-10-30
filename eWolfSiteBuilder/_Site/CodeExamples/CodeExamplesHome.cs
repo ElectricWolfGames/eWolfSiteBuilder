@@ -41,7 +41,7 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             //displayText = "Testing Internals Methods";
             //WebPage.Append($"<li><a href='TestingInternalsMethods.html'>{displayText}</a></li>");
 
-            // ProceduralGeneration
+            // ProceduralGeneration     
             //displayText = "Procedural Generation";
             //WebPage.Append($"<li><a href='ProceduralGeneration.html'>{displayText}</a></li>");
 

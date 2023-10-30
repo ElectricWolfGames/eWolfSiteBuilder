@@ -113,13 +113,13 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             HTMLBuilder options = new HTMLBuilder();
             options.StartTextCenter();
 
-            options.Text("Procedural Generating mesh from code.");
+            options.Text("Procedural Generating a mesh from code.");
             options.NewLine();
             options.NewLine();
-            options.Text("The video talks and shows you how to creat a simple wall just by using code.");
+            options.Text("The video talks and shows you how to create a simple wall just by using code.");
             options.NewLine();
             options.NewLine();
-            options.Text("We build up the wall, polygon by polygon and apply UV to define how the textues are used.");
+            options.Text("We build up the wall, polygon by polygon and, apply UV to define how the textures are used.");
             options.NewLine();
             options.NewLine();
 
