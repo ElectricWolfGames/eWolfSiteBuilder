@@ -34,16 +34,17 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             displayText = "Adding extra data on to Enums";
             WebPage.Append($"<li><a href='U3DEnumsAttribute.html'>{displayText}</a></li>");
 
-            //displayText = "Basic API Request";
-            //WebPage.Append($"<li><a href='BasicAPIRequest.html'>{displayText}</a></li>");
+            displayText = "Procedural Generation";
+            WebPage.Append($"<li><a href='ProceduralGeneration.html'>{displayText}</a></li>");
 
+            displayText = "Basic API Request";
+            WebPage.Append($"<li><a href='BasicAPIRequest.html'>{displayText}</a></li>");
+
+            //displayText = "Enhance your unity editor with OnDrawGizmosSelected";
+            //WebPage.Append($"<li><a href='EnhanceYourUnityEditor.html'>{displayText}</a></li>");
 
             //displayText = "Testing Internals Methods";
             //WebPage.Append($"<li><a href='TestingInternalsMethods.html'>{displayText}</a></li>");
-
-            // ProceduralGeneration     
-            //displayText = "Procedural Generation";
-            //WebPage.Append($"<li><a href='ProceduralGeneration.html'>{displayText}</a></li>");
 
 
 
