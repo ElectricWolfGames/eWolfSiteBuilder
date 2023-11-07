@@ -43,6 +43,9 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             //displayText = "Enhance your unity editor with OnDrawGizmosSelected";
             //WebPage.Append($"<li><a href='EnhanceYourUnityEditor.html'>{displayText}</a></li>");
 
+            displayText = "Enhance your unity editor with Handles";
+            WebPage.Append($"<li><a href='EnhanceYourUnityEditorHandles.html'>{displayText}</a></li>");
+
             //displayText = "Testing Internals Methods";
             //WebPage.Append($"<li><a href='TestingInternalsMethods.html'>{displayText}</a></li>");
 
