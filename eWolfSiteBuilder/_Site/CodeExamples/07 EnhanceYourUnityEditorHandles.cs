@@ -47,7 +47,7 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             HTMLBuilder options = new HTMLBuilder();
             options.StartTextCenter();
 
-            string folder = "06 EnhanceYourUnityEditor/Data/";
+            string folder = "07 EnhanceYourUnityEditorHandles/Data/";
 
             options.Text("You can download the the files..");
             options.NewLine();
@@ -56,7 +56,21 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             options.NewLine();
             options.NewLine();
 
-            options.Text($"<a href=\"{folder}ShowLink.cs\" download>ShowLink.cs</a>");
+            options.Text("<h1>Show Range</h1>");
+            options.NewLine();
+            options.Text($"<a href=\"{folder}ShowHandles.cs\" download>ShowHandles.cs</a>");
+            options.NewLine();
+            options.NewLine();
+            options.Text($"<a href=\"{folder}ShowHandles_UI.cs\" download>ShowHandles_UI.cs</a>");
+            options.NewLine();
+            options.NewLine();
+
+            options.Text("<h1>Show area</h1>");
+            options.NewLine();
+            options.Text($"<a href=\"{folder}ShowPath.cs\" download>ShowPath.cs</a>");
+            options.NewLine();
+            options.NewLine();
+            options.Text($"<a href=\"{folder}ShowPath_UI.cs\" download>ShowPath_UI.cs</a>");
             options.NewLine();
             options.NewLine();
 
@@ -69,9 +83,26 @@ namespace eWolfSiteBuilder._Site.CodeExamples
             HTMLBuilder options = new HTMLBuilder();
             options.StartTextCenter();
 
-            options.Text(".cs");
+            options.Text("ShowHandles.cs");
             options.NewLine();
-            options.CodeText("");
+            options.CodeText("using UnityEngine;\r\n\r\npublic class ShowHandles : MonoBehaviour\r\n{\r\n    public float Size = 1;\r\n    public Vector3 GatePos { get; set; } = new Vector3(1, 0, 0);\r\n\r\n    public void OnDrawGizmosSelected()\r\n    {\r\n        Gizmos.DrawWireSphere(transform.position, Size);\r\n    }\r\n}");
+            options.NewLine();
+            options.NewLine();
+            options.Text("ShowHandles_UI.cs");
+            options.NewLine();
+            options.CodeText("using Unity.VisualScripting;\r\nusing UnityEditor;\r\nusing UnityEngine;\r\n\r\n[CustomEditor(typeof(ShowHandles))]\r\n[CanEditMultipleObjects]\r\npublic class ShowHandles_UI : Editor\r\n{\r\n    private ShowHandles _node;\r\n\r\n    public void OnEnable()\r\n    {\r\n        _node = target.GetComponent<ShowHandles>();\r\n    }\r\n\r\n    public void OnSceneGUI()\r\n    {\r\n        var handlePosition = _node.gameObject.transform.position + _node.GatePos;\r\n\r\n        Vector3 newpos = Handles.FreeMoveHandle(\r\n                handlePosition,\r\n                Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);\r\n\r\n        if (newpos != handlePosition)\r\n        {\r\n            _node.GatePos = newpos - _node.gameObject.transform.position;\r\n\r\n            _node.Size = _node.GatePos.magnitude;\r\n        }\r\n    }\r\n}");
+            options.NewLine();
+            options.NewLine();
+            options.NewLine();
+            options.NewLine();
+            options.Text("ShowPath.cs");
+            options.NewLine();
+            options.CodeText("using System.Collections.Generic;\r\nusing UnityEngine;\r\n\r\npublic class ShowPath : MonoBehaviour\r\n{\r\n    public bool EditPath = false;\r\n    public List<Vector3> Nodes = new List<Vector3>();\r\n\r\n    public void OnDrawGizmosSelected()\r\n    {\r\n        if (EditPath)\r\n            return;\r\n\r\n        Vector3 posLast = new Vector3();\r\n        bool second = false;\r\n\r\n        for (int i = 0; i < Nodes.Count; i++)\r\n        {\r\n            if (second)\r\n            {\r\n                Gizmos.DrawLine(Nodes[i], posLast);\r\n            }\r\n            posLast = Nodes[i];\r\n            second = true;\r\n        }\r\n    }\r\n}");
+            options.NewLine();
+            options.NewLine();
+            options.Text("ShowPath_UI.cs");
+            options.NewLine();
+            options.CodeText("using Unity.VisualScripting;\r\nusing UnityEditor;\r\nusing UnityEngine;\r\n\r\n[CustomEditor(typeof(ShowPath))]\r\n[CanEditMultipleObjects]\r\npublic class ShowPath_UI : Editor\r\n{\r\n    private ShowPath _node;\r\n\r\n    public void OnEnable()\r\n    {\r\n        _node = target.GetComponent<ShowPath>();\r\n    }\r\n\r\n    public void OnSceneGUI()\r\n    {\r\n        if (_node.EditPath)\r\n            return;\r\n\r\n        Vector3 handlePosition = new Vector3(1, 0, 0);\r\n\r\n        for (int i = 0; i < _node.Nodes.Count; i++)\r\n        {\r\n            handlePosition = _node.Nodes[i];\r\n            Vector3 newpos = Handles.FreeMoveHandle(\r\n               handlePosition,\r\n               Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);\r\n\r\n            if (newpos != handlePosition)\r\n            {\r\n                newpos.y = 0;\r\n                _node.Nodes[i] = newpos;\r\n            }\r\n        }\r\n\r\n        handlePosition.x += 2f;\r\n        Quaternion q = Quaternion.Euler(90, 0, 0);\r\n        if (Handles.Button(handlePosition, q, 0.5f, 0.5f, Handles.CircleHandleCap))\r\n        {\r\n            _node.Nodes.Add(handlePosition);\r\n        }\r\n    }\r\n}");
             options.NewLine();
             options.NewLine();
 
