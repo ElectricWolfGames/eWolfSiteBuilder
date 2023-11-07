@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang='en' >	<head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XCYJV6WSHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XCYJV6WSHD');
+</script>		<meta charset='UTF-8'>		<title>Enhance your unity editor with Handles</title>		<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>		<meta name='description' content='Enhance your unity editor with Handles'/>		<meta name='keywords' content=''/>		<meta name='title' content='Enhance your unity editor with Handles'/>		<meta name='author' content='Electric Wolf'>		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>		<link rel='stylesheet' href='../Scripts/style.css'><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css'><script src='https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js'></script><script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script><script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js'></script></head><nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+<a class='navbar-brand' href='../index.html'>Home</a>
+<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExample04' aria-controls='navbarsExample04' aria-expanded='false' aria-label='Toggle navigation'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarsExample04'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item active'><a class='nav-link'href='../Unity/Index.html'>Unity</a></li>
+<li class='nav-item active'><a class='nav-link'href='../CodeExamples/index.html'>Code Examples</a></li>
+<li class='nav-item active'><a class='nav-link'href='../Railways/index.html'>Railways</a></li>
+<li class='nav-item active'><a class='nav-link'href='../VintageSciFi/index.html'>Vintage Sci-Fi</a></li>
+</div>
+</ul>
+</div>
+</nav>
+<Body><!--07/11/2023--><div class='container mt-12'><div class='jumbotron'>
+<div class='row'>
+<div class='col-md-12'>
+<h1>Enhance your unity editor with Handles</h1>
+<p class='lead'></p>
+</div>
+</div>
+</div>
+<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Overview">Overview</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Downloads">Downloads</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Files">Files</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='Overview'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Overview</h2>
+</div>
+<div class='text-center'>Enhance your unity editor with Handles</br></br></br></br><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/?rel=0' frameborder='0' allowfullscreen></iframe></div></div></div>
+</div>
+</div>
+<br />
+<a id='Downloads'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Downloads</h2>
+</div>
+<div class='text-center'>You can download the the files..</br><a href="07 EnhanceYourUnityEditorHandles/Data/EnhanceYourUnityEditor.unitypackage" download>Unity3D package</a></br></br><h1>Show Range</h1></br><a href="07 EnhanceYourUnityEditorHandles/Data/ShowHandles.cs" download>ShowHandles.cs</a></br></br><a href="07 EnhanceYourUnityEditorHandles/Data/ShowHandles_UI.cs" download>ShowHandles_UI.cs</a></br></br><h1>Show area</h1></br><a href="07 EnhanceYourUnityEditorHandles/Data/ShowPath.cs" download>ShowPath.cs</a></br></br><a href="07 EnhanceYourUnityEditorHandles/Data/ShowPath_UI.cs" download>ShowPath_UI.cs</a></br></br></div></div>
+</div>
+</div>
+<br />
+<a id='Files'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Files</h2>
+</div>
+<div class='text-center'>ShowHandles.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using UnityEngine;</br></br>public class ShowHandles : MonoBehaviour</br>{</br>&nbsp&nbsp&nbsp&nbsppublic float Size = 1;</br>&nbsp&nbsp&nbsp&nbsppublic Vector3 GatePos { get; set; } = new Vector3(1, 0, 0);</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnDrawGizmosSelected()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGizmos.DrawWireSphere(transform.position, Size);</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>ShowHandles_UI.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using Unity.VisualScripting;</br>using UnityEditor;</br>using UnityEngine;</br></br>[CustomEditor(typeof(ShowHandles))]</br>[CanEditMultipleObjects]</br>public class ShowHandles_UI : Editor</br>{</br>&nbsp&nbsp&nbsp&nbspprivate ShowHandles _node;</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnEnable()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node = target.GetComponent<ShowHandles>();</br>&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnSceneGUI()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar handlePosition = _node.gameObject.transform.position + _node.GatePos;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 newpos = Handles.FreeMoveHandle(</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphandlePosition,</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspQuaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (newpos != handlePosition)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node.GatePos = newpos - _node.gameObject.transform.position;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node.Size = _node.GatePos.magnitude;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br></br></br>ShowPath.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System.Collections.Generic;</br>using UnityEngine;</br></br>public class ShowPath : MonoBehaviour</br>{</br>&nbsp&nbsp&nbsp&nbsppublic bool EditPath = false;</br>&nbsp&nbsp&nbsp&nbsppublic List<Vector3> Nodes = new List<Vector3>();</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnDrawGizmosSelected()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (EditPath)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 posLast = new Vector3();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbool second = false;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor (int i = 0; i < Nodes.Count; i++)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (second)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGizmos.DrawLine(Nodes[i], posLast);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspposLast = Nodes[i];</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspsecond = true;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>ShowPath_UI.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using Unity.VisualScripting;</br>using UnityEditor;</br>using UnityEngine;</br></br>[CustomEditor(typeof(ShowPath))]</br>[CanEditMultipleObjects]</br>public class ShowPath_UI : Editor</br>{</br>&nbsp&nbsp&nbsp&nbspprivate ShowPath _node;</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnEnable()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node = target.GetComponent<ShowPath>();</br>&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnSceneGUI()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_node.EditPath)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 handlePosition = new Vector3(1, 0, 0);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor (int i = 0; i < _node.Nodes.Count; i++)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphandlePosition = _node.Nodes[i];</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 newpos = Handles.FreeMoveHandle(</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   handlePosition,</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (newpos != handlePosition)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnewpos.y = 0;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node.Nodes[i] = newpos;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphandlePosition.x += 2f;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspQuaternion q = Quaternion.Euler(90, 0, 0);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (Handles.Button(handlePosition, q, 0.5f, 0.5f, Handles.CircleHandleCap))</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node.Nodes.Add(handlePosition);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br></div></div>
+</div>
+</div>
+<br />
+</div></div></div></Body>
