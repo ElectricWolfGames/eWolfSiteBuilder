@@ -12,20 +12,19 @@ public class ShowHandles_UI : Editor
     {
         _node = target.GetComponent<ShowHandles>();
     }
-
     public void OnSceneGUI()
     {
-        var handlePosition = _node.gameObject.transform.position + _node.GatePos;
+        var handlePosition = _node.gameObject.transform.position + _node.LastPos;
 
         Vector3 newpos = Handles.FreeMoveHandle(
-                handlePosition,
-                Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);
+            handlePosition,
+            Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);
 
         if (newpos != handlePosition)
         {
-            _node.GatePos = newpos - _node.gameObject.transform.position;
+            _node.LastPos = newpos - _node.gameObject.transform.position;
+            _node.Size = _node.LastPos.magnitude;
+        } 
 
-            _node.Size = _node.GatePos.magnitude;
-        }
     }
 }

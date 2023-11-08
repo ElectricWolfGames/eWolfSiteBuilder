@@ -1,27 +1,26 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ShowPath : MonoBehaviour
 {
-    public bool EditPath = false;
+    public bool EditPath = true;
     public List<Vector3> Nodes = new List<Vector3>();
 
     public void OnDrawGizmosSelected()
     {
-        if (EditPath)
+        if (!EditPath)
             return;
 
-        Vector3 posLast = new Vector3();
-        bool second = false;
+        if (!Nodes.Any())
+            return;
 
-        for (int i = 0; i < Nodes.Count; i++)
+        Vector3 posLast = Nodes[0];
+        
+        for (int i = 1; i < Nodes.Count; i++)
         {
-            if (second)
-            {
-                Gizmos.DrawLine(Nodes[i], posLast);
-            }
+            Gizmos.DrawLine(Nodes[i], posLast);
             posLast = Nodes[i];
-            second = true;
         }
     }
 }

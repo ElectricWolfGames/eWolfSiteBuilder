@@ -15,7 +15,7 @@ public class ShowPath_UI : Editor
 
     public void OnSceneGUI()
     {
-        if (_node.EditPath)
+        if (!_node.EditPath)
             return;
 
         Vector3 handlePosition = new Vector3(1, 0, 0);
@@ -23,6 +23,7 @@ public class ShowPath_UI : Editor
         for (int i = 0; i < _node.Nodes.Count; i++)
         {
             handlePosition = _node.Nodes[i];
+
             Vector3 newpos = Handles.FreeMoveHandle(
                handlePosition,
                Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);
@@ -40,5 +41,6 @@ public class ShowPath_UI : Editor
         {
             _node.Nodes.Add(handlePosition);
         }
+
     }
 }
