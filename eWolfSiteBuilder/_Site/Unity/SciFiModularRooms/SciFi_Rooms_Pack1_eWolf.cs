@@ -15,8 +15,8 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
         public SciFi_Rooms_Pack1_eWolf()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "Sci-Fi Modular Rooms Pack 1";
-            MenuTitle = "Sci-Fi Modular Rooms Pack 1";
+            DisplayTitle = "Sci-Fi Modular Rooms";
+            MenuTitle = "Sci-Fi Modular Rooms";
             Keywords.Add(DisplayTitle);
             Keywords.Add("Corridors and rooms");
             Keywords.Add("Unity3d Modular rooms");
