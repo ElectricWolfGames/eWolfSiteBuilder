@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang='en' >	<head><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XCYJV6WSHD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XCYJV6WSHD');
+</script>		<meta charset='UTF-8'>		<title>Book Effect</title>		<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>		<meta name='description' content='Book Effect'/>		<meta name='keywords' content='Book Effect,book with turning pages,unity book,unity3d turning pages'/>		<meta name='title' content='Book Effect'/>		<meta name='author' content='Electric Wolf'>		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>		<link rel='stylesheet' href='../../Scripts/style.css'><link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css'><script src='https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js'></script><script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js'></script><script src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js'></script></head><nav class='navbar navbar-expand-md navbar-dark bg-dark'>
+<a class='navbar-brand' href='../../index.html'>Home</a>
+<button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarsExample04' aria-controls='navbarsExample04' aria-expanded='false' aria-label='Toggle navigation'>
+<span class='navbar-toggler-icon'></span>
+</button>
+<div class='collapse navbar-collapse' id='navbarsExample04'>
+<ul class='navbar-nav mr-auto'>
+<li class='nav-item active'><a class='nav-link'href='../../Unity/Index.html'>Unity</a></li>
+<li class='nav-item active'><a class='nav-link'href='../../CodeExamples/index.html'>Code Examples</a></li>
+<li class='nav-item active'><a class='nav-link'href='../../Railways/index.html'>Railways</a></li>
+<li class='nav-item active'><a class='nav-link'href='../../VintageSciFi/index.html'>Vintage Sci-Fi</a></li>
+</div>
+</ul>
+</div>
+</nav>
+<Body><!--03/01/2024--><div class='container mt-12'><div class='jumbotron'>
+<div class='row'>
+<div class='col-md-12'>
+<h1>Book Effect(2023) Version</h1>
+<p class='lead'>Book effect lets you add a book to your scene with turning pages. And by using the interface you have actions to open, close the book and turn the pages forward and back. All pages are added to the Inspector as textures.</p>
+</div>
+</div>
+</div>
+<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#DemoVideo">Demo Video</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#HowtouseUnity">How to use Unity</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#HowtousefromCode">How to use from Code</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CodeControlOptions">Code Control Options</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Support">Support</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='DemoVideo'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Demo Video</h2>
+</div>
+<div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/OAkJZ9Tj9UU?rel=0' frameborder='0' allowfullscreen></iframe></div></div>
+</div>
+</div>
+<br />
+<a id='Download'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Download</h2>
+</div>
+<div class='text-center'></br>Available at the <a href='https://assetstore.unity.com/packages/tools/particles-effects/book-effect-27538' target='Blank' >Unity Asset Store</a></br></br></div></div>
+</div>
+</div>
+<br />
+<a id='HowtouseUnity'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>How to use Unity</h2>
+</div>
+<div class='text-center'>Add the <strong>eWolf\BookEffectV2\Prefabs\Book_Normal_pf.prefab</strong> into your scene.</br></br>Next you will need add the pages</br><img src='images/InspectorStart.png' width=45%px ></br></br>Set the number of pages size for wish to use</br></br>Then add all the pages in to the array</br></br><img src='images/InspectorEnd.png' width=45%px ></br></br>You can quicky test the book by adding the prefab</br><strong>eWolf\BookEffectV2\Prefabs\BookHudControl_pf</strong></br></br>Then link this to your book.</br></br><img src='images/InspectorHud.png' width=45%px ></br></br>And run the game and use the HUD options to use the book.</br></br><img src='images/InGameTest.PNG' width=45%px ></div></div>
+</div>
+</div>
+<br />
+<a id='HowtousefromCode'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>How to use from Code</h2>
+</div>
+<div class='text-center'>To access the book from code you will need to get the IBookControl from the Book (GameObject)</br></br>Example Code</br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">public GameObject Book;</br>private IBookControl _bookControl;</br></div></div></div></br>And in the Start methods get the IBookControl</br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">private void Start()</br>{</br>&nbsp&nbsp&nbsp&nbsp_bookControl = Book.GetComponent&ltIBookControl&gt();</br>}</br></div></div></div></br>In the Update code you can open the book with </br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">private void Update()</br>{<br>&nbsp&nbsp&nbsp&nbspif (Input.GetKeyDown("o"))</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.OpenBook();</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br>Back in Unity3D, create an empty object and add this script and then link the book game object to the Book in this script.</br>When you run that in game it will open the book when you press 'o'</br></br>Now you have access to the book you can add extra options like turning the pages with</br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">_bookControl.TurnPage();</br></div></div></div></br>To make it safe we will first need to check the book can turn to the next page.</br>Here is the code to make the page turn from another keypress</br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">if (Input.GetKeyDown("p"))</br>{</br>&nbsp&nbsp&nbsp&nbspif (_bookControl.CanTurnPageForward)</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.TurnPage();</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/Lm6nuxJ3a54?rel=0' frameborder='0' allowfullscreen></iframe></div></div></div>
+</div>
+</div>
+<br />
+<a id='CodeControlOptions'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Code Control Options</h2>
+</div>
+<div class='text-center'>With access to the IBookControl</br></br>You have access to </br></br></div><div class='text-left'>Can we turn the back backwards<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool CanTurnPageBackWard  { get; }</br></div></div></div></br></br>Can we turn the back forward (normal direction)<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool CanTurnPageForward  { get; }</br></div></div></div></br></br>Get the book details<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">IDetails GetDetails { get; }</br></div></div></div></br></br>Is the book currently open<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool IsBookOpen { get; }</br></div></div></div></br></br>Close the Book<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void CloseBook();</br></div></div></div></br></br>Open the Book<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void OpenBook();</br></div></div></div></br></br>Open the book at a set page<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void OpenBookAtPage(int pageIndex);</br></div></div></div></br></br>Set the animation speed for the book<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void SetSpeed(float speed);</br></div></div></div></br></br>Trun the page forward (normal)<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void TurnPage();</br></div></div></div></br></br>Turn the page backwards<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void TurnPageBack();</br></div></div></div></div></div>
+</div>
+</div>
+<br />
+<a id='Support'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Support</h2>
+</div>
+</br>If you need any more help please email us at <strong>Contact@electricWolf.co.uk</strong></br></br></div>
+</div>
+</div>
+<br />
+</div></div></div></Body>
