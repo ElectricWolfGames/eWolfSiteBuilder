@@ -21,7 +21,7 @@
 </ul>
 </div>
 </nav>
-<Body><!--03/01/2024--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--05/01/2024--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>Book Effect</h1>
@@ -29,17 +29,7 @@
 </div>
 </div>
 </div>
-<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#DemoVideo">Demo Video</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#OlderVersion">OlderVersion</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Overview">Overview</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='DemoVideo'></a>
-<div class ='row bg-light'>
-<div class='col-md-12'>
-<div class='section-title'>
-<div class='text-left'><h2>Demo Video</h2>
-</div>
-<div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/OAkJZ9Tj9UU?rel=0' frameborder='0' allowfullscreen></iframe></div></div>
-</div>
-</div>
-<br />
-<a id='Download'></a>
+<div class='row'><div class='col-md-12'><div class="d-flex flex-sm-row flex-column justify-content-between"><div class="border-end bg-white col-md-2" id="sidebar-wrapper"><div class="sticky-top"><div class="list-group list-group-flush"><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Download">Download</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#OlderVersion">OlderVersion</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#ExampleBook">Example Book</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#Overview">Overview</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#HowtousefromCode">How to use from Code</a><a class="list-group-item list-group-item-action list-group-item-light p-2" href="#CodeControlOptions">Code Control Options</a></div></div></div><div id="page-content-wrapper col-md-8"><a id='Download'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
@@ -59,13 +49,43 @@
 </div>
 </div>
 <br />
+<a id='ExampleBook'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Example Book</h2>
+</div>
+<div class='text-center'></br>After inporting</br></br>Take a look at the two example scenes in the folder <strong>Assets\eWolf\BookEffectV3\Scene</strong></br></br></br></br>To add a book to a scene follow the steps</br></br>Create a new empty scene</br>Drag in the book Prefab </br><strong>Assets\eWolf\BookEffectV3\Prefabs\Book_Builder_pf.prefab</strong></br>Then select the book in the scene, and in the inspector click on the <strong>Build Book</strong> Button</br></br>And the book will appear with all it's default material and pages</br>The Overview section has all the details on what all the options are</br></br>To test the book in a running game,</br></br>Drag in the book controller Prefab </br><strong>Assets\eWolf\BookEffectV2\Prefabs\BookHudControl_pf.prefab</strong></br></br>Select the BookHudControl_pf</br></br>And then drag the Book_Builder_pf game object in to the Book Object field</br>So it looks like the below.</br><img src='images/V3/BookControl.PNG' width=65%px ></br></br>Now when you run the game, you will see the button to open and close the book, and also turn the pages.</div></div>
+</div>
+</div>
+<br />
 <a id='Overview'></a>
 <div class ='row bg-light'>
 <div class='col-md-12'>
 <div class='section-title'>
 <div class='text-left'><h2>Overview</h2>
 </div>
-<div class='text-center'></br>The updated Book effect package now lets you set the size of the book</br></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookSize.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Width: </strong>The width of the book in units<br /><strong>Height: </strong>The height of the book in units<br /><strong>Thinkness: </strong>The thinkness of the book when closed<br /><strong>Cover Thinkness: </strong>The thinkness of the book cover<br /><strong>Hardback: </strong>Not used yet, for future use!<br /></br></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookPageDetails.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Edge Gap: </strong>Gap between the pages and the edge of the book<br /><strong>Page Turn Style: </strong>How the page looks when it turns<br /></br></div></div><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookMaterials.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Cover Inner: </strong>Inside cover material<br /><strong>Cover Outter: </strong>The book outside material<br /><strong>Inside Back Page: </strong>Inside page right side<br /><strong>Inside Front Page: </strong>Inside page left side<br /><strong>Pages: </strong>Edge of the book. (pages)<br /></br></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookPages.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Pages: </strong>Allow you to add as many textures as needed.<br /></br></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookOthers.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Starting Page: </strong>Sets the starting page when the book opens<br /><strong>Start Speed: </strong>Set the speed of the anims<br /></br></div></div></br>When you are ready Click on the<strong> Build Book </strong>button to create the book</br><img src='images/V3/Buttons.PNG' width=65%px ></br></br>When built, you can use the <strong>Open and Close</strong> Buttons to view the book open and closed</br></div></div>
+<div class='text-center'></br>The updated Book effect package now lets you set the size of the book</br></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookSize.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Width: </strong>The width of the book in units<br /><strong>Height: </strong>The height of the book in units<br /><strong>Thinkness: </strong>The thinkness of the book when closed<br /><strong>Cover Thinkness: </strong>The thinkness of the book cover<br /><strong>Hardback: </strong>Not used yet, for future use!<br /></br></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookPageDetails.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Edge Gap: </strong>Gap between the pages and the edge of the book<br /><strong>Page Turn Style: </strong>How the page looks when it turns<br /></br></div></div><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookMaterials.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Cover Inner: </strong>Inside cover material<br /><strong>Cover Outter: </strong>The book outside material<br /><strong>Inside Back Page: </strong>Inside page right side<br /><strong>Inside Front Page: </strong>Inside page left side<br /><strong>Pages: </strong>Edge of the book. (pages)<br /></br></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookPages.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Pages: </strong>Allow you to add as many textures as needed.<br /></br></div></div></br><div class='row'><div class='col-md-6'><div class='text-right'><img src='images/V3/InspectorBookOthers.PNG' width=100%px ></div></div><div class='col-md-6'><strong>Starting Page: </strong>Sets the starting page when the book opens<br /><strong>Start Speed: </strong>Set the speed of the anims<br /></br></div></div></br>When you are ready Click on the<strong> Build Book </strong>button to create the book</br><img src='images/V3/Buttons.PNG' width=65%px ></br></br>When built, you can use the <strong>Open and Close</strong> Buttons to view the book open and closed</br>Each time you change a value above you will need to rebuild the book.</br></br>We also have more options to help with defining the Book Cover, that we will take about later.</br></br></div></div>
+</div>
+</div>
+<br />
+<a id='HowtousefromCode'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>How to use from Code</h2>
+</div>
+<div class='text-center'>To access the book from code you will need to get the IBookControl from the Book (GameObject)</br></br>Example Code</br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">public GameObject Book;</br>private IBookControl _bookControl;</br></div></div></div></br>And in the Start methods get the IBookControl</br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">private void Start()</br>{</br>&nbsp&nbsp&nbsp&nbsp_bookControl = Book.GetComponent&ltIBookControl&gt();</br>}</br></div></div></div></br>In the Update code you can open the book with </br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">private void Update()</br>{<br>&nbsp&nbsp&nbsp&nbspif (Input.GetKeyDown("o"))</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.OpenBook();</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br>Back in Unity3D, create an empty object and add this script and then link the book game object to the Book in this script.</br>When you run that in game it will open the book when you press 'o'</br></br>Now you have access to the book you can add extra options like turning the pages with</br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">_bookControl.TurnPage();</br></div></div></div></br>To make it safe we will first need to check the book can turn to the next page.</br>Here is the code to make the page turn from another keypress</br></br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">if (Input.GetKeyDown("p"))</br>{</br>&nbsp&nbsp&nbsp&nbspif (_bookControl.CanTurnPageForward)</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_bookControl.TurnPage();</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>Please NOTE: This video was for Book Effect V2.</br>but will still work the same way, you just use the <strong>Assets\eWolf\BookEffectV3\Prefabs\Book_Builder_pf.prefab</strong><div class='text-center'><iframe width='854' height='480' src='https://www.youtube.com/embed/Lm6nuxJ3a54?rel=0' frameborder='0' allowfullscreen></iframe></div></div></div>
+</div>
+</div>
+<br />
+<a id='CodeControlOptions'></a>
+<div class ='row bg-light'>
+<div class='col-md-12'>
+<div class='section-title'>
+<div class='text-left'><h2>Code Control Options</h2>
+</div>
+<div class='text-center'>With access to the IBookControl</br></br>You have access to </br></br></div><div class='text-left'>Can we turn the back backwards<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool CanTurnPageBackWard  { get; }</br></div></div></div></br></br>Can we turn the back forward (normal direction)<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool CanTurnPageForward  { get; }</br></div></div></div></br></br>Get the book details<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">IDetails GetDetails { get; }</br></div></div></div></br></br>Is the book currently open<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">bool IsBookOpen { get; }</br></div></div></div></br></br>Close the Book<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void CloseBook();</br></div></div></div></br></br>Open the Book<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void OpenBook();</br></div></div></div></br></br>Open the book at a set page<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void OpenBookAtPage(int pageIndex);</br></div></div></div></br></br>Set the animation speed for the book<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void SetSpeed(float speed);</br></div></div></div></br></br>Trun the page forward (normal)<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void TurnPage();</br></div></div></div></br></br>Turn the page backwards<div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">void TurnPageBack();</br></div></div></div></div></div>
 </div>
 </div>
 <br />
