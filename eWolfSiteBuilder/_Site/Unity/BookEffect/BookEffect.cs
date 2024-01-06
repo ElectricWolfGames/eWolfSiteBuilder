@@ -42,18 +42,16 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
 
             var items = new List<HTMLIndexedItems>
             {
-                //new HTMLIndexedItems("Demo Video", CreateExample),
                 new HTMLIndexedItems("Download", CreateDownload),
                 new HTMLIndexedItems("OlderVersion", CreateOlderVersion),
                 new HTMLIndexedItems("Example Book", CreateExampleBook),
                 new HTMLIndexedItems("Overview", CreateOverview),
-
-                // new HTMLIndexedItems("How to use Unity", CreateHowToUseNew),
-                new HTMLIndexedItems("How to use from Code", CreateUseFromCode),
-                new HTMLIndexedItems("Code Control Options", CreateCodeOptions),
                 new HTMLIndexedItems("Define the book cover", DefineTheBookCover),
 
-                //new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport)
+                new HTMLIndexedItems("How to use from Code", CreateUseFromCode),
+                new HTMLIndexedItems("Code Control Options", CreateCodeOptions),
+
+                new HTMLIndexedItems("Support", PageDetailsHelper.AddSectionSupport)
             };
 
             AddIndexItemsWithSideBar(items);
@@ -86,6 +84,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.Unity3DLink(Unity3DSetting.BookEffect);
             options.NewLine();
             options.NewLine();
+            options.Text("Version 3 will be released Feburay 2024.");
             options.EndTextCenter();
 
             return options.Output();
@@ -117,7 +116,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.NewLine();
             options.Text("And the book will appear with all it's default material and pages");
             options.NewLine();
-            options.Text("The Overview section has all the details on what all the options are");
+            options.Text("The Overview section (below) has all the details on what all the options are");
             options.NewLine();
             options.NewLine();
             options.Text("To test the book in a running game,");
@@ -133,7 +132,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.NewLine();
             options.Text("So it looks like the below.");
             options.NewLine();
-            options.Image("V3/BookControl.PNG", 65);
+            options.Image("V3/BookControl.PNG", 45);
             options.NewLine();
             options.NewLine();
             options.Text("Now when you run the game, you will see the button to open and close the book, and also turn the pages.");
@@ -149,6 +148,8 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.StartTextCenter();
             options.NewLine();
 
+            options.Text("Version 3 will be released Feburay 2024. Until then please use Version 2");
+            options.NewLine();
             options.PageLink("If you need to check the older version Documation you can ", "found Here", "BookEffectV2.html");
             options.NewLine();
             options.NewLine();
@@ -232,7 +233,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
 
             left.ImageRight("V3/InspectorBookOthers.PNG", 100);
             right.InspectorDetails("Starting Page", "Sets the starting page when the book opens");
-            right.InspectorDetails("Start Speed", "Set the speed of the anims");
+            right.InspectorDetails("Start Speed", "Set the speed of the animation");
             right.NewLine();
             right.Text("");
 
@@ -411,6 +412,22 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
         {
             HTMLBuilder options = new HTMLBuilder();
             options.StartTextCenter();
+
+            options.Text("As we can now set the thinkness of the book cover");
+            options.NewLine();
+            options.Text("We also need to be able to change how much UV are used for the edge.");
+            options.NewLine();
+            options.NewLine();
+            options.Image("V3/BookEdge.PNG", 45);
+            options.NewLine();
+            options.NewLine();
+            options.Text("This can be done my the Book Cover UV Size Options");
+            options.Image("V3/InspectorBookUV.PNG", 45);
+            options.NewLine();
+            options.NewLine();
+            options.InspectorDetails("UV Cover Width", "The % of texture to use from the front cover");
+            options.InspectorDetails("UV Cover Border X", "The % of the texture to use for the Edge (left and right)");
+            options.InspectorDetails("UV Cover Border Y", "The % of the texture to use for the Edge (top and bottom)");
 
             // TODO: how the UI work!
             options.EndTextCenter();
