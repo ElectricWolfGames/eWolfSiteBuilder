@@ -44,6 +44,8 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             {
                 new HTMLIndexedItems("Download", CreateDownload),
                 new HTMLIndexedItems("OlderVersion", CreateOlderVersion),
+                new HTMLIndexedItems("VideoOverView", Version3Video),
+
                 new HTMLIndexedItems("Example Book", CreateExampleBook),
                 new HTMLIndexedItems("Overview", CreateOverview),
                 new HTMLIndexedItems("Define the book cover", DefineTheBookCover),
@@ -259,6 +261,18 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             return options.Output();
         }
 
+        private static string Version3Video(string data)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            options.StartTextCenter();
+            options.NewLine();
+
+            options.YouTubeLinkBig("V1iKKwmNrIM");
+            options.EndTextCenter();
+
+            return options.Output();
+        }
+
         private string CreateCodeOptions(string arg)
         {
             HTMLBuilder options = new HTMLBuilder();
@@ -429,7 +443,6 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.InspectorDetails("UV Cover Border X", "The % of the texture to use for the Edge (left and right)");
             options.InspectorDetails("UV Cover Border Y", "The % of the texture to use for the Edge (top and bottom)");
 
-            // TODO: how the UI work!
             options.EndTextCenter();
             return options.Output();
         }

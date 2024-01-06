@@ -11,13 +11,16 @@ using System.Collections.Generic;
 namespace eWolfSiteBuilder._Site.Unity.BookEffect
 {
     [PageTitle("BookEffectV2.html")]
-    public class BookEffectV2 : PageDetailsWolfSite, IUnityList
+    public class BookEffectV2 : PageDetailsWolfSite
     {
         public BookEffectV2()
         {
             WebPage = new WebPage(this);
             DisplayTitle = "Book Effect";
             MenuTitle = "Book Effect";
+            DontBuildPage = true;
+            DontShowNavigation = true;
+
             Keywords.Add(DisplayTitle);
             Keywords.Add("book with turning pages");
             Keywords.Add("unity book");
