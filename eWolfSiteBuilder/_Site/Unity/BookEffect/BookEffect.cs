@@ -98,7 +98,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.StartTextCenter();
             options.NewLine();
 
-            options.Text("After inporting");
+            options.Text("After importing");
             options.NewLine();
             options.NewLine();
             options.TextBold("Take a look at the two example scenes in the folder ", "Assets\\eWolf\\BookEffectV3\\Scene");
@@ -178,8 +178,8 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             left.ImageRight("V3/InspectorBookSize.PNG", 100);
             right.InspectorDetails("Width", "The width of the book in units");
             right.InspectorDetails("Height", "The height of the book in units");
-            right.InspectorDetails("Thinkness", "The thinkness of the book when closed");
-            right.InspectorDetails("Cover Thinkness", "The thinkness of the book cover");
+            right.InspectorDetails("Thickness", "The thickness of the book when closed");
+            right.InspectorDetails("Cover Thickness", "The thickness of the book cover");
             right.InspectorDetails("Hardback", "Not used yet, for future use!");
             right.NewLine();
 
@@ -253,7 +253,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.NewLine();
             options.NewLine();
 
-            options.Text("We also have more options to help with defining the Book Cover, that we will take about later.");
+            options.Text("We also have more options to help with defining the Book Cover, which we will talk about later.");
             options.NewLine();
             options.NewLine();
 
@@ -427,7 +427,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             HTMLBuilder options = new HTMLBuilder();
             options.StartTextCenter();
 
-            options.Text("As we can now set the thinkness of the book cover");
+            options.Text("As we can now set the thickness of the book cover");
             options.NewLine();
             options.Text("We also need to be able to change how much UV are used for the edge.");
             options.NewLine();
@@ -435,7 +435,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
             options.Image("V3/BookEdge.PNG", 45);
             options.NewLine();
             options.NewLine();
-            options.Text("This can be done my the Book Cover UV Size Options");
+            options.Text("This can be done by the Book Cover UV Size Options");
             options.Image("V3/InspectorBookUV.PNG", 45);
             options.NewLine();
             options.NewLine();
