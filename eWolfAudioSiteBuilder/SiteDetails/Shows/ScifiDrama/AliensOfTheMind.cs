@@ -26,10 +26,9 @@ namespace eWolfAudioSiteBuilder.SiteDetails.Shows.ScifiDrama
             Casts.Add(string.Empty, "Richard Herndle");
             Casts.Add(string.Empty, "Joan Benom");
 
-            Production.Add("WRITER","Rene Bascilico");
-            Production.Add("PRODUCER","John Dyer");
-            Production.Add("EFFECTS","Chris Jenkins");
-
+            Production.Add("WRITER", "Rene Bascilico");
+            Production.Add("PRODUCER", "John Dyer");
+            Production.Add("EFFECTS", "Chris Jenkins");
 
             Shows.Add(string.Empty);
             Shows.Shows[0].AddLink("https://youtu.be/f0RJOEO3PVU");

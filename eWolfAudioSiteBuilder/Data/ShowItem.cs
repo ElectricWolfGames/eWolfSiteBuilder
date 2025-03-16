@@ -1,9 +1,7 @@
-﻿
-namespace eWolfAudioSiteBuilder.Data
+﻿namespace eWolfAudioSiteBuilder.Data
 {
     public class ShowItem
     {
-        public string YoutubeLink { get; set; }
         public ShowItem(string name)
         {
             Name = name;
@@ -11,8 +9,8 @@ namespace eWolfAudioSiteBuilder.Data
 
         public string Description { get; set; }
         public List<EpisodeItem> Episodes { get; set; } = new List<EpisodeItem>();
-
         public string Name { get; set; }
+        public string YoutubeLink { get; set; }
 
         internal void AddEpisode(int number, string name)
         {
