@@ -52,6 +52,7 @@ namespace eWolfSiteBuilder._Site.Games.SpaceSalvager
 
         private string AddSectionItems(string data)
         {
+            return string.Empty;
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
             outer.NewLine();

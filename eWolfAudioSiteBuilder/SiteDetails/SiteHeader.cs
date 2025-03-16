@@ -1,12 +1,16 @@
 ﻿using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace eWolfSiteBuilder.SiteDetails
+namespace eWolfAudioSiteBuilder.SiteDetails
 {
     public class SiteHeader : IPageHeaderDetails
     {
-        public string Output(PageDetails pageDetails, string extraOffSet)
+        public string Output(PageDetails pageDetails, string extraOffSet = "")
         {
             StringBuilder _stringBuilder = new StringBuilder();
 
@@ -18,7 +22,7 @@ namespace eWolfSiteBuilder.SiteDetails
             _stringBuilder.Append($"		<title>{pageDetails.DisplayTitle}</title>");
             _stringBuilder.Append("		<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>");
             _stringBuilder.Append($"		<meta name='description' content='{pageDetails.DisplayTitle}'/>");
-            _stringBuilder.Append($"		<meta name='keywords' content='{string.Join(",",pageDetails.Keywords)}'/>");
+            _stringBuilder.Append($"		<meta name='keywords' content='{string.Join(",", pageDetails.Keywords)}'/>");
             _stringBuilder.Append($"		<meta name='title' content='{pageDetails.DisplayTitle}'/>");
             _stringBuilder.Append("		<meta name='author' content='Electric Wolf'>");
             _stringBuilder.Append("		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>");

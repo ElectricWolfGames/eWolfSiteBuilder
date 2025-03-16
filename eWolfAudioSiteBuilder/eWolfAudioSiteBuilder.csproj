@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj" />
+    <ProjectReference Include="..\..\eWolfApps\Common\eWolfCommon\eWolfCommon.csproj" />
+  </ItemGroup>
+
+</Project>

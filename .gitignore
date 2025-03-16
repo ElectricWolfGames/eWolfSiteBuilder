@@ -10,3 +10,6 @@
 /.vs/eWolfSiteBuilder/config
 /.vs
 /eWolfSiteBuilder/bin/Debug/net7.0-windows
+/eWolfAudioSiteBuilder/bin/Debug/net8.0-windows8.0
+/eWolfAudioSiteBuilder/obj
+/eWolfSiteBuilder/bin/Debug/net8.0-windows8.0
