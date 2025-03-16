@@ -8,10 +8,9 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 {
     [PageTitle("Place holder Page")]
     [Navigation(NavigationTypes.Main, 2)]
-    [AddGallery()]
     public class ShowDisplay : PageDetails
     {
-        public IAudioShow LayoutDetails;
+        public IAudioShow AudioShow;
 
         public ShowDisplay()
         {
@@ -48,16 +47,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             WebPage.Append(Jumbotron());
 
-            /*            WebPage.Append(AddImages());
-                        if (LayoutByLayoutDetails.Images.Count > 6)
-                        {
-                            WebPage.Append(NavButtons());
-                        }
-
-                        WebPage.Append("</div>");
-                        WebPage.Append(HTMLRailHelper.Modal());
-                        WebPage.Append("<script src='../Scripts/script.js'></script>");
-            */
             WebPage.EndBody();
             WebPage.Output();
         }
@@ -69,10 +58,10 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             stringBuilder.AppendLine("<div class='jumbotron'>");
             stringBuilder.AppendLine("<div class='row'>");
             stringBuilder.AppendLine("<div class='col-md-12'>");
-            stringBuilder.AppendLine($"<h1>{DisplayTitle} </h1>");
-            stringBuilder.AppendLine($"<h3>{LayoutDetails.Title}</h3>");
+            stringBuilder.AppendLine($"<h1>{AudioShow.Title}</h1>");
+
             stringBuilder.AppendLine("<div class='col-md-12'>");
-            stringBuilder.AppendLine($"<p'>{LayoutDetails.Description}</p>");
+            stringBuilder.AppendLine($"<p'>{AudioShow.Description}</p>");
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");
             stringBuilder.AppendLine("</div>");

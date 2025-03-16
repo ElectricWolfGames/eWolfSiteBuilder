@@ -1,4 +1,7 @@
 ﻿using eWolfAudioSiteBuilder.Data;
+using eWolfAudioSiteBuilder.SiteDetails.Shows.Comedy;
+using System.Drawing.Drawing2D;
+using System.Windows.Shapes;
 
 namespace eWolfAudioSiteBuilder.SiteDetails.Shows.ScifiDrama
 {
@@ -8,6 +11,8 @@ namespace eWolfAudioSiteBuilder.SiteDetails.Shows.ScifiDrama
         {
             Title = "Aliens of the Mind";
             Year = 1976;
+            Description = "The six-part drama centres around the discovery, on a remote Scottish island, of a community of ‘human mutants’ capable of telepathy. A plan is in place to use them to control the British Government, and friends Curtis Lark (Vincent Price) and Hugh Baxter (Peter Cushing) join forces to combat them.";
+
             Casts.Add("Curtis Lark", "Vincent Price");
             Casts.Add("Hugh Baxter", "Peter Cushing");
             Casts.Add(string.Empty, "Henry Stamfer");

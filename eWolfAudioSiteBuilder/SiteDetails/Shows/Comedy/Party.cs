@@ -1,10 +1,4 @@
 ﻿using eWolfAudioSiteBuilder.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
 
 namespace eWolfAudioSiteBuilder.SiteDetails.Shows.Comedy
 {
@@ -14,6 +8,7 @@ namespace eWolfAudioSiteBuilder.SiteDetails.Shows.Comedy
         {
             Title = "Party";
             Year = 2009;
+            Description = "The series surrounds young idealists who want to get into British politics but are naïve and have no idea how to.";
 
             Casts.Add(string.Empty, "Tom Basden");
             Casts.Add(string.Empty, "Tim Key");

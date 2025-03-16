@@ -1,10 +1,6 @@
 ﻿using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace eWolfAudioSiteBuilder.SiteDetails
 {
@@ -17,7 +13,7 @@ namespace eWolfAudioSiteBuilder.SiteDetails
             var offSet = pageDetails.GetRooloffSet();
             _stringBuilder.Append("<!DOCTYPE html><html lang='en' >");
             _stringBuilder.Append("	<head>");
-            AddSiteTracker(_stringBuilder);
+            //AddSiteTracker(_stringBuilder);
             _stringBuilder.Append("		<meta charset='UTF-8'>");
             _stringBuilder.Append($"		<title>{pageDetails.DisplayTitle}</title>");
             _stringBuilder.Append("		<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>");

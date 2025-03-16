@@ -32,18 +32,11 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             WebPage.Append("<div class='container mt-4'>");
 
-            //IOrderedEnumerable<IBlog> ordedBlogs = blogs.Blogs.OrderByDescending(x => x.Date);
-            //WebPage.Append(AddCarousel(ordedBlogs.ToList()));
-            WebPage.Append("<main role='main' class='container'>");
-            WebPage.Append("<div class='col-md-8 blog-main'>");
-            WebPage.Append("<div class='row'>");
+            WebPage.AppendLine("<div class='col-md-8 blog-main'>");
+            WebPage.AppendLine(ShowList());
+            WebPage.AppendLine("</div>");
 
-            //WebPage.Append(AddBlogsAsTimeline(ordedBlogs));
-            WebPage.Append(ShowList());
-
-            WebPage.Append("</div>");
-            WebPage.Append("</div>");
-
+            WebPage.AppendLine("</div>");
             WebPage.EndBody();
             WebPage.Output();
         }
@@ -52,7 +45,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
         {
             ShowDisplay showDisplay = new()
             {
-                LayoutDetails = item,
+                AudioShow = item,
                 DisplayTitle = item.Title,
                 MenuTitle = item.Title,
             };
@@ -69,10 +62,12 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             foreach (var item in meds.Shows)
             {
-                string link = CreateShowPage(item);
-                sb.Append(item.Title);
-                sb.Append($"<li><a href='{item.Title}.html'>{item.Title}</a></li>");
-                sb.Append("</br>");
+                if (!string.IsNullOrEmpty(item.Title))
+                {
+                    string link = CreateShowPage(item);
+                    sb.Append($"<a href='{item.Title}.html'>{item.Title}</a>");
+                    sb.Append("</br>");
+                }
             }
             return sb.ToString();
         }
