@@ -23,7 +23,6 @@ namespace eWolfAudioSiteBuilder.SiteDetails.Shows.Comedy
             Casts.Add(string.Empty, "");
             Casts.Add(string.Empty, "");
 
-
             Production.Add("WRITER", "Tom Basden");
             Production.Add("PRODUCER", "Julia McKenzie");
 
@@ -51,7 +50,6 @@ namespace eWolfAudioSiteBuilder.SiteDetails.Shows.Comedy
             Shows.Add("Series  4");
             Shows.Shows[3].AddLink("https://youtu.be/tYjKzY8M0MY");
             Shows.Shows[3].AddEpisode(1, "Christmas Special");
-
         }
     }
 }

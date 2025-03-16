@@ -1,10 +1,11 @@
-﻿using eWolfAudioSiteBuilder.Services;
+﻿using eWolfAudioSiteBuilder.Interfaces;
+using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using System.Text;
 
-namespace eWolfAudioSiteBuilder._Site.Audio
+namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 {
     [PageTitle("shows.html")]
     [Navigation(NavigationTypes.Main, 1)]
@@ -26,7 +27,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
         public override void CreatePage()
         {
             WebPage.AddHeader(this);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../");
+            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
             WebPage.Append("<div class='container mt-4'>");
@@ -47,6 +48,19 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.Output();
         }
 
+        private string CreateShowPage(IAudioShow item)
+        {
+            ShowDisplay showDisplay = new()
+            {
+                LayoutDetails = item,
+                DisplayTitle = item.Title,
+                MenuTitle = item.Title,
+            };
+
+            showDisplay.CreatePage();
+            return showDisplay.OutputPath;
+        }
+
         private string ShowList()
         {
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
@@ -55,7 +69,9 @@ namespace eWolfAudioSiteBuilder._Site.Audio
 
             foreach (var item in meds.Shows)
             {
+                string link = CreateShowPage(item);
                 sb.Append(item.Title);
+                sb.Append($"<li><a href='{item.Title}.html'>{item.Title}</a></li>");
                 sb.Append("</br>");
             }
             return sb.ToString();
