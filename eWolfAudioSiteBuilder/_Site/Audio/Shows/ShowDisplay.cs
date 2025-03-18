@@ -75,7 +75,8 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 options.NewLine();
                 foreach (var episode in show.Episodes)
                 {
-                    options.Text(episode.Name);
+                    options.Text($"<h4>{episode.Name}</h4>");
+                    options.Text(episode.Description);
                     options.NewLine();
                 }
                 options.EndTextCenter();
