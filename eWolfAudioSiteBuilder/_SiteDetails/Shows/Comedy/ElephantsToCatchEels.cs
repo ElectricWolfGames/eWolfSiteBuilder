@@ -6,6 +6,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
     {
         public ElephantsToCatchEels()
         {
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
+
             Title = "Elephants to Catch Eels";
             Year = 2003;
             Description = "A comedy set in an 18th-century Cornish village from the writers of Dead Ringers";

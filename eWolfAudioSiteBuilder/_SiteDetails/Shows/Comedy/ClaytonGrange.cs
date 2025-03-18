@@ -6,6 +6,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
     {
         public ClaytonGrange()
         {
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
+
             Title = "Clayton Grange";
             Year = 2012;
             Description = "Comedy set around Clayton Grange, a top secret Scientific Institute with a government brief to solve the global fuel crisis, cheer people up and make war just a bit more gentle.\r\nUnfortunately the scientists tasked to work at Clayton Grange are a bit rubbish at life. And not much better at science.";

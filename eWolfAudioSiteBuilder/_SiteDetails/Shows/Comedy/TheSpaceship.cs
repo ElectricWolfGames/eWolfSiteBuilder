@@ -6,6 +6,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
     {
         public TheSpaceship()
         {
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
+
             Title = "The Spaceship";
             Year = 2005;
             Description = "What you are about to hear took place live, four years ago, 70,000 light years from home…\r\n";
