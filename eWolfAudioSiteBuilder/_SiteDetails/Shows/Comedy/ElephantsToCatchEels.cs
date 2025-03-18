@@ -2,7 +2,7 @@
 
 namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 {
-    public class ElephantsToCatchEels: AudioBaseDetails
+    public class ElephantsToCatchEels : AudioBaseDetails
     {
         public ElephantsToCatchEels()
         {

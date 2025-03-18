@@ -16,7 +16,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Casts.Add("Alice Jameson", "Stephanie Racine");
             Casts.Add("Alan Dobson", "Paul Stonehouse");
             Casts.Add("Gwynnie", "Heather Craney");
-            Casts.Add("Ensemble Actor", "Don Gilet" );
+            Casts.Add("Ensemble Actor", "Don Gilet");
             Casts.Add("Announcer", "Clive Hayward");
 
             Production.Add("WRITER", "Neil Warhurst");

@@ -1,6 +1,4 @@
 ﻿using eWolfAudioSiteBuilder.Data;
-using System.Drawing.Drawing2D;
-using System.Windows.Shapes;
 
 namespace eWolfAudioSiteBuilder._SiteDetails.Shows.ScifiDrama
 {
