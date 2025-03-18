@@ -67,7 +67,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             var comedys = meds.Shows.Where(x => x.ShowTypes == showType);
             comedys = comedys.OrderBy(x => x.Title).ToList();
 
-            string path = "E:\\Projects\\GitHub\\eWolfSiteBuilder\\DemoSiteAudio\\Audio\\Shows\\";
+            string path = "E:\\Projects\\GitHub\\eWolfSiteBuilder\\DemoSiteAudio\\Audio\\Shows";
 
             foreach (var item in comedys)
             {
