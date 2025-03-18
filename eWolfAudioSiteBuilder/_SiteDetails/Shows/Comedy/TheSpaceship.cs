@@ -40,7 +40,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[1].AddEpisode(3, "s02e03: Rude", "The crew have some space tourists on board, but it turns into a holiday from hell.");
             Shows.Shows[1].AddEpisode(4, "s02e04: Sick ", "The crew contract a mystery virus which makes them age at an alarming rate.");
             Shows.Shows[1].AddEpisode(5, "s02e05: The End", "The End: The crew find themselves at the end of the universe.");
-
         }
     }
 }

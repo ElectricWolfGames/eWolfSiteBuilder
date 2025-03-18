@@ -19,8 +19,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Casts.Add("Mad Gilbert", "Martin Hyder");
             Casts.Add("Gullible Dewey", "Mark Felgate");
 
-
-
             Production.Add("WRITER", "Tom Jamieson");
             Production.Add("WRITER", "Nev Fountain");
             Production.Add("PRODUCER", "Jan Ravens");
@@ -44,7 +42,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[1].AddEpisode(4, "Episodes 4", "It's Jesters' Relief Week, but must Cornish smuggler Tamsyn raise funds for Devonians?");
             Shows.Shows[1].AddEpisode(5, "Episodes 5", "Smuggler Jago is kidnapped, but can he survive in polite city society?");
             Shows.Shows[1].AddEpisode(6, "Episodes 6", "A surprise for 18th-century smuggler Tamsyn, and confusion aboard a boat to France.");
-
         }
     }
 }

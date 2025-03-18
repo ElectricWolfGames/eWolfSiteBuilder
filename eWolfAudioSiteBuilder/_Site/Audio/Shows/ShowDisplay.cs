@@ -49,9 +49,27 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             WebPage.Append(Shows());
 
-
             WebPage.EndBody();
             WebPage.Output();
+        }
+
+        private string Jumbotron()
+        {
+            StringBuilder stringBuilder = new();
+
+            stringBuilder.AppendLine("<div class='jumbotron'>");
+            stringBuilder.AppendLine("<div class='row'>");
+            stringBuilder.AppendLine("<div class='col-md-12'>");
+            stringBuilder.AppendLine($"<h1>{AudioShow.Title}</h1>");
+
+            stringBuilder.AppendLine("<div class='col-md-12'>");
+            stringBuilder.AppendLine($"<p'>{AudioShow.Description}</p>");
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
+            stringBuilder.AppendLine("</div>");
+
+            return stringBuilder.ToString();
         }
 
         private string Shows()
@@ -84,8 +102,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             }
             options.NewLine(); options.NewLine();
 
-
-
             options.StartTextCenter();
             options.Text("<h3>Cast</h3>");
             options.NewLine();
@@ -102,25 +118,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             options.NewLine(); options.NewLine(); options.NewLine();
 
             return options.Output();
-        }
-
-        private string Jumbotron()
-        {
-            StringBuilder stringBuilder = new();
-
-            stringBuilder.AppendLine("<div class='jumbotron'>");
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-12'>");
-            stringBuilder.AppendLine($"<h1>{AudioShow.Title}</h1>");
-
-            stringBuilder.AppendLine("<div class='col-md-12'>");
-            stringBuilder.AppendLine($"<p'>{AudioShow.Description}</p>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-
-            return stringBuilder.ToString();
         }
     }
 }

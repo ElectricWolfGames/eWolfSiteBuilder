@@ -37,7 +37,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[1].AddEpisode(2, "Episodes 2", "Professor Saunders hopes to persuade his elderly aunt to leave her fortune to science. Meanwhile, his team develop a gun powered simply by thought, but no-one succeeds in thinking very well.");
             Shows.Shows[1].AddEpisode(3, "Episodes 3", "Geoff cannot resist using a 'bring your child to work day' to do some controversial genetic manipulation, while Saunders trials a bionic suit that recycles your own urine.");
             Shows.Shows[1].AddEpisode(4, "Episodes 4", "Spurred on by Saunders, the weary scientific team tries to impress a visiting Nobel Prize judge with their self-replicating killer robo-ants.");
-
         }
     }
 }

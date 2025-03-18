@@ -2,7 +2,6 @@
 
 namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 {
-
     public class Party : AudioBaseDetails
     {
         public Party()
