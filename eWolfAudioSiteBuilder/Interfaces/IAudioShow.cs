@@ -1,4 +1,5 @@
 ﻿using eWolfAudioSiteBuilder.Data;
+using eWolfAudioSiteBuilder.Data.Enums;
 
 namespace eWolfAudioSiteBuilder.Interfaces
 {
@@ -10,5 +11,6 @@ namespace eWolfAudioSiteBuilder.Interfaces
         ShowHolder Shows { get; set; }
         string Title { get; set; }
         int Year { get; set; }
+        public ShowTypes ShowTypes { get; set; }
     }
 }
