@@ -1,6 +1,6 @@
 ﻿using eWolfAudioSiteBuilder.Data;
 
-namespace eWolfAudioSiteBuilder.SiteDetails.Shows.ScifiDrama
+namespace eWolfAudioSiteBuilder._SiteDetails.Shows.ScifiDrama
 {
     public class HostPlanetEarth : AudioBaseDetails
     {

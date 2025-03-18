@@ -17,6 +17,11 @@
             var e = new EpisodeItem(number, name);
             Episodes.Add(e);
         }
+        internal void AddEpisode(int number, string name, string description)
+        {
+            var e = new EpisodeItem(number, name, description);
+            Episodes.Add(e);
+        }
 
         internal void AddLink(string link)
         {

@@ -2,7 +2,7 @@
 using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Text;
 
-namespace eWolfAudioSiteBuilder.SiteDetails
+namespace eWolfAudioSiteBuilder._SiteDetails
 {
     public class SiteHeader : IPageHeaderDetails
     {

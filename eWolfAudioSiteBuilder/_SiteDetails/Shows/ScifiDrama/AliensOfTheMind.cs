@@ -1,9 +1,8 @@
 ﻿using eWolfAudioSiteBuilder.Data;
-using eWolfAudioSiteBuilder.SiteDetails.Shows.Comedy;
 using System.Drawing.Drawing2D;
 using System.Windows.Shapes;
 
-namespace eWolfAudioSiteBuilder.SiteDetails.Shows.ScifiDrama
+namespace eWolfAudioSiteBuilder._SiteDetails.Shows.ScifiDrama
 {
     public class AliensOfTheMind : AudioBaseDetails
     {
@@ -36,7 +35,7 @@ namespace eWolfAudioSiteBuilder.SiteDetails.Shows.ScifiDrama
             Production.Add("EFFECTS", "Chris Jenkins");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("https://youtu.be/f0RJOEO3PVU");
+            Shows.Shows[0].AddLink("f0RJOEO3PVU");
             Shows.Shows[0].AddEpisode(1, "Island Genesis");
             Shows.Shows[0].AddEpisode(2, "Hurried Exodus");
             Shows.Shows[0].AddEpisode(3, "Unexpected Visitations");

@@ -1,9 +1,9 @@
 ﻿using eWolfAudioSiteBuilder.Services;
-using eWolfAudioSiteBuilder.SiteDetails;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Reflection;
 using System.Windows;
+using eWolfAudioSiteBuilder._SiteDetails;
 
 namespace eWolfAudioSiteBuilder;
 
