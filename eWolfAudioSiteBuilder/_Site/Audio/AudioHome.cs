@@ -33,14 +33,14 @@ namespace eWolfAudioSiteBuilder._Site.Audio
 
             WebPage.Append("<div class='container mt-4'>");
 
-            WebPage.AppendLine("<div class='col-md-8 blog-main'>");
-            WebPage.AppendLine(ShowByType(ShowTypes.Comedy, "Comedy"));
+            WebPage.AppendLine("<div class='col-md-6 blog-main'>");
+            WebPage.AppendLine(ShowByType(ShowTypes.Comedy, "Comedy", "sci fi.png"));
             WebPage.AppendLine("</div>");
             WebPage.AppendLine("</div>");
 
             WebPage.Append("<div class='container mt-4'>");
-            WebPage.AppendLine("<div class='col-md-8 blog-main'>");
-            WebPage.AppendLine(ShowByType(ShowTypes.SciFiDrama, "Sci fi Drama"));
+            WebPage.AppendLine("<div class='col-md-6 blog-main'>");
+            WebPage.AppendLine(ShowByType(ShowTypes.SciFiDrama, "Sci fi Drama", "sci fi.png"));
             WebPage.AppendLine("</div>");
 
             WebPage.AppendLine("</div>");
@@ -52,13 +52,14 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.Output();
         }
 
-        private string ShowByType(ShowTypes showType, string title)
+        private string ShowByType(ShowTypes showType, string title, string image)
         {
             HTMLBuilder options = new HTMLBuilder();
 
             options.Text(title);
             options.Text("</br>");
-            
+
+            options.ImageCenter(image, 15);
 
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 

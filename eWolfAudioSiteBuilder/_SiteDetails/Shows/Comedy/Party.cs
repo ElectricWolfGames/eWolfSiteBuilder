@@ -8,7 +8,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
         {
             ShowTypes = Data.Enums.ShowTypes.Comedy;
 
-
             Title = "Party";
             Year = 2009;
             Description = "The series surrounds young idealists who want to get into British politics but are naïve and have no idea how to.";
