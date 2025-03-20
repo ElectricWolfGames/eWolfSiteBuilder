@@ -10,6 +10,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 
             Title = "Party";
             Year = 2009;
+            DateAdded = "2025/04/11";
+
             Description = "The series surrounds young idealists who want to get into British politics but are naïve and have no idea how to.";
 
             Casts.Add(string.Empty, "Tom Basden");

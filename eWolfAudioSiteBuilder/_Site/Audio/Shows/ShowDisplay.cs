@@ -3,6 +3,7 @@ using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfCommon.Helpers;
 using System.Text;
 
 namespace eWolfAudioSiteBuilder._Site.Audio.Shows
@@ -40,7 +41,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             WebPage.SetRootAddress = RootAddress + "E:\\Projects\\GitHub\\eWolfSiteBuilder\\DemoSiteAudio\\Audio\\";
             WebPage.HtmlPath = "Shows";
-            WebPage.HtmlTitle = $"{MenuTitle}.html";
+            WebPage.HtmlTitle = $"{FileHelper.GetSafeFileName(MenuTitle)}.html";
 
             WebPage.SetDontBuild = false;
 

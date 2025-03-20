@@ -6,7 +6,7 @@ namespace eWolfAudioSiteBuilder.Interfaces
     public interface IAudioShow
     {
         CastHolder Casts { get; set; }
-        string DataAdded { get; set; }
+        string DateAdded { get; set; }
         string Description { get; set; }
         CastHolder Production { get; set; }
         ShowHolder Shows { get; set; }

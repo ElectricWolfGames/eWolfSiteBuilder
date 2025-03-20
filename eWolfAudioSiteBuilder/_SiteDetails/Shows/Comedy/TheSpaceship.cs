@@ -10,6 +10,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 
             Title = "The Spaceship";
             Year = 2005;
+            DateAdded = "2024/12/03";
+
             Description = "What you are about to hear took place live, four years ago, 70,000 light years from home…\r\n";
 
             Casts.Add("Captain Gordon Taylor", "James Fleet");

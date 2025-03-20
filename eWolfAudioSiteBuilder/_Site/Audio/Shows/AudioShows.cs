@@ -3,6 +3,7 @@ using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfCommon.Helpers;
 using System.Text;
 
 namespace eWolfAudioSiteBuilder._Site.Audio.Shows
@@ -65,11 +66,14 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 if (!string.IsNullOrEmpty(item.Title))
                 {
                     string link = CreateShowPage(item);
-                    sb.Append($"<a href='{item.Title}.html'>{item.Title}</a>");
+                    string safeFileName = FileHelper.GetSafeFileName(item.Title);
+                    sb.Append($"<a href='{safeFileName}.html'>{item.Title}</a>");
                     sb.Append("</br>");
                 }
             }
             return sb.ToString();
         }
+
+        
     }
 }

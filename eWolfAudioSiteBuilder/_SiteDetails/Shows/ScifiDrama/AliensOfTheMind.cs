@@ -10,6 +10,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.ScifiDrama
 
             Title = "Aliens of the Mind";
             Year = 1976;
+            DateAdded = "";
+
             Description = "The six-part drama centres around the discovery, on a remote Scottish island, of a community of ‘human mutants’ capable of telepathy. A plan is in place to use them to control the British Government, and friends Curtis Lark (Vincent Price) and Hugh Baxter (Peter Cushing) join forces to combat them.";
 
             Casts.Add("Curtis Lark", "Vincent Price");

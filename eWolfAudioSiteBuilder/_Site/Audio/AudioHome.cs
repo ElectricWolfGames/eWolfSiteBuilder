@@ -4,6 +4,7 @@ using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
+using eWolfCommon.Helpers;
 using System.Text;
 
 namespace eWolfAudioSiteBuilder._Site.Audio
@@ -34,7 +35,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.Append("<div class='container mt-4'>");
 
             WebPage.AppendLine("<div class='col-md-6 blog-main'>");
-            WebPage.AppendLine(ShowByType(ShowTypes.Comedy, "Comedy", "sci fi.png"));
+            WebPage.AppendLine(ShowByType(ShowTypes.Comedy, "Comedy", "Comedy.png"));
             WebPage.AppendLine("</div>");
             WebPage.AppendLine("</div>");
 
@@ -56,10 +57,10 @@ namespace eWolfAudioSiteBuilder._Site.Audio
         {
             HTMLBuilder options = new HTMLBuilder();
 
-            options.Text(title);
+            options.Title(title);
             options.Text("</br>");
 
-            options.ImageCenter(image, 15);
+            options.ImageCenter(image, 35);
 
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
@@ -74,7 +75,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
-                    options.Text($"<a href='\\{path}\\{item.Title}.html'>{item.Title}</a>");
+                    options.Text($"<a href='\\{path}\\{FileHelper.GetSafeFileName(item.Title)}.html'>{item.Title}</a>");
                     options.Text("</br>");
                 }
             }

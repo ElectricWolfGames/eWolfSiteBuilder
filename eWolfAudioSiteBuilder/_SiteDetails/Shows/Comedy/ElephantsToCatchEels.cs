@@ -10,6 +10,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 
             Title = "Elephants to Catch Eels";
             Year = 2003;
+            DateAdded = "2024/12/27";
+
             Description = "A comedy set in an 18th-century Cornish village from the writers of Dead Ringers";
 
             Casts.Add("Tamsyn Trelawney (series 1)", "Lucy Speed");
