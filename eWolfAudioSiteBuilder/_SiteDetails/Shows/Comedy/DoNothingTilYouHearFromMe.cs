@@ -41,7 +41,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[1].AddEpisode(2, "I Get Along Without You Very Well", "When Barry's wife walks out, Roy knows the best way to get her back, until rum intervenes.");
             Shows.Shows[1].AddEpisode(3, "Swingin' Down the Lane", "Can musicians Roy and George settle a 50-year-old score with their former bandleader?");
             Shows.Shows[1].AddEpisode(4, "Thanks for the Memory", "Can Roy lift George's spirits by organising a very special celebration?");
-
         }
     }
 }

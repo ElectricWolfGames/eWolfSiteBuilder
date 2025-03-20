@@ -2,7 +2,7 @@
 
 namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 {
-    public class _EmptyShow: AudioBaseDetails
+    public class _EmptyShow : AudioBaseDetails
     {
         public _EmptyShow()
         {
@@ -20,7 +20,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Casts.Add("", "");
             Casts.Add("", "");
             Casts.Add("", "");
-            
+
             Production.Add("WRITER", "");
             Production.Add("WRITER", "");
             Production.Add("PRODUCER", "");

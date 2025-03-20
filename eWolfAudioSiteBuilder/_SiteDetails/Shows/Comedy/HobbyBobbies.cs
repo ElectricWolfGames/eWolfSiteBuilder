@@ -1,9 +1,4 @@
 ﻿using eWolfAudioSiteBuilder.Data;
-using System.Drawing.Drawing2D;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Threading;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 {
@@ -25,7 +20,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Casts.Add("Bernie", "Chris Emmett");
             Casts.Add("Geoff's Dad", "Noddy Holder");
             Casts.Add("Jermain", "Leon Herbert");
-            
+
             Production.Add("WRITER", "Dave Lamb");
             Production.Add("WRITER", "");
             Production.Add("PRODUCER", "Steve Doherty");
@@ -37,7 +32,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[0].AddEpisode(2, "Dangerous Driving", "Our heroes decide to act on dangerous driving in the town, starting with colleague Jermain.");
             Shows.Shows[0].AddEpisode(3, "Dangerous Posters", "The useless officers' crackdown on fly-posting leads to the disappearance of 'Daddy Warbucks' and the sight of Bernie in a bright red wig.");
             Shows.Shows[0].AddEpisode(4, "Dangerous Dogs", "Our heroes are dispatched to investigate a nuisance caller and her dangerous dog -but stumble into the local drugs racket.");
-
 
             Shows.Add("Series  2");
             Shows.Shows[1].AddLink("ThzC2YoK53A");

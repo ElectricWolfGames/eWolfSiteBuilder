@@ -14,7 +14,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 
             Description = "Comedy series set on a seaside town building site during the booming but restrictive post-war 1950s.";
 
-
             Casts.Add("Big Jim", "Norman Rossington");
             Casts.Add("Harold Perkins", "Roland Curram");
             Casts.Add("Old Ned", "Harold Goodwin");
@@ -24,7 +23,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Casts.Add("The Farmer", "Douglas Blackwell");
             Casts.Add("The Farmer’s Daughter", "Karen Ascoe");
             Casts.Add("Storyteller", "Bernard Cribbins");
-
 
             Production.Add("WRITER", "Ted Walker");
             Production.Add("WRITER", "Colin Rose");
