@@ -54,7 +54,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[2].AddEpisode(4, "Holofile 959: We, Nebulous", "Returning to K.E.N.T. after a trip away, Paula and Rory are contacted by Nebulous, who informs them that he has been incarcerated in Biros Optimum Security Prison alongside the galaxy's most evil masterminds ... only to learn too late that they have actually rescued Nebulous' long lost evil twin brother, Professor \"Spiffo\" Nebulous, forcing K.E.N.T.'s Nebulous (whose first name is Boffo) to confront his evil twin at last.");
             Shows.Shows[2].AddEpisode(5, "Holofile 011: Rebel Without a Cortex", "Nebulous and his team have to transport a dangerous criminal to Venus: a shapeshifting alien known as a Yarwood. It morphs into a female Loverley in front of Rory, Nebulous' father in front of the Professor, and as Nebulous himself in front of Paula.\r\n");
             Shows.Shows[2].AddEpisode(6, "Holofile 703: Us and Phlegm", "When 99 percent of the nation's workforce phone in sick, Nebulous – the only K.E.N.T. member still in perfect health – comes face to face with a very unpleasant alien life form in the form of the Phlegmbions (A phlegm/mucus hybrid) ... allied with none other than his childhood doctor, Doctor Beep. Special Guest Star David Tennant.\r\n");
-
         }
     }
 }

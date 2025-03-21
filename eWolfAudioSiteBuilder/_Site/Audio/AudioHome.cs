@@ -32,20 +32,19 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.AddNavigation(NavigationTypes.Main, @"../");
             WebPage.StartBody();
 
-            WebPage.Append("<div class='container mt-4'>");
+            WebPage.Append("<div class='container'>");
+            WebPage.Append("<h2>Radio Shows</h2>");
 
-            WebPage.AppendLine("<div class='col-md-6 blog-main'>");
+            WebPage.Append("<h2>Most Recent Releases</h2>");
+            WebPage.Append("<div class='row'>");
+
+            WebPage.Append("<div class='col-md-6' style='background-color: #EEEEEE;'>");
             WebPage.AppendLine(ShowByType(ShowTypes.Comedy, "Comedy", "Comedy.png"));
-            WebPage.AppendLine("</div>");
-            WebPage.AppendLine("</div>");
+            WebPage.Append("</div>");
 
-            WebPage.Append("<div class='container mt-4'>");
-            WebPage.AppendLine("<div class='col-md-6 blog-main'>");
+            WebPage.Append("<div class='col-md-6' style='background-color: #DDDDDD;'>");
             WebPage.AppendLine(ShowByType(ShowTypes.SciFiDrama, "Sci fi Drama", "sci fi.png"));
-            WebPage.AppendLine("</div>");
-
-            WebPage.AppendLine("</div>");
-
+            WebPage.Append("</div>");
             WebPage.Append("</div>");
             WebPage.Append("</div>");
 
@@ -56,28 +55,29 @@ namespace eWolfAudioSiteBuilder._Site.Audio
         private string ShowByType(ShowTypes showType, string title, string image)
         {
             HTMLBuilder options = new HTMLBuilder();
-
-            options.Title(title);
-            options.Text("</br>");
-
+            options.Text("<br>");
             options.ImageCenter(image, 35);
+            options.Title(title);
 
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             var sb = new StringBuilder();
 
-            var selectedShows = meds.Shows.Where(x => x.ShowTypes == showType);
+            var selectedShows = meds.Shows.Where(x => x.ShowTypes == showType && !string.IsNullOrWhiteSpace(x.DateAdded));
+
+            var today = DateTime.Now.AddDays(1);
+            selectedShows = selectedShows.Where(x => DateTime.Parse(x.DateAdded) < today).ToList();
             selectedShows = selectedShows.OrderByDescending(x =>
-                string.IsNullOrWhiteSpace(x.DateAdded)? DateTime.MinValue :DateTime.Parse(x.DateAdded)
+                DateTime.Parse(x.DateAdded)
                 ).ToList();
 
-            string path = "E:\\Projects\\GitHub\\eWolfSiteBuilder\\DemoSiteAudio\\Audio\\Shows";
+            string path = "Shows";
 
             foreach (var item in selectedShows.Take(5))
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
-                    options.Text($"<a href='\\{path}\\{FileHelper.GetSafeFileName(item.Title)}.html'>{item.Title}</a>");
+                    options.Text($"<a href='{path}\\{FileHelper.GetSafeFileName(item.Title)}.html'>{item.Title}</a>");
                     options.Text("</br>");
                 }
             }

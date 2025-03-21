@@ -30,21 +30,21 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("ThmN4BdsSyM");
             Shows.Shows[0].AddEpisode(1, "Take Me Home, Country Roads", "");
             Shows.Shows[0].AddEpisode(2, "Roots Manoeuvres", "");
             Shows.Shows[0].AddEpisode(3, "Get Up, Stand Up", "");
             Shows.Shows[0].AddEpisode(4, "The Heart of Saturday Night", "");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("");
+            Shows.Shows[1].AddLink("OU_yDr2vAoY");
             Shows.Shows[1].AddEpisode(1, "Ill Communication", "");
             Shows.Shows[1].AddEpisode(2, "Oh Carolina", "");
             Shows.Shows[1].AddEpisode(3, "Daddy Cool", "");
             Shows.Shows[1].AddEpisode(4, "Ride With Me", "");
 
             Shows.Add("Series  3");
-            Shows.Shows[2].AddLink("");
+            Shows.Shows[2].AddLink("2mEcSaPZWD8");
             Shows.Shows[2].AddEpisode(1, "No Richie, No Cry", "");
             Shows.Shows[2].AddEpisode(2, "It's A Family Affair", "");
             Shows.Shows[2].AddEpisode(3, "Redemption Song", "");
@@ -53,7 +53,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[2].AddEpisode(6, "Girls and Boys", "");
 
             Shows.Add("Series  4");
-            Shows.Shows[3].AddLink("");
+            Shows.Shows[3].AddLink("_A6aYijqc20");
             Shows.Shows[3].AddEpisode(1, "Three's a Crowd", "");
             Shows.Shows[3].AddEpisode(2, "Best Local Business", "");
             Shows.Shows[3].AddEpisode(3, "Let It Grow", "");
