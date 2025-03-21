@@ -66,12 +66,14 @@ namespace eWolfAudioSiteBuilder._Site.Audio
 
             var sb = new StringBuilder();
 
-            var comedys = meds.Shows.Where(x => x.ShowTypes == showType);
-            comedys = comedys.OrderBy(x => x.Title).ToList();
+            var selectedShows = meds.Shows.Where(x => x.ShowTypes == showType);
+            selectedShows = selectedShows.OrderByDescending(x =>
+                string.IsNullOrWhiteSpace(x.DateAdded)? DateTime.MinValue :DateTime.Parse(x.DateAdded)
+                ).ToList();
 
             string path = "E:\\Projects\\GitHub\\eWolfSiteBuilder\\DemoSiteAudio\\Audio\\Shows";
 
-            foreach (var item in comedys)
+            foreach (var item in selectedShows.Take(5))
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
