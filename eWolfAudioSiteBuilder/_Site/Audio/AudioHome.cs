@@ -74,6 +74,8 @@ namespace eWolfAudioSiteBuilder._Site.Audio
                     options.Text("</br>");
                 }
             }
+            options.Text("</br>");
+            options.PageLink("", "- See all shows", ".\\Shows\\shows.html");
 
             options.Text("</br>");
             options.Text("</br>");

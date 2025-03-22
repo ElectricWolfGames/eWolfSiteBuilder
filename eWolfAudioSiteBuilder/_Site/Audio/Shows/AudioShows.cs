@@ -1,4 +1,5 @@
-﻿using eWolfAudioSiteBuilder.Interfaces;
+﻿using eWolfAudioSiteBuilder.Data.Enums;
+using eWolfAudioSiteBuilder.Interfaces;
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
@@ -31,13 +32,27 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
-            WebPage.Append("<div class='container mt-4'>");
+            
+            WebPage.Append("<div class='container'>");
+            WebPage.Append("<h2>Radio Shows</h2>");
 
-            WebPage.AppendLine("<div class='col-md-8 blog-main'>");
-            WebPage.AppendLine(ShowList());
-            WebPage.AppendLine("</div>");
+            WebPage.Append("<h2>Most Recent Releases</h2>");
+            WebPage.Append("<div class='row'>");
 
-            WebPage.AppendLine("</div>");
+            WebPage.Append("<div class='col-md-6' style='background-color: #EEEEEE;'>");
+            WebPage.AppendLine(ShowListByName());
+            WebPage.Append("</div>");
+
+
+            WebPage.Append("<div class='col-md-6' style='background-color: #DDDDDD;'>");
+            WebPage.AppendLine(ShowListByYear());
+            WebPage.Append("</div>");
+
+            WebPage.Append("</div>");
+            WebPage.Append("</div>");
+            
+
+
             WebPage.EndBody();
             WebPage.Output();
         }
@@ -55,24 +70,44 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             return showDisplay.OutputPath;
         }
 
-        private string ShowList()
+        private string ShowListByName()
         {
             HTMLBuilder options = new HTMLBuilder();
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
-
-
             options.Title("All shows by name");
-            foreach (var item in meds.Shows.OrderBy(x => x.Title))
+            foreach (var item in meds.OnlyAviableShows().OrderBy(x => x.Title))
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
                     string link = CreateShowPage(item);
                     string safeFileName = FileHelper.GetSafeFileName(item.Title);
-                    options.Text($"<a href='{safeFileName}.html'>{item.Title}</a>");
+                    options.Text($"<a href='{safeFileName}.html'>{item.Title} ({item.ShowTypes})</a>");
                     options.Text("</br>");
                 }
             }
+            options.Text("</br>");
+            options.Text("More to come...");
+            return options.Output();
+        }
+        private string ShowListByYear()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+
+            options.Title("All shows by year");
+            foreach (var item in meds.OnlyAviableShows().OrderBy(x => x.Year))
+            {
+                if (!string.IsNullOrEmpty(item.Title))
+                {
+                    string link = CreateShowPage(item);
+                    string safeFileName = FileHelper.GetSafeFileName(item.Title);
+                    options.Text($"<a href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes})</a>");
+                    options.Text("</br>");
+                }
+            }
+            options.Text("</br>");
+            options.Text("More to come...");
             return options.Output();
         }
     }
