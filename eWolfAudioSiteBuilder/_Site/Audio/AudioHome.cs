@@ -63,16 +63,9 @@ namespace eWolfAudioSiteBuilder._Site.Audio
 
             var sb = new StringBuilder();
 
-            var selectedShows = meds.Shows.Where(x => x.ShowTypes == showType && !string.IsNullOrWhiteSpace(x.DateAdded));
-
-            var today = DateTime.Now.AddDays(1);
-            selectedShows = selectedShows.Where(x => DateTime.Parse(x.DateAdded) < today).ToList();
-            selectedShows = selectedShows.OrderByDescending(x =>
-                DateTime.Parse(x.DateAdded)
-                ).ToList();
+            var selectedShows = meds.OnlyAviableShows().Where(x => x.ShowTypes == showType);
 
             string path = "Shows";
-
             foreach (var item in selectedShows.Take(5))
             {
                 if (!string.IsNullOrEmpty(item.Title))

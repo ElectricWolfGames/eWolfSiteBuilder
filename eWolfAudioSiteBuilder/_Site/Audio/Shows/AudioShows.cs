@@ -61,8 +61,9 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
 
+
             options.Title("All shows by name");
-            foreach (var item in meds.Shows)
+            foreach (var item in meds.Shows.OrderBy(x => x.Title))
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {

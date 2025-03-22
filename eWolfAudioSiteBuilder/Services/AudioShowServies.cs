@@ -1,4 +1,5 @@
-﻿using eWolfAudioSiteBuilder.Interfaces;
+﻿using eWolfAudioSiteBuilder.Data.Enums;
+using eWolfAudioSiteBuilder.Interfaces;
 using System.Reflection;
 
 namespace eWolfAudioSiteBuilder.Services
@@ -33,6 +34,18 @@ namespace eWolfAudioSiteBuilder.Services
         private void AddAudioShows()
         {
             _audioShow.AddRange(GetAll());
+        }
+
+        public List<IAudioShow> OnlyAviableShows()
+        {
+            var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded));
+            var today = DateTime.Now.AddDays(1);
+            selectedShows = selectedShows.Where(x => DateTime.Parse(x.DateAdded) < today).ToList();
+            selectedShows = selectedShows.OrderByDescending(x =>
+                DateTime.Parse(x.DateAdded)
+                ).ToList();
+
+            return (List<IAudioShow>)selectedShows;
         }
     }
 }
