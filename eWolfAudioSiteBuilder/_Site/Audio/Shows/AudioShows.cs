@@ -1,5 +1,6 @@
 ﻿using eWolfAudioSiteBuilder.Interfaces;
 using eWolfAudioSiteBuilder.Services;
+using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
@@ -57,21 +58,22 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private string ShowList()
         {
+            HTMLBuilder options = new HTMLBuilder();
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
-            var sb = new StringBuilder();
 
+            options.Title("All shows by name");
             foreach (var item in meds.Shows)
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
                     string link = CreateShowPage(item);
                     string safeFileName = FileHelper.GetSafeFileName(item.Title);
-                    sb.Append($"<a href='{safeFileName}.html'>{item.Title}</a>");
-                    sb.Append("</br>");
+                    options.Text($"<a href='{safeFileName}.html'>{item.Title}</a>");
+                    options.Text("</br>");
                 }
             }
-            return sb.ToString();
+            return options.Output();
         }
     }
 }
