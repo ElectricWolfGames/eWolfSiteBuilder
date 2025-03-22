@@ -119,6 +119,24 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 options.NewLine();
             }
             options.EndTextCenter();
+
+            options.StartTextCenter();
+            var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
+
+            if (writers.Any())
+            {
+                if (writers.Count() == 1)
+                    options.Text("<h3>Writen by</h3>");
+                else
+                    options.Text("<h3>Writers</h3>");
+
+                foreach (var writer in writers)
+                {
+                    options.Text($"<h4>{writer.FullName}</h4>");
+                }
+            }
+            options.EndTextCenter();
+
             options.NewLine();
             options.NewLine(); options.NewLine(); options.NewLine();
 

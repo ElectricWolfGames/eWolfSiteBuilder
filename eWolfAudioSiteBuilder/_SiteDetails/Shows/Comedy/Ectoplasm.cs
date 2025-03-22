@@ -12,7 +12,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Year = 2000;
             DateAdded = "";
 
-            Description = "The stories follow the adventures of Lord Zimbabwe (Romero), a \"walker in the ether\", or occult investigator; his friend and collaborator Doctor Lilac (Freedman), a German scientist who has invented various machines.";
+            Description = "The stories follow the adventures of Lord Zimbabwe (Romero), a 'walker in the ether', or occult investigator; his friend and collaborator Doctor Lilac (Freedman), a German scientist who has invented various machines.";
 
             Casts.Add("Lord Zimbabwe", "Nick Romero");
             Casts.Add("Doctor Lilac", "Dan Freedman");

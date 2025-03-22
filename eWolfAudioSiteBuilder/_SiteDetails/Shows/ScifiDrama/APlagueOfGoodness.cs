@@ -38,7 +38,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.ScifiDrama
             Casts.Add("TV Announcer", "Jeremy Roberts");
             Casts.Add("TV Secretary", "Gordon Reid");
 
-            Production.Add("WRITER", "Wally K. Daly");
+            Production.Add("WRITER", "Wally K Daly");
             Production.Add("DIRECTOR", "Martin Jenkins");
 
             Shows.Add("Series  1");
