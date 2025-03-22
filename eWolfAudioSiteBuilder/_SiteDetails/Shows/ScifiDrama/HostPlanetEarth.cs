@@ -12,7 +12,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.ScifiDrama
             Year = 1967;
             DateAdded = "";
 
-            Description = "It detailed the course of a strange disease which first affects scientists working on a British rocketry programme. When British astronauts fall prey to the sickness in space, can they be allowed to return?\r\n";
+            Description = "It detailed the course of a strange disease which first affects scientists working on a British rocketry programme. When British astronauts fall prey to the sickness in space, can they be allowed to return?";
 
             Casts.Add("Claire Stewart", "Brenda Bruce");
             Casts.Add("Professor Ormskirk", "Clive Morton");

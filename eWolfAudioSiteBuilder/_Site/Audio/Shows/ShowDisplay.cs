@@ -90,17 +90,20 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 else
                     options.YouTubeLinkAudio(show.YoutubeLink);
 
-                options.StartTextCenter();
-                options.Text("<h3>Episodes</h3>");
-                options.NewLine();
-                foreach (var episode in show.Episodes)
+                if (show.Episodes.Count > 0)
                 {
-                    options.Text($"<h4>{episode.Name}</h4>");
-                    options.Text(episode.Description);
+                    options.StartTextCenter();
+                    options.Text("<h3>Episodes</h3>");
+                    options.NewLine();
+                    foreach (var episode in show.Episodes)
+                    {
+                        options.Text($"<h4>{episode.Name}</h4>");
+                        options.Text(episode.Description);
+                        options.NewLine();
+                    }
+                    options.EndTextCenter();
                     options.NewLine();
                 }
-                options.EndTextCenter();
-                options.NewLine();
             }
             options.NewLine(); options.NewLine();
 
