@@ -1,25 +1,25 @@
 ﻿using eWolfAudioSiteBuilder.Data;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Windows.Documents;
+using System.Windows;
 
 namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 {
-    public class _EmptyShow : AudioBaseDetails
+    public class SelfStorage : AudioBaseDetails
     {
-        public _EmptyShow()
+        public SelfStorage()
         {
-            ShowTypes = Data.Enums.ShowTypes.None;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
-            Title = "";
-            Year = 2099;
+            Title = "Self Storage";
+            Year = 2007;
             DateAdded = "";
 
             Description = "";
 
-            Casts.Add("", "");
-            Casts.Add("", "");
-            Casts.Add("", "");
-            Casts.Add("", "");
-            Casts.Add("", "");
-            Casts.Add("", "");
+            Casts.Add("Dave", "Reece Shearsmith");
+            Casts.Add("Geoff", "Mark Heap ");
+            Casts.Add("Ron", "Tom Goodman-Hill ");
 
             Production.Add("WRITER", "");
             Production.Add("WRITER", "");

@@ -2,7 +2,7 @@
 
 namespace eWolfAudioSiteBuilder._SiteDetails.Shows.ScifiDrama
 {
-    public class _625Y  : AudioBaseDetails
+    public class _625Y : AudioBaseDetails
     {
         public _625Y()
         {
