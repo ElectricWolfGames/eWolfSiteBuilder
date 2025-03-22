@@ -32,7 +32,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[0].AddEpisode(2, "The Case of the Missing Lost Soul", "");
             Shows.Shows[0].AddEpisode(3, "The Affair of the Baddie's Niece", "");
             Shows.Shows[0].AddEpisode(4, "The Adventure of the Stupid, Ignorant Americans", "");
-
         }
     }
 }

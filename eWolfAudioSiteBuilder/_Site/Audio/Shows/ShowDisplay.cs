@@ -48,7 +48,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.Append("<div class='container mt-4'>");
             WebPage.Append(Jumbotron());
 
-
             WebPage.Append(Show());
 
             WebPage.EndBody();

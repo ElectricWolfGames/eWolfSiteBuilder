@@ -1,5 +1,4 @@
-﻿using eWolfAudioSiteBuilder.Data.Enums;
-using eWolfAudioSiteBuilder.Interfaces;
+﻿using eWolfAudioSiteBuilder.Interfaces;
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
@@ -32,7 +31,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
-            
             WebPage.Append("<div class='container'>");
             WebPage.Append("<h2>Radio Shows</h2>");
 
@@ -43,15 +41,12 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.AppendLine(ShowListByName());
             WebPage.Append("</div>");
 
-
             WebPage.Append("<div class='col-md-6' style='background-color: #DDDDDD;'>");
             WebPage.AppendLine(ShowListByYear());
             WebPage.Append("</div>");
 
             WebPage.Append("</div>");
             WebPage.Append("</div>");
-            
-
 
             WebPage.EndBody();
             WebPage.Output();
@@ -90,6 +85,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             options.Text("More to come...");
             return options.Output();
         }
+
         private string ShowListByYear()
         {
             HTMLBuilder options = new HTMLBuilder();
