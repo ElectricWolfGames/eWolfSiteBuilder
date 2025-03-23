@@ -12,7 +12,15 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Year = 2005;
             DateAdded = "2025/01/10";
 
-            Description = "Set in the year 2099, the series depicts the Earth as very different from today. Following a number of environmental disasters, such as \"the Withering\" – which resulted in the loss of a great deal of human knowledge including the vacuum cleaner and fire (although the latter came back fairly quickly) – and a \"Cattle-clasm\" that killed off most of the livestock, the Earth has been reduced to a wasteland separated between \"Withered Zones\" and the remaining inhabitable areas. The Withering shifted the Earth into a new orbit, resulting in disruption to the seasons and a reformed calendar. Every day of the week is now 25 hours long except for Thursday (which, due to time anomalies, has not occurred in over a decade),[14] while the change in the length of the year led to the creation of new months such as Janril, Febtober, and Marchuary.";
+            Description = "Set in the year 2099, the series depicts the Earth as very different from today. " +
+                "Following a number of environmental disasters, such as \"the Withering\" – which resulted in the loss " +
+                "of a great deal of human knowledge including the vacuum cleaner and fire (although the latter came " +
+                "back fairly quickly) – and a \"Cattle-clasm\" that killed off most of the livestock, the Earth has " +
+                "been reduced to a wasteland separated between \"Withered Zones\" and the remaining inhabitable areas. " +
+                "The Withering shifted the Earth into a new orbit, resulting in disruption to the seasons and a reformed " +
+                "calendar. Every day of the week is now 25 hours long except for Thursday (which, due to time " +
+                "anomalies, has not occurred in over a decade), while the change in the length of the year " +
+                "led to the creation of new months such as Janril, Febtober, and Marchuary.";
 
             Casts.Add("Professor Boffo Nebulous", "Mark Gatiss");
             Casts.Add("Paula Breeze (assistant to Nebulous)", "Rosie Cavaliero");
