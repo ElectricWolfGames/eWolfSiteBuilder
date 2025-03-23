@@ -10,7 +10,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.ScifiDrama
 
             Title = "Host Planet Earth";
             Year = 1967;
-            DateAdded = "";
+            DateAdded = "2025/04/23";
 
             Description = "It detailed the course of a strange disease which first affects scientists working on a British rocketry programme. When British astronauts fall prey to the sickness in space, can they be allowed to return?";
 

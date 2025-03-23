@@ -32,9 +32,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.StartBody();
 
             WebPage.Append("<div class='container'>");
-            WebPage.Append("<h2>Radio Shows</h2>");
-
-            WebPage.Append("<h2>Most Recent Releases</h2>");
             WebPage.Append("<div class='row'>");
 
             WebPage.Append("<div class='col-md-6' style='background-color: #EEEEEE;'>");
@@ -91,7 +88,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             HTMLBuilder options = new HTMLBuilder();
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
-            options.Title("All shows by year");
+            options.Title("All shows by Broadcast year");
             foreach (var item in meds.OnlyAviableShows().OrderBy(x => x.Year))
             {
                 if (!string.IsNullOrEmpty(item.Title))

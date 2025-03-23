@@ -66,7 +66,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             var selectedShows = meds.OnlyAviableShows().Where(x => x.ShowTypes == showType);
 
             string path = "Shows";
-            foreach (var item in selectedShows.Take(5))
+            foreach (var item in selectedShows.Take(10))
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
