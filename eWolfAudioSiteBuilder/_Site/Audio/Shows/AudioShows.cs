@@ -39,7 +39,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.Append("</br>");
             WebPage.Append("</div>");
 
-
             WebPage.Append("<div class='col-md-5' style='background-color: #EEEEEE; margin:10px;'>");
             WebPage.AppendLine(ShowListByName());
             WebPage.Append("</div>");
