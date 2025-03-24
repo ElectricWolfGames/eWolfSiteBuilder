@@ -8,7 +8,7 @@ namespace TextConverter
         {
             Console.WriteLine("Hello World!");
 
-            string raw = "Sid .... Warren Mitchell\r\nVal .... Kay Stonham\r\nIan .... Simon Greenall\r\nAda .... Avril Elgar\r\nMatthew .... Josh Freedman\r\nMolly .... Mollie Freedman\r\nGovernor .... Will Ing\r\nHeadmistress .... Annie Hulley";
+            string raw = "Charles …. Donald Hewlett\r\nGeorge …. Michael Knowles\r\nHilary …. Norma Ronald\r\nGJ …. Tony Anholt\r\nFuturistic Manager …. David Ryall\r\nBilly …. Michael Bilton\r\nHarry the Publican …. Colin Starkey";
 
             Names(raw);
         }
@@ -34,8 +34,8 @@ namespace TextConverter
             foreach (string line in lines)
             {
                 var updated = line.Replace("\r", "");
-                // string[] parts = updated.Split("…."); 
-                string[] parts = updated.Split("....");
+                string[] parts = updated.Split("…."); 
+                //string[] parts = updated.Split("....");
 
                 // Casts.Add("Curtis Lark", "Vincent Price");
                 Console.WriteLine($"Casts.Add(\"{parts[0].Trim()}\" , \"{parts[1].Trim()}\");");

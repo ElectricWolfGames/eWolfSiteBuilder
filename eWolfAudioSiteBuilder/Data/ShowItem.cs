@@ -1,4 +1,6 @@
-﻿namespace eWolfAudioSiteBuilder.Data
+﻿using System.Windows.Shapes;
+
+namespace eWolfAudioSiteBuilder.Data
 {
     public class ShowItem
     {
@@ -26,6 +28,9 @@
 
         internal void AddLink(string link)
         {
+            if (link.Contains("youtu.be"))
+                throw new Exception("You tube linkes need to be just the end code!");
+
             YoutubeLink = link;
         }
     }
