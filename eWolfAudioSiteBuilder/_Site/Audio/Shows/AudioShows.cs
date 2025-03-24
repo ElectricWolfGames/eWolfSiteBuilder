@@ -34,11 +34,17 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.Append("<div class='container'>");
             WebPage.Append("<div class='row'>");
 
-            WebPage.Append("<div class='col-md-6' style='background-color: #EEEEEE;'>");
+            WebPage.Append("<div class='col-md-12'>");
+            WebPage.Append("</br>");
+            WebPage.Append("</br>");
+            WebPage.Append("</div>");
+
+
+            WebPage.Append("<div class='col-md-5' style='background-color: #EEEEEE; margin:10px;'>");
             WebPage.AppendLine(ShowListByName());
             WebPage.Append("</div>");
 
-            WebPage.Append("<div class='col-md-6' style='background-color: #DDDDDD;'>");
+            WebPage.Append("<div class='col-md-5' style='background-color: #DDDDDD; margin:10px;'>");
             WebPage.AppendLine(ShowListByYear());
             WebPage.Append("</div>");
 

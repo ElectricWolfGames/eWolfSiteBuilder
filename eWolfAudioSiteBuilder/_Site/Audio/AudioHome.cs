@@ -38,11 +38,11 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.Append("<h2>Most Recent Releases</h2>");
             WebPage.Append("<div class='row'>");
 
-            WebPage.Append("<div class='col-md-6' style='background-color: #EEEEEE;'>");
+            WebPage.Append("<div class='col-md-5' style='background-color: #EEEEEE; margin:10px;'>");
             WebPage.AppendLine(ShowByType(ShowTypes.Comedy, "Comedy", "Comedy.png"));
             WebPage.Append("</div>");
 
-            WebPage.Append("<div class='col-md-6' style='background-color: #DDDDDD;'>");
+            WebPage.Append("<div class='col-md-5' style='background-color: #DDDDDD; margin:10px;'>");
             WebPage.AppendLine(ShowByType(ShowTypes.SciFiDrama, "Sci fi Drama", "sci fi.png"));
             WebPage.Append("</div>");
             WebPage.Append("</div>");
