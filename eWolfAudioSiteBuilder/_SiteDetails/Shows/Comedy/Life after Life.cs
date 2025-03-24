@@ -6,7 +6,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
     {
         public LifeAfterLife()
         {
-            ShowTypes = Data.Enums.ShowTypes.None;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Life after Life";
             Year = 1998;

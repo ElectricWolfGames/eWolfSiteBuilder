@@ -8,7 +8,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
         {
             ShowTypes = Data.Enums.ShowTypes.Comedy;
 
-            Title = "Ectoplasm ";
+            Title = "Ectoplasm";
             Year = 2000;
             DateAdded = "";
 

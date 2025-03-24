@@ -1,7 +1,10 @@
-﻿using eWolfAudioSiteBuilder.Interfaces;
+﻿using eWolfAudioSiteBuilder.Data.Enums;
+using eWolfAudioSiteBuilder.Interfaces;
+using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
+using eWolfBootstrap.SiteBuilder.Builders;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfCommon.Helpers;
 using System.Text;
@@ -77,6 +80,99 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
         {
             HTMLBuilder options = new HTMLBuilder();
 
+            Episodes(options);
+
+            Cast(options);
+
+            ProductinTeam(options);
+
+            options.NewLine();
+            options.NewLine();
+
+            AlsoWritenBy(options);
+
+            options.NewLine();
+            options.NewLine();
+
+            return options.Output();
+        }
+
+        private void AlsoWritenBy(HTMLBuilder options)
+        {
+            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+            var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
+
+            List<IAudioShow> alsoBy = new List<IAudioShow>();
+            foreach (var writer in writers)
+            {
+                var selectedShows = meds.OnlyAviableShows().Where(x =>
+                     x.Production.Casts.Any(x => x.FullName == writer.FullName));
+
+                foreach (var ss in selectedShows)
+                {
+                    if (ss.Title == AudioShow.Title)
+                        continue;
+                    alsoBy.Add(ss);
+                }
+            }
+
+            if (alsoBy.Any())
+            {
+                options.Text("<div class='container mt-5'>");
+                options.Text("<h4>By the same writers</h4>");
+                options.Text("<div class='row'>");
+                foreach (var ss in alsoBy)
+                {
+                    options.Text(CreateCard(ss));
+                    
+                }
+                options.Text("</div>");
+                options.Text("</div>");
+
+            }
+        }
+
+        private string CreateCard(IAudioShow showDetails)
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            string link = $"{FileHelper.GetSafeFileName(showDetails.Title)}.html";
+
+            options.Text("<div class='card' style='max-width: 18rem; border: 3px solid #2E8B57; border-radius: 10px; margin:10px;' >");
+            options.Text("<div class='card-header text-white' style='background-color: #2E8B57;'>");
+            options.Text($"<h4><a style='color: #FFFFFF;' href='{link}'>{showDetails.Title}</a></h4></div>");
+            options.Text("<div class='card-body text-primary'>");
+            options.Text($"<p style='color: #2E8B57;' class='card-text'>{showDetails.Description}</p>");
+            options.Text($"<h5 style='color: #FFFFFF;' class='card-title'><a href='{link}'>{showDetails.ShowTypes}</a></h5>");
+
+            options.Text("</div>");
+            options.Text("</div>");
+
+            return options.Output();
+        }
+
+        private void ProductinTeam(HTMLBuilder options)
+        {
+            options.StartTextCenter();
+            var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
+
+            if (writers.Any())
+            {
+                if (writers.Count() == 1)
+                    options.Text("<h3>Writen by</h3>");
+                else
+                    options.Text("<h3>Writers</h3>");
+
+                foreach (var writer in writers)
+                {
+                    options.Text($"<h4>{writer.FullName}</h4>");
+                }
+            }
+            options.EndTextCenter();
+        }
+
+        private void Episodes(HTMLBuilder options)
+        {
             foreach (var show in AudioShow.Shows.Shows)
             {
                 options.Title(show.Name);
@@ -105,7 +201,10 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 }
             }
             options.NewLine(); options.NewLine();
+        }
 
+        private void Cast(HTMLBuilder options)
+        {
             options.StartTextCenter();
             options.Text("<h3>Cast</h3>");
             options.NewLine();
@@ -118,28 +217,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 options.NewLine();
             }
             options.EndTextCenter();
-
-            options.StartTextCenter();
-            var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
-
-            if (writers.Any())
-            {
-                if (writers.Count() == 1)
-                    options.Text("<h3>Writen by</h3>");
-                else
-                    options.Text("<h3>Writers</h3>");
-
-                foreach (var writer in writers)
-                {
-                    options.Text($"<h4>{writer.FullName}</h4>");
-                }
-            }
-            options.EndTextCenter();
-
-            options.NewLine();
-            options.NewLine(); options.NewLine(); options.NewLine();
-
-            return options.Output();
         }
     }
 }
