@@ -33,9 +33,12 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.StartBody();
 
             WebPage.Append("<div class='container'>");
-            WebPage.Append("<h2>Radio Shows</h2>");
 
-            WebPage.Append("<h2>Most Recent Releases</h2>");
+            WebPage.Append("</br>");
+
+            WebPage.Append(Jumbotron());
+
+            WebPage.Append("<h3>Radio Shows< - Most Recent Releases</h3>");
             WebPage.Append("<div class='row'>");
 
             WebPage.Append("<div class='col-md-5' style='background-color: #EEEEEE; margin:10px;'>");
@@ -50,6 +53,27 @@ namespace eWolfAudioSiteBuilder._Site.Audio
 
             WebPage.EndBody();
             WebPage.Output();
+        }
+
+        private string Jumbotron()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            //options.Text("<div class='jumbotron'>");
+            //options.Text("<div class='row'>");
+            //options.Text("<div class='col-md-12'>");
+            //options.Text($"<h1>{AudioShow.Title}</h1>");
+
+            options.ImageCenter("Title.jpeg", 50);
+
+            //options.Text("<div class='col-md-12'>");
+            //options.Text($"<p'>{AudioShow.Description}</p>");
+            //options.Text("</div>");
+            //options.Text("</div>");
+            //options.Text("</div>");
+            //options.Text("</div>");
+
+            return options.Output();
         }
 
         private string ShowByType(ShowTypes showType, string title, string image)
