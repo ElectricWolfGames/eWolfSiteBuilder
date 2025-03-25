@@ -93,7 +93,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 {
                     string link = CreateShowPage(item);
                     string safeFileName = FileHelper.GetSafeFileName(item.Title);
-                    options.Text($"<a href='{safeFileName}.html'>{item.Title} ({item.ShowTypes})</a>");
+                    options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Title} ({item.ShowTypes})</a>");
                     options.Text("</br>");
                 }
             }
@@ -114,7 +114,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 {
                     string link = CreateShowPage(item);
                     string safeFileName = FileHelper.GetSafeFileName(item.Title);
-                    options.Text($"<a href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes})</a>");
+                    options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes})</a>");
                     options.Text("</br>");
                 }
             }

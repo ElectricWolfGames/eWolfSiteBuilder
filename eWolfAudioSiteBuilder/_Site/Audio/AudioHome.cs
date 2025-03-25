@@ -94,7 +94,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
-                    options.Text($"<a href='{path}\\{FileHelper.GetSafeFileName(item.Title)}.html'>{item.Title}</a>");
+                    options.Text($"<a style='color: darkblue;' href='{path}\\{FileHelper.GetSafeFileName(item.Title)}.html'>{item.Title}</a>");
                     options.Text("</br>");
                 }
             }
