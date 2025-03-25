@@ -38,7 +38,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
 
             WebPage.Append(Jumbotron());
 
-            WebPage.Append("<h3>Radio Shows< - Most Recent Releases</h3>");
+            WebPage.Append("<h3>Radio Shows - Most Recent Releases...</h3>");
             WebPage.Append("<div class='row'>");
 
             WebPage.Append("<div class='col-md-5' style='background-color: #EEEEEE; margin:10px;'>");

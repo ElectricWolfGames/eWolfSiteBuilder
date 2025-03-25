@@ -32,6 +32,11 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.StartBody();
 
             WebPage.Append("<div class='container'>");
+
+            WebPage.Append("</br>");
+
+            WebPage.Append(Jumbotron());
+
             WebPage.Append("<div class='row'>");
 
             WebPage.Append("<div class='col-md-12'>");
@@ -65,6 +70,15 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             showDisplay.CreatePage();
             return showDisplay.OutputPath;
+        }
+
+        private string Jumbotron()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+
+            options.ImagePath("..//images/Title.jpeg", 50);
+
+            return options.Output();
         }
 
         private string ShowListByName()
