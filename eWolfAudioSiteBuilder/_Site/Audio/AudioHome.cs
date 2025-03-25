@@ -58,21 +58,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
         private string Jumbotron()
         {
             HTMLBuilder options = new HTMLBuilder();
-
-            //options.Text("<div class='jumbotron'>");
-            //options.Text("<div class='row'>");
-            //options.Text("<div class='col-md-12'>");
-            //options.Text($"<h1>{AudioShow.Title}</h1>");
-
             options.ImageCenter("Title.jpeg", 50);
-
-            //options.Text("<div class='col-md-12'>");
-            //options.Text($"<p'>{AudioShow.Description}</p>");
-            //options.Text("</div>");
-            //options.Text("</div>");
-            //options.Text("</div>");
-            //options.Text("</div>");
-
             return options.Output();
         }
 
