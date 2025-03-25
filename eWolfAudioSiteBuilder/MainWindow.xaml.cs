@@ -17,7 +17,7 @@ public partial class MainWindow : Window
 
         _buildSite.WebSiteRootAddress = @"E:\Projects\GitHub\eWolfSiteBuilder\DemoSiteAudio\";
 
-        SiteBuilderServiceLocator.Instance.InjectService<IPageHeaderDetails>(new SiteHeader());
+        SiteBuilderServiceLocator.Instance.InjectService<IPageHeaderDetails>(new SiteHeaderAudio());
         SiteBuilderServiceLocator.Instance.InjectService<IBuildSite>(_buildSite);
         SiteBuilderServiceLocator.Instance.InjectService<INavigationBuilder>(new NavigationBuilder());
 

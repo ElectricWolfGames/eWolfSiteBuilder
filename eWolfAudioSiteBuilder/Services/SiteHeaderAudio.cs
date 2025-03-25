@@ -2,9 +2,9 @@
 using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Text;
 
-namespace eWolfSiteBuilder.SiteDetails
+namespace eWolfAudioSiteBuilder.Services
 {
-    public class SiteHeader : IPageHeaderDetails
+    public class SiteHeaderAudio : IPageHeaderDetails
     {
         public string Output(PageDetails pageDetails, string extraOffSet)
         {
@@ -18,7 +18,7 @@ namespace eWolfSiteBuilder.SiteDetails
             _stringBuilder.Append($"		<title>{pageDetails.DisplayTitle}</title>");
             _stringBuilder.Append("		<meta http-equiv='Content -Type' content='text/html; charset=UTF-8'>");
             _stringBuilder.Append($"		<meta name='description' content='{pageDetails.DisplayTitle}'/>");
-            _stringBuilder.Append($"		<meta name='keywords' content='{string.Join(",",pageDetails.Keywords)}'/>");
+            _stringBuilder.Append($"		<meta name='keywords' content='{string.Join(",", pageDetails.Keywords)}'/>");
             _stringBuilder.Append($"		<meta name='title' content='{pageDetails.DisplayTitle}'/>");
             _stringBuilder.Append("		<meta name='author' content='Electric Wolf'>");
             _stringBuilder.Append("		<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>");
@@ -34,12 +34,14 @@ namespace eWolfSiteBuilder.SiteDetails
 
         private static void AddSiteTracker(StringBuilder sb)
         {
-            sb.Append(@"
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src='https://www.googletagmanager.com/gtag/js?id=UA-180928318-1'></script>
-<script>
-  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);} gtag('js', new Date());  gtag('config', 'UA-180928318-1');
-</script>");
+            sb.Append("<!-- Google tag (gtag.js) -->" +
+                "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-SJNLQ51KZ5\"></script>" +
+                "<script>" +
+                "  window.dataLayer = window.dataLayer || [];" +
+                "  function gtag(){dataLayer.push(arguments);}" +
+                "  gtag('js', new Date());" +
+                "  gtag('config', 'G-SJNLQ51KZ5');" +
+                "</script>");
         }
     }
 }
