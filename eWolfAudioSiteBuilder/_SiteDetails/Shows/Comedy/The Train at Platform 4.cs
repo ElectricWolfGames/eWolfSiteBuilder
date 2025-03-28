@@ -18,8 +18,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Casts.Add("Sam", "Rosie Cavaliero");
             Casts.Add("Noel", "Hugh Dennis");
             Casts.Add("Gilbert", "Kenneth Collard");
-            Casts.Add("Dev", ". Ali Shahalom");
-            Casts.Add("Tasha", ". Amy Gledhill");
+            Casts.Add("Dev", "Ali Shahalom");
+            Casts.Add("Tasha", "Amy Gledhill");
             Casts.Add("Jocasta", "Anna Crilly");
             Casts.Add("Colleague", "Justice Ritchie");
             Casts.Add("Mr Bagnall", "Steve Brody");

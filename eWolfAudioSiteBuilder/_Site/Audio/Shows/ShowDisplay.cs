@@ -5,6 +5,7 @@ using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfCommon.Helpers;
+using System.IO;
 using System.Text;
 
 namespace eWolfAudioSiteBuilder._Site.Audio.Shows
@@ -53,14 +54,18 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             WebPage.EndBody();
             WebPage.Output();
+
+            ShowTextCreator.CreateYTFile(AudioShow);
         }
+
+        
 
         private void AlsoWritenBy(HTMLBuilder options)
         {
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
             var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
 
-            List<IAudioShow> alsoBy = new List<IAudioShow>();
+            List<IAudioShow> alsoBy = new();
             foreach (var writer in writers)
             {
                 var selectedShows = meds.OnlyAviableShows().Where(x =>
@@ -74,7 +79,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 }
             }
 
-            if (alsoBy.Any())
+            if (alsoBy.Count != 0)
             {
                 options.Text("<div class='container mt-5'>");
                 options.Text("<h4>By the same writers</h4>");
