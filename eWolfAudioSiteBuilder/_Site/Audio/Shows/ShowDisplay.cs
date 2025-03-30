@@ -76,6 +76,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             if (alsoBy.Count != 0)
             {
+                alsoBy = alsoBy.Distinct().ToList();
                 options.Text("<div class='container mt-5'>");
                 options.Text("<h4>By the same writers</h4>");
                 options.Text("<div class='row'>");
