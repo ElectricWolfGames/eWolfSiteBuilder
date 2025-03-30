@@ -5,7 +5,6 @@ using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfCommon.Helpers;
-using System.IO;
 using System.Text;
 
 namespace eWolfAudioSiteBuilder._Site.Audio.Shows
@@ -54,11 +53,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             WebPage.EndBody();
             WebPage.Output();
-
-            ShowTextCreator.CreateYTFile(AudioShow);
         }
-
-        
 
         private void AlsoWritenBy(HTMLBuilder options)
         {

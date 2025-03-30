@@ -99,6 +99,10 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             }
             options.Text("</br>");
             options.Text("More to come...");
+
+            foreach (var item in meds.Shows)
+                ShowTextCreator.CreateYTFile(item);
+
             return options.Output();
         }
 

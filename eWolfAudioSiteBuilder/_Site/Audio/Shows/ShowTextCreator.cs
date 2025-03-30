@@ -1,17 +1,13 @@
 ﻿using eWolfAudioSiteBuilder.Interfaces;
 using eWolfCommon.Helpers;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 {
     internal static class ShowTextCreator
     {
-        public static  void CreateYTFile(IAudioShow AudioShow)
+        public static void CreateYTFile(IAudioShow AudioShow)
         {
             string path = $"E:\\_AudioTemp\\_Texts\\{FileHelper.GetSafeFileName(AudioShow.Title)}.txt";
             StringBuilder sb = new StringBuilder();
@@ -22,11 +18,12 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             sb.AppendLine();
             Cast(sb, AudioShow);
 
+            // TODO:Add the series and episodes if we have more then one of them
 
             File.WriteAllText(path, sb.ToString());
         }
 
-        private static  void Cast(StringBuilder options, IAudioShow AudioShow)
+        private static void Cast(StringBuilder options, IAudioShow AudioShow)
         {
             foreach (var cast in AudioShow.Casts.Casts)
             {
@@ -34,9 +31,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                     options.AppendLine($"{cast.FullName}");
                 else
                     options.AppendLine($"{cast.FullName} as '{cast.Role}'");
-                
             }
-            
         }
     }
 }
