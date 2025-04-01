@@ -49,6 +49,8 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             sb.AppendLine();
             Cast(sb, AudioShow);
 
+            Episodes(sb, AudioShow);
+
             // TODO:Add the series and episodes if we have more then one of them
 
             File.WriteAllText(path, sb.ToString());
@@ -62,6 +64,44 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                     options.AppendLine($"{cast.FullName}");
                 else
                     options.AppendLine($"{cast.FullName} as '{cast.Role}'");
+            }
+        }
+
+        private static void Episodes(StringBuilder sb, IAudioShow audioShow)
+        {
+            int count = 1;
+            foreach (var show in audioShow.Shows.Shows)
+            {
+                sb.AppendLine(string.Empty);
+                sb.AppendLine($"Series {count++}");
+
+                foreach (var ep in show.Episodes)
+                {
+                    sb.AppendLine($"{ep.Name}: {ep.Description}");
+                }
+                sb.AppendLine(string.Empty);
+            }
+
+            sb.AppendLine(string.Empty);
+            sb.AppendLine(string.Empty);
+            sb.AppendLine(string.Empty);
+
+            count = 0;
+            foreach (var show in audioShow.Shows.Shows)
+            {
+                int epCount = 1; count++;
+                foreach (var ep in show.Episodes)
+                {
+                    string name = $"s0{count}e0{epCount++}";
+
+                    sb.AppendLine($"EpisodeDetails {name} = new EpisodeDetails();");
+                    sb.AppendLine($"{name}.TitleExtra = \"\";");
+                    sb.AppendLine($"{name}.Title = \"{name} {ep.Description}\";");
+                    sb.AppendLine($"{name}.Description = \"\";");
+                    sb.AppendLine($"showDetails.EpisodeDetails.Add({name});");
+                    sb.AppendLine(string.Empty);
+                }
+                sb.AppendLine(string.Empty);
             }
         }
     }

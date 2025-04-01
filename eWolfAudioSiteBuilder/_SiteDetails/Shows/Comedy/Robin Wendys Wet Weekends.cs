@@ -36,6 +36,8 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[0].AddEpisode(2, "Episodes 2", "A Fete Worse Than Death");
             Shows.Shows[0].AddEpisode(3, "Episodes 3", "A Cavalier Attitude");
             Shows.Shows[0].AddEpisode(4, "Episodes 4", "Police, Camera, Amphibian");
+            Shows.Shows[0].AddEpisode(5, "Special", "Robin & Wendy's Wet Edinburgh Weekend");
+            
 
             Shows.Add("Series  2");
             Shows.Shows[1].AddLink("");

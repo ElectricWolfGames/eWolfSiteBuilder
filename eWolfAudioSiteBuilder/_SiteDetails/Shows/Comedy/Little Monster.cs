@@ -1,7 +1,4 @@
 ﻿using eWolfAudioSiteBuilder.Data;
-using System.Windows.Documents;
-using System;
-using System.Threading.Channels;
 
 namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
 {
@@ -9,7 +6,7 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
     {
         public LittleMonster()
         {
-            ShowTypes = Data.Enums.ShowTypes.None;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Little Monster";
             Channel = "BBC Radio 4";
