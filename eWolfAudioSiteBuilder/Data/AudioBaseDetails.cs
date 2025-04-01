@@ -6,6 +6,7 @@ namespace eWolfAudioSiteBuilder.Data
     public class AudioBaseDetails : IAudioShow
     {
         public CastHolder Casts { get; set; } = new CastHolder();
+        public string Channel { get; set; }
         public string DateAdded { get; set; } = string.Empty;
         public string Description { get; set; }
         public CastHolder Production { get; set; } = new CastHolder();
@@ -13,6 +14,5 @@ namespace eWolfAudioSiteBuilder.Data
         public ShowTypes ShowTypes { get; set; }
         public string Title { get; set; }
         public int Year { get; set; }
-        public string Channel { get; set; }
     }
 }

@@ -46,7 +46,6 @@ namespace eWolfAudioSiteBuilder._SiteDetails.Shows.Comedy
             Shows.Shows[1].AddEpisode(5, "Episodes 5", "A Green Unpleasant Land");
             Shows.Shows[1].AddEpisode(6, "Episodes 6", "About Some Boys");
 
-
             Shows.Add("Series  3");
             Shows.Shows[2].AddLink("");
             Shows.Shows[2].AddEpisode(1, "Episodes 1", "Alka Salsa");

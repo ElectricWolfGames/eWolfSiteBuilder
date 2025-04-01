@@ -1,6 +1,5 @@
 ﻿using eWolfAudioSiteBuilder.Interfaces;
 using eWolfCommon.Helpers;
-using System.DirectoryServices.ActiveDirectory;
 using System.IO;
 using System.Text;
 
@@ -45,7 +44,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 }
             }
 
-                sb.AppendLine();
+            sb.AppendLine();
             sb.AppendLine(AudioShow.Description);
             sb.AppendLine();
             Cast(sb, AudioShow);
