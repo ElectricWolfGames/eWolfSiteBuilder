@@ -1,5 +1,4 @@
-﻿using System.Windows;
-using eWolfAudioShows.Data;
+﻿using eWolfAudioShows.Data;
 
 namespace eWolfAudioShows.Shows.Comedy
 {

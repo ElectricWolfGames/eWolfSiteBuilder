@@ -1,6 +1,4 @@
-﻿using eWolfAudioShows.Data;
-
-namespace eWolfAudioShows.Data
+﻿namespace eWolfAudioShows.Data
 {
     public class ShowHolder
     {
