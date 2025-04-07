@@ -1,5 +1,7 @@
-﻿using eWolfAudioSiteBuilder.Interfaces;
-using System.Reflection;
+﻿using System.Reflection;
+using System.Windows.Controls;
+using eWolfAudioShows;
+using eWolfAudioShows.Interfaces;
 
 namespace eWolfAudioSiteBuilder.Services
 {
@@ -34,12 +36,7 @@ namespace eWolfAudioSiteBuilder.Services
 
         private static List<IAudioShow> GetAll()
         {
-            var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
-                          where t.GetInterfaces().Contains(typeof(IAudioShow))
-                                && t.GetConstructor(Type.EmptyTypes) != null
-                          select Activator.CreateInstance(t) as IAudioShow;
-
-            return updates.ToList();
+            return Holder.GetAll();
         }
 
         private void AddAudioShows()

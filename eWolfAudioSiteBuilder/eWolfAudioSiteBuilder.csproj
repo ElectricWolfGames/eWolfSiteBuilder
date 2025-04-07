@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj" />
     <ProjectReference Include="..\..\eWolfApps\Common\eWolfCommon\eWolfCommon.csproj" />
+    <ProjectReference Include="..\eWolfAudioShows\eWolfAudioShows.csproj" />
   </ItemGroup>
 
 </Project>
