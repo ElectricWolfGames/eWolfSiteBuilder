@@ -53,6 +53,12 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.AppendLine(ShowListByYear());
             WebPage.Append("</div>");
 
+
+            WebPage.Append("<div class='col-md-5' style='background-color: #DDDDDD; margin:10px;'>");
+            WebPage.AppendLine(ShowNoLiveByYear());
+            WebPage.Append("</div>");
+
+
             WebPage.Append("</div>");
             WebPage.Append("</div>");
 
@@ -114,6 +120,27 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             options.Title("All shows by Broadcast year");
             foreach (var item in meds.OnlyAviableShows().OrderBy(x => x.Year))
+            {
+                if (!string.IsNullOrEmpty(item.Title))
+                {
+                    string link = CreateShowPage(item);
+                    string safeFileName = FileHelper.GetSafeFileName(item.Title);
+                    options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes})</a>");
+                    options.Text("</br>");
+                }
+            }
+            options.Text("</br>");
+            options.Text("More to come...");
+            return options.Output();
+        }
+
+        private string ShowNoLiveByYear()
+        {
+            HTMLBuilder options = new HTMLBuilder();
+            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+
+            options.Title("Show comming soon... Audio to follow");
+            foreach (var item in meds.OnlyNotAviableShows().OrderBy(x => x.Year) )
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {

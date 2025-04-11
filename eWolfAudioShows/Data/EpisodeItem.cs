@@ -2,21 +2,19 @@
 {
     public class EpisodeItem
     {
-        public EpisodeItem(int number, string name)
-        {
-            Name = name;
-            Number = number;
-        }
-
-        public EpisodeItem(int number, string name, string description)
+        public EpisodeItem(int number, string name, string description, string mp3, string image)
         {
             Name = name;
             Number = number;
             Description = description;
+            Mp3 = mp3;
+            Image= image;
         }
 
         public string Description { get; set; }
+        public string Mp3 { get; set; }
         public string Name { get; set; }
+        public string Image { get; set; }
         public int Number { get; set; }
     }
 }

@@ -4,10 +4,11 @@
     {
         public List<ShowItem> Shows { get; set; } = new List<ShowItem>();
 
-        internal void Add(string name)
+        internal ShowItem Add(string name)
         {
             var ci = new ShowItem(name);
             Shows.Add(ci);
+            return ci;
         }
     }
 }

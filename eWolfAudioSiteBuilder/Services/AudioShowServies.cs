@@ -33,6 +33,19 @@ namespace eWolfAudioSiteBuilder.Services
 
             return (List<IAudioShow>)selectedShows;
         }
+        public List<IAudioShow> OnlyNotAviableShows()
+        {
+            var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded)).ToList();
+            var today = DateTime.Now.AddDays(1);
+            selectedShows = selectedShows.Where(x => DateTime.Parse(x.DateAdded) >= today).ToList();
+            selectedShows = selectedShows.OrderByDescending(x =>
+                DateTime.Parse(x.DateAdded)
+                ).ToList();
+
+            selectedShows.AddRange(Shows.Where(x => string.IsNullOrWhiteSpace(x.DateAdded)));
+
+            return (List<IAudioShow>)selectedShows;
+        }
 
         private static List<IAudioShow> GetAll()
         {

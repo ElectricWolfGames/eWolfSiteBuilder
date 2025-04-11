@@ -30,7 +30,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("-wUN6zZAYhk");
             Shows.Shows[0].AddEpisode(1, "Transport of Delight", "Demobbed Old Ned heads south after the war and joins a special construction team.");
             Shows.Shows[0].AddEpisode(2, "The French Connection", "The post-war construction team's Potts and Perkins hurl insults - and then onions.");
             Shows.Shows[0].AddEpisode(3, "On the Line", "Perkins can't get a site phone, so his workmates get him a handset and more besides.");

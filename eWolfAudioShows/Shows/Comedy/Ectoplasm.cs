@@ -27,7 +27,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("F3HnLB1CLbc");
             Shows.Shows[0].AddEpisode(1, "The Curse of Tutancommon", "");
             Shows.Shows[0].AddEpisode(2, "The Case of the Missing Lost Soul", "");
             Shows.Shows[0].AddEpisode(3, "The Affair of the Baddie's Niece", "");

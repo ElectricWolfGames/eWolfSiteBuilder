@@ -14,13 +14,19 @@
 
         internal void AddEpisode(int number, string name)
         {
-            var e = new EpisodeItem(number, name);
+            var e = new EpisodeItem(number, name, string.Empty, string.Empty, string.Empty);
             Episodes.Add(e);
         }
 
         internal void AddEpisode(int number, string name, string description)
         {
-            var e = new EpisodeItem(number, name, description);
+            var e = new EpisodeItem(number, name, description, string.Empty, string.Empty);
+            Episodes.Add(e);
+        }
+
+        internal void AddEpisode(int number, string name, string description, string mp3, string image)
+        {
+            var e = new EpisodeItem(number, name, description, mp3, image);
             Episodes.Add(e);
         }
 
