@@ -45,7 +45,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[2].AddEpisode(2, "Dial M for Myrtle", "A suspicious death leaves the gals from personnel with no options other than to investigate.");
             Shows.Shows[2].AddEpisode(3, "Dig for Victory!", "The Women's Land Army are on the hunt for volunteers, and Dot and the gals are whisked off to the countryside to work the land. It is not long before Dot is planning a great escape.");
             Shows.Shows[2].AddEpisode(4, "London Can Take It", "Can Dot use her resemblance to Vera Lynn to get one over on Millicent as the they seek to ingratiate themselves with the PM?");
-            Shows.Shows[2].AddEpisode(5, "Dot and the Russian Dossier", "May, 1941. The future of the war hangs in the balance, and Dot has been selected for a most perilous mission.");
+            // Shows.Shows[2].AddEpisode(5, "Dot and the Russian Dossier", "May, 1941. The future of the war hangs in the balance, and Dot has been selected for a most perilous mission.");
 
         }
     }

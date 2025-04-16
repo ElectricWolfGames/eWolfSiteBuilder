@@ -97,8 +97,8 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
                     sb.AppendLine($"EpisodeDetails {name} = new EpisodeDetails();");
                     sb.AppendLine($"{name}.TitleExtra = \"\";");
-                    sb.AppendLine($"{name}.Title = \"{name} {ep.Description}\";");
-                    sb.AppendLine($"{name}.Description = \"\";");
+                    sb.AppendLine($"{name}.Title = \"{name} {ep.Name}\";");
+                    sb.AppendLine($"{name}.Description = \"{ep.Description}\";");
                     sb.AppendLine($"showDetails.EpisodeDetails.Add({name});");
                     sb.AppendLine(string.Empty);
                 }
