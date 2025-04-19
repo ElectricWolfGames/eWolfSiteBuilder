@@ -1,8 +1,4 @@
 ﻿using eWolfAudioShows.Data;
-using eWolfAudioShows.Shows.Comedy._Live;
-using System.Threading;
-using System;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace eWolfAudioShows.Shows.Comedy
 {
@@ -18,16 +14,13 @@ namespace eWolfAudioShows.Shows.Comedy
 
             Description = "Sci-fi sitcom about Robin Lightfoot, a confirmed bachelor who wakes up one day in a parallel universe where he is married with two children.";
 
-
-
-            Casts.Add("Robin Lightfoot","Hugh Bonneville");
-            Casts.Add("Leslie Lightfoot","Josie Lawrence");
-            Casts.Add("Dirk","Stephen Frost");
-            Casts.Add("Ned Lightfoot" ,"Sam Bradley");
-            Casts.Add("Maxine Lightfoot" ,"Ann Gosling");
-            Casts.Add("Arthur Smith" ,"Arthur Smith");
-            Casts.Add("Julia Lightfoot" ,"Barbara Murray");
-
+            Casts.Add("Robin Lightfoot", "Hugh Bonneville");
+            Casts.Add("Leslie Lightfoot", "Josie Lawrence");
+            Casts.Add("Dirk", "Stephen Frost");
+            Casts.Add("Ned Lightfoot", "Sam Bradley");
+            Casts.Add("Maxine Lightfoot", "Ann Gosling");
+            Casts.Add("Arthur Smith", "Arthur Smith");
+            Casts.Add("Julia Lightfoot", "Barbara Murray");
 
             Production.Add("WRITER", "Tony Bagley");
             Production.Add("WRITER", "");
@@ -42,8 +35,6 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[0].AddEpisode(4, "Episodes 4", "Robin is starting like his life in a parallel universe as a married man. But he is completely thrown when the children's entertainer he has booked for his son's birthday party turns out to be comedian Arthur Smith from his old universe.");
             Shows.Shows[0].AddEpisode(3, "Episodes 5", "Just as he is starting to make the most of his new life, Robin is whisked back to his old universe, where his doppelganger has been wreaking havoc.");
             Shows.Shows[0].AddEpisode(4, "Episodes 6", "Robin is accused of murdering his new family and blackmailed for a divorce settlement.Two small questions: how is he going to win his new wife back, and how is he going to avoid the death penalty ?");
-
-
 
             Shows.Add("Series  2");
             Shows.Shows[1].AddLink("");

@@ -35,7 +35,6 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[0].AddEpisode(4, "Dentists And Lovers", "Ned needs root canal work, but 21st century Jason needs lessons in 19th century courting.");
             Shows.Shows[0].AddEpisode(5, "London", "Bored witless by one street Macclesfield, Jason suggests a trip to London, to general delight. But a mint popping highwayman soon changes everyone's plans.");
             Shows.Shows[0].AddEpisode(6, "Victorian Principles", "The young Queen Victoria is coming to Woolsley House for a visit. When Jason invents the electric guitar, he unwittingly changes the course of history.");
-
         }
     }
 }

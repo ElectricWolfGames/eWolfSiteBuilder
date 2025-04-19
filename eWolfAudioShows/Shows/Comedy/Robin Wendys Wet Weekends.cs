@@ -40,16 +40,16 @@ namespace eWolfAudioShows.Shows.Comedy
 
             show = Shows.Add("Series  2");
             show.AddLink("");
-            show.AddEpisode(1, "Episodes 1", "Them and Us", 
+            show.AddEpisode(1, "Episodes 1", "Them and Us",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\201.mp3",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\s02\s02e01 Them and Us.png");
-            show.AddEpisode(2, "Episodes 2", "Take the High Road", 
+            show.AddEpisode(2, "Episodes 2", "Take the High Road",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\202.mp3",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\s02\s02e02 Take the High Road.png");
             show.AddEpisode(3, "Episodes 3", "Entertaining Mr Stone",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\203.mp3",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\s02\s02e03 Entertaining Mr Stone.png");
-            show.AddEpisode(4, "Episodes 4", "Lassie Go Home", 
+            show.AddEpisode(4, "Episodes 4", "Lassie Go Home",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\204.mp3",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\s02\s02e04 Lassie Go Home.png");
             show.AddEpisode(5, "Episodes 5", "A Green Unpleasant Land",
