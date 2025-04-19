@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eWolfSiteBuilder", "eWolfSiteBuilder\eWolfSiteBuilder.csproj", "{177035EE-6AC8-4CEA-A4CC-4E8841DE419C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{815095E7-4966-4533-ACAA-CB0C1D0E21E5}"
+	ProjectSection(SolutionItems) = preProject
+		eWolfAudioShows\Shows\Comedy\DoNothingTilYouHearFromMe.cs = eWolfAudioShows\Shows\Comedy\DoNothingTilYouHearFromMe.cs
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eWolfBootstrap", "..\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj", "{04C29DE6-1F8C-43EB-B188-A5305678803A}"
 EndProject

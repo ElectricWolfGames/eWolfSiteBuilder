@@ -1,13 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class RudysRareRecords : AudioBaseDetails
     {
         public RudysRareRecords()
         {
-            // TODO: RudysRarerRcords
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Rudy's Rare Records";
             Year = 2008;

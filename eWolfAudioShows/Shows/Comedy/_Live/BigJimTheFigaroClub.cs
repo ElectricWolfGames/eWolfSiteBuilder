@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class BigJimTheFigaroClub : AudioBaseDetails
     {
         public BigJimTheFigaroClub()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Big Jim & The Figaro Club";
             Year = 1987;
-            DateAdded = "";
+            DateAdded = "2025/04/25";
 
             Description = "Comedy series set on a seaside town building site during the booming but restrictive post-war 1950s.";
 

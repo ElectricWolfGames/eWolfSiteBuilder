@@ -5,5 +5,6 @@
         None = 0,
         Comedy = 1,
         SciFiDrama = 2,
+        Waiting = 3,
     }
 }

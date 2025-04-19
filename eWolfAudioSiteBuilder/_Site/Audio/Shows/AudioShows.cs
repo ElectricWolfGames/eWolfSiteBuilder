@@ -144,10 +144,13 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
-                    string link = CreateShowPage(item);
-                    string safeFileName = FileHelper.GetSafeFileName(item.Title);
-                    options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes})</a>");
-                    options.Text("</br>");
+                    if (item.ShowTypes != eWolfAudioShows.Data.Enums.ShowTypes.Waiting)
+                    {
+                        string link = CreateShowPage(item);
+                        string safeFileName = FileHelper.GetSafeFileName(item.Title);
+                        options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes})</a>");
+                        options.Text("</br>");
+                    }
                 }
             }
             options.Text("</br>");

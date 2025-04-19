@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class Ectoplasm : AudioBaseDetails
     {
         public Ectoplasm()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Ectoplasm";
             Year = 2000;
-            DateAdded = "";
+            DateAdded = "2025/05/02";
 
             Description = "The stories follow the adventures of Lord Zimbabwe (Romero), a 'walker in the ether', or occult investigator; his friend and collaborator Doctor Lilac (Freedman), a German scientist who has invented various machines.";
 

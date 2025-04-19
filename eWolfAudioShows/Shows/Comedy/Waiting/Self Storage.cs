@@ -1,12 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy.Waiting
 {
     public class SelfStorage : AudioBaseDetails
     {
         public SelfStorage()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Waiting;
 
             Title = "Self Storage";
             Year = 2007;

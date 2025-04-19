@@ -1,13 +1,13 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class WhenTheDogDies : AudioBaseDetails
     {
         // TODO: WhenTheDogDies
         public WhenTheDogDies()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "When The Dog Dies";
             Year = 2010;
