@@ -37,7 +37,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             Production.Add("EFFECTS", "Chris Jenkins");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("f0RJOEO3PVU");
+            Shows.Shows[0].AddLink("VrnyGcw4EQo");
             Shows.Shows[0].AddEpisode(1, "Island Genesis");
             Shows.Shows[0].AddEpisode(2, "Hurried Exodus");
             Shows.Shows[0].AddEpisode(3, "Unexpected Visitations");

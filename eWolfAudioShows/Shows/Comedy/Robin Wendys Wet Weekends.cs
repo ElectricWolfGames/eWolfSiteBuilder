@@ -11,7 +11,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Title = "Robin and Wendys Wet Weekends";
             Channel = "BBC Radio 4";
             Year = 2001;
-            DateAdded = "";
+            DateAdded = "2025/04/09";
 
             Description = "It revolves around the mundane lives of Robin and Wendy Mayfield who live on an anonymous estate in Stevenage. Robin tends to be self-centred, demanding and controlling in his relationships. Wendy, however, always seems to see the positive side of any situation, and, while often frustrated, copes with Robin admirably. Both Robin and Wendy have relatively meaningless bureaucratic jobs. Robin manages shipping and receiving for a warehouse, and Wendy works in local government.";
 
@@ -31,7 +31,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             var show = Shows.Add("Series  1");
-            show.AddLink("");
+            show.AddLink("VWy8LUXuPXc");
             show.AddEpisode(1, "Episodes 1", "The Heinrich Manoeuvre");
             show.AddEpisode(2, "Episodes 2", "A Fete Worse Than Death");
             show.AddEpisode(3, "Episodes 3", "A Cavalier Attitude");
@@ -39,7 +39,7 @@ namespace eWolfAudioShows.Shows.Comedy
             show.AddEpisode(5, "Special", "Robin & Wendy's Wet Edinburgh Weekend");
 
             show = Shows.Add("Series  2");
-            show.AddLink("");
+            show.AddLink("FciBoe2ar5Y");
             show.AddEpisode(1, "Episodes 1", "Them and Us",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\201.mp3",
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\s02\s02e01 Them and Us.png");
@@ -60,14 +60,14 @@ namespace eWolfAudioShows.Shows.Comedy
                 @"E:\_AudioTemp\Comedy\_Uploading_B\11 Robin Wendys Wet Weekends - BBC Radio\s02\s02e06 About Some Boys.png");
 
             show = Shows.Add("Series  3");
-            show.AddLink("");
+            show.AddLink("OONcUvhaZMQ");
             show.AddEpisode(1, "Episodes 1", "Alka Salsa");
             show.AddEpisode(2, "Episodes 2", "Dream Genie");
             show.AddEpisode(3, "Episodes 3", "Arrivederci Coma");
             show.AddEpisode(4, "Episodes 4", "Anniversary Waltz");
 
             show = Shows.Add("Series  4");
-            show.AddLink("");
+            show.AddLink("QIR1XkAo-nw");
             show.AddEpisode(1, "Episodes 1", "Autumn Crocus");
             show.AddEpisode(2, "Episodes 2", "Congratulations, It's a Hob Nob");
             show.AddEpisode(3, "Episodes 3", "Baby Love");
