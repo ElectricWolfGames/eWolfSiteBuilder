@@ -8,13 +8,13 @@
             Number = number;
             Description = description;
             Mp3 = mp3;
-            Image= image;
+            Image = image;
         }
 
         public string Description { get; set; }
+        public string Image { get; set; }
         public string Mp3 { get; set; }
         public string Name { get; set; }
-        public string Image { get; set; }
         public int Number { get; set; }
     }
 }

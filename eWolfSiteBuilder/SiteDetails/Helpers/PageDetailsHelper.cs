@@ -70,7 +70,6 @@ namespace eWolfSiteBuilder.SiteDetails.Helpers
 
             builder.Text("</div>");
             return builder.Output();
-
         }
     }
 }
