@@ -11,7 +11,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Title = "Robin and Wendys Wet Weekends";
             Channel = "BBC Radio 4";
             Year = 2001;
-            DateAdded = "2025/04/09";
+            DateAdded = "2025/05/09";
 
             Description = "It revolves around the mundane lives of Robin and Wendy Mayfield who live on an anonymous estate in Stevenage. Robin tends to be self-centred, demanding and controlling in his relationships. Wendy, however, always seems to see the positive side of any situation, and, while often frustrated, copes with Robin admirably. Both Robin and Wendy have relatively meaningless bureaucratic jobs. Robin manages shipping and receiving for a warehouse, and Wendy works in local government.";
 

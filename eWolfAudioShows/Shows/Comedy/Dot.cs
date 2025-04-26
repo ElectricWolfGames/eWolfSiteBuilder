@@ -26,21 +26,21 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "Jessica Brown");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("mFGN6EyyJBU");
             Shows.Shows[0].AddEpisode(1, "The Astonishing Adventures Of Agent Whiff-Whaff", "Dot and the gals from personnel are getting squiffy over Agent Bertie Whiff-Whaff. Bertie wants Dot promoted, but can Dot handle life on the other side of the hallway?");
             Shows.Shows[0].AddEpisode(2, "The Extraordinary Example Of The Ha'penny Exchange", "A little East End snotling has found her way into the Cabinet War Rooms. How will Dot dispose of her?");
             Shows.Shows[0].AddEpisode(3, "The Mystery At St. Horribly-Vulture's School For Boys", "Dot is sent to back to school to enlist a teacher for 'Shhh Bletchley Park', but is he of sound material?");
             Shows.Shows[0].AddEpisode(4, "Eenie Meenie Miney... Spy!", "The Russian ambassador is in town, Dot and the gals are on surveillance duty. Can they snaffle the Russian secrets?");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("");
+            Shows.Shows[1].AddLink("36kiJsPJ2VM");
             Shows.Shows[1].AddEpisode(1, "Teeth", "The fellas are going gaga for Myrtle's new gnashers. As Hollywood beckons, how will Dot take the news she is no longer the star of her own show.");
             Shows.Shows[1].AddEpisode(2, "Psychology", "Peabody's not been the full shilling recently and now Dr Pinkly has arrived to test who is the psychological 'weak link' and everyone's a suspect. Who will be deemed sane and who will be sent to Sunnyside Sanatorium?");
             Shows.Shows[1].AddEpisode(3, "Meat", "The American ambassador is coming to town, and Dot is in charge of cooking up a storm. She must prepare a delicious cut of veal to woo the Ambassador. It's a shame she just ate it. How will they wriggle out of this one?");
             Shows.Shows[1].AddEpisode(4, "Trees", "Dot and the gals are tasked with a top secret mission in the countryside. A German plane crashes nearby, will this be Dot's big chance for promotion?");
 
             Shows.Add("Series  3");
-            Shows.Shows[2].AddLink("");
+            Shows.Shows[2].AddLink("0XXqHNxEl6U");
             Shows.Shows[2].AddEpisode(1, "Saucepans for Spitfires!", "A national initiative to boost morale causes havoc in the War Rooms.");
             Shows.Shows[2].AddEpisode(2, "Dial M for Myrtle", "A suspicious death leaves the gals from personnel with no options other than to investigate.");
             Shows.Shows[2].AddEpisode(3, "Dig for Victory!", "The Women's Land Army are on the hunt for volunteers, and Dot and the gals are whisked off to the countryside to work the land. It is not long before Dot is planning a great escape.");
