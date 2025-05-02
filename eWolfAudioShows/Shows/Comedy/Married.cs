@@ -29,12 +29,12 @@ namespace eWolfAudioShows.Shows.Comedy
 
             Shows.Add("Series  1");
             Shows.Shows[0].AddLink("");
-            Shows.Shows[0].AddEpisode(1, "Episodes 1", "Robin Lightfoot is grumpy yet happily single. Then one morning he wakes up to discover he's in a parallel universe. He's got a wife and two children.Is it a nightmare, a practical joke or something much more sinister ?");
-            Shows.Shows[0].AddEpisode(2, "Episodes 2", "Robin Lightfoot has awoken in a parallel universe - not only does he have a family, but two half-brothers, both called Ian.");
-            Shows.Shows[0].AddEpisode(3, "Episodes 3", "Bachelor Robin Lightfoot is feeling a little warmer towards his adopted 'wife' - but then he discovers 'his' past misdemeanours and his doppelganger's other woman turns up to rock the boat.");
-            Shows.Shows[0].AddEpisode(4, "Episodes 4", "Robin is starting like his life in a parallel universe as a married man. But he is completely thrown when the children's entertainer he has booked for his son's birthday party turns out to be comedian Arthur Smith from his old universe.");
-            Shows.Shows[0].AddEpisode(3, "Episodes 5", "Just as he is starting to make the most of his new life, Robin is whisked back to his old universe, where his doppelganger has been wreaking havoc.");
-            Shows.Shows[0].AddEpisode(4, "Episodes 6", "Robin is accused of murdering his new family and blackmailed for a divorce settlement.Two small questions: how is he going to win his new wife back, and how is he going to avoid the death penalty ?");
+            Shows.Shows[0].AddEpisode(1, "Confirmed Bachelor", "Robin Lightfoot is grumpy yet happily single. Then one morning he wakes up to discover he's in a parallel universe. He's got a wife and two children.Is it a nightmare, a practical joke or something much more sinister ?");
+            Shows.Shows[0].AddEpisode(2, "Family", "Robin Lightfoot has awoken in a parallel universe - not only does he have a family, but two half-brothers, both called Ian.");
+            Shows.Shows[0].AddEpisode(3, "The Other Woman", "Bachelor Robin Lightfoot is feeling a little warmer towards his adopted 'wife' - but then he discovers 'his' past misdemeanours and his doppelganger's other woman turns up to rock the boat.");
+            Shows.Shows[0].AddEpisode(4, "Arthur Smith", "Robin is starting like his life in a parallel universe as a married man. But he is completely thrown when the children's entertainer he has booked for his son's birthday party turns out to be comedian Arthur Smith from his old universe.");
+            Shows.Shows[0].AddEpisode(3, "Back to Life", "Just as he is starting to make the most of his new life, Robin is whisked back to his old universe, where his doppelganger has been wreaking havoc.");
+            Shows.Shows[0].AddEpisode(4, "Murder", "Robin is accused of murdering his new family and blackmailed for a divorce settlement.Two small questions: how is he going to win his new wife back, and how is he going to avoid the death penalty ?");
 
             Shows.Add("Series  2");
             Shows.Shows[1].AddLink("");
@@ -47,12 +47,12 @@ namespace eWolfAudioShows.Shows.Comedy
 
             Shows.Add("Series  3");
             Shows.Shows[2].AddLink("");
-            Shows.Shows[2].AddEpisode(1, "Episodes 1", "To his horror, Robin is going through a phase of being nice. But 'wife' Lesley is now an artist and doesn't want to know him. So Robin is left holding the baby - well, two teenagers and three babies.");
-            Shows.Shows[2].AddEpisode(2, "Episodes 2", "The two universes have collided and Dirk sees an ideal opportunity to make money: he opens Cafe Apocalypse.");
-            Shows.Shows[2].AddEpisode(3, "Episodes 3", "The King's ex, Adrian Turnball, quite literally drops in on Robin and Co after being trapped in a vortex for five weeks.");
-            Shows.Shows[2].AddEpisode(4, "Episodes 4", "Robin, Leslie and Dirk go for a drive - through a time anomaly - and find themselves in deepest, darkest Texas.");
-            Shows.Shows[2].AddEpisode(5, "Episodes 3", "Robin has encountered many strange phenomena since the universes collided. Today he has two Arthur Smiths for the price of one.");
-            Shows.Shows[2].AddEpisode(6, "Episodes 4", "Grumpy bachelor Robin Lightfoot suddenly realises he must have been personally responsible for the two universes colliding when he travels back in time to the day he was born.");
+            Shows.Shows[2].AddEpisode(1, "Collided", "To his horror, Robin is going through a phase of being nice. But 'wife' Lesley is now an artist and doesn't want to know him. So Robin is left holding the baby - well, two teenagers and three babies.");
+            Shows.Shows[2].AddEpisode(2, "Cafe Apocalypse", "The two universes have collided and Dirk sees an ideal opportunity to make money: he opens Cafe Apocalypse.");
+            Shows.Shows[2].AddEpisode(3, "Powerbroker", "The King's ex, Adrian Turnball, quite literally drops in on Robin and Co after being trapped in a vortex for five weeks.");
+            Shows.Shows[2].AddEpisode(4, "Texas", "Robin, Leslie and Dirk go for a drive - through a time anomaly - and find themselves in deepest, darkest Texas.");
+            Shows.Shows[2].AddEpisode(5, "The Smiths", "Robin has encountered many strange phenomena since the universes collided. Today he has two Arthur Smiths for the price of one.");
+            Shows.Shows[2].AddEpisode(6, "Discovery", "Grumpy bachelor Robin Lightfoot suddenly realises he must have been personally responsible for the two universes colliding when he travels back in time to the day he was born.");
         }
     }
 }
