@@ -1,12 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class RobinWendysWetWeekends : AudioBaseDetails
     {
         public RobinWendysWetWeekends()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Robin and Wendys Wet Weekends";
             Channel = "BBC Radio 4";

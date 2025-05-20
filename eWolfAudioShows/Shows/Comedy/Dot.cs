@@ -1,6 +1,6 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy._Live
+namespace eWolfAudioShows.Shows.Comedy
 {
     public class Dot : AudioBaseDetails
     {
@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
 
             Title = "Dot";
             Year = 2015;
-            DateAdded = "2025/05/23";
+            DateAdded = "";
 
             Description = "Rollicking wartime comedy set in the personnel department of the Cabinet War Rooms. Sitcom by Ed Harris.";
 

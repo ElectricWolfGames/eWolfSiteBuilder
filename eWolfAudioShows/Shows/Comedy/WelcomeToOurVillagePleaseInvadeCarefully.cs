@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.Comedy
 
             Title = "Welcome To Our Village, Please Invade Carefully";
             Year = 2012;
-            DateAdded = "";
+            DateAdded = "2025/06/06";
 
             Description = "Sitcom about an alien invasion of a small village, starring Hattie Morahan";
 

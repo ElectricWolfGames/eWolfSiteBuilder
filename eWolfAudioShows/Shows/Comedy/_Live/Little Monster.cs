@@ -1,17 +1,17 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class LittleMonster : AudioBaseDetails
     {
         public LittleMonster()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Little Monster";
             Channel = "BBC Radio 4";
             Year = 2013;
-            DateAdded = "";
+            DateAdded = "2025/05/05";
 
             Description = "A darkly comic look at modern parenthood about a mother coming to grips with the fact that her new child Benjy is a little monster. Literally. With horns, scales, fangs and a habit of bringing in the remains of next door's chickens. But she still loves him/her/it anyway.";
 
