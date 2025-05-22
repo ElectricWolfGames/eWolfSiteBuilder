@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-using System.Windows.Controls;
-using eWolfAudioShows;
+﻿using eWolfAudioShows;
 using eWolfAudioShows.Interfaces;
 
 namespace eWolfAudioSiteBuilder.Services
@@ -25,7 +23,7 @@ namespace eWolfAudioSiteBuilder.Services
         public List<IAudioShow> OnlyAviableShows()
         {
             var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded));
-            var today = DateTime.Now.AddDays(1);
+            var today = DateTime.Now.AddDays(0);
             selectedShows = selectedShows.Where(x => DateTime.Parse(x.DateAdded) < today).ToList();
             selectedShows = selectedShows.OrderByDescending(x =>
                 DateTime.Parse(x.DateAdded)
@@ -33,10 +31,11 @@ namespace eWolfAudioSiteBuilder.Services
 
             return (List<IAudioShow>)selectedShows;
         }
+
         public List<IAudioShow> OnlyNotAviableShows()
         {
             var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded)).ToList();
-            var today = DateTime.Now.AddDays(1);
+            var today = DateTime.Now.AddDays(0);
             selectedShows = selectedShows.Where(x => DateTime.Parse(x.DateAdded) >= today).ToList();
             selectedShows = selectedShows.OrderByDescending(x =>
                 DateTime.Parse(x.DateAdded)

@@ -1,9 +1,4 @@
 ﻿using eWolfAudioShows.Data;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Diagnostics.Metrics;
-using System.Diagnostics;
-using System.Drawing;
-using System.Numerics;
 
 namespace eWolfAudioShows.Shows.Comedy
 {

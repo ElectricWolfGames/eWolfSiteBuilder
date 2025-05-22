@@ -1,12 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class WelcomeToOurVillagePleaseInvadeCarefully : AudioBaseDetails
     {
         public WelcomeToOurVillagePleaseInvadeCarefully()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Welcome To Our Village, Please Invade Carefully";
             Year = 2012;
