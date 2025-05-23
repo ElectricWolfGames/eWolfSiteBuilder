@@ -34,7 +34,30 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         public override void CreatePage()
         {
-            WebPage.AddHeader(this);
+            DisplayTitle = $"Audio Drama {AudioShow.Title}";
+            Keywords.Add("Audio Drama");
+            Keywords.Add("Radio Show, audiobooks full length, audiobook");
+            Keywords.Add(AudioShow.ShowTypes.ToString());
+
+            if (AudioShow.ShowTypes == eWolfAudioShows.Data.Enums.ShowTypes.SciFiDrama)
+            {
+                Keywords.Add("science fiction audiobooks on youtube");
+                Keywords.Add("science fiction");
+            }
+            if (AudioShow.ShowTypes == eWolfAudioShows.Data.Enums.ShowTypes.Comedy)
+            {
+                Keywords.Add("comedy shows full episodes");
+            }
+
+            if (AudioShow.Casts.Casts.Count > 1)
+            {
+                Keywords.Add($"{AudioShow.Casts.Casts[0].Role}");
+                Keywords.Add($"{AudioShow.Casts.Casts[0].FullName}");
+            }
+
+            MetaDescription = AudioShow.Description;
+
+            WebPage.AddHeader(this, string.Empty);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 

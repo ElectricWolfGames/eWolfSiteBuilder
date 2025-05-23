@@ -20,7 +20,7 @@ namespace eWolfSiteBuilder._Site.Unity.SciFiModularRooms
 
         public override void CreatePage()
         {
-            WebPage.AddHeader(this);
+            WebPage.AddHeader(this, string.Empty);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 

@@ -1,5 +1,4 @@
 ﻿using eWolfAudioShows.Data.Enums;
-
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
@@ -29,7 +28,8 @@ namespace eWolfAudioSiteBuilder._Site.Audio
 
         public override void CreatePage()
         {
-            WebPage.AddHeader(this);
+            DisplayTitle = "Audio Dramas";
+            WebPage.AddHeader(this, string.Empty);
             WebPage.AddNavigation(NavigationTypes.Main, @"../");
             WebPage.StartBody();
 

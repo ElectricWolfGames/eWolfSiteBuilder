@@ -41,7 +41,7 @@ namespace eWolfSiteBuilder._Site.Unity.GardenFlowers
 
         public override void CreatePage()
         {
-            WebPage.AddHeader(this);
+            WebPage.AddHeader(this, string.Empty);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 

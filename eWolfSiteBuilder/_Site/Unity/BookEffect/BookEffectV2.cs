@@ -31,7 +31,7 @@ namespace eWolfSiteBuilder._Site.Unity.BookEffect
 
         public override void CreatePage()
         {
-            WebPage.AddHeader(this);
+            WebPage.AddHeader(this, string.Empty);
             WebPage.AddNavigation(NavigationTypes.Main, @"../../");
             WebPage.StartBody();
 
