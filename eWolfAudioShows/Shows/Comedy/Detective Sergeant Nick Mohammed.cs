@@ -6,7 +6,7 @@ namespace eWolfAudioShows.Shows.Comedy
     {
         public DetectiveSergeantNickMohammed()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.None;
+            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
 
             Title = "Detective Sergeant Nick Mohammed";
             Year = 2011;
