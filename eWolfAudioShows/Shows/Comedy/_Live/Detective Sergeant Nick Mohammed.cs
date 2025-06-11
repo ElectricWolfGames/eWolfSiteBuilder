@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.Comedy
 
             Title = "Detective Sergeant Nick Mohammed";
             Year = 2011;
-            DateAdded = "";
+            DateAdded = "2025/07/11";
 
             Description = "Set at Tilford Road Police Station, Nick is joined by Sergeants Anna Crilly, Colin Hoult as they attempt to solve a different crime each week.";
 

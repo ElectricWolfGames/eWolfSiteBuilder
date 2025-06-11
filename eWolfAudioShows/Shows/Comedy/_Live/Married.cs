@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class Married : AudioBaseDetails
     {
         public Married()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Married";
             Year = 1999;
-            DateAdded = "";
+            DateAdded = "2025/06/27";
 
             Description = "Sci-fi sitcom about Robin Lightfoot, a confirmed bachelor who wakes up one day in a parallel universe where he is married with two children.";
 
