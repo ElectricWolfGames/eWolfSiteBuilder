@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
 
             Title = "Dot";
             Year = 2015;
-            DateAdded = "2025/06/017";
+            DateAdded = "2025/06/17";
 
             Description = "Rollicking wartime comedy set in the personnel department of the Cabinet War Rooms. Sitcom by Ed Harris.";
 

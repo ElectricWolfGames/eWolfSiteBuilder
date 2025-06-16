@@ -63,7 +63,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             WebPage.Append("<div class='container mt-12'>");
 
-            WebPage.SetRootAddress = RootAddress + "E:\\Projects\\GitHub\\eWolfSiteBuilder\\DemoSiteAudio\\Audio\\";
+            WebPage.SetRootAddress = RootAddress + "E:\\eWolfSiteUploads\\Audio\\";
             WebPage.HtmlPath = "Shows";
             WebPage.HtmlTitle = $"{FileHelper.GetSafeFileName(MenuTitle)}.html";
 

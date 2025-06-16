@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama
 
             Title = "A Plague Of Goodness";
             Year = 1986;
-            DateAdded = "";
+            DateAdded = "2025/06/06";
 
             Description = "An American evangelist's message is having a devastating effect in the United States. He asks to come to Britain. Will he be allowed in? What is the reason for his success? What influence do his wife and chief agent have?";
 
