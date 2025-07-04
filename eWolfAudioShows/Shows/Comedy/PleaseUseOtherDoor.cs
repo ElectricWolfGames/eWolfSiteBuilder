@@ -12,7 +12,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Year = 1993;
             DateAdded = "";
 
-            Description = "";
+            Description = "A new comedy from writers new to radio. Overheard conversations take place over the course of the day.";
 
             Casts.Add("", "Madeline Appiah");
             Casts.Add("", "Gabby Best");
