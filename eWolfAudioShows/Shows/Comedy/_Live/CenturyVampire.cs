@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class CenturyVampire : AudioBaseDetails
     {
         public CenturyVampire()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "20th Century Vampire";
             Year = 1993;
-            DateAdded = "";
+            DateAdded = "2025/08/08";
 
             Description = "The adventures of trainee vampire Eloise, her boyfriend Wayne and her eccentric Transylvanian tutor, Lucretia";
 

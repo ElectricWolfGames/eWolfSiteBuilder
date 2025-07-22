@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class Bookcases : AudioBaseDetails
     {
         public Bookcases()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Bookcases";
             Year = 1998;
-            DateAdded = "";
+            DateAdded = "2025/07/18";
 
             Description = "London, 1853, and the sedate religious publishing house of Spavin and Spavin is about to experience a radical shake-up. Vivacious actress Cordelia is on the hunt for her next  husband and has her eye on Gerald, one of the firm's partners, while her son, Primus, has ambitions to take over the firm. And when he does, it'll be out with the Bibles and in with the best sellers - starting with Charlotte Brontë's latest blockbuster....";
 

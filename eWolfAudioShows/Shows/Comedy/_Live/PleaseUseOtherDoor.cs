@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class PleaseUseOtherDoor : AudioBaseDetails
     {
         public PleaseUseOtherDoor()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Please Use Other Door";
             Year = 1993;
-            DateAdded = "";
+            DateAdded = "2025/08/15";
 
             Description = "A new comedy from writers new to radio. Overheard conversations take place over the course of the day.";
 

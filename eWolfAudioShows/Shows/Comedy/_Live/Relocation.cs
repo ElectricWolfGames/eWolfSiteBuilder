@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class Relocation : AudioBaseDetails
     {
         public Relocation()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Relocation";
             Year = 2019;
-            DateAdded = "";
+            DateAdded = "2025/08/22";
 
             Description = "Comedy about a couple in witness relocation in the Welsh Valleys";
 
