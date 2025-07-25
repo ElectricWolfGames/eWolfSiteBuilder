@@ -36,7 +36,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("gc2nxoep4wo");
         }
     }
 }

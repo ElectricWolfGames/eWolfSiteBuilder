@@ -28,7 +28,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("aJKuwyfKcjM");
             Shows.Shows[0].AddEpisode(1, "I Am a Vampire", "Eloise receives monumental news from her mysterious Aunt Lucretia; it seems the Co-op checkout girl is now a vampire!");
             Shows.Shows[0].AddEpisode(2, "Back to School", "GCSE vampirism exam-time, but at least there is a practical!");
             Shows.Shows[0].AddEpisode(3, "The Biggest Secret", "Bursting to share her news of her vampirism, Eloise tells each of her possible confidants a dark secret (all untrue) to see if they can be trusted.");

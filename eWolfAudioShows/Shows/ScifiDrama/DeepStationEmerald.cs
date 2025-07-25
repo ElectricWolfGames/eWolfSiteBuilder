@@ -23,7 +23,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             Production.Add("DIRECTOR", "Martin Jameson");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("6gICUwY5K1E");
         }
     }
 }

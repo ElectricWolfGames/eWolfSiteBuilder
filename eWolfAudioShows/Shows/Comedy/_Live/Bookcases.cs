@@ -38,14 +38,14 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "Cherry Cookson");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("C70HuoX9zJg");
             Shows.Shows[0].AddEpisode(1, "Bronte Country", "London 1853, and a firm of religious publishers is transformed by an actress and her son.");
             Shows.Shows[0].AddEpisode(2, "Gone for a Burton", "1855 - Primus's latest publishing coup is an explorer, but he seems to have lost his way.");
             Shows.Shows[0].AddEpisode(3, "The Man in White", "Bored by Gerald, Cordelia is having fun with struggling novelist Wilkie Collins.");
             Shows.Shows[0].AddEpisode(4, "The Prosser Prize", "Primus does his utmost to ensure one of his books will win a literary award.");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("");
+            Shows.Shows[1].AddLink("mgM9IRx16x8");
             Shows.Shows[1].AddEpisode(1, "Self Help", "1860 London. Publishing sitcom with Maggie Steed and Elizabeth Spriggs.");
             Shows.Shows[1].AddEpisode(2, "Great Expectations", "Ailing Victorian publishers Spavin and Spavin hope Charles Dickens can save them.");
             Shows.Shows[1].AddEpisode(3, "Terminal Journals", "Primus plots to save the firm by publishing deathbed memoirs of the famous.");

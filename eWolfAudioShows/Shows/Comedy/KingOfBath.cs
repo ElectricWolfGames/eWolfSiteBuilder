@@ -40,7 +40,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "Alison Hindell");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("NszNohebdFM");
             Shows.Shows[0].AddEpisode(1, "By Any Other Name", "");
             Shows.Shows[0].AddEpisode(2, "Merely Players", "");
             Shows.Shows[0].AddEpisode(3, "Ars Brevis", "");

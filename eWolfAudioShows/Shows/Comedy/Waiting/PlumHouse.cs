@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
 
             Title = "Plum House";
             Year = 2016;
-            DateAdded = "2025/07/25";
+            DateAdded = "";
 
             Description = "Tom Collyer, sent from the Trust to do just that, seems to be the most likely candidate but the challenge is huge as he confronts the reality of winning round Peter Knight's handpicked team - the hopelessly out of touch deputy Julian (Miles Jupp), the corner-cutting gift shop manager Maureen (Jane Horrocks) who's intent on making profit from extremely cheap plum-themed merchandise, and maintenance man Alan (Pearce Quigley) who has heard the words \"health\" and \"safety\" but never in the same sentence.";
 
