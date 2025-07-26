@@ -11,6 +11,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Title = "Relocation";
             Year = 2019;
             DateAdded = "2025/08/22";
+            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\22 Relocation\\";
 
             Description = "Comedy about a couple in witness relocation in the Welsh Valleys";
 

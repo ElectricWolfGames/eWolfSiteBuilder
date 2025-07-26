@@ -17,9 +17,11 @@ namespace eWolfAudioShows.Shows.Comedy
         {
             ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
 
-            Title = "Castle";
+            Title = "The Castle";
             Year = 2099;
             DateAdded = "";
+
+            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\24 The Castle\\";
 
             Description = "Hie ye to The Castle, a rollicking sitcom set way back then, starring James Fleet (The Vicar Of Dibley), Neil Dudgeon (Life Of Riley, Midsomer Murders), Martha Howe-Douglas (Horrible Histories) & Ingrid Oliver (Doctor Who).";
 

@@ -11,6 +11,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Title = "Please Use Other Door";
             Year = 1993;
             DateAdded = "2025/08/15";
+            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\21 Please Use Other Door\\";
 
             Description = "A new comedy from writers new to radio. Overheard conversations take place over the course of the day.";
 

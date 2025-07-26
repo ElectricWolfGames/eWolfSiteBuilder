@@ -7,49 +7,49 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 {
     internal static class ShowTextCreator
     {
-        public static void CreateYTFile(IAudioShow AudioShow)
+        public static void CreateYTFile(IAudioShow audioShow)
         {
-            string path = $"E:\\_AudioTemp\\_Texts\\{AudioShow.ShowTypes}\\";
+            CreateTimeStampFile(audioShow);
+
+            string path = $"E:\\_AudioTemp\\_Texts\\{audioShow.ShowTypes}\\";
+
+            if (!string.IsNullOrWhiteSpace(audioShow.OutputPath))
+                path = audioShow.OutputPath;
+
             Directory.CreateDirectory(path);
-            path = $"{path}\\{FileHelper.GetSafeFileName(AudioShow.Title)}.txt";
+            path = $"{path}\\{FileHelper.GetSafeFileName(audioShow.Title)}.txt";
 
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine(AudioShow.Title);
+            sb.AppendLine(audioShow.Title);
 
-            if (AudioShow.Title == "A Plague Of Goodness")
+            if (audioShow.Shows.Shows.Count != 0)
             {
-                int i = 0;
-                i++;
-            }
-
-            if (AudioShow.Shows.Shows.Count != 0)
-            {
-                if (AudioShow.Shows.Shows.Count > 1)
+                if (audioShow.Shows.Shows.Count > 1)
                 {
-                    for (int i = 0; i < AudioShow.Shows.Shows.Count; i++)
+                    for (int i = 0; i < audioShow.Shows.Shows.Count; i++)
                     {
-                        sb.AppendLine($"{AudioShow.Title} | Series {i + 1} of {AudioShow.Shows.Shows.Count} | Radio {AudioShow.ShowTypes}");
+                        sb.AppendLine($"{audioShow.Title} | Series {i + 1} of {audioShow.Shows.Shows.Count} | Radio {audioShow.ShowTypes}");
                     }
                 }
                 else
                 {
-                    if (AudioShow.Shows.Shows[0].Episodes.Count == 0)
+                    if (audioShow.Shows.Shows[0].Episodes.Count == 0)
                     {
-                        sb.AppendLine($"{AudioShow.Title} | Complete Story | Radio {AudioShow.ShowTypes}");
+                        sb.AppendLine($"{audioShow.Title} | Complete Story | Radio {audioShow.ShowTypes}");
                     }
                     else
                     {
-                        sb.AppendLine($"{AudioShow.Title} | Series 1 of 1 | Radio {AudioShow.ShowTypes}");
+                        sb.AppendLine($"{audioShow.Title} | Series 1 of 1 | Radio {audioShow.ShowTypes}");
                     }
                 }
             }
 
             sb.AppendLine();
-            sb.AppendLine(AudioShow.Description);
+            sb.AppendLine(audioShow.Description);
             sb.AppendLine();
-            Cast(sb, AudioShow);
+            Cast(sb, audioShow);
 
-            Episodes(sb, AudioShow);
+            Episodes(sb, audioShow);
 
             // TODO:Add the series and episodes if we have more then one of them
 
@@ -65,6 +65,42 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 else
                     options.AppendLine($"{cast.FullName} as '{cast.Role}'");
             }
+        }
+
+        private static void CreateTimeStampFile(IAudioShow audioShow)
+        {
+            if (string.IsNullOrWhiteSpace(audioShow.OutputPath))
+                return;
+
+            string path = $"{audioShow.OutputPath}\\Timestamps.txt";
+
+            if (File.Exists(path))
+                return;
+
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(audioShow.Title);
+
+            int count = 1;
+            foreach (var show in audioShow.Shows.Shows)
+            {
+                sb.AppendLine(string.Empty);
+                sb.AppendLine(string.Empty);
+                sb.AppendLine($"Series {count++}");
+                sb.AppendLine("TIMESTAMPS");
+
+                TimeSpan timeSpan = new TimeSpan();
+                foreach (var ep in show.Episodes)
+                {
+                    // 00:00:00 Episode One
+                    sb.AppendLine($"{timeSpan} {ep.Name}");
+                    timeSpan += new TimeSpan(0, 27, 0);
+                }
+                sb.AppendLine(string.Empty);
+            }
+
+            sb.AppendLine();
+
+            File.WriteAllText(path, sb.ToString());
         }
 
         private static void Episodes(StringBuilder sb, IAudioShow audioShow)

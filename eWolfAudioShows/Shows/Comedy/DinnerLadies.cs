@@ -1,7 +1,4 @@
 ﻿using eWolfAudioShows.Data;
-using System.Reflection.Metadata;
-using System.Reflection.PortableExecutable;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace eWolfAudioShows.Shows.Comedy
 {
@@ -14,6 +11,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Title = "Dinner Ladies";
             Year = 1997;
             DateAdded = "";
+            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\25 Dinner Ladies\\";
 
             Description = "Comedy drama series about the dinner ladies of Old Dale School. Stars Barbara Dickson, Jean Heywood, Brigit Forsyth, Jack Smethurst, Bill Dean";
 
