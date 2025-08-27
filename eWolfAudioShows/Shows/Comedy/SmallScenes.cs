@@ -34,8 +34,8 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("WRITER", "Henry Paker");
             Production.Add("WRITER", "Mike Wozniak");
             Production.Add("WRITER", "Benjamin Partridge");
-            Production.Add("WRITER (Series 1 - 2)", "Daniel Rigby");
-            Production.Add("WRITER (Series 1 - 2)", "Sara Pascoe");
+            Production.Add("WRITER", "Daniel Rigby (Series 1 - 2)");
+            Production.Add("WRITER", "Sara Pascoe (Series 1 - 2)");
 
             Production.Add("PRODUCER", "");
             Production.Add("DIRECTOR", "");
