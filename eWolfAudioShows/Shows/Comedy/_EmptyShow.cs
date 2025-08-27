@@ -19,6 +19,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Title = "";
             Year = 2099;
             DateAdded = "";
+            OutputPath = null;
 
             Description = "";
 

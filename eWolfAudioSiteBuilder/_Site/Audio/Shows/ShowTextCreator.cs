@@ -105,7 +105,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private static void Episodes(StringBuilder sb, IAudioShow audioShow)
         {
-            int count = 1;
+            /*int count = 1;
             foreach (var show in audioShow.Shows.Shows)
             {
                 sb.AppendLine(string.Empty);
@@ -138,7 +138,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                     sb.AppendLine(string.Empty);
                 }
                 sb.AppendLine(string.Empty);
-            }
+            }*/
         }
     }
 }
