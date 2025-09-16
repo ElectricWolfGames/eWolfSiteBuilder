@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class KingOfBath : AudioBaseDetails
     {
         public KingOfBath()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "King of Bath";
             Year = 1999;
-            DateAdded = "";
+            DateAdded = "2025/09/26";
             OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\23 King of Bath\\";
 
             Description = "In the fashionable spa town of Bath, one man is the arbiter of taste and the epitome of elegance: the self-proclaimed ‘King of Bath’, Beau Nash. In his capacity as Master of Ceremonies, he presides over the city’s social life, arranging balls and concerts for the ‘ton’, keeping a discreet eye on distinguished visitors and smoothing over any quarrels or disagreements.";

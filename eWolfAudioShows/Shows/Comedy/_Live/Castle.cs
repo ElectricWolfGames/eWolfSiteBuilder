@@ -18,8 +18,8 @@ namespace eWolfAudioShows.Shows.Comedy
             ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
 
             Title = "The Castle";
-            Year = 2099;
-            DateAdded = "";
+            Year = 2007;
+            DateAdded = "2025/09/05";
 
             OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\24 The Castle\\";
 
@@ -44,7 +44,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("hpP4919CFBk");
             Shows.Shows[0].AddEpisode(1, "Episodes 1", "Sir William De Warenne moves into the castle next door, and discovers the lovely Anne. Anne discovers the lovely Sam. Charlotte discovers that she is supposed to stay out of the way.");
             Shows.Shows[0].AddEpisode(2, "Episodes 2", "An unexpected lion and the world's first satellite dish spell trouble for Anne and Sam Tree's ongoing romance.");
             Shows.Shows[0].AddEpisode(3, "Episodes 3", "De Warenne decides to woo Lady Anne with a swearing cook and a chocolate fountain. What Ho! magazine features a world exclusive.");
@@ -53,7 +53,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[0].AddEpisode(6, "Episodes 6", "Featuring an art exhibition, a strolling footpad, a dodgy flat-pack scaffold and a lawnmower.");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("");
+            Shows.Shows[1].AddLink("eVq2mXjICyc");
             Shows.Shows[1].AddEpisode(1, "Houston We Have An Problemme", "Brave knight Sir William De Warenne's dungeon renovation falls foul of the Health and Safety inspectors. Meanwhile Thomas has invented a new rocket.");
             Shows.Shows[1].AddEpisode(2, "Nice To Gavotte You, To Gavotte You Nice", "The arrival of a new handyman, a mysterious Frenchwoman and a celebrity dance competition puts everyone in a whirl.");
             Shows.Shows[1].AddEpisode(3, "Is This A Turnip That I See Before Me?", "A troupe of travelling players, a case of mistaken cushions, a spittoon of mead and a high-speed turnip cause collusion and confusion in equal measure.");
@@ -62,7 +62,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[1].AddEpisode(6, "Something Old, Something New, Something Borrowed, Something Filled With Helium", "A new suitor for Anne puts De Warenne's visor firmly out of joint, and a primitive sat-nav and some surgically-introduced helium cause chaos at the altar.");
 
             Shows.Add("Series  3");
-            Shows.Shows[2].AddLink("");
+            Shows.Shows[2].AddLink("8eOsnKzDtto");
             Shows.Shows[2].AddEpisode(1, "The Dragon Of Mass Destruction", "De Warenne is in trouble as an official inquiry into the Crusades gets mixed up with a Talent Competition and a Dragon of Mass Destruction. Plus embroidery gets a right dissing.");
             Shows.Shows[2].AddEpisode(2, "The Pilchards Of Doom", "Sir John grapples with both an adulterous affair and a tin of pilchards. Meanwhile, Thomas explores the secrets of the universe and Anne falls in love with King Russell de Brand.");
             Shows.Shows[2].AddEpisode(3, "The Snowballs Of Hell", "There's romance in the air for Charlotte as a vicious gang war breaks out in the castle. Meanwhile, De Warenne discovers the fondue and declares martial law.");
@@ -71,7 +71,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[2].AddEpisode(6, "There's No Place Like Woodstock", "Somewhere, over the rainbow, there is a bunch of idiots from Woodstock and a mysterious man known only as Lord Andrew Lloyd Webber.");
 
             Shows.Add("Series  4");
-            Shows.Shows[3].AddLink("");
+            Shows.Shows[3].AddLink("XpeOXjhLt04");
             Shows.Shows[3].AddEpisode(1, "Tender Is The Knight", "Sir John fills his castle with wounded soldiers and De Warenne fills his trousers with ice. Plus a new valet arrives hotfoot from somewhere called Downton Abbey.");
             Shows.Shows[3].AddEpisode(2, "The Only Way Is Ethics", "Someone, or something, is hacking into peoples' private conversations and Master Henry could end up in jail. Meanwhile Lady Anne has taken to nuzzling De Warenne's trusty War Horse.");
             Shows.Shows[3].AddEpisode(3, "Highlights & Twilights", "Two mysterious visitors, one deathly pale and one deathly orange. It's the love that dare not speak its name and the love that can speak its name but can't pronounce it properly.");
