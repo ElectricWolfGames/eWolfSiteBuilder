@@ -1,6 +1,6 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy._Live
+namespace eWolfAudioShows.Shows.ScifiDrama
 {
     public class Leviathan99 : AudioBaseDetails
     {
@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
 
             Title = "Leviathan 99";
             Year = 1968;
-            DateAdded = "2025/09/03";
+            DateAdded = "2025/10/03";
 
             Description = "A fantastical adaptation of Moby Dick, Ray Bradbury takes audiences past the moon and the stars in search of the greatest and brightest comet in the universe. Join a deranged captain, an eight-foot-tall telepathic spider, and our reluctant hero. You can call him Ishmael.";
 
