@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.Comedy
 
             Title = "ReincarNathan";
             Year = 2019;
-            DateAdded = "2025/09/17";
+            DateAdded = "2025/10/17";
             OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\26 ReincarNathan\\";
 
             Description = "Nathan was a popstar, but didn't really nail life the first time round, so he's been reincarnated as a series of different animals.";

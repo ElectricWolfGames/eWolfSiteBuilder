@@ -10,7 +10,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
 
             Title = "Dinner Ladies";
             Year = 1997;
-            DateAdded = "2025/9/19";
+            DateAdded = "2025/10/10";
             OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\25 Dinner Ladies\\";
 
             Description = "Comedy drama series about the dinner ladies of Old Dale School. Stars Barbara Dickson, Jean Heywood, Brigit Forsyth, Jack Smethurst, Bill Dean";

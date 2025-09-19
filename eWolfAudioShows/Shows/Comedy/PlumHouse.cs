@@ -1,6 +1,6 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy._Live
+namespace eWolfAudioShows.Shows.Comedy
 {
     public class PlumHouse : AudioBaseDetails
     {
