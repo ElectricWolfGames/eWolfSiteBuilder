@@ -1,16 +1,4 @@
 ﻿using eWolfAudioShows.Data;
-using eWolfAudioShows.Shows.Comedy._Live;
-using System;
-using System.Diagnostics.Metrics;
-using System.Drawing;
-using System.Drawing.Printing;
-using System.Net.NetworkInformation;
-using System.Reflection.Metadata;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
-using System.Text.RegularExpressions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace eWolfAudioShows.Shows.Comedy
 {
