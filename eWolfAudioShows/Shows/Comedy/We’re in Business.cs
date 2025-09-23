@@ -18,12 +18,12 @@ namespace eWolfAudioShows.Shows.Comedy
     {
         public WereinBusiness()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.None;
+            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
 
             Title = "We’re in Business";
             Year = 1959;
             DateAdded = "";
-            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\29 We’re in Business";
+            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\29 We’re in Business\\";
 
             Description = "Dudley Grosvenor a dodgy small-time businessman Dudley Grosvenor, who’s always looking to make a fast buck with his crooked schemes - usually at the expense of his hapless sidekick, Harry. Dudley spends his life lurching from one crisis to another, secure in the belief that “it might never happen\" - but when it inevitably does, both men end up in a fix…";
 
@@ -46,22 +46,19 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("WRITER", "George Evans,");
             Production.Add("WRITER", "Marty Feldman");
             Production.Add("WRITER", "Barry Took");
-            Production.Add("PRODUCER", "Charles Maxwell\r\n");
+            Production.Add("PRODUCER", "Charles Maxwell");
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
             Shows.Shows[0].AddLink("");
-            Shows.Shows[0].AddEpisode(1, "Episodes 1", "");
-            Shows.Shows[0].AddEpisode(2, "Episodes 2", "");
-            Shows.Shows[0].AddEpisode(3, "Episodes 3", "");
-            Shows.Shows[0].AddEpisode(4, "Episodes 4", "");
-
-            Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("");
-            Shows.Shows[1].AddEpisode(1, "Episodes 1", "");
-            Shows.Shows[1].AddEpisode(2, "Episodes 2", "");
-            Shows.Shows[1].AddEpisode(3, "Episodes 3", "");
-            Shows.Shows[1].AddEpisode(4, "Episodes 4", "");
+            Shows.Shows[0].AddEpisode(1, "Conscience Money", "After a win on the horses, Dudley splashes the cash, and his mother also has money to burn");
+            Shows.Shows[0].AddEpisode(2, "The Newspaper Business", "Can Dudley and Harry make a go of it in the newspaper business?");
+            Shows.Shows[0].AddEpisode(3, "The Parrot", "Dudley and Harry's rent is overdue. Can a new visitor help them out? From 1960.");
+            Shows.Shows[0].AddEpisode(4, "The Regimental Dinner", "Can Dudley and Harry help the Major organise his regimental dinner?");
+            Shows.Shows[0].AddEpisode(5, "The Gorilla", "When he breaks the major's stuffed gorilla, Dudley, Harry and Miss Boot seek a replacement");
+            Shows.Shows[0].AddEpisode(6, "Changing Rooms", "Can Dudley and Harry get along in their new noisy lodgings?");
+            Shows.Shows[0].AddEpisode(7, "Dudley and Harry's Reunion", "With Dudley behind bars, surely Harry is safe from his crooked scheming?");
+            Shows.Shows[0].AddEpisode(8, "Dudley's Granny", "Dudley and Harry end up at the mercy of a devious criminal.");
         }
     }
 }
