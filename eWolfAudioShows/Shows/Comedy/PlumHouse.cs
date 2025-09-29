@@ -29,7 +29,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "Paul Schlesinger");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("V-MtCbXbt4k");
             Shows.Shows[0].AddEpisode(1, "Why Why Wi?", "The museum's preparations for the annual WI visit include hiding away valuable artefacts, as - according to Peter - some members are prone to stealing them. And Julian gives a disastrous lecture on the life and work of George Pudding.");
             Shows.Shows[0].AddEpisode(2, "Perilously Poorly Peter", "Peter is forced to visit town. He leaves his hopelessly out-of-touch deputy Julian in charge, who sees it as a perfect opportunity for him to finally make his mark on the place.");
             Shows.Shows[0].AddEpisode(3, "Trust The Trust", "A mysterious visitor arrives. When he shows genuine interest in how the place is run, the team immediately suspect he has been sent by the Trust to spy on them.");
@@ -38,7 +38,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[0].AddEpisode(6, "Lights, Camera, Pudding", "The team at the museum are startled to hear that Peter has agreed to Plum House being used as a location in a period drama.");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("");
+            Shows.Shows[1].AddLink("sgOmvtZrn3k");
             Shows.Shows[1].AddEpisode(1, "A Sound Investment", "The team are making an audio tour they hope will bring visitors flocking in. But they can't agree on who will star in the recording, and Tom has a bigger problem when he accidentally breaks the most valuable artefact in the museum.");
             Shows.Shows[1].AddEpisode(2, "Thief Encounter", "Peter and Julian are determined to retrieve a valuable pudding artefact and they've enlisted the help of a crooked connection to do so. Emma and Tom try to keep everyone on the straight and narrow - but Maureen finds herself mysteriously drawn to the shady visitor.");
             Shows.Shows[1].AddEpisode(3, "Black Pudding", "The offer of an honorary degree at a less than prestigious ex-polytechnic sends Peter into a depressive spiral, as he questions whether he has wasted his life. The team call on the chief psychiatrist to the academic profession, the radical Doctor Bloch.");
@@ -47,7 +47,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[1].AddEpisode(6, "Wedding Bells", "The team are preparing to host their first wedding at the museum. With a journalist coming to cover the event, it's a publicity coup for Plum House. But the groom has cold feet. Can they carry on regardless with a fake wedding? Tom is dubious - until Julian suggests he might pretend to marry Emma.");
 
             Shows.Add("Series  3");
-            Shows.Shows[2].AddLink("");
+            Shows.Shows[2].AddLink("S1TmgBEsp9o");
             Shows.Shows[2].AddEpisode(1, "Better The Devil", "With manager Tom off on leave, the arrival of Roger from Head Office - sent to reform the operation, is a shock to them all. How will they get rid of him and entice Tom back?");
             Shows.Shows[2].AddEpisode(2, "#SO BRITISH", "The curator Peter Knight finds unlikely TV fame when he is featured on an ancestry show helping Derren Brown trace his roots to the museum.");
             Shows.Shows[2].AddEpisode(3, "A Knight to Remember", "The Plum House team are once again invited to the Museum of the Year awards in London, leaving Julian in charge in Tom and Peter's absence.");

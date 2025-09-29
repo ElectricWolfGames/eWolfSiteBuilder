@@ -1,12 +1,4 @@
 ﻿using eWolfAudioShows.Data;
-using eWolfAudioShows.Shows.Comedy._Live;
-using System;
-using System.Diagnostics.Metrics;
-using System.Drawing;
-using System.Net.NetworkInformation;
-using System.Security.Claims;
-using System.Text.RegularExpressions;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace eWolfAudioShows.Shows.Comedy
 {
@@ -39,8 +31,6 @@ namespace eWolfAudioShows.Shows.Comedy
 
             Production.Add("PRODUCER", "");
             Production.Add("DIRECTOR", "");
-
-            //CreateShow();
 
             Shows.Add("Series 1");
             Shows.Shows[0].AddEpisode(1, " Episode One", "Featuring commentary from the World Ham Shouting Championships and a couple who are being harassed by a former England football hero.");

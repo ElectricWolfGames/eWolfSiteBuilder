@@ -1,12 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live
 {
     public class ReincarNathan : AudioBaseDetails
     {
         public ReincarNathan()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "ReincarNathan";
             Year = 2019;
