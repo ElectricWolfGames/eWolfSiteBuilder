@@ -42,6 +42,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series 1");
+            Shows.Shows[0].AddLink("nBcjweYVd0U");
             Shows.Shows[0].AddEpisode(1, "A Childhood Cruelly Kippered", "The idyllic life of young Pip Bin is ruined by the scheming of his exceedingly evil guardian, Mr Gently Benevolent, and his incarceration in Britain's most violent school, St Bastards.");
             Shows.Shows[0].AddEpisode(2, "An Adolescence Utterly Trashed", "Pip meets a mysterious aged crone who can help him escape from Britain's most terrifying school and the clutches of his evil guardian.");
             Shows.Shows[0].AddEpisode(3, "A Youth Utterly Crocked", "Pip must thwart the plans of his evil guardian Mr Gently Benevolent. Can underwater squirrels, oddly placed church bells and a stint in the workhouse foil him in his noble quest? Or will Aunt Lily and her Gloucestershire racing cows save the day?");
@@ -50,6 +51,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[0].AddEpisode(6, "A Life Sadly Smashed...Then Happily Restored A Bit", "Things look grim for Pip as he faces a lengthy and highly prejudicial court case. Is he to be hanged, or will there be a last-minute escape followed by a thrilling chase, several duels, a jar of exotic jam and at least two weddings?");
 
             Shows.Add("Series 2");
+            Shows.Shows[1].AddLink("Ej4TaqG_dEg");
             Shows.Shows[1].AddEpisode(1, "A Happy Life, Cruelly Re-Kippered", "Pip Bin struggles against the cruel plotting of his evil guardian Mr Gently Benevolent, recently returned from the dead. A plot is afoot to steal Britain's loveliest school, St Lovely's.");
             Shows.Shows[1].AddEpisode(2, "A Re-Kippered Life Smashed Some More", "Pip and Harry find themselves building an entire railway network in their bid to catch the evil Mr Gently Benevolent.");
             Shows.Shows[1].AddEpisode(3, "A Recovery All Made Miserable", "Young Pip is nursed back to health by the Reverend Fecund and his hideously ugly daughter Ripley.");
@@ -58,6 +60,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[1].AddEpisode(6, "Happy Life Broken And Then Mended A Bit", "The planet is in deadly peril when Gently Benevolent summons a massive Martian invasion. Is this the end for Pip, Harry and the rest of the human race, not to mention Pippa's goose sanctuary?");
 
             Shows.Add("Series 3");
+            Shows.Shows[2].AddLink("pkOLg0qA-Ng");
             Shows.Shows[2].AddEpisode(1, "A Lovely Life Re-Kippered Again Once More", "Pip Bin's happiness is shattered once again. Fog-filled streets, murders, and ghastly apparitions from beyond the grave abound, and through it all echoes the terrible menacing coo of a possessed and evil pigeon.");
             Shows.Shows[2].AddEpisode(2, "A Now Grim Life Yet More Grimified", "Pip Bin faces his most gruelling fate yet at the hands of his evil undead ex-guardian and an enormous quantity of cheese. But can the spirits of Harvest Festival past, present and future show him a way to redemption?");
             Shows.Shows[2].AddEpisode(3, "A Sort Of Fine Life De-Niced Completely", "Pip Bin strives to improve working conditions in his Bin factory, and to end poverty once and for all using Harry Biscuit's anti-poverty cannon. But will his quest distract him from a dastardly plan to steal London and sell it to the French?");
@@ -66,6 +69,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[2].AddEpisode(6, "Lives Lost, Ruined, Wrecked And Redeemed", "Pip and Ripely find themselves facing a vast and evil undead army. England has only one hope - that Miss Sweetly Delightful can melt Mr Benevolent's cruel, undead heart.");
 
             Shows.Add("Series 4");
+            Shows.Shows[3].AddLink("PRjvAS6sUtg");
             Shows.Shows[3].AddEpisode(1, "A Tolerable Life De-Happified", "Pip must enlist the help of his former nemesis to fight a new evil spreading terror and cake-crumbs through the streets of London.");
             Shows.Shows[3].AddEpisode(2, "A Now Spoilt Life Smashed Some More", "Pip and Harry journey to the Underworld to rescue Ripely, only to find the evil Mister Benevolent has got there first.");
             Shows.Shows[3].AddEpisode(3, "A Wretched Life Made Much Much Sadder", "After an embarrassing disaster involving a bridge and a train full of puppies and orphans, Pip and Harry travel to America on the SS Massive Britain.");
@@ -74,6 +78,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[3].AddEpisode(6, "A Life Destroyed, And Then Repaired And Re-Happied", "Our hero Pip faces his nemesis Mister Benevolent for an epic Russian battle.");
 
             Shows.Add("Series 5");
+            Shows.Shows[4].AddLink("t202se7vRog");
             Shows.Shows[4].AddEpisode(1, "A Pleasant Yet Dull Life Re-Evilled", "Pip Bin is beginning to miss the conflict with his absent evil nemesis Mr Gently Benevolent, when he receives an intriguing invitation to a house party with Britain's poshest man.");
             Shows.Shows[4].AddEpisode(2, "A Re-Excited Life Made Distinctly Dangerous", "Pip and his friends travel to India, in their quest to thwart the evil machinations of smooth but sinister genius Mr Gently Benevolent. Gasp as our heroes struggle with super-intelligent tigers, giant snakes, and secret gin!");
             Shows.Shows[4].AddEpisode(3, "An Alrightish Life Savagely Frozen To Bits", "Pip races to Antarctica to thwart another fiendish plot by his evil ex-guardian, Mr Gently Benevolent.");
