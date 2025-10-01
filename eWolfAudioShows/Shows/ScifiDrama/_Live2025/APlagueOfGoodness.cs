@@ -1,12 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.ScifiDrama
+namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
 {
     public class APlagueOfGoodness : AudioBaseDetails
     {
         public APlagueOfGoodness()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.SciFiDrama;
+            ShowTypes = Data.Enums.ShowTypes.SciFiDrama;
 
             Title = "A Plague Of Goodness";
             Year = 1986;

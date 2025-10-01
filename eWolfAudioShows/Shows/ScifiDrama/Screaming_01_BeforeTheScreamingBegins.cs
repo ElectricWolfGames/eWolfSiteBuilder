@@ -12,7 +12,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             Title = "Before the Screaming Begins";
             Year = 1978;
             DateAdded = "";
-            OutputPath = null;
+            OutputPath = "E:\\_AudioTemp\\Scifi\\_Uploading_SciFi\\11 The Scream Trilogy\\s01\\";
 
             Description = "Tom Harris' wedding anniversary takes a dramatic turn when he's abducted by aliens... What is their intent?";
 

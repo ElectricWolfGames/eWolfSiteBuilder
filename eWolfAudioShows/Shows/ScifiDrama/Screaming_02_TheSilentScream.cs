@@ -11,7 +11,8 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             Title = "The Silent Scream";
             Year = 1979;
             DateAdded = "";
-            OutputPath = null;
+            OutputPath = "E:\\_AudioTemp\\Scifi\\_Uploading_SciFi\\11 The Scream Trilogy\\s02\\";
+
             Description = "Earth prepares for an alien invasion. Tom Harris disappears into space but returns with new and astonishing powers. Put to good use, they will benefit humanity - but in the wrong hands they could have horrifying and nightmarish implications.";
 
             Casts.Add("Tom Harris", "James Laurenson");

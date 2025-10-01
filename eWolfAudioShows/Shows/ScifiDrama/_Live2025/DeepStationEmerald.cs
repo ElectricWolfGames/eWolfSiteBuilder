@@ -1,6 +1,6 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.ScifiDrama
+namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
 {
     public class DeepStationEmerald : AudioBaseDetails
     {

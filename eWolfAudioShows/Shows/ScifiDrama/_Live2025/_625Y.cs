@@ -1,12 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.ScifiDrama
+namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
 {
     public class _625Y : AudioBaseDetails
     {
         public _625Y()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.SciFiDrama;
+            ShowTypes = Data.Enums.ShowTypes.SciFiDrama;
 
             Title = "625Y";
             Year = 1999;

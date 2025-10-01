@@ -18,7 +18,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             Title = "With a Whimper to the Grave";
             Year = 1984;
             DateAdded = "";
-            OutputPath = null;
+            OutputPath = "E:\\_AudioTemp\\Scifi\\_Uploading_SciFi\\11 The Scream Trilogy\\s03\\";
 
             Description = "The nations of Earth form a World Council with a cunning plan. The aliens reveal their true intentions. To combat the threat of an alien invasion, the nations of the Earth have formed a World Council. The aliens have given certain humans extraordinary 'sixth-sense' powers. But when these powers are abused the aliens prepare to leave and abandon the Earth to its fate. But are they really going? And what is the fate awaiting the peoples of the Earth?";
 

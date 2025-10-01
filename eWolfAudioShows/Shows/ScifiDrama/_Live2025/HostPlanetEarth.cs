@@ -1,12 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.ScifiDrama
+namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
 {
     public class HostPlanetEarth : AudioBaseDetails
     {
         public HostPlanetEarth()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.SciFiDrama;
+            ShowTypes = Data.Enums.ShowTypes.SciFiDrama;
 
             Title = "Host Planet Earth";
             Year = 1967;

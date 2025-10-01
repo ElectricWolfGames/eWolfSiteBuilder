@@ -1,12 +1,12 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.ScifiDrama
+namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
 {
     public class AliensInTheMind : AudioBaseDetails
     {
         public AliensInTheMind()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.SciFiDrama;
+            ShowTypes = Data.Enums.ShowTypes.SciFiDrama;
 
             Title = "Aliens in the Mind";
             Year = 1976;
