@@ -19,7 +19,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             Directory.CreateDirectory(path);
             path = $"{path}\\{FileHelper.GetSafeFileName(audioShow.Title)}.txt";
 
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             sb.AppendLine(audioShow.Title);
 
             if (audioShow.Shows.Shows.Count != 0)
@@ -77,7 +77,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             if (File.Exists(path))
                 return;
 
-            StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new();
             sb.AppendLine(audioShow.Title);
 
             int count = 1;
@@ -88,7 +88,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 sb.AppendLine($"Series {count++}");
                 sb.AppendLine("TIMESTAMPS");
 
-                TimeSpan timeSpan = new TimeSpan();
+                TimeSpan timeSpan = new();
                 foreach (var ep in show.Episodes)
                 {
                     // 00:00:00 Episode One

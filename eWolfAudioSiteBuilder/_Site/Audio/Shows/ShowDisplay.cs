@@ -130,7 +130,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private static string CreateCard(IAudioShow showDetails)
         {
-            HTMLBuilder options = new HTMLBuilder();
+            HTMLBuilder options = new();
 
             string link = $"{FileHelper.GetSafeFileName(showDetails.Title)}.html";
 
@@ -220,7 +220,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private string Show()
         {
-            HTMLBuilder options = new HTMLBuilder();
+            HTMLBuilder options = new();
 
             Episodes(options);
 

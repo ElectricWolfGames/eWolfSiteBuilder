@@ -9,7 +9,7 @@ namespace eWolfAudioSiteBuilder;
 
 public partial class MainWindow : Window
 {
-    private readonly BuildSite _buildSite = new BuildSite();
+    private readonly BuildSite _buildSite = new();
 
     public MainWindow()
     {

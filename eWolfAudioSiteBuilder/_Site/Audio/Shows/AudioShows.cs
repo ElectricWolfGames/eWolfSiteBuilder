@@ -78,7 +78,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private static string Jumbotron()
         {
-            HTMLBuilder options = new HTMLBuilder();
+            HTMLBuilder options = new();
 
             options.ImagePath("..//images/Title.jpeg", 50);
 
@@ -87,7 +87,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private string ShowListByName()
         {
-            HTMLBuilder options = new HTMLBuilder();
+            HTMLBuilder options = new();
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             options.Title("All shows by name");
@@ -112,7 +112,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private string ShowListByYear()
         {
-            HTMLBuilder options = new HTMLBuilder();
+            HTMLBuilder options = new();
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             options.Title("All shows by Broadcast year");
@@ -133,7 +133,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private string ShowNotLiveByYear()
         {
-            HTMLBuilder options = new HTMLBuilder();
+            HTMLBuilder options = new();
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             options.Title("Show comming soon... Audio to follow");

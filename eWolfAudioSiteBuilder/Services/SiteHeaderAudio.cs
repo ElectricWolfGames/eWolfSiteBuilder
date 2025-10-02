@@ -8,7 +8,7 @@ namespace eWolfAudioSiteBuilder.Services
     {
         public string Output(PageDetails pageDetails, string extraOffSet)
         {
-            StringBuilder _stringBuilder = new StringBuilder();
+            StringBuilder _stringBuilder = new();
 
             var offSet = pageDetails.GetRooloffSet();
             _stringBuilder.AppendLine("<!DOCTYPE html><html lang='en' >");
