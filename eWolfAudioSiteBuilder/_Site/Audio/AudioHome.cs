@@ -7,7 +7,6 @@ using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfCommon.Helpers;
-using System.Text;
 
 namespace eWolfAudioSiteBuilder._Site.Audio
 {
@@ -45,16 +44,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.Append("<div class='row col-md-16'>");
             WebPage.AppendLine(ShowCardsListByName());
             WebPage.Append("</div>");
-
-            /*WebPage.Append("<div class='row'>");
-            WebPage.Append("<div class='col-md-5' style='background-color: #EEEEEE; margin:10px;'>");
-            WebPage.AppendLine(ShowByType(ShowTypes.Comedy, "Comedy", "Comedy.png"));
-            WebPage.Append("</div>");*/
-
-            /*WebPage.Append("<div class='col-md-5' style='background-color: #DDDDDD; margin:10px;'>");
-            WebPage.AppendLine(ShowByType(ShowTypes.SciFiDrama, "Sci fi Drama", "sci fi.png"));
-            WebPage.Append("</div>");
-            WebPage.Append("</div>");*/
 
             WebPage.Append("</div>");
 
@@ -98,36 +87,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio
         {
             HTMLBuilder options = new();
             options.ImageCenter("Title.jpeg", 50);
-            return options.Output();
-        }
-
-        private static string ShowByType(ShowTypes showType, string title, string image)
-        {
-            HTMLBuilder options = new();
-            options.Text("<br>");
-            options.ImageCenter(image, 35);
-            options.Title(title);
-
-            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
-
-            var sb = new StringBuilder();
-
-            var selectedShows = meds.OnlyAviableShows().Where(x => x.ShowTypes == showType);
-
-            string path = "Shows";
-            foreach (var item in selectedShows.Take(20))
-            {
-                if (!string.IsNullOrEmpty(item.Title))
-                {
-                    options.Text($"<a style='color: darkblue;' href='{path}\\{FileHelper.GetSafeFileName(item.Title)}.html'>{item.Title}</a>");
-                    options.Text("</br>");
-                }
-            }
-            options.Text("</br>");
-            options.PageLink("", "- See all shows", ".\\Shows\\shows.html");
-
-            options.Text("</br>");
-            options.Text("</br>");
             return options.Output();
         }
 
