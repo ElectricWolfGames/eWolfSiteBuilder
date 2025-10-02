@@ -8,7 +8,7 @@
         }
 
         public string Description { get; set; }
-        public List<EpisodeItem> Episodes { get; set; } = new List<EpisodeItem>();
+        public List<EpisodeItem> Episodes { get; set; } = [];
         public string Name { get; set; }
         public string YoutubeLink { get; set; }
 

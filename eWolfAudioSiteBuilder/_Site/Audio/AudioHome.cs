@@ -56,14 +56,14 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.Output();
         }
 
-        private string Jumbotron()
+        private static string Jumbotron()
         {
             HTMLBuilder options = new HTMLBuilder();
             options.ImageCenter("Title.jpeg", 50);
             return options.Output();
         }
 
-        private string ShowByType(ShowTypes showType, string title, string image)
+        private static string ShowByType(ShowTypes showType, string title, string image)
         {
             HTMLBuilder options = new HTMLBuilder();
             options.Text("<br>");
@@ -77,7 +77,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             var selectedShows = meds.OnlyAviableShows().Where(x => x.ShowTypes == showType);
 
             string path = "Shows";
-            foreach (var item in selectedShows.Take(10))
+            foreach (var item in selectedShows.Take(20))
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {

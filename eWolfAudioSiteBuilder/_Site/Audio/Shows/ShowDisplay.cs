@@ -128,7 +128,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             options.EndTextCenter();
         }
 
-        private string CreateCard(IAudioShow showDetails)
+        private static string CreateCard(IAudioShow showDetails)
         {
             HTMLBuilder options = new HTMLBuilder();
 

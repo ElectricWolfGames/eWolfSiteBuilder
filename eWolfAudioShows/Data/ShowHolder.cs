@@ -2,7 +2,7 @@
 {
     public class ShowHolder
     {
-        public List<ShowItem> Shows { get; set; } = new List<ShowItem>();
+        public List<ShowItem> Shows { get; set; } = [];
 
         internal ShowItem Add(string name)
         {

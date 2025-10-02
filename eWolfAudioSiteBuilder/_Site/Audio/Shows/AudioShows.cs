@@ -53,7 +53,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.Append("</div>");
 
             WebPage.Append("<div class='col-md-5' style='background-color: #DDDDDD; margin:10px;'>");
-            WebPage.AppendLine(ShowNoLiveByYear());
+            WebPage.AppendLine(ShowNotLiveByYear());
             WebPage.Append("</div>");
 
             WebPage.Append("</div>");
@@ -63,7 +63,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.Output();
         }
 
-        private string CreateShowPage(IAudioShow item)
+        private static string CreateShowPage(IAudioShow item)
         {
             ShowDisplay showDisplay = new()
             {
@@ -76,7 +76,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             return showDisplay.OutputPath;
         }
 
-        private string Jumbotron()
+        private static string Jumbotron()
         {
             HTMLBuilder options = new HTMLBuilder();
 
@@ -131,7 +131,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             return options.Output();
         }
 
-        private string ShowNoLiveByYear()
+        private string ShowNotLiveByYear()
         {
             HTMLBuilder options = new HTMLBuilder();
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
@@ -141,12 +141,15 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
-                    if (item.ShowTypes != eWolfAudioShows.Data.Enums.ShowTypes.Waiting)
+                    if (!string.IsNullOrEmpty(item.DateAdded))
                     {
-                        string link = CreateShowPage(item);
-                        string safeFileName = FileHelper.GetSafeFileName(item.Title);
-                        options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes})</a>");
-                        options.Text("</br>");
+                        if (item.ShowTypes != eWolfAudioShows.Data.Enums.ShowTypes.Waiting)
+                        {
+                            string link = CreateShowPage(item);
+                            string safeFileName = FileHelper.GetSafeFileName(item.Title);
+                            options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes}) [{item.DateAdded}]</a>");
+                            options.Text("</br>");
+                        }
                     }
                 }
             }
