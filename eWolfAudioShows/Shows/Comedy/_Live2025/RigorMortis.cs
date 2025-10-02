@@ -11,6 +11,7 @@ namespace eWolfAudioShows.Shows.Comedy
             Title = "Rigor Mortis";
             Year = 2003;
             DateAdded = "2025/05/23";
+            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\18 Rigor Mortis\\";
 
             Description = "Meet Dr Anthony Webster and Dr Ruth Anderson, two pathologists attempting to live normal lives in an atmosphere of death, decay and seriously unpleasant smells. Anthony loves his chosen profession, finding every cadaver exciting and surprising: 'they're like Kinder eggs that have died'. Ruth, however, longs for a juicy murder mystery, instead of one routine autopsy after another.";
 
