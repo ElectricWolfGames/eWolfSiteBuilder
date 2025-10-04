@@ -139,7 +139,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             options.Title("Show comming soon... Audio to follow");
             foreach (var item in meds.OnlyNotAviableShows().OrderBy(x => x.Year))
             {
-                if (!string.IsNullOrEmpty(item.DateAdded))
+                //if (!string.IsNullOrEmpty(item.DateAdded))
                 {
                     if (item.ShowTypes != eWolfAudioShows.Data.Enums.ShowTypes.Waiting)
                     {
