@@ -13,6 +13,7 @@ namespace eWolfAudioShows.Interfaces
         ShowHolder Shows { get; set; }
         public ShowTypes ShowTypes { get; set; }
         string Title { get; set; }
+        string TitleLine2 { get; set; }
         int Year { get; set; }
     }
 }

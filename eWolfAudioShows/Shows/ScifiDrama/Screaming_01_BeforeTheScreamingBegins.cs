@@ -10,7 +10,9 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             ShowTypes = Data.Enums.ShowTypes.SciFiDrama;
 
             Title = "The Scream Trilogy";
+            TitleLine2 = "COMPLETE STORY\nBY WALLY K DALY";
             Year = 1978;
+
             DateAdded = "";
             OutputPath = "E:\\_AudioTemp\\Scifi\\_Uploading_SciFi\\11 The Scream Trilogy\\";
 
@@ -56,7 +58,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             Production.Add("PRODUCER", "");
             Production.Add("DIRECTOR", "");
 
-            Shows.Add("Series  1");
+            Shows.Add(string.Empty);
             Shows.Shows[0].AddLink("");
             Shows.Shows[0].AddEpisode(1, "1 Before the Screaming Begins", "Tom Harris' wedding anniversary takes a dramatic turn when he's abducted by aliens... What is their intent?");
             Shows.Shows[0].AddEpisode(2, "2: The Silent Scream", "Earth prepares for an alien invasion. Tom Harris disappears into space but returns with new and astonishing powers. Put to good use, they will benefit humanity - but in the wrong hands they could have horrifying and nightmarish implications.");

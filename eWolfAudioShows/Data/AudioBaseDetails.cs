@@ -15,6 +15,7 @@ namespace eWolfAudioShows.Data
         public ShowHolder Shows { get; set; } = new ShowHolder();
         public ShowTypes ShowTypes { get; set; }
         public string Title { get; set; }
+        public string TitleLine2 { get; set; }
         public int Year { get; set; }
 
         protected void CreateShow()
