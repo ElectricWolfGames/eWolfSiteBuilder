@@ -13,20 +13,20 @@ namespace eWolfAudioShows.Shows.Comedy
             DateAdded = "";
             OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\29 We’re in Business\\";
 
-            Description = "Dudley Grosvenor a dodgy small-time businessman Dudley Grosvenor, who’s always looking to make a fast buck with his crooked schemes - usually at the expense of his hapless sidekick, Harry. Dudley spends his life lurching from one crisis to another, secure in the belief that “it might never happen\" - but when it inevitably does, both men end up in a fix…";
+            Description = "Dudley Grosvenor a dodgy small-time businessman Dudley Grosvenor, who’s always looking to make a fast buck with his crooked schemes - usually at the expense of his hapless sidekick, Harry. Dudley spends his life lurching from one crisis to another.";
 
-            Casts.Add("Dudley Grosvenor ", "Peter Jones");
+            Casts.Add("Dudley Grosvenor", "Peter Jones");
             Casts.Add("Harry", "Harry Worth");
-            Casts.Add("Granny / Miss Jubilee Boot ", "Irene Handl");
+            Casts.Add("Granny / Miss Jubilee Boot", "Irene Handl");
             Casts.Add("Lady Crabbe", "Beryl Reid");
             Casts.Add("Sid / Mr Trumpet", "Dick Emery");
             Casts.Add("Parrot", "Peter Hawkins");
             Casts.Add("Various", "Hugh Paddick");
-            Casts.Add("Various", " Doris Hare");
-            Casts.Add("Various", "Vivienne Martin, ");
+            Casts.Add("Various", "Doris Hare");
+            Casts.Add("Various", "Vivienne Martin");
             Casts.Add("Various", "Paddy Edwards");
             Casts.Add("Various", "Wallas Eaton");
-            Casts.Add("Various", "John Graham ");
+            Casts.Add("Various", "John Graham");
             Casts.Add("Various", "Frederick Treves");
 
             Production.Add("WRITER", "Peter Jones");
