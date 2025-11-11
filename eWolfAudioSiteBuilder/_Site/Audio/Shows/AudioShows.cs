@@ -139,15 +139,13 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             options.Title("Show comming soon... Audio to follow");
             foreach (var item in meds.OnlyNotAviableShows().OrderBy(x => x.Year))
             {
-                //if (!string.IsNullOrEmpty(item.DateAdded))
+                if (item.ShowTypes != eWolfAudioShows.Data.Enums.ShowTypes.Waiting
+                    && item.ShowTypes != eWolfAudioShows.Data.Enums.ShowTypes.None)
                 {
-                    if (item.ShowTypes != eWolfAudioShows.Data.Enums.ShowTypes.Waiting)
-                    {
-                        string link = CreateShowPage(item);
-                        string safeFileName = FileHelper.GetSafeFileName(item.Title);
-                        options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes}) [{item.DateAdded}]</a>");
-                        options.Text("</br>");
-                    }
+                    string link = CreateShowPage(item);
+                    string safeFileName = FileHelper.GetSafeFileName(item.Title);
+                    options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Year} {item.Title} ({item.ShowTypes})</a>");
+                    options.Text("</br>");
                 }
             }
             options.Text("</br>");
