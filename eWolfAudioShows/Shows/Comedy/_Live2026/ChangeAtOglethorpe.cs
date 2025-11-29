@@ -10,8 +10,8 @@ namespace eWolfAudioShows.Shows.Comedy
 
             Title = "Change At Oglethorpe";
             Year = 1995;
-            DateAdded = "";
-            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\30 Change At Oglethorpe\\";
+            DateAdded = "2026/01/02";
+            OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\030 Change At Oglethorpe\\";
 
             Description = "When Oglethorpe station gets a new station manager, a graduate trainee who has never worked on the railways, comic situations ensue.";
 

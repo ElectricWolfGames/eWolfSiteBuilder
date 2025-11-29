@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live2025
 {
     public class BleakExpectations : AudioBaseDetails
     {
         public BleakExpectations()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Bleak Expectations";
             Year = 2007;
-            DateAdded = "";
+            DateAdded = "2025/11/21";
             OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\27 Bleak Expectations\\";
 
             Description = "A spoof of Charles Dickens' novels and other well-known works, set in the Victorian world of ludicrously elaborate etiquette and unhelpful new inventions. Rollicking good fun performed with great gusto by Tom Allen";

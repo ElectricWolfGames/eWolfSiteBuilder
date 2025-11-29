@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live2025
 {
     public class WereinBusiness : AudioBaseDetails
     {
         public WereinBusiness()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "We’re in Business";
             Year = 1959;
-            DateAdded = "";
+            DateAdded = "2025/12/12";
             OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\29 We’re in Business\\";
 
             Description = "Dudley Grosvenor a dodgy small-time businessman Dudley Grosvenor, who’s always looking to make a fast buck with his crooked schemes - usually at the expense of his hapless sidekick, Harry. Dudley spends his life lurching from one crisis to another.";

@@ -1,18 +1,18 @@
 ﻿using eWolfAudioShows.Data;
 using System.Drawing;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy._Live2026
 {
     public class Knocker : AudioBaseDetails
     {
         public Knocker()
         {
-            ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+            ShowTypes = Data.Enums.ShowTypes.Comedy;
 
             Title = "Knocker";
             Year = 2007;
-            DateAdded = "";
-            OutputPath = "E:\\_AudioTemp\\Comedy\\_Uploading_B\\31 Knocker\\";
+            DateAdded = "2026/01/09";
+            OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\031 Knocker\\";
 
             Description = "Knocker is a BBC 7 sitcom that revolves around the unfortunate exploits of market researcher Ian Dunn, played by Neil Edmond.\r\n";
             FullDescription = "Knocker is a BBC 7 sitcom that revolves around the unfortunate exploits of market researcher Ian Dunn, played by Neil Edmond.\r\n\r\nIan works as the soul surviving member of the International Query Board UK. The fact Ian is the only employee left is not surprising, considering that his work involves going out in revolting weather, approaching people in the street or at their own homes, and asking these total strangers very personal questions. All this, and he is only armed with a series of stupid questions, a broken clipboard and the Market Research Code of Conduct.\r\n\r\nAlmost every episode features Ian being humiliated by the people he has to try and canvas. He suffers constant humiliation by those who refuse to answer him, and those who do answer his polls... because they tend to be deranged.\r\n\r\nApart from that, Ian's other source of woe is his own boss Mary (Paula Wilcox). Mary, while seeming to be kind to Ian, actually just wants him to get the figures at any cost. She even suggests to him that it is acceptable for him to bend the rules - something Ian finds abhorrent.\r\n\r\nOther than Ian, Mary's other problems come from Andre, a character who never appears, but it is clear from Mary's description of him that he tends to be accident prone.\r\n\r\n";
