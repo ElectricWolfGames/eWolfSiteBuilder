@@ -47,6 +47,12 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             sb.AppendLine();
             sb.AppendLine(audioShow.Description);
             sb.AppendLine();
+
+            sb.AppendLine("You can find more at");
+            sb.AppendLine("https://electricwolf.co.uk/Audio/index.html");
+
+            sb.AppendLine();
+
             Cast(sb, audioShow);
 
             Episodes(sb, audioShow);

@@ -1,8 +1,8 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy
+namespace eWolfAudioShows.Shows.Comedy.Waiting
 {
-    public class JamesAcastersFindings : AudioBaseDetails
+    /*public class JamesAcastersFindings : AudioBaseDetails
     {
         public JamesAcastersFindings()
         {
@@ -31,5 +31,5 @@ namespace eWolfAudioShows.Shows.Comedy
             Shows.Shows[0].AddEpisode(4, "Wheels", "This week's episode sees James analysing the stylistic perfection of 'The Wheels on the Bus', refusing to divulge his roulette wheel exploits (what happens in Vegas stays in Vegas...) and reinventing the Ferris wheel so it's proportionally more thrilling.");
             Shows.Shows[0].AddEpisode(5, "Paint", "James gets his portrait painted, speculates on the identity of Banksy (top three suspects: Jamie Oliver, Gordon Banks and Nathaniel Metcalfe) and strips down to his pants to play paintball, just like on Jackass.");
         }
-    }
+    }*/
 }
