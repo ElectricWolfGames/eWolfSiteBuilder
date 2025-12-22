@@ -32,6 +32,7 @@ public class Gush : AudioBaseDetails
         Production.Add("DIRECTOR", "");
 
         Shows.Add("Series 1");
+        Shows.Shows[0].AddLink("lDkIjq6-N38");
         Shows.Shows[0].AddEpisode(1, "Episode One", "What could divide two close friends, the aristocratic Foxwell Cravate and American tycoon Max Pomeroy so far apart that their rivalry has come to threaten the human race? There's only one way to find out - with flashbacks.");
         Shows.Shows[0].AddEpisode(2, "Episode Two", "Could Cravate and Pomeroy's bitter rivalry ruin Prince Saudi's oil deal for world peace?");
         Shows.Shows[0].AddEpisode(3, "Episode Three", "Cravate and Pomeroy face execution. Can Lady Arabella win them a last-minute reprieve?");

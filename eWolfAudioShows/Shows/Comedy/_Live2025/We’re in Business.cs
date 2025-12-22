@@ -38,7 +38,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live2025
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("QN6pWa_hq5w");
             Shows.Shows[0].AddEpisode(1, "Conscience Money", "After a win on the horses, Dudley splashes the cash, and his mother also has money to burn");
             Shows.Shows[0].AddEpisode(2, "The Newspaper Business", "Can Dudley and Harry make a go of it in the newspaper business?");
             Shows.Shows[0].AddEpisode(3, "The Parrot", "Dudley and Harry's rent is overdue. Can a new visitor help them out? From 1960.");

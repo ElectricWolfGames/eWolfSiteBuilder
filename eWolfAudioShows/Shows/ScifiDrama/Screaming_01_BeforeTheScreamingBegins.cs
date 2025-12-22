@@ -13,7 +13,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             TitleLine2 = "COMPLETE STORY\nBY WALLY K DALY";
             Year = 1978;
 
-            DateAdded = "";
+            DateAdded = "2025/12/12";
             OutputPath = "E:\\_AudioTemp\\Scifi\\_Uploading_SciFi\\11 The Scream Trilogy\\";
 
             Description = "The Scream Trilogy - Part 1, Tom Harris is abducted by aliens on his wedding anniversary, and returned with new, frightening mental powers. Part 2 sees the alien invasion gathering pace, and humanity struggling to fend off enemies from without and within. And in Part 3, the nations of Earth have formed a World Council to combat the threat they face. As the invaders' sinister plans are revealed, the Council takes action";
@@ -59,7 +59,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama
             Production.Add("DIRECTOR", "");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("");
+            Shows.Shows[0].AddLink("lSBlEuHYVsg");
             Shows.Shows[0].AddEpisode(1, "1 Before the Screaming Begins", "Tom Harris' wedding anniversary takes a dramatic turn when he's abducted by aliens... What is their intent?");
             Shows.Shows[0].AddEpisode(2, "2: The Silent Scream", "Earth prepares for an alien invasion. Tom Harris disappears into space but returns with new and astonishing powers. Put to good use, they will benefit humanity - but in the wrong hands they could have horrifying and nightmarish implications.");
             Shows.Shows[0].AddEpisode(3, "3: With a Whimper to the Grave", "The nations of Earth form a World Council with a cunning plan. The aliens reveal their true intentions. To combat the threat of an alien invasion, the nations of the Earth have formed a World Council. The aliens have given certain humans extraordinary 'sixth-sense' powers. But when these powers are abused the aliens prepare to leave and abandon the Earth to its fate. But are they really going? And what is the fate awaiting the peoples of the Earth?");
