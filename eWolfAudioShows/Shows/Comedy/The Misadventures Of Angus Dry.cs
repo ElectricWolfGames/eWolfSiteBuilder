@@ -10,7 +10,7 @@ public class TheMisadventuresOfAngusDry : AudioBaseDetails
         ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
 
         Title = "The Misadventures Of Angus Dry [Dry Slopes]";
-        Year = 2099;
+        Year = 1995;
         DateAdded = "";
         OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\034 The Misadventures Of Angus Dry\\";
 

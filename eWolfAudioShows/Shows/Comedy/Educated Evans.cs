@@ -9,7 +9,7 @@ public class EducatedEvans : AudioBaseDetails
         ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
 
         Title = "Educated Evans";
-        Year = 2099;
+        Year = 1996;
         DateAdded = "";
         OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\035 Educated Evans\\";
 
