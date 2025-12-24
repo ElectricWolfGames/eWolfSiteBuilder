@@ -111,19 +111,21 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private static void Episodes(StringBuilder sb, IAudioShow audioShow)
         {
-            /*int count = 1;
+            int count = 1;
             foreach (var show in audioShow.Shows.Shows)
             {
                 sb.AppendLine(string.Empty);
                 sb.AppendLine($"Series {count++}");
 
+                int epiCount = 1;
                 foreach (var ep in show.Episodes)
                 {
-                    sb.AppendLine($"{ep.Name}: {ep.Description}");
+                    sb.AppendLine($"{epiCount++}. {ep.Name}: {ep.Description}");
+                    sb.AppendLine(string.Empty);
                 }
                 sb.AppendLine(string.Empty);
             }
-
+            /*
             sb.AppendLine(string.Empty);
             sb.AppendLine(string.Empty);
             sb.AppendLine(string.Empty);
