@@ -15,7 +15,7 @@ public class Patterson : AudioBaseDetails
         DateAdded = "";
         OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\036 Patterson\\";
 
-        Description = "Patterson is a BBC Radio sitcom about a hapless university lecturer. It was billed as a comedy series in eight parts, written by Malcolm Bradbury and Christopher Bigsby[1] but strictly speaking, it is a serial. The show was produced by Geoffrey Perkins and tells the tale of Doctor Andrew Patterson (Lewis Fiander) who is cajoled by his wife Jane (Judy Parfitt) into accepting a job in the dysfunctional English department of a provincial red-brick university. This is the catalyst for a catalogue of unfortunate events, which sees his life rapidly crumble around him, bit by bit.";
+        Description = "Patterson follows Dr Andrew Patterson, a man who ends up becoming a lecturer in English literature whilst his life slowly crumbles around him.";
 
         Casts.Add("Dr Andrew Patterson", "Lewis Fiander");
         Casts.Add("Jane Patterson", "Judy Parfitt");
