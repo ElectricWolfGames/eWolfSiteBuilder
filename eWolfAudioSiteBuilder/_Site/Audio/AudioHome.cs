@@ -96,7 +96,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             var selectedShows = meds.OnlyAviableShows();
-            foreach (var item in selectedShows.Take(21))
+            foreach (var item in selectedShows.Take(210))
             {
                 if (!string.IsNullOrEmpty(item.Title))
                 {
