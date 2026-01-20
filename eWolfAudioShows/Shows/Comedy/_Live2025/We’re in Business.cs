@@ -31,7 +31,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live2025
 
             Production.Add("WRITER", "Peter Jones");
             Production.Add("WRITER", "George Wadmore");
-            Production.Add("WRITER", "George Evans,");
+            Production.Add("WRITER", "George Evans");
             Production.Add("WRITER", "Marty Feldman");
             Production.Add("WRITER", "Barry Took");
             Production.Add("PRODUCER", "Charles Maxwell");
