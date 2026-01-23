@@ -30,13 +30,13 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("-wUN6zZAYhk");
-            Shows.Shows[0].AddEpisode(1, "Transport of Delight", "Demobbed Old Ned heads south after the war and joins a special construction team.");
-            Shows.Shows[0].AddEpisode(2, "The French Connection", "The post-war construction team's Potts and Perkins hurl insults - and then onions.");
-            Shows.Shows[0].AddEpisode(3, "On the Line", "Perkins can't get a site phone, so his workmates get him a handset and more besides.");
-            Shows.Shows[0].AddEpisode(4, "Up the Pole", "When Perkins befriends the Carnival Queen, the workmates plot a little sabotage.");
-            Shows.Shows[0].AddEpisode(5, "Boning Up on History", "Perkins wants to dig for post-war Britain, but the workmates decide to soil his plans.");
-            Shows.Shows[0].AddEpisode(6, "The Old Dunkirk Spirit", "Perkins has no materials to rebuild post-war Britain, which well suits the workmates.");
+            Shows.ShowItems[0].AddLink("-wUN6zZAYhk");
+            Shows.ShowItems[0].AddEpisode(1, "Transport of Delight", "Demobbed Old Ned heads south after the war and joins a special construction team.");
+            Shows.ShowItems[0].AddEpisode(2, "The French Connection", "The post-war construction team's Potts and Perkins hurl insults - and then onions.");
+            Shows.ShowItems[0].AddEpisode(3, "On the Line", "Perkins can't get a site phone, so his workmates get him a handset and more besides.");
+            Shows.ShowItems[0].AddEpisode(4, "Up the Pole", "When Perkins befriends the Carnival Queen, the workmates plot a little sabotage.");
+            Shows.ShowItems[0].AddEpisode(5, "Boning Up on History", "Perkins wants to dig for post-war Britain, but the workmates decide to soil his plans.");
+            Shows.ShowItems[0].AddEpisode(6, "The Old Dunkirk Spirit", "Perkins has no materials to rebuild post-war Britain, which well suits the workmates.");
         }
     }
 }

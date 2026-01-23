@@ -42,7 +42,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
             Production.Add("DIRECTOR", "Martin Jenkins");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("BcU5xKiItXo");
+            Shows.ShowItems[0].AddLink("BcU5xKiItXo");
         }
     }
 }

@@ -10,6 +10,7 @@
         public string Description { get; set; }
         public List<EpisodeItem> Episodes { get; set; } = [];
         public string Name { get; set; }
+        public string PartName { get; set; }
         public string YoutubeLink { get; set; }
 
         internal void AddEpisode(int number, string name)

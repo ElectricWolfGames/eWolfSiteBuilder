@@ -29,7 +29,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
             Production.Add("WRITER", "Wally K Daly");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("o2UVjYukEFI");
+            Shows.ShowItems[0].AddLink("o2UVjYukEFI");
         }
     }
 }

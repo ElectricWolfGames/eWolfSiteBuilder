@@ -22,18 +22,18 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             StringBuilder sb = new();
             sb.AppendLine(audioShow.Title);
 
-            if (audioShow.Shows.Shows.Count != 0)
+            if (audioShow.Shows.ShowItems.Count != 0)
             {
-                if (audioShow.Shows.Shows.Count > 1)
+                if (audioShow.Shows.ShowItems.Count > 1)
                 {
-                    for (int i = 0; i < audioShow.Shows.Shows.Count; i++)
+                    for (int i = 0; i < audioShow.Shows.ShowItems.Count; i++)
                     {
-                        sb.AppendLine($"{audioShow.Title} | Series {i + 1} of {audioShow.Shows.Shows.Count} | Radio {audioShow.ShowTypes}");
+                        sb.AppendLine($"{audioShow.Title} | Series {i + 1} of {audioShow.Shows.ShowItems.Count} | Radio {audioShow.ShowTypes}");
                     }
                 }
                 else
                 {
-                    if (audioShow.Shows.Shows[0].Episodes.Count == 0)
+                    if (audioShow.Shows.ShowItems[0].Episodes.Count == 0)
                     {
                         sb.AppendLine($"{audioShow.Title} | Complete Story | Radio {audioShow.ShowTypes}");
                     }
@@ -87,7 +87,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             sb.AppendLine(audioShow.Title);
 
             int count = 1;
-            foreach (var show in audioShow.Shows.Shows)
+            foreach (var show in audioShow.Shows.ShowItems)
             {
                 sb.AppendLine(string.Empty);
                 sb.AppendLine(string.Empty);
@@ -112,7 +112,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
         private static void Episodes(StringBuilder sb, IAudioShow audioShow)
         {
             int count = 1;
-            foreach (var show in audioShow.Shows.Shows)
+            foreach (var show in audioShow.Shows.ShowItems)
             {
                 sb.AppendLine(string.Empty);
                 sb.AppendLine($"Series {count++}");

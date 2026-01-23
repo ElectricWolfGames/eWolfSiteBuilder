@@ -27,20 +27,20 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("PRODUCER", "Carol Smith");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("2P4c9cEoChY");
-            Shows.Shows[0].AddEpisode(1, "Body and Soul", "At a bandmate's funeral, musicians Roy and George face up to their own mortality.");
-            Shows.Shows[0].AddEpisode(2, "Let's Face the Music", "Will musicians Roy and George live up to the billing at their comeback gig?");
-            Shows.Shows[0].AddEpisode(3, "The Folks Who Live on the Hill", "Vi is sick, and Roy is no help. Then unexpected guests arrive for Victor's birthday party.");
-            Shows.Shows[0].AddEpisode(4, "Round Midnight", "When an old musician friend turns up after 40 years abroad, Roy begins to smell a rat.");
-            Shows.Shows[0].AddEpisode(5, "I Could Write a Book", "Roy must face up to life after the loss of Leonard, his beloved trombone.");
-            Shows.Shows[0].AddEpisode(6, "She's Funny That Way", "Could the return of an old flame mark the end of Roy and George's musical marriage?");
+            Shows.ShowItems[0].AddLink("2P4c9cEoChY");
+            Shows.ShowItems[0].AddEpisode(1, "Body and Soul", "At a bandmate's funeral, musicians Roy and George face up to their own mortality.");
+            Shows.ShowItems[0].AddEpisode(2, "Let's Face the Music", "Will musicians Roy and George live up to the billing at their comeback gig?");
+            Shows.ShowItems[0].AddEpisode(3, "The Folks Who Live on the Hill", "Vi is sick, and Roy is no help. Then unexpected guests arrive for Victor's birthday party.");
+            Shows.ShowItems[0].AddEpisode(4, "Round Midnight", "When an old musician friend turns up after 40 years abroad, Roy begins to smell a rat.");
+            Shows.ShowItems[0].AddEpisode(5, "I Could Write a Book", "Roy must face up to life after the loss of Leonard, his beloved trombone.");
+            Shows.ShowItems[0].AddEpisode(6, "She's Funny That Way", "Could the return of an old flame mark the end of Roy and George's musical marriage?");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("ITQnEglySlk");
-            Shows.Shows[1].AddEpisode(1, "Lulu's Back in Town", "Musician Roy panics when his wife's vivacious sister takes best pal George out for dinner.");
-            Shows.Shows[1].AddEpisode(2, "I Get Along Without You Very Well", "When Barry's wife walks out, Roy knows the best way to get her back, until rum intervenes.");
-            Shows.Shows[1].AddEpisode(3, "Swingin' Down the Lane", "Can musicians Roy and George settle a 50-year-old score with their former bandleader?");
-            Shows.Shows[1].AddEpisode(4, "Thanks for the Memory", "Can Roy lift George's spirits by organising a very special celebration?");
+            Shows.ShowItems[1].AddLink("ITQnEglySlk");
+            Shows.ShowItems[1].AddEpisode(1, "Lulu's Back in Town", "Musician Roy panics when his wife's vivacious sister takes best pal George out for dinner.");
+            Shows.ShowItems[1].AddEpisode(2, "I Get Along Without You Very Well", "When Barry's wife walks out, Roy knows the best way to get her back, until rum intervenes.");
+            Shows.ShowItems[1].AddEpisode(3, "Swingin' Down the Lane", "Can musicians Roy and George settle a 50-year-old score with their former bandleader?");
+            Shows.ShowItems[1].AddEpisode(4, "Thanks for the Memory", "Can Roy lift George's spirits by organising a very special celebration?");
         }
     }
 }

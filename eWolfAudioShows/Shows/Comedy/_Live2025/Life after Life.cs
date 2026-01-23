@@ -29,7 +29,7 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "Jane Berthoud");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("AUJch9gkCOQ");
+            Shows.ShowItems[0].AddLink("AUJch9gkCOQ");
         }
     }
 }

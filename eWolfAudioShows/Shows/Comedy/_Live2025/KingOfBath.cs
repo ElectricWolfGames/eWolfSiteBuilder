@@ -41,13 +41,13 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "Alison Hindell");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("NszNohebdFM");
-            Shows.Shows[0].AddEpisode(1, "By Any Other Name", "");
-            Shows.Shows[0].AddEpisode(2, "Merely Players", "");
-            Shows.Shows[0].AddEpisode(3, "Ars Brevis", "");
-            Shows.Shows[0].AddEpisode(4, "Suffer Little Children", "");
-            Shows.Shows[0].AddEpisode(3, "Blessed Are We", "");
-            Shows.Shows[0].AddEpisode(4, "The Clockwork Man", "");
+            Shows.ShowItems[0].AddLink("NszNohebdFM");
+            Shows.ShowItems[0].AddEpisode(1, "By Any Other Name", "");
+            Shows.ShowItems[0].AddEpisode(2, "Merely Players", "");
+            Shows.ShowItems[0].AddEpisode(3, "Ars Brevis", "");
+            Shows.ShowItems[0].AddEpisode(4, "Suffer Little Children", "");
+            Shows.ShowItems[0].AddEpisode(3, "Blessed Are We", "");
+            Shows.ShowItems[0].AddEpisode(4, "The Clockwork Man", "");
         }
     }
 }

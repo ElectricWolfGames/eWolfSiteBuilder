@@ -32,13 +32,13 @@ namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
             Production.Add("MUSIC", "Clive Webster");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("t18QklXdoDA");
-            Shows.Shows[0].AddEpisode(1, "The Beginning");
-            Shows.Shows[0].AddEpisode(2, "The Empty Minds");
-            Shows.Shows[0].AddEpisode(3, "The Pattern Emerges");
-            Shows.Shows[0].AddEpisode(4, "The Gemini Factor");
-            Shows.Shows[0].AddEpisode(5, "The Arrival");
-            Shows.Shows[0].AddEpisode(6, "The Price of Freedom");
+            Shows.ShowItems[0].AddLink("t18QklXdoDA");
+            Shows.ShowItems[0].AddEpisode(1, "The Beginning");
+            Shows.ShowItems[0].AddEpisode(2, "The Empty Minds");
+            Shows.ShowItems[0].AddEpisode(3, "The Pattern Emerges");
+            Shows.ShowItems[0].AddEpisode(4, "The Gemini Factor");
+            Shows.ShowItems[0].AddEpisode(5, "The Arrival");
+            Shows.ShowItems[0].AddEpisode(6, "The Price of Freedom");
         }
     }
 }

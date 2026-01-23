@@ -37,13 +37,13 @@ namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
             Production.Add("EFFECTS", "Chris Jenkins");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("VrnyGcw4EQo");
-            Shows.Shows[0].AddEpisode(1, "Island Genesis");
-            Shows.Shows[0].AddEpisode(2, "Hurried Exodus");
-            Shows.Shows[0].AddEpisode(3, "Unexpected Visitations");
-            Shows.Shows[0].AddEpisode(4, "Official Intercessions");
-            Shows.Shows[0].AddEpisode(5, "Genetic Revelation");
-            Shows.Shows[0].AddEpisode(6, "Final Tribulations");
+            Shows.ShowItems[0].AddLink("VrnyGcw4EQo");
+            Shows.ShowItems[0].AddEpisode(1, "Island Genesis");
+            Shows.ShowItems[0].AddEpisode(2, "Hurried Exodus");
+            Shows.ShowItems[0].AddEpisode(3, "Unexpected Visitations");
+            Shows.ShowItems[0].AddEpisode(4, "Official Intercessions");
+            Shows.ShowItems[0].AddEpisode(5, "Genetic Revelation");
+            Shows.ShowItems[0].AddEpisode(6, "Final Tribulations");
         }
     }
 }

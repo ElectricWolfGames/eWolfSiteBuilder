@@ -38,15 +38,15 @@ namespace eWolfAudioShows.Shows.Comedy._Live2025
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("QN6pWa_hq5w");
-            Shows.Shows[0].AddEpisode(1, "Conscience Money", "After a win on the horses, Dudley splashes the cash, and his mother also has money to burn");
-            Shows.Shows[0].AddEpisode(2, "The Newspaper Business", "Can Dudley and Harry make a go of it in the newspaper business?");
-            Shows.Shows[0].AddEpisode(3, "The Parrot", "Dudley and Harry's rent is overdue. Can a new visitor help them out? From 1960.");
-            Shows.Shows[0].AddEpisode(4, "The Regimental Dinner", "Can Dudley and Harry help the Major organise his regimental dinner?");
-            Shows.Shows[0].AddEpisode(5, "The Gorilla", "When he breaks the major's stuffed gorilla, Dudley, Harry and Miss Boot seek a replacement");
-            Shows.Shows[0].AddEpisode(6, "Changing Rooms", "Can Dudley and Harry get along in their new noisy lodgings?");
-            Shows.Shows[0].AddEpisode(7, "Dudley and Harry's Reunion", "With Dudley behind bars, surely Harry is safe from his crooked scheming?");
-            Shows.Shows[0].AddEpisode(8, "Dudley's Granny", "Dudley and Harry end up at the mercy of a devious criminal.");
+            Shows.ShowItems[0].AddLink("QN6pWa_hq5w");
+            Shows.ShowItems[0].AddEpisode(1, "Conscience Money", "After a win on the horses, Dudley splashes the cash, and his mother also has money to burn");
+            Shows.ShowItems[0].AddEpisode(2, "The Newspaper Business", "Can Dudley and Harry make a go of it in the newspaper business?");
+            Shows.ShowItems[0].AddEpisode(3, "The Parrot", "Dudley and Harry's rent is overdue. Can a new visitor help them out? From 1960.");
+            Shows.ShowItems[0].AddEpisode(4, "The Regimental Dinner", "Can Dudley and Harry help the Major organise his regimental dinner?");
+            Shows.ShowItems[0].AddEpisode(5, "The Gorilla", "When he breaks the major's stuffed gorilla, Dudley, Harry and Miss Boot seek a replacement");
+            Shows.ShowItems[0].AddEpisode(6, "Changing Rooms", "Can Dudley and Harry get along in their new noisy lodgings?");
+            Shows.ShowItems[0].AddEpisode(7, "Dudley and Harry's Reunion", "With Dudley behind bars, surely Harry is safe from his crooked scheming?");
+            Shows.ShowItems[0].AddEpisode(8, "Dudley's Granny", "Dudley and Harry end up at the mercy of a devious criminal.");
         }
     }
 }

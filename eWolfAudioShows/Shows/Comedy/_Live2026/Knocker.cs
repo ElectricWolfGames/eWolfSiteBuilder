@@ -30,13 +30,13 @@ namespace eWolfAudioShows.Shows.Comedy._Live2026
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series 1");
-            Shows.Shows[0].AddLink("vv33LADiixY");
-            Shows.Shows[0].AddEpisode(1, " Privinvasionacy", "Ian tries to get people to fill out a survey about people's bodily habits. In particular, their lower body habits.");
-            Shows.Shows[0].AddEpisode(2, " Eligibilliant", "Ian attempts to ask children about their views on yogurt, on a rough council estate in the middle of Halloween. He only manages to ask an old woman, who thinks he his Death.");
-            Shows.Shows[0].AddEpisode(3, " Obselejectivitysence", "Ian tries to test out a new electronic system for entering his data on a street where all of the houses are being demolished.");
-            Shows.Shows[0].AddEpisode(4, " Confidentialitydence", "Ian tries some product placement around a block of flats, and finds himself embroiled with a love-starved woman.");
-            Shows.Shows[0].AddEpisode(5, " Incentativity", "Ian carries out a poll concerning racial tolerance, and is given an added incentive. If he interviews people successfully, he earns food.");
-            Shows.Shows[0].AddEpisode(6, " Profitch", "A trip down a dual carriageway and a meeting with a man who claims to be a prophet lead to Ian making an important decision.");
+            Shows.ShowItems[0].AddLink("vv33LADiixY");
+            Shows.ShowItems[0].AddEpisode(1, " Privinvasionacy", "Ian tries to get people to fill out a survey about people's bodily habits. In particular, their lower body habits.");
+            Shows.ShowItems[0].AddEpisode(2, " Eligibilliant", "Ian attempts to ask children about their views on yogurt, on a rough council estate in the middle of Halloween. He only manages to ask an old woman, who thinks he his Death.");
+            Shows.ShowItems[0].AddEpisode(3, " Obselejectivitysence", "Ian tries to test out a new electronic system for entering his data on a street where all of the houses are being demolished.");
+            Shows.ShowItems[0].AddEpisode(4, " Confidentialitydence", "Ian tries some product placement around a block of flats, and finds himself embroiled with a love-starved woman.");
+            Shows.ShowItems[0].AddEpisode(5, " Incentativity", "Ian carries out a poll concerning racial tolerance, and is given an added incentive. If he interviews people successfully, he earns food.");
+            Shows.ShowItems[0].AddEpisode(6, " Profitch", "A trip down a dual carriageway and a meeting with a man who claims to be a prophet lead to Ian making an important decision.");
         }
     }
 }

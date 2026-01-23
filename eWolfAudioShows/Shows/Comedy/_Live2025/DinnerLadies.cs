@@ -36,13 +36,13 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "Turan Ali");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("cAhKXpneHcI");
-            Shows.Shows[0].AddEpisode(1, "Surprise Parties", "Bad news gets served up in the kitchen at Old Dale School.");
-            Shows.Shows[0].AddEpisode(2, "Hare-Brained Schemes", "Faced with no jobs, Sheila has an idea - but bad news follows.");
-            Shows.Shows[0].AddEpisode(3, "A Motley Crew", "In memory of Sheila, all the women battle to win the contract.");
-            Shows.Shows[0].AddEpisode(4, "The Professionals", "Rejected by the bank, the ladies battle on to win the contract.");
-            Shows.Shows[0].AddEpisode(3, "Taking the Bull by the Horns", "The battling school cooks hand in their tender and await the verdict.");
-            Shows.Shows[0].AddEpisode(4, "A Very Mixed Grilling", "Can Bev's battling cooks win their tender for school meals?");
+            Shows.ShowItems[0].AddLink("cAhKXpneHcI");
+            Shows.ShowItems[0].AddEpisode(1, "Surprise Parties", "Bad news gets served up in the kitchen at Old Dale School.");
+            Shows.ShowItems[0].AddEpisode(2, "Hare-Brained Schemes", "Faced with no jobs, Sheila has an idea - but bad news follows.");
+            Shows.ShowItems[0].AddEpisode(3, "A Motley Crew", "In memory of Sheila, all the women battle to win the contract.");
+            Shows.ShowItems[0].AddEpisode(4, "The Professionals", "Rejected by the bank, the ladies battle on to win the contract.");
+            Shows.ShowItems[0].AddEpisode(3, "Taking the Bull by the Horns", "The battling school cooks hand in their tender and await the verdict.");
+            Shows.ShowItems[0].AddEpisode(4, "A Very Mixed Grilling", "Can Bev's battling cooks win their tender for school meals?");
         }
     }
 }

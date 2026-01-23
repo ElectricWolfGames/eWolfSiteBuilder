@@ -27,18 +27,18 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("xqc4gzd7QG0");
-            Shows.Shows[0].AddEpisode(1, "Episodes 1", "Gosh, there's been a murder... Ouch! Nick and company try to solve it.");
-            Shows.Shows[0].AddEpisode(2, "Episodes 2", "Someone has been kidnapped... Yikes! Nick tackles the hostage negotiations.");
-            Shows.Shows[0].AddEpisode(3, "Episodes 3", "There's a riot going on... topical! Nick tackles a full-on student protest.");
-            Shows.Shows[0].AddEpisode(4, "Episodes 4", "Uh oh, not another bank heist... ker-ching! Nick and co try to solve it.");
+            Shows.ShowItems[0].AddLink("xqc4gzd7QG0");
+            Shows.ShowItems[0].AddEpisode(1, "Episodes 1", "Gosh, there's been a murder... Ouch! Nick and company try to solve it.");
+            Shows.ShowItems[0].AddEpisode(2, "Episodes 2", "Someone has been kidnapped... Yikes! Nick tackles the hostage negotiations.");
+            Shows.ShowItems[0].AddEpisode(3, "Episodes 3", "There's a riot going on... topical! Nick tackles a full-on student protest.");
+            Shows.ShowItems[0].AddEpisode(4, "Episodes 4", "Uh oh, not another bank heist... ker-ching! Nick and co try to solve it.");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("VzNEx-V-daM");
-            Shows.Shows[1].AddEpisode(1, "Forgery", "DS Nick Mohammed is immersed in the art world when a forgery ring is discovered.");
-            Shows.Shows[1].AddEpisode(2, "Jury", "DS Nick Mohammed has his day in court, but the judge seems unimpressed...");
-            Shows.Shows[1].AddEpisode(3, "Fugitive", "DS Nick Mohammed is on the trail of a fugitive, with the help of Colin and Anna.");
-            Shows.Shows[1].AddEpisode(4, "Security", "DS Nick Mohammed is asked to provide additional security for a major event.");
+            Shows.ShowItems[1].AddLink("VzNEx-V-daM");
+            Shows.ShowItems[1].AddEpisode(1, "Forgery", "DS Nick Mohammed is immersed in the art world when a forgery ring is discovered.");
+            Shows.ShowItems[1].AddEpisode(2, "Jury", "DS Nick Mohammed has his day in court, but the judge seems unimpressed...");
+            Shows.ShowItems[1].AddEpisode(3, "Fugitive", "DS Nick Mohammed is on the trail of a fugitive, with the help of Colin and Anna.");
+            Shows.ShowItems[1].AddEpisode(4, "Security", "DS Nick Mohammed is asked to provide additional security for a major event.");
         }
     }
 }

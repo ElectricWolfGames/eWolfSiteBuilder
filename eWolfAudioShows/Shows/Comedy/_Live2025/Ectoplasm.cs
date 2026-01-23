@@ -27,11 +27,11 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("F3HnLB1CLbc");
-            Shows.Shows[0].AddEpisode(1, "The Curse of Tutancommon", "");
-            Shows.Shows[0].AddEpisode(2, "The Case of the Missing Lost Soul", "");
-            Shows.Shows[0].AddEpisode(3, "The Affair of the Baddie's Niece", "");
-            Shows.Shows[0].AddEpisode(4, "The Adventure of the Stupid, Ignorant Americans", "");
+            Shows.ShowItems[0].AddLink("F3HnLB1CLbc");
+            Shows.ShowItems[0].AddEpisode(1, "The Curse of Tutancommon", "");
+            Shows.ShowItems[0].AddEpisode(2, "The Case of the Missing Lost Soul", "");
+            Shows.ShowItems[0].AddEpisode(3, "The Affair of the Baddie's Niece", "");
+            Shows.ShowItems[0].AddEpisode(4, "The Adventure of the Stupid, Ignorant Americans", "");
         }
     }
 }

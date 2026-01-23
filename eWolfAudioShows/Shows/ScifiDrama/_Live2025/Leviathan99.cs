@@ -36,7 +36,7 @@ namespace eWolfAudioShows.Shows.ScifiDrama._Live2025
             Production.Add("DIRECTOR", "");
 
             Shows.Add(string.Empty);
-            Shows.Shows[0].AddLink("gc2nxoep4wo");
+            Shows.ShowItems[0].AddLink("gc2nxoep4wo");
         }
     }
 }

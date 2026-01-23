@@ -13,6 +13,7 @@ namespace eWolfAudioShows.Data
         public string FullDescription { get; set; }
         public string OutputPath { get; set; }
         public CastHolder Production { get; set; } = new CastHolder();
+        public List<ShowItem> ShowItems { get; set; }
         public ShowHolder Shows { get; set; } = new ShowHolder();
         public ShowTypes ShowTypes { get; set; }
         public string Title { get; set; }

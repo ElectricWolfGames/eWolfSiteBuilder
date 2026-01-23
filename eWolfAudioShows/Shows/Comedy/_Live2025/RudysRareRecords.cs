@@ -28,36 +28,36 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("ThmN4BdsSyM");
-            Shows.Shows[0].AddEpisode(1, "Take Me Home, Country Roads", "");
-            Shows.Shows[0].AddEpisode(2, "Roots Manoeuvres", "");
-            Shows.Shows[0].AddEpisode(3, "Get Up, Stand Up", "");
-            Shows.Shows[0].AddEpisode(4, "The Heart of Saturday Night", "");
+            Shows.ShowItems[0].AddLink("ThmN4BdsSyM");
+            Shows.ShowItems[0].AddEpisode(1, "Take Me Home, Country Roads", "");
+            Shows.ShowItems[0].AddEpisode(2, "Roots Manoeuvres", "");
+            Shows.ShowItems[0].AddEpisode(3, "Get Up, Stand Up", "");
+            Shows.ShowItems[0].AddEpisode(4, "The Heart of Saturday Night", "");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("OU_yDr2vAoY");
-            Shows.Shows[1].AddEpisode(1, "Ill Communication", "");
-            Shows.Shows[1].AddEpisode(2, "Oh Carolina", "");
-            Shows.Shows[1].AddEpisode(3, "Daddy Cool", "");
-            Shows.Shows[1].AddEpisode(4, "Ride With Me", "");
+            Shows.ShowItems[1].AddLink("OU_yDr2vAoY");
+            Shows.ShowItems[1].AddEpisode(1, "Ill Communication", "");
+            Shows.ShowItems[1].AddEpisode(2, "Oh Carolina", "");
+            Shows.ShowItems[1].AddEpisode(3, "Daddy Cool", "");
+            Shows.ShowItems[1].AddEpisode(4, "Ride With Me", "");
 
             Shows.Add("Series  3");
-            Shows.Shows[2].AddLink("2mEcSaPZWD8");
-            Shows.Shows[2].AddEpisode(1, "No Richie, No Cry", "");
-            Shows.Shows[2].AddEpisode(2, "It's A Family Affair", "");
-            Shows.Shows[2].AddEpisode(3, "Redemption Song", "");
-            Shows.Shows[2].AddEpisode(4, "Rudy's Rare Record", "");
-            Shows.Shows[2].AddEpisode(5, "Lights Out", "");
-            Shows.Shows[2].AddEpisode(6, "Girls and Boys", "");
+            Shows.ShowItems[2].AddLink("2mEcSaPZWD8");
+            Shows.ShowItems[2].AddEpisode(1, "No Richie, No Cry", "");
+            Shows.ShowItems[2].AddEpisode(2, "It's A Family Affair", "");
+            Shows.ShowItems[2].AddEpisode(3, "Redemption Song", "");
+            Shows.ShowItems[2].AddEpisode(4, "Rudy's Rare Record", "");
+            Shows.ShowItems[2].AddEpisode(5, "Lights Out", "");
+            Shows.ShowItems[2].AddEpisode(6, "Girls and Boys", "");
 
             Shows.Add("Series  4");
-            Shows.Shows[3].AddLink("_A6aYijqc20");
-            Shows.Shows[3].AddEpisode(1, "Three's a Crowd", "");
-            Shows.Shows[3].AddEpisode(2, "Best Local Business", "");
-            Shows.Shows[3].AddEpisode(3, "Let It Grow", "");
-            Shows.Shows[3].AddEpisode(4, "It's Grim Up North", "");
-            Shows.Shows[3].AddEpisode(5, "Miss Reenie Comes to Stay", "");
-            Shows.Shows[3].AddEpisode(6, "Sound of da Police", "");
+            Shows.ShowItems[3].AddLink("_A6aYijqc20");
+            Shows.ShowItems[3].AddEpisode(1, "Three's a Crowd", "");
+            Shows.ShowItems[3].AddEpisode(2, "Best Local Business", "");
+            Shows.ShowItems[3].AddEpisode(3, "Let It Grow", "");
+            Shows.ShowItems[3].AddEpisode(4, "It's Grim Up North", "");
+            Shows.ShowItems[3].AddEpisode(5, "Miss Reenie Comes to Stay", "");
+            Shows.ShowItems[3].AddEpisode(6, "Sound of da Police", "");
         }
     }
 }

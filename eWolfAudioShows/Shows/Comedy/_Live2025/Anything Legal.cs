@@ -28,15 +28,15 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("NMFsrNr9kc4");
-            Shows.Shows[0].AddEpisode(1, "Episodes 1", "Charles and George are laid off, but afraid to tell anyone.");
-            Shows.Shows[0].AddEpisode(2, "Episodes 2", "Admitting they've been laid off, Charles and George take action.");
-            Shows.Shows[0].AddEpisode(3, "Episodes 3", "They earn their first cash, but at what cost?");
-            Shows.Shows[0].AddEpisode(4, "Episodes 4", "A horrid child and a bizarre giant.");
-            Shows.Shows[0].AddEpisode(5, "Episodes 5", "George and Charles hire a secretary to boost business.");
-            Shows.Shows[0].AddEpisode(6, "Episodes 6", "Charles and George's new business course sets tongues wagging");
-            Shows.Shows[0].AddEpisode(7, "Episodes 7", "Charles and George's DIY skills arouse their wives' suspicions.");
-            Shows.Shows[0].AddEpisode(8, "Episodes 8", "George's nanny comes to the rescue.");
+            Shows.ShowItems[0].AddLink("NMFsrNr9kc4");
+            Shows.ShowItems[0].AddEpisode(1, "Episodes 1", "Charles and George are laid off, but afraid to tell anyone.");
+            Shows.ShowItems[0].AddEpisode(2, "Episodes 2", "Admitting they've been laid off, Charles and George take action.");
+            Shows.ShowItems[0].AddEpisode(3, "Episodes 3", "They earn their first cash, but at what cost?");
+            Shows.ShowItems[0].AddEpisode(4, "Episodes 4", "A horrid child and a bizarre giant.");
+            Shows.ShowItems[0].AddEpisode(5, "Episodes 5", "George and Charles hire a secretary to boost business.");
+            Shows.ShowItems[0].AddEpisode(6, "Episodes 6", "Charles and George's new business course sets tongues wagging");
+            Shows.ShowItems[0].AddEpisode(7, "Episodes 7", "Charles and George's DIY skills arouse their wives' suspicions.");
+            Shows.ShowItems[0].AddEpisode(8, "Episodes 8", "George's nanny comes to the rescue.");
         }
     }
 }

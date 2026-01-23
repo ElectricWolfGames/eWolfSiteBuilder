@@ -27,18 +27,18 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("fbZKl6ldqCA");
-            Shows.Shows[0].AddEpisode(1, "Dangerous Minds", "Geoff's decision to finally rebel against his domineering Dad doesn't go quite as he'd have liked.");
-            Shows.Shows[0].AddEpisode(2, "Dangerous Driving", "Our heroes decide to act on dangerous driving in the town, starting with colleague Jermain.");
-            Shows.Shows[0].AddEpisode(3, "Dangerous Posters", "The useless officers' crackdown on fly-posting leads to the disappearance of 'Daddy Warbucks' and the sight of Bernie in a bright red wig.");
-            Shows.Shows[0].AddEpisode(4, "Dangerous Dogs", "Our heroes are dispatched to investigate a nuisance caller and her dangerous dog -but stumble into the local drugs racket.");
+            Shows.ShowItems[0].AddLink("fbZKl6ldqCA");
+            Shows.ShowItems[0].AddEpisode(1, "Dangerous Minds", "Geoff's decision to finally rebel against his domineering Dad doesn't go quite as he'd have liked.");
+            Shows.ShowItems[0].AddEpisode(2, "Dangerous Driving", "Our heroes decide to act on dangerous driving in the town, starting with colleague Jermain.");
+            Shows.ShowItems[0].AddEpisode(3, "Dangerous Posters", "The useless officers' crackdown on fly-posting leads to the disappearance of 'Daddy Warbucks' and the sight of Bernie in a bright red wig.");
+            Shows.ShowItems[0].AddEpisode(4, "Dangerous Dogs", "Our heroes are dispatched to investigate a nuisance caller and her dangerous dog -but stumble into the local drugs racket.");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("ThzC2YoK53A");
-            Shows.Shows[1].AddEpisode(1, "Sinkhole", "When an enormous sinkhole opens up, the police need to do a little more than 'look into it'.");
-            Shows.Shows[1].AddEpisode(2, "Vice", "The tiny Haling police force is thrown into confusion when the Guv orders a crackdown on vice in their patch. Can social media help unveil the mysterious Big Brenda ?");
-            Shows.Shows[1].AddEpisode(3, "Blackmail", "A little bit of murky police history comes back to haunt the Haling squad.Will the stench of corruption overpower the whiff of lager at the inter - force darts tournament?");
-            Shows.Shows[1].AddEpisode(4, "Burglaries", "Nigel takes up free running in the hope that physical fitness can improve his performance at work.But what, if anything, will identify the mysterious hand cream thief ?");
+            Shows.ShowItems[1].AddLink("ThzC2YoK53A");
+            Shows.ShowItems[1].AddEpisode(1, "Sinkhole", "When an enormous sinkhole opens up, the police need to do a little more than 'look into it'.");
+            Shows.ShowItems[1].AddEpisode(2, "Vice", "The tiny Haling police force is thrown into confusion when the Guv orders a crackdown on vice in their patch. Can social media help unveil the mysterious Big Brenda ?");
+            Shows.ShowItems[1].AddEpisode(3, "Blackmail", "A little bit of murky police history comes back to haunt the Haling squad.Will the stench of corruption overpower the whiff of lager at the inter - force darts tournament?");
+            Shows.ShowItems[1].AddEpisode(4, "Burglaries", "Nigel takes up free running in the hope that physical fitness can improve his performance at work.But what, if anything, will identify the mysterious hand cream thief ?");
         }
     }
 }

@@ -149,7 +149,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private void Episodes(HTMLBuilder options)
         {
-            foreach (var show in AudioShow.Shows.Shows)
+            foreach (var show in AudioShow.Shows.ShowItems)
             {
                 options.Title(show.Name);
                 options.NewLine();

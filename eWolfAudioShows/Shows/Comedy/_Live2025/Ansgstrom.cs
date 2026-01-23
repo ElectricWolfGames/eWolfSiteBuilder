@@ -28,11 +28,11 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("SW39Lf435rI");
-            Shows.Shows[0].AddEpisode(1, "The Man Who Wasn't Dead", "A body goes missing from a crime scene. But was it ever even there in the first place?");
-            Shows.Shows[0].AddEpisode(2, "The Two Faces of Benny from Abba", "Angstrom and Mina try to find out who tried to frame him for the death of Councillor Birgid Lundstrom, a trail which leads them straight to the door of Benny from ABBA. But when that door opens, why is Benny from ABBA now Mexican?");
-            Shows.Shows[0].AddEpisode(3, "Into the Mad Mind of Madness", "A clue left by the killer leads Angström and Mina to the Schmilsson novelty troll factory, where Angstrom's brooding threatens to get out of control.");
-            Shows.Shows[0].AddEpisode(4, "The Hunter Is The Hunted And The Hunter", "The investigation takes Angstrom and Mina to the remote Celibate Puffin Island (but it's all one word in Swedish) where they find a possible connection between the Askeladden murders and the sinister Bolax Corporation, bringing them closer to finally discovering the identity of the mysterious Ash Lad..");
+            Shows.ShowItems[0].AddLink("SW39Lf435rI");
+            Shows.ShowItems[0].AddEpisode(1, "The Man Who Wasn't Dead", "A body goes missing from a crime scene. But was it ever even there in the first place?");
+            Shows.ShowItems[0].AddEpisode(2, "The Two Faces of Benny from Abba", "Angstrom and Mina try to find out who tried to frame him for the death of Councillor Birgid Lundstrom, a trail which leads them straight to the door of Benny from ABBA. But when that door opens, why is Benny from ABBA now Mexican?");
+            Shows.ShowItems[0].AddEpisode(3, "Into the Mad Mind of Madness", "A clue left by the killer leads Angström and Mina to the Schmilsson novelty troll factory, where Angstrom's brooding threatens to get out of control.");
+            Shows.ShowItems[0].AddEpisode(4, "The Hunter Is The Hunted And The Hunter", "The investigation takes Angstrom and Mina to the remote Celibate Puffin Island (but it's all one word in Swedish) where they find a possible connection between the Askeladden murders and the sinister Bolax Corporation, bringing them closer to finally discovering the identity of the mysterious Ash Lad..");
         }
     }
 }

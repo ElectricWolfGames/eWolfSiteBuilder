@@ -30,22 +30,22 @@ namespace eWolfAudioShows.Shows.Comedy._Live
             Production.Add("COMPOSER", "John Whitehall");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("TrE15rh20EY");
-            Shows.Shows[0].AddEpisode(1, "Episodes 1", "18th-century Cornish village sitcom by the writers of Dead Ringers");
-            Shows.Shows[0].AddEpisode(2, "Episodes 2", "Tamsyn Trelawny's band of 18th-century Cornish smugglers try to outwit customs officers.");
-            Shows.Shows[0].AddEpisode(3, "Episodes 3", "A hairy folk band helps Tamsyn Trelawny and the Cornish smugglers to escape the law.");
-            Shows.Shows[0].AddEpisode(4, "Episodes 4", "18th-century smuggler Tamsyn Trelawny tries to keep her love life out of the scandal rags.");
-            Shows.Shows[0].AddEpisode(5, "Episodes 5", "When a new rival appears in town, 18th-century smuggler Tamsyn Trelawny tries to quit.");
-            Shows.Shows[0].AddEpisode(6, "Episodes 6", "Smuggler Tamsyn Trelawny joins customs men to stop Courageous Kate from marrying her dad.");
+            Shows.ShowItems[0].AddLink("TrE15rh20EY");
+            Shows.ShowItems[0].AddEpisode(1, "Episodes 1", "18th-century Cornish village sitcom by the writers of Dead Ringers");
+            Shows.ShowItems[0].AddEpisode(2, "Episodes 2", "Tamsyn Trelawny's band of 18th-century Cornish smugglers try to outwit customs officers.");
+            Shows.ShowItems[0].AddEpisode(3, "Episodes 3", "A hairy folk band helps Tamsyn Trelawny and the Cornish smugglers to escape the law.");
+            Shows.ShowItems[0].AddEpisode(4, "Episodes 4", "18th-century smuggler Tamsyn Trelawny tries to keep her love life out of the scandal rags.");
+            Shows.ShowItems[0].AddEpisode(5, "Episodes 5", "When a new rival appears in town, 18th-century smuggler Tamsyn Trelawny tries to quit.");
+            Shows.ShowItems[0].AddEpisode(6, "Episodes 6", "Smuggler Tamsyn Trelawny joins customs men to stop Courageous Kate from marrying her dad.");
 
             Shows.Add("Series  2");
-            Shows.Shows[1].AddLink("fllK6LE6s5Q");
-            Shows.Shows[1].AddEpisode(1, "Episodes 1", "18th-century smuggler Tamsyn Trelawny wants to win Peasants Personality of the Year.");
-            Shows.Shows[1].AddEpisode(2, "Episodes 2", "18th-century smuggler Tamsyn's head is turned by hunky new band of outlaws 'Boyz 2 Rob'.");
-            Shows.Shows[1].AddEpisode(3, "Episodes 3", "Can 18th-century smuggler Tamsyn escape the clutches of French revolutionaries?");
-            Shows.Shows[1].AddEpisode(4, "Episodes 4", "It's Jesters' Relief Week, but must Cornish smuggler Tamsyn raise funds for Devonians?");
-            Shows.Shows[1].AddEpisode(5, "Episodes 5", "Smuggler Jago is kidnapped, but can he survive in polite city society?");
-            Shows.Shows[1].AddEpisode(6, "Episodes 6", "A surprise for 18th-century smuggler Tamsyn, and confusion aboard a boat to France.");
+            Shows.ShowItems[1].AddLink("fllK6LE6s5Q");
+            Shows.ShowItems[1].AddEpisode(1, "Episodes 1", "18th-century smuggler Tamsyn Trelawny wants to win Peasants Personality of the Year.");
+            Shows.ShowItems[1].AddEpisode(2, "Episodes 2", "18th-century smuggler Tamsyn's head is turned by hunky new band of outlaws 'Boyz 2 Rob'.");
+            Shows.ShowItems[1].AddEpisode(3, "Episodes 3", "Can 18th-century smuggler Tamsyn escape the clutches of French revolutionaries?");
+            Shows.ShowItems[1].AddEpisode(4, "Episodes 4", "It's Jesters' Relief Week, but must Cornish smuggler Tamsyn raise funds for Devonians?");
+            Shows.ShowItems[1].AddEpisode(5, "Episodes 5", "Smuggler Jago is kidnapped, but can he survive in polite city society?");
+            Shows.ShowItems[1].AddEpisode(6, "Episodes 6", "A surprise for 18th-century smuggler Tamsyn, and confusion aboard a boat to France.");
         }
     }
 }

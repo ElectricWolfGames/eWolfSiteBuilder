@@ -25,17 +25,17 @@ public class TheMisadventuresOfAngusDry : AudioBaseDetails
         Production.Add("DIRECTOR", "");
 
         Shows.Add("Series  1");
-        Shows.Shows[0].AddLink("5tipSDaNVWw");
-        Shows.Shows[0].AddEpisode(1, "Episodes 1", "The Lost Boys");
-        Shows.Shows[0].AddEpisode(2, "Episodes 2", "The Day of Judgement");
-        Shows.Shows[0].AddEpisode(3, "Episodes 3", "Families and How to Conceive Them");
-        Shows.Shows[0].AddEpisode(4, "Episodes 4", "Dry Wit");
+        Shows.ShowItems[0].AddLink("5tipSDaNVWw");
+        Shows.ShowItems[0].AddEpisode(1, "Episodes 1", "The Lost Boys");
+        Shows.ShowItems[0].AddEpisode(2, "Episodes 2", "The Day of Judgement");
+        Shows.ShowItems[0].AddEpisode(3, "Episodes 3", "Families and How to Conceive Them");
+        Shows.ShowItems[0].AddEpisode(4, "Episodes 4", "Dry Wit");
 
         Shows.Add("Series  2");
-        Shows.Shows[1].AddLink("WsMWI2i7KMU");
-        Shows.Shows[1].AddEpisode(1, "Episodes 1", "Emma");
-        Shows.Shows[1].AddEpisode(2, "Episodes 2", "Tick Tock");
-        Shows.Shows[1].AddEpisode(3, "Episodes 3", "The Domino Effect");
-        Shows.Shows[1].AddEpisode(4, "Episodes 4", "The Invisible Man");
+        Shows.ShowItems[1].AddLink("WsMWI2i7KMU");
+        Shows.ShowItems[1].AddEpisode(1, "Episodes 1", "Emma");
+        Shows.ShowItems[1].AddEpisode(2, "Episodes 2", "Tick Tock");
+        Shows.ShowItems[1].AddEpisode(3, "Episodes 3", "The Domino Effect");
+        Shows.ShowItems[1].AddEpisode(4, "Episodes 4", "The Invisible Man");
     }
 }

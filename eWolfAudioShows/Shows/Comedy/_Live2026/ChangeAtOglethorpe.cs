@@ -28,13 +28,13 @@ namespace eWolfAudioShows.Shows.Comedy
             Production.Add("DIRECTOR", "");
 
             Shows.Add("Series  1");
-            Shows.Shows[0].AddLink("eD8eaSftW5c");
-            Shows.Shows[0].AddEpisode(1, "Off the Rails", "A graduate trainee takes charge of a rural railway station and its eccentric staff.");
-            Shows.Shows[0].AddEpisode(2, "The Thin Controller", "Trouble for the rural railway station's new manager when he sacks a member of staff.");
-            Shows.Shows[0].AddEpisode(3, "The Brew That Is True", "The royal train's visit sparks turmoil for the rural railway station's new manager.");
-            Shows.Shows[0].AddEpisode(4, "Remember, Remember the Fifth of September", "Birthday celebrations go awry for the rural railway station's cafe proprietor June.");
-            Shows.Shows[0].AddEpisode(5, "The Unquiet American", "The rural station staff attempt to secure an old engine, but there is a big catch.");
-            Shows.Shows[0].AddEpisode(6, "Foreign Parts", "As winter arrives on the rural railway, stationmaster David gets an exciting job offer.");
+            Shows.ShowItems[0].AddLink("eD8eaSftW5c");
+            Shows.ShowItems[0].AddEpisode(1, "Off the Rails", "A graduate trainee takes charge of a rural railway station and its eccentric staff.");
+            Shows.ShowItems[0].AddEpisode(2, "The Thin Controller", "Trouble for the rural railway station's new manager when he sacks a member of staff.");
+            Shows.ShowItems[0].AddEpisode(3, "The Brew That Is True", "The royal train's visit sparks turmoil for the rural railway station's new manager.");
+            Shows.ShowItems[0].AddEpisode(4, "Remember, Remember the Fifth of September", "Birthday celebrations go awry for the rural railway station's cafe proprietor June.");
+            Shows.ShowItems[0].AddEpisode(5, "The Unquiet American", "The rural station staff attempt to secure an old engine, but there is a big catch.");
+            Shows.ShowItems[0].AddEpisode(6, "Foreign Parts", "As winter arrives on the rural railway, stationmaster David gets an exciting job offer.");
         }
     }
 }
