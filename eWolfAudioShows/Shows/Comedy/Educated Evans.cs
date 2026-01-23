@@ -10,7 +10,7 @@ public class EducatedEvans : AudioBaseDetails
 
         Title = "Educated Evans";
         Year = 1996;
-        DateAdded = "";
+        DateAdded = "2026/02/13";
         OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\035 Educated Evans\\";
 
         Description = "Darkly comic tales from the underground world of horse racing.";
@@ -27,7 +27,7 @@ public class EducatedEvans : AudioBaseDetails
         Production.Add("CREATOR", "Edgar Wallace");
 
         Shows.Add("Series  1");
-        Shows.Shows[0].AddLink("");
+        Shows.Shows[0].AddLink("dkeHMp8nOck");
         Shows.Shows[0].AddEpisode(1, "Episodes 1", "The 1920s tipster gets an unlikely helping hand from a self-righteous police inspector.");
         Shows.Shows[0].AddEpisode(2, "Episodes 2", "Can the skint 1920s tipster plot revenge on a local informant and end up a winner too?");
         Shows.Shows[0].AddEpisode(3, "Episodes 3", "Can the tipster help a friend in trouble and acquire valuable information along the way?");

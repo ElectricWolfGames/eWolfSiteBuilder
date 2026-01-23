@@ -10,7 +10,7 @@ public class TheBrothersFaversham : AudioBaseDetails
 
         Title = "The Brothers Faversham";
         Year = 2008;
-        DateAdded = "";
+        DateAdded = "2026/02/27";
         OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\033 The Brothers Faversham\\";
 
         Description = "The Penny Dreadfuls (Humphrey Ker, David Reed & Thom Tuck), spoofing the square-jawed heroes of Victorian";

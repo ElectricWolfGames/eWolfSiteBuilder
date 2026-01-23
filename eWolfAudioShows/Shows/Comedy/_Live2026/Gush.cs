@@ -1,16 +1,16 @@
 ﻿using eWolfAudioShows.Data;
 
-namespace eWolfAudioShows.Shows.Comedy;
+namespace eWolfAudioShows.Shows.Comedy._Live2026;
 
 public class Gush : AudioBaseDetails
 {
     public Gush()
     {
-        ShowTypes = eWolfAudioShows.Data.Enums.ShowTypes.Comedy;
+        ShowTypes = Data.Enums.ShowTypes.Comedy;
 
         Title = "Gush";
         Year = 1994;
-        DateAdded = "";
+        DateAdded = "2026/01/23";
         OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\032 Gush\\";
 
         Description = "Gush is the stunning saga of the bitter rivals Foxwell Cravate and Max Pomeroy whose destinies are tragically intertwined. Set in Durban at the Transworld Oil Conference and packed with the flair, fun and parody of the best TV mini-series of the 90s, this is comedy that will have you laughing out loud.\r\n";

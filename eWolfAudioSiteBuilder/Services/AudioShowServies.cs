@@ -24,7 +24,7 @@ namespace eWolfAudioSiteBuilder.Services
         {
             var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded));
             var today = DateTime.Now.AddDays(0);
-            selectedShows = selectedShows.Where(x => DateTime.Parse(x.DateAdded) < today).ToList();
+            selectedShows = selectedShows.Where(x => DateTime.Parse(x.DateAdded) <= today).ToList();
             selectedShows = selectedShows.OrderByDescending(x =>
                 DateTime.Parse(x.DateAdded)
                 ).ToList();

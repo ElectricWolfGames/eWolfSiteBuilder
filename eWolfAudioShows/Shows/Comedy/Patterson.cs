@@ -12,7 +12,7 @@ public class Patterson : AudioBaseDetails
 
         Title = "Patterson";
         Year = 1981;
-        DateAdded = "";
+        DateAdded = "2026/02/27";
         OutputPath = "E:\\_AudioTemp\\Comedy\\2026- Uploading\\036 Patterson\\";
 
         Description = "Patterson follows Dr Andrew Patterson, a man who ends up becoming a lecturer in English literature whilst his life slowly crumbles around him.";
@@ -37,7 +37,7 @@ public class Patterson : AudioBaseDetails
         Production.Add("DIRECTOR", "");
 
         Shows.Add("Series  1");
-        Shows.Shows[0].AddLink("");
+        Shows.Shows[0].AddLink("RxOyXqTi49o");
         Shows.Shows[0].AddEpisode(1, "Welcome to the Department", "A reluctant academic takes a teaching post at a deeply eccentric university, where colleagues are stranger than fiction and temptation lurks in the corridors. As his wife begins to thrive in their bleak new town, he finds himself increasingly trapped by academia, desire, and domestic chaos.");
         Shows.Shows[0].AddEpisode(2, "First Day, Worst Impressions", "Andrew Patterson’s hopes for a successful first lecture collapse into confusion, academic despair, and moral lectures on faculty misconduct. An evening of temptation and social obligation ends in farce when a minor faux pas turns into public humiliation and a fiery plunge into the lake.");
         Shows.Shows[0].AddEpisode(3, "Borrowed Lawnmowers and Broken Vows", "A sleepless household and workplace absurdities push Andrew Patterson into a frantic quest to retrieve a mysteriously borrowed lawnmower or lose his job. An ill-judged dinner meant to solve the problem ends in betrayal, leaving his marriage in ruins and Andrew out on the street.");
