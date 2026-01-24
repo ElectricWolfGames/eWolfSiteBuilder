@@ -10,7 +10,6 @@ namespace eWolfAudioShows.Interfaces
         string Description { get; set; }
         string OutputPath { get; set; }
         CastHolder Production { get; set; }
-        List<ShowItem> ShowItems { get; set; }
         ShowHolder Shows { get; set; }
         public ShowTypes ShowTypes { get; set; }
         string Title { get; set; }

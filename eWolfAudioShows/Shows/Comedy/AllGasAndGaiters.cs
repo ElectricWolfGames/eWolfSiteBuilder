@@ -30,6 +30,7 @@ public class AllGasAndGaiters : AudioBaseDetails
         Shows.Add("Series  1 - Part A");
         Shows.ShowItems[0].AddLink("");
         var show = Shows.ShowItems[0];
+        show.StartName = "01";
         show.PartName = "A";
         show.AddEpisode(1, "Episodes 1", "The Bishop Rides Again (5 January 1971)");
         show.AddEpisode(2, "Episodes 2", "The Bishop Writes a Sermon ( 12 January 1971)");
@@ -41,6 +42,7 @@ public class AllGasAndGaiters : AudioBaseDetails
         Shows.Add("Series  1 - Part B");
         Shows.ShowItems[1].AddLink("");
         show = Shows.ShowItems[1];
+        show.StartName = "01";
         show.PartName = "B";
         show.AddEpisode(1, "Episodes 7", "The Dean Goes Primitive (16 February 1971)");
         show.AddEpisode(2, "Episodes 8", "The Bishop Gets a Letter (23 February 1971)");
@@ -53,6 +55,7 @@ public class AllGasAndGaiters : AudioBaseDetails
         Shows.Add("Series  2 - Part A");
         Shows.ShowItems[2].AddLink("");
         show = Shows.ShowItems[2];
+        show.StartName = "02";
         show.PartName = "A";
         show.AddEpisode(1, "Episodes 1", "The Bishop Learns the Facts (24 July 1972)");
         show.AddEpisode(2, "Episodes 2", "The Bishop Takes a Holiday (31 July 1972)");
@@ -68,6 +71,7 @@ public class AllGasAndGaiters : AudioBaseDetails
         Shows.Add("Series  2 - Part B");
         Shows.ShowItems[3].AddLink("");
         show = Shows.ShowItems[3];
+        show.StartName = "02";
         show.PartName = "B";
         show.AddEpisode(1, "Episodes 1", "The Bishop Buys a Mug (2 October 1972)");
         show.AddEpisode(2, "Episodes 2", "The Bishop Loses His Chaplain (9 October 1972)");
