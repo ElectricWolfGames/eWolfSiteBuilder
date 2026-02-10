@@ -1,0 +1,34 @@
+﻿namespace eWolfAudioShows.Shows_OLD.Comedy._Live2025;
+
+public class Ectoplasm : AudioBaseDetailsOLD
+{
+    public Ectoplasm()
+    {
+        ShowTypes = Data.Enums.ShowTypes.Comedy;
+
+        Title = "Ectoplasm";
+        Year = 2000;
+        DateAdded = "2025/05/02";
+
+        Description = "The stories follow the adventures of Lord Zimbabwe (Romero), a 'walker in the ether', or occult investigator; his friend and collaborator Doctor Lilac (Freedman), a German scientist who has invented various machines.";
+
+        Casts.Add("Lord Zimbabwe", "Nick Romero");
+        Casts.Add("Doctor Lilac", "Dan Freedman");
+        Casts.Add("Theremin", "Peter Donaldson");
+        Casts.Add("", "Sophie Aldred");
+        Casts.Add("", "Owen Oakeshott");
+        Casts.Add("", "Colin Guthrie");
+
+        Production.Add("WRITER", "Dan Freedman");
+        Production.Add("WRITER", "Nick Romero");
+        Production.Add("PRODUCER", "Helen Williams");
+        Production.Add("DIRECTOR", "");
+
+        Shows.Add("Series  1");
+        Shows.ShowItems[0].AddLink("F3HnLB1CLbc");
+        Shows.ShowItems[0].AddEpisode(1, "The Curse of Tutancommon", "");
+        Shows.ShowItems[0].AddEpisode(2, "The Case of the Missing Lost Soul", "");
+        Shows.ShowItems[0].AddEpisode(3, "The Affair of the Baddie's Niece", "");
+        Shows.ShowItems[0].AddEpisode(4, "The Adventure of the Stupid, Ignorant Americans", "");
+    }
+}

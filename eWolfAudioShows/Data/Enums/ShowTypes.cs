@@ -1,10 +1,9 @@
-﻿namespace eWolfAudioShows.Data.Enums
+﻿namespace eWolfAudioShows.Data.Enums;
+
+public enum ShowTypes
 {
-    public enum ShowTypes
-    {
-        None = 0,
-        Comedy = 1,
-        SciFiDrama = 2,
-        Waiting = 3,
-    }
+    None = 0,
+    Comedy = 1,
+    SciFiDrama = 2,
+    Waiting = 3,
 }

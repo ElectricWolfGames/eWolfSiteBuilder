@@ -1,4 +1,4 @@
-﻿using eWolfAudioShows.Interfaces;
+﻿using eWolfAudioShows.Shows_OLD;
 using eWolfCommon.Helpers;
 using System.IO;
 using System.Text;
@@ -7,7 +7,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 {
     internal static class ShowTextCreator
     {
-        public static void CreateYTFile(IAudioShow audioShow)
+        public static void CreateYTFile(IAudioShowOLD audioShow)
         {
             CreateTimeStampFile(audioShow);
 
@@ -62,7 +62,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             File.WriteAllText(path, sb.ToString());
         }
 
-        private static void Cast(StringBuilder options, IAudioShow AudioShow)
+        private static void Cast(StringBuilder options, IAudioShowOLD AudioShow)
         {
             foreach (var cast in AudioShow.Casts.Casts)
             {
@@ -73,7 +73,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             }
         }
 
-        private static void CreateTimeStampFile(IAudioShow audioShow)
+        private static void CreateTimeStampFile(IAudioShowOLD audioShow)
         {
             if (string.IsNullOrWhiteSpace(audioShow.OutputPath))
                 return;
@@ -109,7 +109,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             File.WriteAllText(path, sb.ToString());
         }
 
-        private static void Episodes(StringBuilder sb, IAudioShow audioShow)
+        private static void Episodes(StringBuilder sb, IAudioShowOLD audioShow)
         {
             int count = 1;
             foreach (var show in audioShow.Shows.ShowItems)

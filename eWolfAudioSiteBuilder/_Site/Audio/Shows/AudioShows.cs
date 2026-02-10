@@ -1,4 +1,4 @@
-﻿using eWolfAudioShows.Interfaces;
+﻿using eWolfAudioShows.Shows_OLD;
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
@@ -63,7 +63,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.Output();
         }
 
-        private static string CreateShowPage(IAudioShow item)
+        private static string CreateShowPage(IAudioShowOLD item)
         {
             ShowDisplay showDisplay = new()
             {

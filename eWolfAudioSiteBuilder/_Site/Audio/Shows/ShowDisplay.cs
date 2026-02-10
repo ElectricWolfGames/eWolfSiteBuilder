@@ -1,4 +1,4 @@
-﻿using eWolfAudioShows.Interfaces;
+﻿using eWolfAudioShows.Shows_OLD;
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
@@ -13,7 +13,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
     [Navigation(NavigationTypes.Main, 2)]
     public class ShowDisplay : PageDetails
     {
-        public IAudioShow AudioShow;
+        public IAudioShowOLD AudioShow;
 
         public ShowDisplay()
         {
@@ -83,7 +83,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
             var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
 
-            List<IAudioShow> alsoBy = new();
+            List<IAudioShowOLD> alsoBy = new();
             foreach (var writer in writers)
             {
                 var selectedShows = meds.OnlyAviableShows().Where(x =>
@@ -128,7 +128,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             options.EndTextCenter();
         }
 
-        private static string CreateCard(IAudioShow showDetails)
+        private static string CreateCard(IAudioShowOLD showDetails)
         {
             HTMLBuilder options = new();
 

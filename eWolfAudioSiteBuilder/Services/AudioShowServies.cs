@@ -1,18 +1,18 @@
 ﻿using eWolfAudioShows;
-using eWolfAudioShows.Interfaces;
+using eWolfAudioShows.Shows_OLD;
 
 namespace eWolfAudioSiteBuilder.Services
 {
     public class AudioShowServies
     {
-        private List<IAudioShow> _audioShow = new();
+        private List<IAudioShowOLD> _audioShow = new();
 
         public AudioShowServies()
         {
             AddAudioShows();
         }
 
-        internal List<IAudioShow> Shows
+        internal List<IAudioShowOLD> Shows
         {
             get
             {
@@ -20,7 +20,7 @@ namespace eWolfAudioSiteBuilder.Services
             }
         }
 
-        public List<IAudioShow> OnlyAviableShows()
+        public List<IAudioShowOLD> OnlyAviableShows()
         {
             var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded));
             var today = DateTime.Now.AddDays(0);
@@ -29,10 +29,10 @@ namespace eWolfAudioSiteBuilder.Services
                 DateTime.Parse(x.DateAdded)
                 ).ToList();
 
-            return (List<IAudioShow>)selectedShows;
+            return (List<IAudioShowOLD>)selectedShows;
         }
 
-        public List<IAudioShow> OnlyNotAviableShows()
+        public List<IAudioShowOLD> OnlyNotAviableShows()
         {
             var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded)).ToList();
             var today = DateTime.Now.AddDays(0);
@@ -43,10 +43,10 @@ namespace eWolfAudioSiteBuilder.Services
 
             selectedShows.AddRange(Shows.Where(x => string.IsNullOrWhiteSpace(x.DateAdded)));
 
-            return (List<IAudioShow>)selectedShows;
+            return (List<IAudioShowOLD>)selectedShows;
         }
 
-        private static List<IAudioShow> GetAll()
+        private static List<IAudioShowOLD> GetAll()
         {
             return Holder.GetAll();
         }

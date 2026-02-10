@@ -1,5 +1,5 @@
 ﻿using eWolfAudioShows.Data.Enums;
-using eWolfAudioShows.Interfaces;
+using eWolfAudioShows.Shows_OLD;
 using eWolfAudioSiteBuilder._Site.Audio.Shows;
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
@@ -51,7 +51,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
             WebPage.Output();
         }
 
-        private static string CreateCard(IAudioShow showDetails)
+        private static string CreateCard(IAudioShowOLD showDetails)
         {
             HTMLBuilder options = new();
 
