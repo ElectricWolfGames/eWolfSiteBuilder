@@ -3,15 +3,15 @@ using eWolfAudioShows.Data.Enums;
 
 namespace eWolfAudioShows.Interfaces;
 
-public interface IAudioEpisodesShow
+public interface IAudioSeriesShow
 {
     CastHolder Casts { get; set; }
     string DateAdded { get; set; }
     string Description { get; set; }
     string DetailedDescription { get; set; }
-    EpisodeHolder Episodes { get; set; }
     string OutputPath { get; set; }
     CastHolder Production { get; set; }
+    ShowHolder Shows { get; set; }
     public ShowTypes ShowTypes { get; set; }
     string Title { get; set; }
     int Year { get; set; }

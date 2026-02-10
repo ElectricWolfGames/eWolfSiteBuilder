@@ -10,4 +10,8 @@
     <ProjectReference Include="..\..\eWolfApps\Common\eWolfBootstrap\eWolfBootstrap.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Shows\Drama\_Live2026\" />
+  </ItemGroup>
+
 </Project>

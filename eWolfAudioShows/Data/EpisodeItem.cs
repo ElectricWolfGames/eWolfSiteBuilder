@@ -1,8 +1,8 @@
 ﻿namespace eWolfAudioShows.Data;
 
-public class EpisodeItem
+public class ShowEpisodeItem
 {
-    public EpisodeItem(int number, string name, string description, string mp3, string image)
+    public ShowEpisodeItem(int number, string name, string description, string mp3, string image)
     {
         Name = name;
         Number = number;
