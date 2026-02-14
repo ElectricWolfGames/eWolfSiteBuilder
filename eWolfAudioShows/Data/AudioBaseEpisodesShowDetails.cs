@@ -15,4 +15,5 @@ public class AudioBaseEpisodesShowDetails : IAudioEpisodesShow
     public ShowTypes ShowTypes { get; set; }
     public string Title { get; set; } = null!;
     public int Year { get; set; }
+    public string YTPlayList { get; set; }
 }

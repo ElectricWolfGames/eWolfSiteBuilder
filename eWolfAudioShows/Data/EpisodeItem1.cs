@@ -7,7 +7,7 @@ public class EpisodeItem
         Name = name;
     }
 
-    public CastHolder Casts { get; set; }
+    public CastHolder Casts { get; set; } = new CastHolder();
     public string Description { get; set; }
     public string FullDescription { get; set; }
     public string Name { get; set; }

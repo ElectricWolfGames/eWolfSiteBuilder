@@ -10,6 +10,9 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ShowTypes = Data.Enums.ShowTypes.Drama;
 
         Title = "HAUNTED: TALES OF THE SUPERNATURAL";
+        OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\";
+
+        YTPlayList = "";
 
         Year = 1980;
         DateAdded = "";
@@ -26,7 +29,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("Doctor Raven / John Grove", "Adrian Eagan");
 
         ep.Production.Add("WRITER", "Rosemary Timperley");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\01 Little Girl Lost\\";
+        ep.OutputPath = "01 Little Girl Lost\\";
 
         // 02
         ep = Episodes.Add("What Was It");
@@ -36,7 +39,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("Mrs. Moffatt", "Helen Horton ");
 
         ep.Production.Add("WRITER", "Fitz-James O'Brien");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\02 What Was It\\";
+        ep.OutputPath = "02 What Was It\\";
 
         // 03
         ep = Episodes.Add("The Family");
@@ -50,21 +53,21 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("Graham Faulkner", "The Policeman");
 
         ep.Production.Add("WRITER", "John Elliot");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\03 The Family\\";
+        ep.OutputPath = "03 The Family\\";
 
         // 04
         ep = Episodes.Add("Walk on Water");
         ep.Description = "Young Rachel finds her whole life blighted by one encounter. A salutary lesson about talking to strangers, as a young girl finds her whole life blighted by one encounter. Stars Anna Cooper as Rachel, Ursula Howells as Mother, Jack May as Father, David Ashford as Peter and Brian Hewlett as the Man. With Brian Haines, Trevor Cooper and Leonard Fenton.";
 
         ep.Production.Add("WRITER", "Rosemary Timperley");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\04 Walk on Water\\";
+        ep.OutputPath = "04 Walk on Water\\";
 
         // 05
         ep = Episodes.Add("The Dream Woman");
         ep.Description = "Isaac lives in constant fear of a knife-wielding female. But is she of this Earth, or from beyond the grave? Stars Charles Kay.";
 
         ep.Production.Add("WRITER", "Rosemary Timperley");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\05 The Dream Woman\\";
+        ep.OutputPath = "05 The Dream Woman\\";
 
         // 06
         ep = Episodes.Add("The Decoy");
@@ -72,7 +75,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Rosemary Timperley");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\06 The Decoy\\";
+        ep.OutputPath = "06 The Decoy\\";
 
         // 07
         ep = Episodes.Add("Listen to the Silence");
@@ -80,7 +83,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Rosemary Timperley");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\07 Listen to the Silence\\";
+        ep.OutputPath = "07 Listen to the Silence\\";
 
         // 08
         ep = Episodes.Add("The Inexperienced Ghost");
@@ -88,7 +91,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "H. G. Wells");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\08 The Inexperienced Ghost\\";
+        ep.OutputPath = "08 The Inexperienced Ghost\\";
 
         // 09
         ep = Episodes.Add("Christina");
@@ -97,7 +100,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Daphne Castell");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\09 Christina\\";
+        ep.OutputPath = "09 Christina\\";
 
         // 10
         ep = Episodes.Add("The Late Departure");
@@ -106,7 +109,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Glen Chandler");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\10 The Late Departure\\";
+        ep.OutputPath = "10 The Late Departure\\";
 
         // 11
         ep = Episodes.Add("Esmeralda");
@@ -115,7 +118,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "George Baker");
 
         ep.Production.Add("WRITER", "Glen Chandler");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\11 Esmeralda\\";
+        ep.OutputPath = "11 Esmeralda\\";
 
         // 12
         ep = Episodes.Add("A Pair of Hands");
@@ -124,7 +127,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Arthur Quiller-Couch");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\12 A Pair of Hands\\";
+        ep.OutputPath = "12 A Pair of Hands\\";
 
         // 13
         ep = Episodes.Add("Keeping His Promise");
@@ -133,7 +136,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Algernon Blackwood");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\13 Keeping His Promise\\";
+        ep.OutputPath = "13 Keeping His Promise\\";
 
         // 14
         ep = Episodes.Add("Which One");
@@ -141,7 +144,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Ronald Chetwynd-Hayes");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\14 Which One\\";
+        ep.OutputPath = "14 Which One\\";
 
         // 15
         ep = Episodes.Add("The Judge's House");
@@ -154,7 +157,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "Alexander John");
 
         ep.Production.Add("WRITER", "Bram Stoker");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\15 The Judge's House\\";
+        ep.OutputPath = "15 The Judge's House\\";
 
         // 16
         ep = Episodes.Add("The Emissary");
@@ -162,7 +165,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "Jennie Linden");
 
         ep.Production.Add("WRITER", "Ray Bradbury");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\16 The Emissary\\";
+        ep.OutputPath = "16 The Emissary";
 
         // 17
         ep = Episodes.Add("Legal Rites");
@@ -171,7 +174,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
 
         ep.Production.Add("WRITER", "Isaac Asimov");
         ep.Production.Add("WRITER", "James Maccreag");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\17 Legal Rites \\";
+        ep.OutputPath = "17 Legal Rites";
 
         // 18
         ep = Episodes.Add("Mists of Memory");
@@ -179,7 +182,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "Helen Worth");
 
         ep.Production.Add("WRITER", "Rosemary Timperley");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\18 \\";
+        ep.OutputPath = "18 Mists of Memory";
 
         // 19
         ep = Episodes.Add("The Lamp");
@@ -188,7 +191,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "Timothy Bateson");
 
         ep.Production.Add("WRITER", "Agatha Christie");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\19 \\";
+        ep.OutputPath = "19 The Lamp";
 
         // 20
         ep = Episodes.Add("Channel Crossing");
@@ -197,7 +200,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "Nicholas Lyndhurst");
 
         ep.Production.Add("WRITER", "Rosemary Timperley");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\20 Channel Crossing\\";
+        ep.OutputPath = "20 Channel Crossing\\";
 
         // 21
         ep = Episodes.Add("The Liberated Tiger");
@@ -206,7 +209,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "Leslie Sands");
 
         ep.Production.Add("WRITER", "Ronald Chetwynd-Hayes");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\21 The Liberated Tiger\\";
+        ep.OutputPath = "21 The Liberated Tiger\\";
 
         // 22
         ep = Episodes.Add("The Dead Man of Varley Grange ");
@@ -215,7 +218,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
 
         ep.Production.Add("ADAPTED", "Patricia Mays");
         ep.Production.Add("DIRECTED", "Martin Williamson");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\22 The Dead Man of Varley Grange\\";
+        ep.OutputPath = "22 The Dead Man of Varley Grange\\";
 
         // 23
         ep = Episodes.Add("To Kill A Ghost");
@@ -224,7 +227,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
 
         ep.Production.Add("WRITER", "Elizabeth S. Holding");
         ep.Production.Add("ADAPTED", "Patricia Mays");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\23 To Kill A Ghost\\";
+        ep.OutputPath = "23 To Kill A Ghost\\";
 
         // 24
         ep = Episodes.Add("The Grey Ones");
@@ -232,7 +235,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "Tony Britton");
 
         ep.Production.Add("WRITER", "J.B. Priestley");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\24 The Grey Ones\\";
+        ep.OutputPath = "24 The Grey Ones\\";
 
         // 25
         ep = Episodes.Add("Only Child");
@@ -240,7 +243,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Francis Stephens");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\25 Only Child\\";
+        ep.OutputPath = "25 Only Child\\";
 
         // 26
         ep = Episodes.Add("The Firmin Child");
@@ -248,6 +251,6 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Richard Blum");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\26 The Firmin Child\\";
+        ep.OutputPath = "26 The Firmin Child\\";
     }
 }
