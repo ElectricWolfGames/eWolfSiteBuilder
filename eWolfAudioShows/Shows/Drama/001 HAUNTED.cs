@@ -7,7 +7,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
 {
     public Haunted()
     {
-        ShowTypes = Data.Enums.ShowTypes.None;
+        ShowTypes = Data.Enums.ShowTypes.Drama;
 
         Title = "HAUNTED: TALES OF THE SUPERNATURAL";
 
