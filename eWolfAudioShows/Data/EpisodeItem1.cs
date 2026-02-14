@@ -9,6 +9,7 @@ public class EpisodeItem
 
     public CastHolder Casts { get; set; }
     public string Description { get; set; }
+    public string FullDescription { get; set; }
     public string Name { get; set; }
     public string OutputPath { get; set; }
     public string PartName { get; set; }
