@@ -88,7 +88,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
         private string ShowListByName()
         {
             HTMLBuilder options = new();
-            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+            /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             options.Title("All shows by name");
             foreach (var item in meds.OnlyAviableShows().OrderBy(x => x.Title))
@@ -106,14 +106,14 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             foreach (var item in meds.Shows)
                 ShowTextCreator.CreateYTFile(item);
-
+            */
             return options.Output();
         }
 
         private string ShowListByYear()
         {
             HTMLBuilder options = new();
-            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+            /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             options.Title("All shows by Broadcast year");
             foreach (var item in meds.OnlyAviableShows().OrderBy(x => x.Year))
@@ -127,14 +127,14 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 }
             }
             options.Text("</br>");
-            options.Text("More to come...");
+            options.Text("More to come...");*/
             return options.Output();
         }
 
         private string ShowNotLiveByYear()
         {
             HTMLBuilder options = new();
-            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+            /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             options.Title("Show comming soon... Audio to follow");
             foreach (var item in meds.OnlyNotAviableShows().OrderBy(x => x.Year))
@@ -149,7 +149,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 }
             }
             options.Text("</br>");
-            options.Text("More to come...");
+            options.Text("More to come...");*/
             return options.Output();
         }
     }

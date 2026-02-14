@@ -157,71 +157,97 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\15 The Judge's House\\";
 
         // 16
-        ep = Episodes.Add("");
+        ep = Episodes.Add("The Emissary");
+        ep.Description = "Young Marion is unwell, but her pet dog keeps her in touch with the outside world. And beyond. Stars Jennie Linden";
+        ep.Casts.Add("", "Jennie Linden");
+
+        ep.Production.Add("WRITER", "Ray Bradbury");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\16 The Emissary\\";
+
+        // 17
+        ep = Episodes.Add("Legal Rites");
+        ep.Description = "Adapted by Patricia Mays from Isaac Asimov & James Maccreag's short story. Starring Ed Bishop and directed by Derek Hoddinott";
+        ep.Casts.Add("", "");
+
+        ep.Production.Add("WRITER", "Isaac Asimov");
+        ep.Production.Add("WRITER", "James Maccreag");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\17 Legal Rites \\";
+
+        // 18
+        ep = Episodes.Add("Mists of Memory");
+        ep.Description = "Young cellist Janet meets a confused old man. He wonders if 'music is where I live'. And he seems familiar. Stars Helen Worth.";
+        ep.Casts.Add("", "Helen Worth");
+
+        ep.Production.Add("WRITER", "Rosemary Timperley");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\18 \\";
+
+        // 19
+        ep = Episodes.Add("The Lamp");
+        ep.Description = "A sickly young boy settles into a new address, but his ghostly playmate has other ideas. Stars Judy Cornwell and Timothy Bateson.";
+        ep.Casts.Add("", "Judy Cornwell");
+        ep.Casts.Add("", "Timothy Bateson");
+
+        ep.Production.Add("WRITER", "Agatha Christie");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\19 \\";
+
+        // 20
+        ep = Episodes.Add("Channel Crossing");
+        ep.Description = "Can a family holiday overcome all the issues that divide a bickering family? Stars Peter Sallis and Nicholas Lyndhurst.";
+        ep.Casts.Add("", "Peter Sallis");
+        ep.Casts.Add("", "Nicholas Lyndhurst");
+
+        ep.Production.Add("WRITER", "Rosemary Timperley");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\20 Channel Crossing\\";
+
+        // 21
+        ep = Episodes.Add("The Liberated Tiger");
+        ep.Description = "Roland is dying. But could he possibly be haunting his wife while he is still alive? Stars Rosemary Leach and Leslie Sands.";
+        ep.Casts.Add("", "Rosemary Leach");
+        ep.Casts.Add("", "Leslie Sands");
+
+        ep.Production.Add("WRITER", "Ronald Chetwynd-Hayes");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\21 The Liberated Tiger\\";
+
+        // 22
+        ep = Episodes.Add("The Dead Man of Varley Grange ");
+        ep.Description = "Jack is set for a good time at a friend's new property, but why do strange rumors persist about the house? Stars George Baker.";
+        ep.Casts.Add("", "George Baker");
+
+        ep.Production.Add("ADAPTED", "Patricia Mays");
+        ep.Production.Add("DIRECTED", "Martin Williamson");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\22 The Dead Man of Varley Grange\\";
+
+        // 23
+        ep = Episodes.Add("To Kill A Ghost");
         ep.Description = "";
         ep.Casts.Add("", "");
 
-        ep.Production.Add("WRITER", "");
-        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\16 \\";
+        ep.Production.Add("WRITER", "Elizabeth S. Holding");
+        ep.Production.Add("ADAPTED", "Patricia Mays");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\23 To Kill A Ghost\\";
 
-        /*
-        1982-05-08 The Emissary (by Ray Bradbury)
+        // 24
+        ep = Episodes.Add("The Grey Ones");
+        ep.Description = "A patient fears evil is at work in the shape of a sinister conspiracy. Will his psychiatrist be able to help? Stars Tony Britton.";
+        ep.Casts.Add("", "Tony Britton");
 
-        Young Marion is unwell, but her pet dog keeps her in touch with the outside world. And beyond. Stars Jennie Linden.
+        ep.Production.Add("WRITER", "J.B. Priestley");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\24 The Grey Ones\\";
 
-        1982-05-15 Legal Rites (by Isaac Asimov & James Maccreag)
+        // 25
+        ep = Episodes.Add("Only Child");
+        ep.Description = "";
+        ep.Casts.Add("", "");
 
-        Adapted by Patricia Mays from Isaac Asimov & James Maccreag's short story. Starring Ed Bishop and directed by Derek Hoddinott
+        ep.Production.Add("WRITER", "Francis Stephens");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\25 Only Child\\";
 
-        1982-05-22 Mists of Memory (by Rosemary Timperley)
+        // 26
+        ep = Episodes.Add("The Firmin Child");
+        ep.Description = "Keeping His Promise by Algernon Blackwood, Two schoolfriends take a blood oath. Will they keep to it?";
+        ep.Casts.Add("", "");
 
-        Young cellist Janet meets a confused old man. He wonders if 'music is where I live'. And he seems familiar. Stars Helen Worth.
-
-        SEASON 3
-
-        1984-07-07 The Lamp (by Agatha Christie)
-
-        A sickly young boy settles into a new address, but his ghostly playmate has other ideas. Stars Judy Cornwell and Timothy Bateson.
-
-        1984-07-14 Channel Crossing (by Rosemary Timperley)
-
-        Can a family holiday overcome all the issues that divide a bickering family? Stars Peter Sallis and Nicholas Lyndhurst.
-
-        1984-07-21 The Liberated Tiger (by Ronald Chetwynd-Hayes)
-
-        Roland is dying. But could he possibly be haunting his wife while he is still alive? Stars Rosemary Leach and Leslie Sands.
-
-        1984-07-28 The Dead Man of Varley Grange (by Anonymous)
-
-        Jack is set for a good time at a friend's new property, but why do strange rumors persist about the house? Stars George Baker. Adapted by Patricia Mays. Directed by Martin Williamson
-
-        1984-08-04 To Kill A Ghost (by Elizabeth S. Holding)
-
-        Adapted by Patricia Mays from Elizabeth S. Holding's short story The Strange Children
-
-        1984-08-11 The Grey Ones (by J.B. Priestley)
-
-        A patient fears evil is at work in the shape of a sinister conspiracy. Will his psychiatrist be able to help? Stars Tony Britton.
-
-        1984-08-18 Only Child (by Francis Stephens)
-
-        1984-09-23 The Firmin Child (by Richard Blum)
-
-        Keeping His Promise by Algernon Blackwood
-        Two schoolfriends take a blood oath. Will they keep to it?
-
-        A Pair of Hands by Arthur Quiller-Couch
-        When Miss Poulton rents a house she does not know that it comes with an unseen helper
-
-        The Late Departure by Glenn Chandler
-        Peter works too hard, and eats and smokes too much. Is his life about to be derailed?
-
-        The Decoy by Algernon Blackwood
-        Will a businessman listen to his wife’s warning as he plans a new project?
-
-        The Family by John Elliott
-        Requested to visit a client by the police, a solicitor must read a letter before entering
-
-                 */
+        ep.Production.Add("WRITER", "Richard Blum");
+        ep.OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\26 The Firmin Child\\";
     }
 }

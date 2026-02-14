@@ -1,18 +1,19 @@
 ﻿using eWolfAudioShows;
+using eWolfAudioShows.Interfaces;
 using eWolfAudioShows.Shows_OLD;
 
 namespace eWolfAudioSiteBuilder.Services
 {
     public class AudioShowServies
     {
-        private List<IAudioShowOLD> _audioShow = new();
+        private List<IAudioEpisodesShow> _audioShow = new();
 
         public AudioShowServies()
         {
             AddAudioShows();
         }
 
-        internal List<IAudioShowOLD> Shows
+        internal List<IAudioEpisodesShow> Shows
         {
             get
             {
@@ -20,7 +21,7 @@ namespace eWolfAudioSiteBuilder.Services
             }
         }
 
-        public List<IAudioShowOLD> OnlyAviableShows()
+        public List<IAudioEpisodesShow> OnlyAviableShows()
         {
             var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded));
             var today = DateTime.Now.AddDays(0);
@@ -29,10 +30,10 @@ namespace eWolfAudioSiteBuilder.Services
                 DateTime.Parse(x.DateAdded)
                 ).ToList();
 
-            return (List<IAudioShowOLD>)selectedShows;
+            return (List<IAudioEpisodesShow>)selectedShows;
         }
 
-        public List<IAudioShowOLD> OnlyNotAviableShows()
+        public List<IAudioEpisodesShow> OnlyNotAviableShows()
         {
             var selectedShows = Shows.Where(x => !string.IsNullOrWhiteSpace(x.DateAdded)).ToList();
             var today = DateTime.Now.AddDays(0);
@@ -43,17 +44,17 @@ namespace eWolfAudioSiteBuilder.Services
 
             selectedShows.AddRange(Shows.Where(x => string.IsNullOrWhiteSpace(x.DateAdded)));
 
-            return (List<IAudioShowOLD>)selectedShows;
+            return (List<IAudioEpisodesShow>)selectedShows;
         }
 
-        private static List<IAudioShowOLD> GetAll()
+        private static List<IAudioEpisodesShow> GetAllEpisodesShow()
         {
-            return Holder.GetAll();
+            return Holder.GetAllEpisodesShow();
         }
 
         private void AddAudioShows()
         {
-            _audioShow.AddRange(GetAll());
+            _audioShow.AddRange(GetAllEpisodesShow());
         }
     }
 }

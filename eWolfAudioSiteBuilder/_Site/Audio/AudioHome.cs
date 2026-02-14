@@ -93,7 +93,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
         private string ShowCardsListByName()
         {
             HTMLBuilder options = new();
-            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+            /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
 
             var selectedShows = meds.OnlyAviableShows();
             foreach (var item in selectedShows.Take(210))
@@ -106,7 +106,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio
 
             foreach (var item in meds.Shows)
                 ShowTextCreator.CreateYTFile(item);
-
+            */
             return options.Output();
         }
     }

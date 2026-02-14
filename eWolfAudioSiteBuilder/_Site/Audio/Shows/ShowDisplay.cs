@@ -78,9 +78,28 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.Output();
         }
 
+        private static string CreateCard(IAudioShowOLD showDetails)
+        {
+            HTMLBuilder options = new();
+
+            string link = $"{FileHelper.GetSafeFileName(showDetails.Title)}.html";
+
+            options.Text("<div class='card' style='max-width: 18rem; border: 3px solid #2E8B57; border-radius: 10px; margin:10px;' >");
+            options.Text("<div class='card-header text-white' style='background-color: #2E8B57;'>");
+            options.Text($"<h4><a style='color: #FFFFFF;' href='{link}'>{showDetails.Title}</a></h4></div>");
+            options.Text("<div class='card-body text-primary'>");
+            options.Text($"<p style='color: #2E8B57;' class='card-text'>{showDetails.Description}</p>");
+            options.Text($"<h5 style='color: #FFFFFF;' class='card-title'><a href='{link}'>{showDetails.ShowTypes}</a></h5>");
+
+            options.Text("</div>");
+            options.Text("</div>");
+
+            return options.Output();
+        }
+
         private void AlsoWritenBy(HTMLBuilder options)
         {
-            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+            /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
             var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
 
             List<IAudioShowOLD> alsoBy = new();
@@ -109,7 +128,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 }
                 options.Text("</div>");
                 options.Text("</div>");
-            }
+            }*/
         }
 
         private void Cast(HTMLBuilder options)
@@ -126,25 +145,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 options.NewLine();
             }
             options.EndTextCenter();
-        }
-
-        private static string CreateCard(IAudioShowOLD showDetails)
-        {
-            HTMLBuilder options = new();
-
-            string link = $"{FileHelper.GetSafeFileName(showDetails.Title)}.html";
-
-            options.Text("<div class='card' style='max-width: 18rem; border: 3px solid #2E8B57; border-radius: 10px; margin:10px;' >");
-            options.Text("<div class='card-header text-white' style='background-color: #2E8B57;'>");
-            options.Text($"<h4><a style='color: #FFFFFF;' href='{link}'>{showDetails.Title}</a></h4></div>");
-            options.Text("<div class='card-body text-primary'>");
-            options.Text($"<p style='color: #2E8B57;' class='card-text'>{showDetails.Description}</p>");
-            options.Text($"<h5 style='color: #FFFFFF;' class='card-title'><a href='{link}'>{showDetails.ShowTypes}</a></h5>");
-
-            options.Text("</div>");
-            options.Text("</div>");
-
-            return options.Output();
         }
 
         private void Episodes(HTMLBuilder options)
