@@ -33,7 +33,8 @@ public class Haunted : AudioBaseEpisodesShowDetails
 
         // 02
         ep = Episodes.Add("What Was It");
-        ep.Description = "It is July 1854. Harry has just arrived No.28 Twenty-sixth Street, in New York City. It was built some fifteen or twenty years earlier by a well-known New York merchant, who five years earlier threw the commercial world into convulsions by a stupendous bank fraud. He escaped to Europe, and died not long after of a broken heart. Almost immediately after the news of his decease reached America, and was verified, the report spread in Twenty-sixth Street that No. 28 was haunted.";
+        ep.Description = "July 1854: Harry arrives at No. 28 Twenty-sixth Street in New York City. The house was built years earlier by a prominent merchant who later caused a massive bank fraud scandal, fled to Europe, and died soon after. Once news of his death reached America, rumours quickly spread that the house was haunted.";
+        ep.FullDescription = "It is July 1854. Harry has just arrived No.28 Twenty-sixth Street, in New York City. It was built some fifteen or twenty years earlier by a well-known New York merchant, who five years earlier threw the commercial world into convulsions by a stupendous bank fraud. He escaped to Europe, and died not long after of a broken heart. Almost immediately after the news of his decease reached America, and was verified, the report spread in Twenty-sixth Street that No. 28 was haunted.";
         ep.Casts.Add("Harry Crown", "Peter Marinker");
         ep.Casts.Add("Doctor Stephen Hammond", "Blane Fairman");
         ep.Casts.Add("Mrs. Moffatt", "Helen Horton ");
