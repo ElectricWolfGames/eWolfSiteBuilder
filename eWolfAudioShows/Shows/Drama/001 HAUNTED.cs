@@ -145,7 +145,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "");
 
         ep.Production.Add("WRITER", "Ronald Chetwynd-Hayes");
-        ep.OutputPath = "14 Which One\\";
+        ep.OutputPath = "14 Which One";
 
         // 15
         ep = Episodes.Add("The Judge's House");
@@ -158,7 +158,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("", "Alexander John");
 
         ep.Production.Add("WRITER", "Bram Stoker");
-        ep.OutputPath = "15 The Judge's House\\";
+        ep.OutputPath = "15 The Judge's House";
 
         // 16
         ep = Episodes.Add("The Emissary");
