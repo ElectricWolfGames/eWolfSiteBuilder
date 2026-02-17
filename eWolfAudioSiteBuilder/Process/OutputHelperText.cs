@@ -39,6 +39,13 @@ public static class OutputHelperText
             StringBuilder stringBuilder = new StringBuilder();
 
             string path = Path.Combine(show.OutputPath, episode.OutputPath, $"{episode.Name}.txt");
+
+            if (File.Exists(path))
+            {
+                count++;
+                continue;
+            }
+
             stringBuilder.AppendLine($"{episode.Name} | {count} | {show.Title} {show.TitleLine2} (Audio Drama)");
 
             stringBuilder.AppendLine();
