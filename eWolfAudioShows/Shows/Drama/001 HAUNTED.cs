@@ -9,7 +9,8 @@ public class Haunted : AudioBaseEpisodesShowDetails
     {
         ShowTypes = Data.Enums.ShowTypes.Drama;
 
-        Title = "HAUNTED: TALES OF THE SUPERNATURAL";
+        Title = "HAUNTED:";
+        TitleLine2 = "TALES OF THE SUPERNATURAL";
         OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\";
 
         YTPlayList = "";

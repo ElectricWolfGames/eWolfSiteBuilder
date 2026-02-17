@@ -1,4 +1,5 @@
-﻿using eWolfAudioSiteBuilder.Services;
+﻿using eWolfAudioSiteBuilder.Process;
+using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Interfaces;
 using System.Reflection;
@@ -20,9 +21,12 @@ public partial class MainWindow : Window
         SiteBuilderServiceLocator.Instance.InjectService<IBuildSite>(_buildSite);
         SiteBuilderServiceLocator.Instance.InjectService<INavigationBuilder>(new NavigationBuilder());
 
-        SiteBuilderServiceLocator.Instance.InjectService<AudioShowServies>(new AudioShowServies());
+        SiteBuilderServiceLocator.Instance.InjectService<AudioEpisodesShowServies>(new AudioEpisodesShowServies());
 
         _buildSite.PreProcess(Assembly.GetExecutingAssembly());
+
+        OutputHelperText.OutputAudioEpisodesShow();
+
         _buildSite.Create();
         _buildSite.OpenHomePage();
 
