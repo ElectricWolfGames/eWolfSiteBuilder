@@ -15,7 +15,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         YTPlayList = "https://www.youtube.com/playlist?list=PL5uFllPR3aCfYvj0shjRZaNAhfFZ0S-EU";
 
         Year = 1980;
-        DateAdded = "2025/02/16";
+        DateAdded = "2026/02/18";
         OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\";
 
         Description = "A BBC WORLD SERVICE, series of twenty-six episodes, broadcast from 1980-84. It included both classic and original ghost stories in a 30 minute format. They were dramatized by Derek Hoddinott and directed by him, unless otherwise noted.";

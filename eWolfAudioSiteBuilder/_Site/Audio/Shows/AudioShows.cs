@@ -131,7 +131,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
         private string ShowNotLiveByYear()
         {
             HTMLBuilder options = new();
-            /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioEpisodesShowServies>();
 
             options.Title("Show comming soon... Audio to follow");
             foreach (var item in meds.OnlyNotAviableShows().OrderBy(x => x.Year))
@@ -146,7 +146,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                 }
             }
             options.Text("</br>");
-            options.Text("More to come...");*/
+            options.Text("More to come...");
             return options.Output();
         }
     }
