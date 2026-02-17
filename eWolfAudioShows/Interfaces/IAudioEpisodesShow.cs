@@ -18,3 +18,17 @@ public interface IAudioEpisodesShow
     int Year { get; set; }
     string YTPlayList { get; set; }
 }
+
+public interface IAudioOneOffShow
+{
+    CastHolder Casts { get; set; }
+    string DateAdded { get; set; }
+    string Description { get; set; }
+    string OutputPath { get; set; }
+    CastHolder Production { get; set; }
+    public ShowTypes ShowTypes { get; set; }
+    string Title { get; set; }
+    string TitleLine2 { get; set; }
+    int Year { get; set; }
+    string YTPlayList { get; set; }
+}
