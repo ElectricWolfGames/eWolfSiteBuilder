@@ -39,19 +39,30 @@ public static class OutputHelperText
             StringBuilder stringBuilder = new StringBuilder();
 
             string path = Path.Combine(show.OutputPath, episode.OutputPath, $"{episode.Name}.txt");
-            stringBuilder.AppendLine($"{episode.Name} | {count} | {show.Title}");
+            stringBuilder.AppendLine($"{episode.Name} | {count} | {show.Title} {show.TitleLine2} (Audio Drama)");
 
             stringBuilder.AppendLine();
 
             stringBuilder.AppendLine($"{episode.Name}");
+
             if (string.IsNullOrWhiteSpace(episode.FullDescription))
                 stringBuilder.AppendLine($"{episode.Description}");
             stringBuilder.AppendLine($"{episode.FullDescription}");
 
             stringBuilder.AppendLine();
+            stringBuilder.AppendLine("PLAYLIST");
+            stringBuilder.AppendLine(show.YTPlayList);
             stringBuilder.AppendLine();
 
+            stringBuilder.AppendLine("CAST");
             Cast(stringBuilder, episode);
+
+            // Show
+            stringBuilder.AppendLine();
+            stringBuilder.AppendLine($"{show.Title} {show.TitleLine2}");
+            stringBuilder.AppendLine(show.Description);
+            stringBuilder.AppendLine();
+            stringBuilder.AppendLine();
 
             File.WriteAllText(path, stringBuilder.ToString());
             count++;

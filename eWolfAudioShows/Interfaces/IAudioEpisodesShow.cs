@@ -16,4 +16,5 @@ public interface IAudioEpisodesShow
     string Title { get; set; }
     string TitleLine2 { get; set; }
     int Year { get; set; }
+    string YTPlayList { get; set; }
 }
