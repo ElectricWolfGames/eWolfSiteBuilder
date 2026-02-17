@@ -8,231 +8,230 @@ using eWolfBootstrap.SiteBuilder.Enums;
 using eWolfCommon.Helpers;
 using System.Text;
 
-namespace eWolfAudioSiteBuilder._Site.Audio.Shows
+namespace eWolfAudioSiteBuilder._Site.Audio.Shows;
+
+[PageTitle("Place holder Page")]
+[Navigation(NavigationTypes.Main, 2)]
+public class AudioEpisodesShowPage : PageDetails
 {
-    [PageTitle("Place holder Page")]
-    [Navigation(NavigationTypes.Main, 2)]
-    public class AudioEpisodesShowPage : PageDetails
+    public IAudioEpisodesShow AudioShow;
+
+    public AudioEpisodesShowPage()
     {
-        public IAudioEpisodesShow AudioShow;
+        WebPage = new WebPage(this);
+        DisplayTitle = "To update later";
+        MenuTitle = "To update later";
+        DontShowNavigation = true;
+        DontBuildPage = true;
+    }
 
-        public AudioEpisodesShowPage()
+    public string OutputPath
+    {
+        get
         {
-            WebPage = new WebPage(this);
-            DisplayTitle = "To update later";
-            MenuTitle = "To update later";
-            DontShowNavigation = true;
-            DontBuildPage = true;
+            return WebPage.OutputPath;
+        }
+    }
+
+    public override void CreatePage()
+    {
+        DisplayTitle = $"Audio Drama {AudioShow.Title} {AudioShow.TitleLine2}";
+        Keywords.Add("Audio Drama");
+        Keywords.Add("Radio Show, audiobooks full length, audiobook");
+        Keywords.Add(AudioShow.ShowTypes.ToString());
+
+        if (AudioShow.ShowTypes == eWolfAudioShows.Data.Enums.ShowTypes.SciFiDrama)
+        {
+            Keywords.Add("science fiction audiobooks on youtube");
+            Keywords.Add("science fiction");
+        }
+        if (AudioShow.ShowTypes == eWolfAudioShows.Data.Enums.ShowTypes.Comedy)
+        {
+            Keywords.Add("comedy shows full episodes");
         }
 
-        public string OutputPath
+        if (AudioShow.Casts.Casts.Count > 1)
         {
-            get
+            Keywords.Add($"{AudioShow.Casts.Casts[0].Role}");
+            Keywords.Add($"{AudioShow.Casts.Casts[0].FullName}");
+        }
+
+        MetaDescription = AudioShow.Description;
+
+        WebPage.AddHeader(this, string.Empty);
+        WebPage.AddNavigation(NavigationTypes.Main, @"../../");
+        WebPage.StartBody();
+
+        WebPage.Append("<div class='container mt-12'>");
+
+        WebPage.SetRootAddress = RootAddress + "E:\\eWolfSiteUploads\\Audio\\";
+        WebPage.HtmlPath = "Shows";
+        WebPage.HtmlTitle = $"{FileHelper.GetSafeFileName(MenuTitle)}.html";
+
+        WebPage.SetDontBuild = false;
+
+        WebPage.Append("<div class='container mt-4'>");
+        WebPage.Append(Jumbotron());
+
+        WebPage.Append(Show());
+
+        WebPage.EndBody();
+        WebPage.Output();
+    }
+
+    private static string CreateCard(IAudioShowOLD showDetails)
+    {
+        HTMLBuilder options = new();
+
+        string link = $"{FileHelper.GetSafeFileName(showDetails.Title)}.html";
+
+        options.Text("<div class='card' style='max-width: 18rem; border: 3px solid #2E8B57; border-radius: 10px; margin:10px;' >");
+        options.Text("<div class='card-header text-white' style='background-color: #2E8B57;'>");
+        options.Text($"<h4><a style='color: #FFFFFF;' href='{link}'>{showDetails.Title}</a></h4></div>");
+        options.Text("<div class='card-body text-primary'>");
+        options.Text($"<p style='color: #2E8B57;' class='card-text'>{showDetails.Description}</p>");
+        options.Text($"<h5 style='color: #FFFFFF;' class='card-title'><a href='{link}'>{showDetails.ShowTypes}</a></h5>");
+
+        options.Text("</div>");
+        options.Text("</div>");
+
+        return options.Output();
+    }
+
+    private void AlsoWritenBy(HTMLBuilder options)
+    {
+        /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+        var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
+
+        List<IAudioShowOLD> alsoBy = new();
+        foreach (var writer in writers)
+        {
+            var selectedShows = meds.OnlyAviableShows().Where(x =>
+                 x.Production.Casts.Any(x => x.FullName == writer.FullName));
+
+            foreach (var ss in selectedShows)
             {
-                return WebPage.OutputPath;
+                if (ss.Title == AudioShow.Title)
+                    continue;
+                alsoBy.Add(ss);
             }
         }
 
-        public override void CreatePage()
+        if (alsoBy.Count != 0)
         {
-            DisplayTitle = $"Audio Drama {AudioShow.Title} {AudioShow.TitleLine2}";
-            Keywords.Add("Audio Drama");
-            Keywords.Add("Radio Show, audiobooks full length, audiobook");
-            Keywords.Add(AudioShow.ShowTypes.ToString());
-
-            if (AudioShow.ShowTypes == eWolfAudioShows.Data.Enums.ShowTypes.SciFiDrama)
+            alsoBy = alsoBy.Distinct().ToList();
+            options.Text("<div class='container mt-5'>");
+            options.Text("<h4>By the same writers</h4>");
+            options.Text("<div class='row'>");
+            foreach (var ss in alsoBy)
             {
-                Keywords.Add("science fiction audiobooks on youtube");
-                Keywords.Add("science fiction");
+                options.Text(CreateCard(ss));
             }
-            if (AudioShow.ShowTypes == eWolfAudioShows.Data.Enums.ShowTypes.Comedy)
-            {
-                Keywords.Add("comedy shows full episodes");
-            }
-
-            if (AudioShow.Casts.Casts.Count > 1)
-            {
-                Keywords.Add($"{AudioShow.Casts.Casts[0].Role}");
-                Keywords.Add($"{AudioShow.Casts.Casts[0].FullName}");
-            }
-
-            MetaDescription = AudioShow.Description;
-
-            WebPage.AddHeader(this, string.Empty);
-            WebPage.AddNavigation(NavigationTypes.Main, @"../../");
-            WebPage.StartBody();
-
-            WebPage.Append("<div class='container mt-12'>");
-
-            WebPage.SetRootAddress = RootAddress + "E:\\eWolfSiteUploads\\Audio\\";
-            WebPage.HtmlPath = "Shows";
-            WebPage.HtmlTitle = $"{FileHelper.GetSafeFileName(MenuTitle)}.html";
-
-            WebPage.SetDontBuild = false;
-
-            WebPage.Append("<div class='container mt-4'>");
-            WebPage.Append(Jumbotron());
-
-            WebPage.Append(Show());
-
-            WebPage.EndBody();
-            WebPage.Output();
-        }
-
-        private static string CreateCard(IAudioShowOLD showDetails)
-        {
-            HTMLBuilder options = new();
-
-            string link = $"{FileHelper.GetSafeFileName(showDetails.Title)}.html";
-
-            options.Text("<div class='card' style='max-width: 18rem; border: 3px solid #2E8B57; border-radius: 10px; margin:10px;' >");
-            options.Text("<div class='card-header text-white' style='background-color: #2E8B57;'>");
-            options.Text($"<h4><a style='color: #FFFFFF;' href='{link}'>{showDetails.Title}</a></h4></div>");
-            options.Text("<div class='card-body text-primary'>");
-            options.Text($"<p style='color: #2E8B57;' class='card-text'>{showDetails.Description}</p>");
-            options.Text($"<h5 style='color: #FFFFFF;' class='card-title'><a href='{link}'>{showDetails.ShowTypes}</a></h5>");
-
             options.Text("</div>");
             options.Text("</div>");
+        }*/
+    }
 
-            return options.Output();
-        }
-
-        private void AlsoWritenBy(HTMLBuilder options)
+    private void Cast(HTMLBuilder options)
+    {
+        options.StartTextCenter();
+        options.Text("<h3>Cast</h3>");
+        options.NewLine();
+        foreach (var cast in AudioShow.Casts.Casts)
         {
-            /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
-            var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
+            if (string.IsNullOrWhiteSpace(cast.Role))
+                options.Text($"{cast.FullName}");
+            else
+                options.Text($"{cast.FullName} as '{cast.Role}'");
+            options.NewLine();
+        }
+        options.EndTextCenter();
+    }
 
-            List<IAudioShowOLD> alsoBy = new();
+    private void Episodes(HTMLBuilder options)
+    {
+        foreach (var episodes in AudioShow.Episodes.EpisodeItems)
+        {
+            options.Title(episodes.Name);
+            options.NewLine();
+            options.NewLine();
+            if (string.IsNullOrWhiteSpace(episodes.YoutubeLink))
+            {
+                options.Text("<h2>Audio comming soon...</h2>");
+            }
+            else
+                options.YouTubeLinkAudio(episodes.YoutubeLink);
+
+            options.Text(episodes.Description);
+            if (episodes.Casts.Casts.Count > 1)
+            {
+                Keywords.Add($"{episodes.Casts.Casts[0].Role}");
+                Keywords.Add($"{episodes.Casts.Casts[0].FullName}");
+            }
+
+            ProductinTeam(options, episodes);
+        }
+        options.NewLine();
+        options.NewLine();
+    }
+
+    private string Jumbotron()
+    {
+        StringBuilder stringBuilder = new();
+
+        stringBuilder.AppendLine("<div class='jumbotron'>");
+        stringBuilder.AppendLine("<div class='row'>");
+        stringBuilder.AppendLine("<div class='col-md-12'>");
+        stringBuilder.AppendLine($"<h1>{AudioShow.Title}</h1>");
+
+        stringBuilder.AppendLine("<div class='col-md-12'>");
+        stringBuilder.AppendLine($"<p'>{AudioShow.Description}</p>");
+        stringBuilder.AppendLine("</div>");
+        stringBuilder.AppendLine("</div>");
+        stringBuilder.AppendLine("</div>");
+        stringBuilder.AppendLine("</div>");
+
+        return stringBuilder.ToString();
+    }
+
+    private void ProductinTeam(HTMLBuilder options, EpisodeItem episodes)
+    {
+        options.StartTextCenter();
+        var writers = episodes.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
+
+        if (writers.Any())
+        {
+            if (writers.Count() == 1)
+                options.Text("<h3>Writen by</h3>");
+            else
+                options.Text("<h3>Writers</h3>");
+
             foreach (var writer in writers)
             {
-                var selectedShows = meds.OnlyAviableShows().Where(x =>
-                     x.Production.Casts.Any(x => x.FullName == writer.FullName));
-
-                foreach (var ss in selectedShows)
-                {
-                    if (ss.Title == AudioShow.Title)
-                        continue;
-                    alsoBy.Add(ss);
-                }
+                options.Text($"<h4>{writer.FullName}</h4>");
             }
-
-            if (alsoBy.Count != 0)
-            {
-                alsoBy = alsoBy.Distinct().ToList();
-                options.Text("<div class='container mt-5'>");
-                options.Text("<h4>By the same writers</h4>");
-                options.Text("<div class='row'>");
-                foreach (var ss in alsoBy)
-                {
-                    options.Text(CreateCard(ss));
-                }
-                options.Text("</div>");
-                options.Text("</div>");
-            }*/
         }
+        options.EndTextCenter();
+    }
 
-        private void Cast(HTMLBuilder options)
-        {
-            options.StartTextCenter();
-            options.Text("<h3>Cast</h3>");
-            options.NewLine();
-            foreach (var cast in AudioShow.Casts.Casts)
-            {
-                if (string.IsNullOrWhiteSpace(cast.Role))
-                    options.Text($"{cast.FullName}");
-                else
-                    options.Text($"{cast.FullName} as '{cast.Role}'");
-                options.NewLine();
-            }
-            options.EndTextCenter();
-        }
+    private string Show()
+    {
+        HTMLBuilder options = new();
 
-        private void Episodes(HTMLBuilder options)
-        {
-            foreach (var episodes in AudioShow.Episodes.EpisodeItems)
-            {
-                options.Title(episodes.Name);
-                options.NewLine();
-                options.NewLine();
-                if (string.IsNullOrWhiteSpace(episodes.YoutubeLink))
-                {
-                    options.Text("<h2>Audio comming soon...</h2>");
-                }
-                else
-                    options.YouTubeLinkAudio(episodes.YoutubeLink);
+        Episodes(options);
 
-                options.Text(episodes.Description);
-                if (episodes.Casts.Casts.Count > 1)
-                {
-                    Keywords.Add($"{episodes.Casts.Casts[0].Role}");
-                    Keywords.Add($"{episodes.Casts.Casts[0].FullName}");
-                }
+        //Cast(options);
 
-                ProductinTeam(options, episodes);
-            }
-            options.NewLine();
-            options.NewLine();
-        }
+        //ProductinTeam(options);
 
-        private string Jumbotron()
-        {
-            StringBuilder stringBuilder = new();
+        //options.NewLine();
+        //options.NewLine();
 
-            stringBuilder.AppendLine("<div class='jumbotron'>");
-            stringBuilder.AppendLine("<div class='row'>");
-            stringBuilder.AppendLine("<div class='col-md-12'>");
-            stringBuilder.AppendLine($"<h1>{AudioShow.Title}</h1>");
+        //AlsoWritenBy(options);
 
-            stringBuilder.AppendLine("<div class='col-md-12'>");
-            stringBuilder.AppendLine($"<p'>{AudioShow.Description}</p>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
-            stringBuilder.AppendLine("</div>");
+        options.NewLine();
+        options.NewLine();
 
-            return stringBuilder.ToString();
-        }
-
-        private void ProductinTeam(HTMLBuilder options, EpisodeItem episodes)
-        {
-            options.StartTextCenter();
-            var writers = episodes.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
-
-            if (writers.Any())
-            {
-                if (writers.Count() == 1)
-                    options.Text("<h3>Writen by</h3>");
-                else
-                    options.Text("<h3>Writers</h3>");
-
-                foreach (var writer in writers)
-                {
-                    options.Text($"<h4>{writer.FullName}</h4>");
-                }
-            }
-            options.EndTextCenter();
-        }
-
-        private string Show()
-        {
-            HTMLBuilder options = new();
-
-            Episodes(options);
-
-            //Cast(options);
-
-            //ProductinTeam(options);
-
-            //options.NewLine();
-            //options.NewLine();
-
-            //AlsoWritenBy(options);
-
-            options.NewLine();
-            options.NewLine();
-
-            return options.Output();
-        }
+        return options.Output();
     }
 }
