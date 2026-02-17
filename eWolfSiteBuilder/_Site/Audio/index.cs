@@ -2,7 +2,7 @@
 using eWolfBootstrap.SiteBuilder.Attributes;
 using eWolfBootstrap.SiteBuilder.Enums;
 
-/*namespace eWolfSiteBuilder._Site.Audio
+namespace eWolfSiteBuilder._Site.Audio
 {
     [PageTitle("index.html")]
     [Navigation(NavigationTypes.Main, 2)]
@@ -19,4 +19,4 @@ using eWolfBootstrap.SiteBuilder.Enums;
         {
         }
     }
-}*/
+}
