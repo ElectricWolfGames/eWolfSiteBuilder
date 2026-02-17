@@ -12,7 +12,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ShowTypes = Data.Enums.ShowTypes.Drama;
 
         Title = "HAUNTED:";
-        TitleLine2 = "TALES OF THE SUPERNATURAL";
+        TitleLine2 = "Tales Of The Supernatural";
         OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\01 Haunted (BBC)\\";
 
         YTPlayList = "https://www.youtube.com/playlist?list=PL5uFllPR3aCfYvj0shjRZaNAhfFZ0S-EU";
@@ -91,8 +91,9 @@ public class Haunted : AudioBaseEpisodesShowDetails
 
         // 08
         ep = Episodes.Add("The Inexperienced Ghost");
-        ep.Description = "";
-        ep.Casts.Add("", "");
+        ep.Description = "A man encounters a troubled spirit. But could this meeting lead to tragedy? Adapted by Patricia Mays from H. G. Wells' story.";
+        ep.Casts.Add("", "Donald Houston ");
+        ep.Casts.Add("", "Christopher Guard");
 
         ep.Production.Add("WRITER", "H. G. Wells");
         ep.OutputPath = "08 The Inexperienced Ghost\\";
