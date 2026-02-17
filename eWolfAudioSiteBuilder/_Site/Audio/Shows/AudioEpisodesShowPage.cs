@@ -1,6 +1,6 @@
-﻿using eWolfAudioShows.Interfaces;
+﻿using eWolfAudioShows.Data;
+using eWolfAudioShows.Interfaces;
 using eWolfAudioShows.Shows_OLD;
-using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
@@ -35,7 +35,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         public override void CreatePage()
         {
-            DisplayTitle = $"Audio Drama {AudioShow.Title}";
+            DisplayTitle = $"Audio Drama {AudioShow.Title} {AudioShow.TitleLine2}";
             Keywords.Add("Audio Drama");
             Keywords.Add("Radio Show, audiobooks full length, audiobook");
             Keywords.Add(AudioShow.ShowTypes.ToString());
@@ -150,33 +150,27 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private void Episodes(HTMLBuilder options)
         {
-            /*foreach (var show in AudioShow.Shows.ShowItems)
+            foreach (var episodes in AudioShow.Episodes.EpisodeItems)
             {
-                options.Title(show.Name);
+                options.Title(episodes.Name);
                 options.NewLine();
                 options.NewLine();
-                if (string.IsNullOrWhiteSpace(show.YoutubeLink))
+                if (string.IsNullOrWhiteSpace(episodes.YoutubeLink))
                 {
                     options.Text("<h2>Audio comming soon...</h2>");
                 }
                 else
-                    options.YouTubeLinkAudio(show.YoutubeLink);
+                    options.YouTubeLinkAudio(episodes.YoutubeLink);
 
-                if (show.Episodes.Count > 0)
+                options.Text(episodes.Description);
+                if (episodes.Casts.Casts.Count > 1)
                 {
-                    options.StartTextCenter();
-                    options.Text("<h3>Episodes</h3>");
-                    options.NewLine();
-                    foreach (var episode in show.Episodes)
-                    {
-                        options.Text($"<h4>{episode.Name}</h4>");
-                        options.Text(episode.Description);
-                        options.NewLine();
-                    }
-                    options.EndTextCenter();
-                    options.NewLine();
+                    Keywords.Add($"{episodes.Casts.Casts[0].Role}");
+                    Keywords.Add($"{episodes.Casts.Casts[0].FullName}");
                 }
-            }*/
+
+                ProductinTeam(options, episodes);
+            }
             options.NewLine();
             options.NewLine();
         }
@@ -200,10 +194,10 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             return stringBuilder.ToString();
         }
 
-        private void ProductinTeam(HTMLBuilder options)
+        private void ProductinTeam(HTMLBuilder options, EpisodeItem episodes)
         {
             options.StartTextCenter();
-            var writers = AudioShow.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
+            var writers = episodes.Production.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
 
             if (writers.Any())
             {
@@ -226,14 +220,14 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
             Episodes(options);
 
-            Cast(options);
+            //Cast(options);
 
-            ProductinTeam(options);
+            //ProductinTeam(options);
 
-            options.NewLine();
-            options.NewLine();
+            //options.NewLine();
+            //options.NewLine();
 
-            AlsoWritenBy(options);
+            //AlsoWritenBy(options);
 
             options.NewLine();
             options.NewLine();

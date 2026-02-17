@@ -1,5 +1,4 @@
 ﻿using eWolfAudioShows.Interfaces;
-using eWolfAudioShows.Shows_OLD;
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
@@ -81,7 +80,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
         {
             HTMLBuilder options = new();
 
-            options.ImagePath("..//images/Title.jpeg", 50);
+            //options.ImagePath("..//images/Title.jpeg", 50);
 
             return options.Output();
         }

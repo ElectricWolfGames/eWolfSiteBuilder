@@ -1,7 +1,5 @@
 ﻿using eWolfAudioShows.Data;
 using eWolfAudioShows.Interfaces;
-using eWolfAudioShows.Shows_OLD;
-using eWolfAudioSiteBuilder._Site.Audio.Shows;
 using eWolfAudioSiteBuilder.Services;
 using System.IO;
 using System.Text;

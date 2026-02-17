@@ -27,7 +27,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("Mrs. Grove", "Ruth Dunning");
         ep.Casts.Add("Janet Lake", "Bernadette Windsor");
         ep.Casts.Add("Doctor Raven / John Grove", "Adrian Eagan");
-
+        ep.YoutubeLink = "6uMyTjaP38w";
         ep.Production.Add("WRITER", "Rosemary Timperley");
         ep.OutputPath = "01 Little Girl Lost\\";
 
@@ -38,7 +38,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("Harry Crown", "Peter Marinker");
         ep.Casts.Add("Doctor Stephen Hammond", "Blane Fairman");
         ep.Casts.Add("Mrs. Moffatt", "Helen Horton ");
-
+        ep.YoutubeLink = "GR0KJouEoH8";
         ep.Production.Add("WRITER", "Fitz-James O'Brien");
         ep.OutputPath = "02 What Was It\\";
 
@@ -52,21 +52,21 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("The Nurse", "Elizabeth Ryder");
         ep.Casts.Add("The Reception", "Jane Thompson");
         ep.Casts.Add("Graham Faulkner", "The Policeman");
-
+        ep.YoutubeLink = "0eBsd8L0lCU";
         ep.Production.Add("WRITER", "John Elliot");
         ep.OutputPath = "03 The Family\\";
 
         // 04
         ep = Episodes.Add("Walk on Water");
         ep.Description = "Young Rachel finds her whole life blighted by one encounter. A salutary lesson about talking to strangers, as a young girl finds her whole life blighted by one encounter. Stars Anna Cooper as Rachel, Ursula Howells as Mother, Jack May as Father, David Ashford as Peter and Brian Hewlett as the Man. With Brian Haines, Trevor Cooper and Leonard Fenton.";
-
+        ep.YoutubeLink = "eHjw57newLs";
         ep.Production.Add("WRITER", "Rosemary Timperley");
         ep.OutputPath = "04 Walk on Water\\";
 
         // 05
         ep = Episodes.Add("The Dream Woman");
         ep.Description = "Isaac lives in constant fear of a knife-wielding female. But is she of this Earth, or from beyond the grave? Stars Charles Kay.";
-
+        ep.YoutubeLink = "k0j7lwWdS-4";
         ep.Production.Add("WRITER", "Rosemary Timperley");
         ep.OutputPath = "05 The Dream Woman\\";
 
@@ -74,7 +74,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("The Decoy");
         ep.Description = "Adapted by Derek Hoddinott from Algernon Blackwood's short story. 'The Decoy' was first published in an anthology entitled: The Wolves of God, and Other Fey Stories, 1921.";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "298NloHnU3Y";
         ep.Production.Add("WRITER", "Rosemary Timperley");
         ep.OutputPath = "06 The Decoy\\";
 
@@ -82,7 +82,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("Listen to the Silence");
         ep.Description = "Mary must face her fears. Can she refuse the offer made by a strange voice claiming to be her grandfather? Stars Gwen Watford.";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "R5oFDgEuhw0";
         ep.Production.Add("WRITER", "Rosemary Timperley");
         ep.OutputPath = "07 Listen to the Silence\\";
 
@@ -91,7 +91,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "A man encounters a troubled spirit. But could this meeting lead to tragedy? Adapted by Patricia Mays from H. G. Wells' story.";
         ep.Casts.Add("", "Donald Houston ");
         ep.Casts.Add("", "Christopher Guard");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "H. G. Wells");
         ep.OutputPath = "08 The Inexperienced Ghost\\";
 
@@ -100,7 +100,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "Miss Chaucer tells Dr. Richard she’s deeply depressed after a friend’s death, financial losses, and feeling completely alone. Writing no longer brings her joy. He advises her to leave London and start fresh somewhere new. She moves to a village, meets Mrs. Crozier, and encounters Christina—the ghost of a child connected to the house—but the reason for the haunting remains a mystery.";
         ep.FullDescription = "Miss Chaucer tells Dr. Richard that she is so depressed - in part due to the recent death of a friend - she have tried to shake it off but with no luck. Since Mary's death she has can't seem to take the same pleasure in writing, especially children stories. Also, before Mary died she had lost a lot of money - mostly to oversea investments. She has no family to turn to for hope or advise.\r\n\r\nMary would have helped her had she been well enough. To an extent, Mary was her family. She's is alone now. It is that fact that depresses and frightens her. Dr. Richard tells her that she has to get away. A fresh environment; a new locality; to get out of London; to find a new village somewhere and make new friends - find a new rhythm for her life and then rethink her future. That is what she did and that is how she came to meet Mrs. Crozier, the housekeeper, and Christina, the ghost of a child who has come back to the house where she once lived. But why?";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Daphne Castell");
         ep.OutputPath = "09 Christina\\";
 
@@ -109,7 +109,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "Peter Harrington is a 43-year-old workaholic who is overweight, a smoker, and has high blood pressure. His business associates and wife keep telling him that he will drop dead one day if he doesn't completely change his lifestyle. One day, after another hectic day at work, he runs to the station to catch the 11:00 p.m. train home. As he sits in one of the compartments, time starts to drift past 11:00 p.m. with no train departure. Slowly, he starts to see that all those around him, railway emloyees and passengers, act strangely towards him as none are concerned about the late departure. Where is this train going and will he ever get home?";
         ep.FullDescription = "";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Glen Chandler");
         ep.OutputPath = "10 The Late Departure\\";
 
@@ -118,7 +118,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "Felix might finally be free of his wife, but who is the mysterious woman claiming to be his daughter? Starring George Baker";
         ep.FullDescription = "";
         ep.Casts.Add("", "George Baker");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Glen Chandler");
         ep.OutputPath = "11 Esmeralda\\";
 
@@ -127,7 +127,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "A gentle ghost story about Margaret, a seven-year-old girl who died of diphtheria. Her small hands quietly appear in Miss Poulton’s rented house, cleaning and caring for everything to keep it safe from illness. Far from frightening, she is a kind and comforting presence who softly looks after the home and its occupant.";
         ep.FullDescription = "More than causing goose pimples, this tender tale tugs at the heartstrings with its touching description of the antics of the \"most harmless ghost in the world.\" The pair of hands that show up in the house rented by Miss Poulton belong to a girl Margaret, who had died of diptheria at the tender age of seven. Ever since, her little hands appear every now and then to dust and clean the house with an almost obsessive desire to keep it free of infection. So unobtrusive and gentle is the dead girl’s presence that hers is the friendliest ghost. As Miss Poulton says of this sweet spirit: she \"smoothed my pillow, touched and made my table comely, in summers lifted the heads of the flowers as I passed\" The short story 'A Pair of Hands' by Arthur Quiller-Couch (1863 - 1944) was first published in 1898.";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Arthur Quiller-Couch");
         ep.OutputPath = "12 A Pair of Hands\\";
 
@@ -136,7 +136,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "While studying late, Jack Marriott—a fourth-year student at Edinburgh University—feels a sudden chill before an old friend, Ambrose Field, appears in a desperate state. After helping him, Marriott realises something is deeply wrong, and a long-forgotten promise returns to haunt him in a very literal way.";
         ep.FullDescription = "A sudden queer sensation of fear passed over him—a faintness and a shiver down the back. It went, however, almost as soon as it came, and he was just debating whether he would call aloud.to his invisible visitor, or slam the door and return to his books, when the cause of the disturbance turned the corner very slowly and came into view…\r\n\r\nThis tale concerns a young man by the name of Jack Marriott who is a fourth year student at Edinburgh University. One night he is cramming for his finals when his friend, Ambrose Field, from a long time ago knocks on the door in a terrible state. His friend is close to starvation, and so Marriot feeds him and sets him to sleep. As his friend sleeps,\r\n\r\nMarriott discovers that nothing is quite as it seems with the situation. A promise that was made a long time ago seems to have come back to haunt him – literally.\r\n";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Algernon Blackwood");
         ep.OutputPath = "13 Keeping His Promise\\";
 
@@ -144,7 +144,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("Which One");
         ep.Description = "A fire warden team are put to the toughest test during a 1940 bombing raid. Will they all survive? Stars Reginald Marsh.";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Ronald Chetwynd-Hayes");
         ep.OutputPath = "14 Which One";
 
@@ -157,7 +157,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Casts.Add("Mrs Witham", "Jane Thompson");
         ep.Casts.Add("", "David Timson");
         ep.Casts.Add("", "Alexander John");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Bram Stoker");
         ep.OutputPath = "15 The Judge's House";
 
@@ -165,7 +165,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("The Emissary");
         ep.Description = "Young Marion is unwell, but her pet dog keeps her in touch with the outside world. And beyond. Stars Jennie Linden";
         ep.Casts.Add("", "Jennie Linden");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Ray Bradbury");
         ep.OutputPath = "16 The Emissary";
 
@@ -173,7 +173,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("Legal Rites");
         ep.Description = "Adapted by Patricia Mays from Isaac Asimov & James Maccreag's short story. Starring Ed Bishop and directed by Derek Hoddinott";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Isaac Asimov");
         ep.Production.Add("WRITER", "James Maccreag");
         ep.OutputPath = "17 Legal Rites";
@@ -182,7 +182,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("Mists of Memory");
         ep.Description = "Young cellist Janet meets a confused old man. He wonders if 'music is where I live'. And he seems familiar. Stars Helen Worth.";
         ep.Casts.Add("", "Helen Worth");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Rosemary Timperley");
         ep.OutputPath = "18 Mists of Memory";
 
@@ -191,7 +191,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "A sickly young boy settles into a new address, but his ghostly playmate has other ideas. Stars Judy Cornwell and Timothy Bateson.";
         ep.Casts.Add("", "Judy Cornwell");
         ep.Casts.Add("", "Timothy Bateson");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Agatha Christie");
         ep.OutputPath = "19 The Lamp";
 
@@ -200,7 +200,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "Can a family holiday overcome all the issues that divide a bickering family? Stars Peter Sallis and Nicholas Lyndhurst.";
         ep.Casts.Add("", "Peter Sallis");
         ep.Casts.Add("", "Nicholas Lyndhurst");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Rosemary Timperley");
         ep.OutputPath = "20 Channel Crossing\\";
 
@@ -209,7 +209,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "Roland is dying. But could he possibly be haunting his wife while he is still alive? Stars Rosemary Leach and Leslie Sands.";
         ep.Casts.Add("", "Rosemary Leach");
         ep.Casts.Add("", "Leslie Sands");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Ronald Chetwynd-Hayes");
         ep.OutputPath = "21 The Liberated Tiger\\";
 
@@ -217,7 +217,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("The Dead Man of Varley Grange ");
         ep.Description = "Jack is set for a good time at a friend's new property, but why do strange rumors persist about the house? Stars George Baker.";
         ep.Casts.Add("", "George Baker");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("ADAPTED", "Patricia Mays");
         ep.Production.Add("DIRECTED", "Martin Williamson");
         ep.OutputPath = "22 The Dead Man of Varley Grange\\";
@@ -226,7 +226,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("To Kill A Ghost");
         ep.Description = "";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Elizabeth S. Holding");
         ep.Production.Add("ADAPTED", "Patricia Mays");
         ep.OutputPath = "23 To Kill A Ghost\\";
@@ -235,7 +235,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("The Grey Ones");
         ep.Description = "A patient fears evil is at work in the shape of a sinister conspiracy. Will his psychiatrist be able to help? Stars Tony Britton.";
         ep.Casts.Add("", "Tony Britton");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "J.B. Priestley");
         ep.OutputPath = "24 The Grey Ones\\";
 
@@ -243,7 +243,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("Only Child");
         ep.Description = "";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Francis Stephens");
         ep.OutputPath = "25 Only Child\\";
 
@@ -251,7 +251,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep = Episodes.Add("The Firmin Child");
         ep.Description = "Keeping His Promise by Algernon Blackwood, Two schoolfriends take a blood oath. Will they keep to it?";
         ep.Casts.Add("", "");
-
+        ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Richard Blum");
         ep.OutputPath = "26 The Firmin Child\\";
     }
