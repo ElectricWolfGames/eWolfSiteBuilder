@@ -1,4 +1,5 @@
-﻿using eWolfAudioShows.Shows_OLD;
+﻿using eWolfAudioShows.Interfaces;
+using eWolfAudioShows.Shows_OLD;
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
@@ -11,11 +12,11 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 {
     [PageTitle("Place holder Page")]
     [Navigation(NavigationTypes.Main, 2)]
-    public class ShowDisplay : PageDetails
+    public class AudioEpisodesShowPage : PageDetails
     {
-        public IAudioShowOLD AudioShow;
+        public IAudioEpisodesShow AudioShow;
 
-        public ShowDisplay()
+        public AudioEpisodesShowPage()
         {
             WebPage = new WebPage(this);
             DisplayTitle = "To update later";
@@ -149,7 +150,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
 
         private void Episodes(HTMLBuilder options)
         {
-            foreach (var show in AudioShow.Shows.ShowItems)
+            /*foreach (var show in AudioShow.Shows.ShowItems)
             {
                 options.Title(show.Name);
                 options.NewLine();
@@ -175,8 +176,9 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
                     options.EndTextCenter();
                     options.NewLine();
                 }
-            }
-            options.NewLine(); options.NewLine();
+            }*/
+            options.NewLine();
+            options.NewLine();
         }
 
         private string Jumbotron()

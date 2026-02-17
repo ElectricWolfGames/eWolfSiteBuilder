@@ -1,4 +1,5 @@
-﻿using eWolfAudioShows.Shows_OLD;
+﻿using eWolfAudioShows.Interfaces;
+using eWolfAudioShows.Shows_OLD;
 using eWolfAudioSiteBuilder.Services;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
@@ -63,9 +64,9 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             WebPage.Output();
         }
 
-        private static string CreateShowPage(IAudioShowOLD item)
+        private static string CreateShowPage(IAudioEpisodesShow item)
         {
-            ShowDisplay showDisplay = new()
+            AudioEpisodesShowPage showDisplay = new()
             {
                 AudioShow = item,
                 DisplayTitle = item.Title,
@@ -88,7 +89,7 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
         private string ShowListByName()
         {
             HTMLBuilder options = new();
-            /*var meds = SiteBuilderServiceLocator.Instance.GetService<AudioShowServies>();
+            var meds = SiteBuilderServiceLocator.Instance.GetService<AudioEpisodesShowServies>();
 
             options.Title("All shows by name");
             foreach (var item in meds.OnlyAviableShows().OrderBy(x => x.Title))
@@ -104,9 +105,6 @@ namespace eWolfAudioSiteBuilder._Site.Audio.Shows
             options.Text("</br>");
             options.Text("More to come...");
 
-            foreach (var item in meds.Shows)
-                ShowTextCreator.CreateYTFile(item);
-            */
             return options.Output();
         }
 

@@ -6,7 +6,7 @@ namespace eWolfAudioSiteBuilder.Services;
 
 public class AudioEpisodesShowServies
 {
-    private List<IAudioEpisodesShow> _audioShow = new();
+    private readonly List<IAudioEpisodesShow> _audioShow = new();
 
     public AudioEpisodesShowServies()
     {
