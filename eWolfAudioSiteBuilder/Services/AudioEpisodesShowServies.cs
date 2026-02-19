@@ -55,13 +55,8 @@ public class AudioEpisodesShowServies
         return (List<IAudioEpisodesShow>)selectedShows;
     }
 
-    private static List<IAudioEpisodesShow> GetAllEpisodesShow()
-    {
-        return Holder.GetAllEpisodesShow();
-    }
-
     private void AddAudioShows()
     {
-        _audioShow.AddRange(GetAllEpisodesShow());
+        _audioShow.AddRange(Holder.GetAllEpisodesShow());
     }
 }
