@@ -3,7 +3,7 @@ using eWolfAudioShows.Interfaces;
 
 namespace eWolfAudioShows.Data;
 
-public class AudioBaseOneOffShowDetails : IAudioOneOffShow
+public class AudioBaseOneOffShowDetails : IAudioDramaOneOffShow
 {
     public CastHolder Casts { get; set; } = new CastHolder();
     public string DateAdded { get; set; }

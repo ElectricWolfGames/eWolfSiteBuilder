@@ -11,7 +11,7 @@ public class ICE : AudioBaseOneOffShowDetails
         Title = "ICE:";
         TitleLine2 = "James Follett";
 
-        OutputPath = "E:\\Aduio_Uploads\\Drama\\2026\\02 ICE - James Follett\\";
+        OutputPath = "E:\\Audio_Uploads\\Drama\\2026\\02 ICE - James Follett\\";
 
         // YTPlayList = "https://www.youtube.com/playlist?list=PL5uFllPR3aCfYvj0shjRZaNAhfFZ0S-EU";
 

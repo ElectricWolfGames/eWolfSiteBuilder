@@ -15,4 +15,14 @@ public static class Holder
 
         return updates.ToList();
     }
+
+    public static List<IAudioDramaOneOffShow> GetAllIAudioDramaOneOffShow()
+    {
+        var updates = from t in Assembly.GetExecutingAssembly().GetTypes()
+                      where t.GetInterfaces().Contains(typeof(IAudioDramaOneOffShow))
+                            && t.GetConstructor(Type.EmptyTypes) != null
+                      select Activator.CreateInstance(t) as IAudioDramaOneOffShow;
+
+        return updates.ToList();
+    }
 }

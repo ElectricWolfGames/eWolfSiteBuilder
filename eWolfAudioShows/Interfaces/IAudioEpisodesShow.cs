@@ -19,7 +19,7 @@ public interface IAudioEpisodesShow
     string YTPlayList { get; set; }
 }
 
-public interface IAudioOneOffShow
+public interface IAudioDramaOneOffShow
 {
     CastHolder Casts { get; set; }
     string DateAdded { get; set; }
