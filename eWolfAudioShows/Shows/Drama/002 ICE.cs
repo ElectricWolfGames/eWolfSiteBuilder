@@ -9,7 +9,7 @@ public class ICE : AudioBaseOneOffShowDetails
         ShowTypes = Data.Enums.ShowTypes.Drama;
 
         Title = "ICE:";
-        TitleLine2 = "James Follett";
+        TitleLine2 = "By James Follett";
 
         OutputPath = "E:\\Audio_Uploads\\Drama\\2026\\02 ICE - James Follett\\";
 
