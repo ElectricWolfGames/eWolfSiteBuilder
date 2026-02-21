@@ -11,6 +11,7 @@ public class AudioBaseOneOffShowDetails : IAudioDramaOneOffShow
     public string OutputPath { get; set; }
     public CastHolder Production { get; set; } = new CastHolder();
     public ShowTypes ShowTypes { get; set; }
+    public string StoryType { get; set; }
     public string Title { get; set; }
     public string TitleLine2 { get; set; }
     public int Year { get; set; }

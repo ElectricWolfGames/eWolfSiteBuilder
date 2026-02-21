@@ -22,10 +22,12 @@ public partial class MainWindow : Window
         SiteBuilderServiceLocator.Instance.InjectService<INavigationBuilder>(new NavigationBuilder());
 
         SiteBuilderServiceLocator.Instance.InjectService<AudioEpisodesShowServies>(new AudioEpisodesShowServies());
+        SiteBuilderServiceLocator.Instance.InjectService<AudioEpisodesOneOffServies>(new AudioEpisodesOneOffServies());
 
         _buildSite.PreProcess(Assembly.GetExecutingAssembly());
 
         OutputHelperText.OutputAudioEpisodesShow();
+        OutputHelperText.OutputAudioOneOffShow();
 
         _buildSite.Create();
         _buildSite.OpenHomePage();

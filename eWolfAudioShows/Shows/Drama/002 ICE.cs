@@ -17,6 +17,7 @@ public class ICE : AudioBaseOneOffShowDetails
 
         Year = 1986;
         DateAdded = "";
+        StoryType = "Fiction / Thriller";
 
         Description = "Eight thousand square miles of solid ice, which have become detached from the Antarctic, are drifting inexorably towards New York Harbor. The combined might of the US military seems powerless to avert the collision, but if it occurs, the whole city will 'ring like a bell'.";
 
