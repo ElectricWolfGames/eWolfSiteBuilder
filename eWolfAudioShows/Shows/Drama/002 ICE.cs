@@ -8,15 +8,15 @@ public class ICE : AudioBaseOneOffShowDetails
     {
         ShowTypes = Data.Enums.ShowTypes.Drama;
 
-        Title = "ICE:";
+        Title = "ICE";
         TitleLine2 = "By James Follett";
 
         OutputPath = "E:\\Audio_Uploads\\Drama\\2026\\02 ICE - James Follett\\";
 
-        // YTPlayList = "https://www.youtube.com/playlist?list=PL5uFllPR3aCfYvj0shjRZaNAhfFZ0S-EU";
+        YTPlayList = "https://www.youtube.com/playlist?list=PL5uFllPR3aCfHLshihw2oXDBbbjtlt2MJ";
 
         Year = 1986;
-        DateAdded = "";
+        DateAdded = "2026/02/23";
         StoryType = "Fiction / Thriller";
 
         Description = "Eight thousand square miles of solid ice, which have become detached from the Antarctic, are drifting inexorably towards New York Harbor. The combined might of the US military seems powerless to avert the collision, but if it occurs, the whole city will 'ring like a bell'.";

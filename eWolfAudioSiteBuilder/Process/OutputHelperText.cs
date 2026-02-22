@@ -126,11 +126,6 @@ public static class OutputHelperText
         stringBuilder.AppendLine("CAST");
         Cast(stringBuilder, show);
 
-        // Show
-        stringBuilder.AppendLine();
-        stringBuilder.AppendLine($"{show.Title} {show.TitleLine2}");
-        stringBuilder.AppendLine(show.Description);
-        stringBuilder.AppendLine();
         stringBuilder.AppendLine();
 
         File.WriteAllText(path, stringBuilder.ToString());
