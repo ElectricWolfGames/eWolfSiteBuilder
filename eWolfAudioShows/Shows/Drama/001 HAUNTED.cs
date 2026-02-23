@@ -106,8 +106,8 @@ public class Haunted : AudioBaseEpisodesShowDetails
 
         // 10
         ep = Episodes.Add("The Late Departure");
-        ep.Description = "Peter Harrington is a 43-year-old workaholic who is overweight, a smoker, and has high blood pressure. His business associates and wife keep telling him that he will drop dead one day if he doesn't completely change his lifestyle. One day, after another hectic day at work, he runs to the station to catch the 11:00 p.m. train home. As he sits in one of the compartments, time starts to drift past 11:00 p.m. with no train departure. Slowly, he starts to see that all those around him, railway emloyees and passengers, act strangely towards him as none are concerned about the late departure. Where is this train going and will he ever get home?";
-        ep.FullDescription = "";
+        ep.Description = "Peter Harrington, a 43-year-old overweight, chain-smoking workaholic with high blood pressure, is constantly warned that his unhealthy lifestyle will kill him. One night, after rushing to catch the 11:00 p.m. train home, he notices it never departs. As time drifts on, the passengers and railway staff behave strangely, unconcerned by the delay. He begins to wonder: where is this train really headed — and will he ever make it home?";
+        ep.FullDescription = "Peter Harrington is a 43-year-old workaholic who is overweight, a smoker, and has high blood pressure. His business associates and wife keep telling him that he will drop dead one day if he doesn't completely change his lifestyle. One day, after another hectic day at work, he runs to the station to catch the 11:00 p.m. train home. As he sits in one of the compartments, time starts to drift past 11:00 p.m. with no train departure. Slowly, he starts to see that all those around him, railway emloyees and passengers, act strangely towards him as none are concerned about the late departure. Where is this train going and will he ever get home?";
         ep.Casts.Add("", "");
         ep.YoutubeLink = "";
         ep.Production.Add("WRITER", "Glen Chandler");

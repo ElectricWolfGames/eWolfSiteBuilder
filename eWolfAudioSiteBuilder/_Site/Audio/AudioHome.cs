@@ -69,6 +69,17 @@ public class AudioHome : PageDetails
             }
         }
 
+        var medOneOff = SiteBuilderServiceLocator.Instance.GetService<AudioEpisodesOneOffServies>();
+
+        var selectedShowOneOff = medOneOff.OnlyAviableShows();
+        foreach (var item in selectedShowOneOff)
+        {
+            if (!string.IsNullOrEmpty(item.Title))
+            {
+                options.Text(CommonHelpers.CreateCard(item));
+            }
+        }
+
         return options.Output();
     }
 }
