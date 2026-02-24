@@ -15,5 +15,6 @@ public class AudioBaseOneOffShowDetails : IAudioDramaOneOffShow
     public string Title { get; set; }
     public string TitleLine2 { get; set; }
     public int Year { get; set; }
+    public string YoutubeLink { get; set; }
     public string YTPlayList { get; set; }
 }

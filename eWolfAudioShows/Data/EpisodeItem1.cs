@@ -1,6 +1,8 @@
-﻿namespace eWolfAudioShows.Data;
+﻿using eWolfAudioShows.Interfaces.Interfaces;
 
-public class EpisodeItem
+namespace eWolfAudioShows.Data;
+
+public class EpisodeItem : IHaveCast
 {
     public EpisodeItem(string name)
     {

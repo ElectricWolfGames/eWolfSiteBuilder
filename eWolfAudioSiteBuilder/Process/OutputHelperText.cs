@@ -1,15 +1,26 @@
 ﻿using CommonCode;
 using eWolfAudioShows.Data;
 using eWolfAudioShows.Interfaces;
+using eWolfAudioShows.Interfaces.Interfaces;
 using eWolfAudioSiteBuilder.Services;
 using System.IO;
-using System.Security.Policy;
 using System.Text;
 
 namespace eWolfAudioSiteBuilder.Process;
 
 public static class OutputHelperText
 {
+    public static void Cast(StringBuilder options, IHaveCast audioShow)
+    {
+        foreach (var cast in audioShow.Casts.Casts)
+        {
+            if (string.IsNullOrWhiteSpace(cast.Role))
+                options.AppendLine($"{cast.FullName}");
+            else
+                options.AppendLine($"{cast.FullName} as '{cast.Role}'");
+        }
+    }
+
     public static void OutputAudioEpisodesShow()
     {
         var shows = AudioEpisodesShowServies.Store.OnlyNotAviableShows();
@@ -27,28 +38,6 @@ public static class OutputHelperText
         foreach (var show in shows)
         {
             OutputOneOffShowText(show);
-        }
-    }
-
-    private static void Cast(StringBuilder options, EpisodeItem AudioShow)
-    {
-        foreach (var cast in AudioShow.Casts.Casts)
-        {
-            if (string.IsNullOrWhiteSpace(cast.Role))
-                options.AppendLine($"{cast.FullName}");
-            else
-                options.AppendLine($"{cast.FullName} as '{cast.Role}'");
-        }
-    }
-
-    private static void Cast(StringBuilder options, IAudioDramaOneOffShow audioShow)
-    {
-        foreach (var cast in audioShow.Casts.Casts)
-        {
-            if (string.IsNullOrWhiteSpace(cast.Role))
-                options.AppendLine($"{cast.FullName}");
-            else
-                options.AppendLine($"{cast.FullName} as '{cast.Role}'");
         }
     }
 

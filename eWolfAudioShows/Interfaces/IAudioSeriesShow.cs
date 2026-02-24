@@ -1,11 +1,11 @@
 ﻿using eWolfAudioShows.Data;
 using eWolfAudioShows.Data.Enums;
+using eWolfAudioShows.Interfaces.Interfaces;
 
 namespace eWolfAudioShows.Interfaces;
 
-public interface IAudioSeriesShow
+public interface IAudioSeriesShow : IHaveCast
 {
-    CastHolder Casts { get; set; }
     string DateAdded { get; set; }
     string Description { get; set; }
     string DetailedDescription { get; set; }

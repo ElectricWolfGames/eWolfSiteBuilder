@@ -1,11 +1,11 @@
 ﻿using eWolfAudioShows.Data;
 using eWolfAudioShows.Data.Enums;
+using eWolfAudioShows.Interfaces.Interfaces;
 
 namespace eWolfAudioShows.Interfaces;
 
-public interface IAudioDramaOneOffShow
+public interface IAudioDramaOneOffShow : IHaveCast
 {
-    CastHolder Casts { get; set; }
     string DateAdded { get; set; }
     string Description { get; set; }
     string OutputPath { get; set; }
@@ -15,5 +15,6 @@ public interface IAudioDramaOneOffShow
     string Title { get; set; }
     string TitleLine2 { get; set; }
     int Year { get; set; }
+    string YoutubeLink { get; set; }
     string YTPlayList { get; set; }
 }

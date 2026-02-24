@@ -1,4 +1,5 @@
 ﻿using eWolfAudioShows.Shows_OLD;
+using eWolfAudioSiteBuilder.Process;
 using eWolfCommon.Helpers;
 using System.IO;
 using System.Text;
@@ -53,24 +54,13 @@ internal static class ShowTextCreator
 
         sb.AppendLine();
 
-        Cast(sb, audioShow);
+        OutputHelperText.Cast(sb, audioShow);
 
         Episodes(sb, audioShow);
 
         // TODO:Add the series and episodes if we have more then one of them
 
         File.WriteAllText(path, sb.ToString());
-    }
-
-    private static void Cast(StringBuilder options, IAudioShowOLD AudioShow)
-    {
-        foreach (var cast in AudioShow.Casts.Casts)
-        {
-            if (string.IsNullOrWhiteSpace(cast.Role))
-                options.AppendLine($"{cast.FullName}");
-            else
-                options.AppendLine($"{cast.FullName} as '{cast.Role}'");
-        }
     }
 
     private static void CreateTimeStampFile(IAudioShowOLD audioShow)

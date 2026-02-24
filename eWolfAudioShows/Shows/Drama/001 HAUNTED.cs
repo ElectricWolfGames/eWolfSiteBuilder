@@ -91,7 +91,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "A man encounters a troubled spirit. But could this meeting lead to tragedy? Adapted by Patricia Mays from H. G. Wells' story.";
         ep.Casts.Add("", "Donald Houston ");
         ep.Casts.Add("", "Christopher Guard");
-        ep.YoutubeLink = "";
+        ep.YoutubeLink = "_Nfx9wkfgy8";
         ep.Production.Add("WRITER", "H. G. Wells");
         ep.OutputPath = "08 The Inexperienced Ghost\\";
 
@@ -100,7 +100,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "Miss Chaucer tells Dr. Richard she’s deeply depressed after a friend’s death, financial losses, and feeling completely alone. Writing no longer brings her joy. He advises her to leave London and start fresh somewhere new. She moves to a village, meets Mrs. Crozier, and encounters Christina—the ghost of a child connected to the house—but the reason for the haunting remains a mystery.";
         ep.FullDescription = "Miss Chaucer tells Dr. Richard that she is so depressed - in part due to the recent death of a friend - she have tried to shake it off but with no luck. Since Mary's death she has can't seem to take the same pleasure in writing, especially children stories. Also, before Mary died she had lost a lot of money - mostly to oversea investments. She has no family to turn to for hope or advise.\r\n\r\nMary would have helped her had she been well enough. To an extent, Mary was her family. She's is alone now. It is that fact that depresses and frightens her. Dr. Richard tells her that she has to get away. A fresh environment; a new locality; to get out of London; to find a new village somewhere and make new friends - find a new rhythm for her life and then rethink her future. That is what she did and that is how she came to meet Mrs. Crozier, the housekeeper, and Christina, the ghost of a child who has come back to the house where she once lived. But why?";
         ep.Casts.Add("", "");
-        ep.YoutubeLink = "";
+        ep.YoutubeLink = "zLqOs-xUcCI";
         ep.Production.Add("WRITER", "Daphne Castell");
         ep.OutputPath = "09 Christina\\";
 
@@ -109,7 +109,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "Peter Harrington, a 43-year-old overweight, chain-smoking workaholic with high blood pressure, is constantly warned that his unhealthy lifestyle will kill him. One night, after rushing to catch the 11:00 p.m. train home, he notices it never departs. As time drifts on, the passengers and railway staff behave strangely, unconcerned by the delay. He begins to wonder: where is this train really headed — and will he ever make it home?";
         ep.FullDescription = "Peter Harrington is a 43-year-old workaholic who is overweight, a smoker, and has high blood pressure. His business associates and wife keep telling him that he will drop dead one day if he doesn't completely change his lifestyle. One day, after another hectic day at work, he runs to the station to catch the 11:00 p.m. train home. As he sits in one of the compartments, time starts to drift past 11:00 p.m. with no train departure. Slowly, he starts to see that all those around him, railway emloyees and passengers, act strangely towards him as none are concerned about the late departure. Where is this train going and will he ever get home?";
         ep.Casts.Add("", "");
-        ep.YoutubeLink = "";
+        ep.YoutubeLink = "T-CQWSoBnSY";
         ep.Production.Add("WRITER", "Glen Chandler");
         ep.OutputPath = "10 The Late Departure\\";
 
@@ -118,7 +118,7 @@ public class Haunted : AudioBaseEpisodesShowDetails
         ep.Description = "Felix might finally be free of his wife, but who is the mysterious woman claiming to be his daughter? Starring George Baker";
         ep.FullDescription = "";
         ep.Casts.Add("", "George Baker");
-        ep.YoutubeLink = "";
+        ep.YoutubeLink = "ZXpJ9wu1kJ4";
         ep.Production.Add("WRITER", "Glen Chandler");
         ep.OutputPath = "11 Esmeralda\\";
 

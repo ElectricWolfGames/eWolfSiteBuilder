@@ -76,6 +76,19 @@ public class AudioShows : PageDetails
         return showDisplay.OutputPath;
     }
 
+    private static string CreateShowPage(IAudioDramaOneOffShow item)
+    {
+        AudioDramaOneOffShowPage showDisplay = new()
+        {
+            AudioShow = item,
+            DisplayTitle = item.Title,
+            MenuTitle = item.Title,
+        };
+
+        showDisplay.CreatePage();
+        return showDisplay.OutputPath;
+    }
+
     private static string Jumbotron()
     {
         HTMLBuilder options = new();
@@ -101,7 +114,20 @@ public class AudioShows : PageDetails
                 options.Text("</br>");
             }
         }
+
+        var medOneOff = SiteBuilderServiceLocator.Instance.GetService<AudioEpisodesOneOffServies>();
+        foreach (var item in medOneOff.OnlyAviableShows().OrderBy(x => x.Title))
+        {
+            if (!string.IsNullOrEmpty(item.Title))
+            {
+                string link = CreateShowPage(item);
+                string safeFileName = FileHelper.GetSafeFileName(item.Title);
+                options.Text($"<a style='color: darkblue;' href='{safeFileName}.html'>{item.Title} ({item.ShowTypes})</a>");
+                options.Text("</br>");
+            }
+        }
         options.Text("</br>");
+
         options.Text("More to come...");
 
         return options.Output();

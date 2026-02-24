@@ -18,6 +18,7 @@ public class TheSpanishPackage : AudioBaseOneOffShowDetails
         Year = 1977;
         DateAdded = "2026/03/02";
         StoryType = "Fiction / Thriller";
+        YoutubeLink = "9OfP6c7FRXA";
 
         Description = "Peter and Jane have retired to Spain. Each year they look forward to a visit from their daughter, Clare. She was unable to come last year, but this year when they go to meet her at Alicante Airport....";
 

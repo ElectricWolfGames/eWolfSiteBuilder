@@ -1,6 +1,7 @@
 ﻿using eWolfAudioShows.Data;
 using eWolfAudioShows.Interfaces;
 using eWolfAudioShows.Shows_OLD;
+using eWolfAudioSiteBuilder.Helper;
 using eWolfBootstrap.Builders;
 using eWolfBootstrap.SiteBuilder;
 using eWolfBootstrap.SiteBuilder.Attributes;
@@ -132,44 +133,33 @@ public class AudioEpisodesShowPage : PageDetails
         }*/
     }
 
-    private void Cast(HTMLBuilder options)
-    {
-        options.StartTextCenter();
-        options.Text("<h3>Cast</h3>");
-        options.NewLine();
-        foreach (var cast in AudioShow.Casts.Casts)
-        {
-            if (string.IsNullOrWhiteSpace(cast.Role))
-                options.Text($"{cast.FullName}");
-            else
-                options.Text($"{cast.FullName} as '{cast.Role}'");
-            options.NewLine();
-        }
-        options.EndTextCenter();
-    }
-
     private void Episodes(HTMLBuilder options)
     {
-        foreach (var episodes in AudioShow.Episodes.EpisodeItems)
+        foreach (var episode in AudioShow.Episodes.EpisodeItems)
         {
-            options.Title(episodes.Name);
+            options.Title(episode.Name);
             options.NewLine();
             options.NewLine();
-            if (string.IsNullOrWhiteSpace(episodes.YoutubeLink))
+            if (string.IsNullOrWhiteSpace(episode.YoutubeLink))
             {
                 options.Text("<h2>Audio comming soon...</h2>");
             }
             else
-                options.YouTubeLinkAudio(episodes.YoutubeLink);
+                options.YouTubeLinkAudio(episode.YoutubeLink);
 
-            options.Text(episodes.Description);
-            if (episodes.Casts.Casts.Count > 1)
+            options.Text(episode.Description);
+
+            options.Text("</br>");
+            AudioHTMLHelpers.Cast(options, episode);
+            options.Text("</br>");
+
+            if (episode.Casts.Casts.Count > 1)
             {
-                Keywords.Add($"{episodes.Casts.Casts[0].Role}");
-                Keywords.Add($"{episodes.Casts.Casts[0].FullName}");
+                Keywords.Add($"{episode.Casts.Casts[0].Role}");
+                Keywords.Add($"{episode.Casts.Casts[0].FullName}");
             }
 
-            ProductinTeam(options, episodes);
+            ProductinTeam(options, episode);
         }
         options.NewLine();
         options.NewLine();
