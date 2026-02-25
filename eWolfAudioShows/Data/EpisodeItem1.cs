@@ -2,7 +2,10 @@
 
 namespace eWolfAudioShows.Data;
 
-public class EpisodeItem : IHaveCast
+public class EpisodeItem :
+        IHaveCast,
+        IHaveProduction,
+        IHaveYoutubeLink
 {
     public EpisodeItem(string name)
     {

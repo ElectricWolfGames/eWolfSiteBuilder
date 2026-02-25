@@ -2,6 +2,7 @@
 using eWolfAudioShows.Data;
 using eWolfAudioShows.Interfaces;
 using eWolfAudioShows.Interfaces.Interfaces;
+using eWolfAudioSiteBuilder.Helper;
 using eWolfAudioSiteBuilder.Services;
 using System.IO;
 using System.Text;
@@ -23,7 +24,7 @@ public static class OutputHelperText
 
     public static void OutputAudioEpisodesShow()
     {
-        var shows = AudioEpisodesShowServies.Store.OnlyNotAviableShows();
+        var shows = AudioEpisodesShowServies.Store.OnlyAviableShows();
 
         foreach (var show in shows)
         {
@@ -81,6 +82,8 @@ public static class OutputHelperText
             stringBuilder.AppendLine();
             stringBuilder.AppendLine();
 
+            stringBuilder.AppendLine(AudioHTMLHelpers.GetListOfActors(episode));
+
             File.WriteAllText(path, stringBuilder.ToString());
             count++;
         }
@@ -116,6 +119,7 @@ public static class OutputHelperText
         Cast(stringBuilder, show);
 
         stringBuilder.AppendLine();
+        stringBuilder.AppendLine(AudioHTMLHelpers.GetListOfActors(show));
 
         File.WriteAllText(path, stringBuilder.ToString());
     }

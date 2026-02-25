@@ -140,12 +140,7 @@ public class AudioEpisodesShowPage : PageDetails
             options.Title(episode.Name);
             options.NewLine();
             options.NewLine();
-            if (string.IsNullOrWhiteSpace(episode.YoutubeLink))
-            {
-                options.Text("<h2>Audio comming soon...</h2>");
-            }
-            else
-                options.YouTubeLinkAudio(episode.YoutubeLink);
+            AudioHTMLHelpers.YouTubeLink(options, episode);
 
             options.Text(episode.Description);
 
@@ -159,7 +154,7 @@ public class AudioEpisodesShowPage : PageDetails
                 Keywords.Add($"{episode.Casts.Casts[0].FullName}");
             }
 
-            ProductinTeam(options, episode);
+            AudioHTMLHelpers.ProductinTeam(options, episode);
         }
         options.NewLine();
         options.NewLine();

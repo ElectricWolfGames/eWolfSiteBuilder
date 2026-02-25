@@ -2,7 +2,7 @@
 
 namespace eWolfAudioShows.Interfaces.Interfaces;
 
-public interface IHaveCast
+public interface IHaveProduction
 {
-    CastHolder Casts { get; set; }
+    CastHolder Production { get; set; }
 }

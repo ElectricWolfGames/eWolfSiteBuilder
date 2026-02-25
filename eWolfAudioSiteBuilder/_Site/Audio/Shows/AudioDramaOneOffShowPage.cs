@@ -95,40 +95,15 @@ public class AudioDramaOneOffShowPage : PageDetails
         return stringBuilder.ToString();
     }
 
-    private void ProductinTeam(HTMLBuilder options, CastHolder castHolder)
-    {
-        options.StartTextCenter();
-        var writers = castHolder.Casts.Where(x => x.Role == "WRITER" && !string.IsNullOrEmpty(x.FullName));
-
-        if (writers.Any())
-        {
-            if (writers.Count() == 1)
-                options.Text("<h3>Writen by</h3>");
-            else
-                options.Text("<h3>Writers</h3>");
-
-            foreach (var writer in writers)
-            {
-                options.Text($"<h4>{writer.FullName}</h4>");
-            }
-        }
-        options.EndTextCenter();
-    }
-
     private string Show()
     {
         HTMLBuilder options = new();
 
-        if (string.IsNullOrWhiteSpace(AudioShow.YoutubeLink))
-        {
-            options.Text("<h2>Audio comming soon...</h2>");
-        }
-        else
-            options.YouTubeLinkAudio(AudioShow.YoutubeLink);
+        AudioHTMLHelpers.YouTubeLink(options, AudioShow);
 
         AudioHTMLHelpers.Cast(options, AudioShow);
 
-        ProductinTeam(options, AudioShow.Production);
+        AudioHTMLHelpers.ProductinTeam(options, AudioShow);
 
         //options.NewLine();
         //options.NewLine();
