@@ -11,7 +11,7 @@ namespace eWolfSiteBuilder._Site.Audio
         public Index()
         {
             WebPage = new WebPage(this);
-            DisplayTitle = "";
+            DisplayTitle = "Audio";
             MenuTitle = "Audio";
         }
 
