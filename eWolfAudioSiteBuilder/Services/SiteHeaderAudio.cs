@@ -36,13 +36,6 @@ public class SiteHeaderAudio : IPageHeaderDetails
 
     private static void AddSiteTracker(StringBuilder sb)
     {
-        sb.Append("<!-- Google tag (gtag.js) -->" +
-            "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-SJNLQ51KZ5\"></script>" +
-            "<script>" +
-            "  window.dataLayer = window.dataLayer || [];" +
-            "  function gtag(){dataLayer.push(arguments);}" +
-            "  gtag('js', new Date());" +
-            "  gtag('config', 'G-SJNLQ51KZ5');" +
-            "</script>");
+        sb.Append("<!-- Google tag (gtag.js) -->\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-XCYJV6WSHD\"></script>\r\n<script>\r\n  window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n  gtag('js', new Date());\r\n\r\n  gtag('config', 'G-XCYJV6WSHD');\r\n</script>");
     }
 }

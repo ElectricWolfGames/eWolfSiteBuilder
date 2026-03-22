@@ -34,12 +34,7 @@ namespace eWolfSiteBuilder.SiteDetails
 
         private static void AddSiteTracker(StringBuilder sb)
         {
-            sb.Append(@"
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src='https://www.googletagmanager.com/gtag/js?id=UA-180928318-1'></script>
-<script>
-  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);} gtag('js', new Date());  gtag('config', 'UA-180928318-1');
-</script>");
+            sb.Append("<!-- Google tag (gtag.js) -->\r\n<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-XCYJV6WSHD\"></script>\r\n<script>\r\n  window.dataLayer = window.dataLayer || [];\r\n  function gtag(){dataLayer.push(arguments);}\r\n  gtag('js', new Date());\r\n\r\n  gtag('config', 'G-XCYJV6WSHD');\r\n</script>");
         }
     }
 }

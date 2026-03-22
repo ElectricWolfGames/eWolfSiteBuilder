@@ -8,6 +8,8 @@ public class AudioBaseOneOffShowDetails : IAudioDramaOneOffShow
     public CastHolder Casts { get; set; } = new CastHolder();
     public string DateAdded { get; set; }
     public string Description { get; set; }
+    public string FullDescription { get; set; }
+
     public string OutputPath { get; set; }
     public CastHolder Production { get; set; } = new CastHolder();
     public ShowTypes ShowTypes { get; set; }
