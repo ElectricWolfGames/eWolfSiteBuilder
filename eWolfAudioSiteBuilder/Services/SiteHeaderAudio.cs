@@ -47,6 +47,6 @@ public class SiteHeaderAudio : IPageHeaderDetails
 </script>");
 
         // Add the Ad Scene
-        sb.Append("<script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5100298817928604\"\r\n     crossorigin=\"anonymous\"></script>");
+        // sb.Append("<script async src=\"https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5100298817928604\"\r\n     crossorigin=\"anonymous\"></script>");
     }
 }
