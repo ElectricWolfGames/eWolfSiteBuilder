@@ -37,7 +37,7 @@
 </ul>
 </div>
 </nav>
-<Body><!--01/05/2026--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--08/07/2026--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>Procedural Generation</h1>
@@ -71,7 +71,166 @@
 <div class='section-title'>
 <div class='text-left'><h2>Files</h2>
 </div>
-<div class='text-center'>CreateMesh.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using UnityEngine;</br></br>namespace eWolf.CodeExamples.ProceduralGeneration</br>{</br>&nbsp&nbsp&nbsp&nbsppublic class CreateMesh : MonoBehaviour</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic Material material;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprivate MeshBuilder _meshBuilder = new MeshBuilder();</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic void BuildMesh()</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_meshBuilder = new MeshBuilder();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUVSet uvSet = new UVSet(1, 1);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfloat size = 1f;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfloat width = 0.1f;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 xy = new Vector3(0, 0, 0);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 xytop = xy + Vector3.up * size;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 xyFar = xy + Vector3.forward * size;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 xytopFar = xytop + Vector3.forward * size;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_meshBuilder.BuildQuad(xy, xyFar, xytop, xytopFar, uvSet);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspxy = new Vector3(width, 0, 0);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspxytop = xy + Vector3.up * size;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspxyFar = xy + Vector3.forward * size;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspxytopFar = xytop + Vector3.forward * size;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_meshBuilder.BuildQuad(xytop, xytopFar, xy, xyFar, uvSet);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUVSet uvSetEnd = new UVSet(width, 1);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspxy = new Vector3(0, 0, 0);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspxytop = xy + Vector3.up * size;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspxyFar = xy + Vector3.right * width;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspxytopFar = xytop + Vector3.right * width;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_meshBuilder.BuildQuad(xytop, xytopFar, xy, xyFar, uvSetEnd);</br></br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_meshBuilder.ApplyMeshDetails(gameObject, material);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic void ClearMesh()</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_meshBuilder = new MeshBuilder();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_meshBuilder.ApplyMeshDetails(gameObject, material);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>MeshBuilder.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System;</br>using System.Collections.Generic;</br>using UnityEngine;</br></br>namespace eWolf.CodeExamples.ProceduralGeneration</br>{</br>&nbsp&nbsp&nbsp&nbsppublic class MeshBuilder</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprivate List<Vector2> MeshUVs { get; set; } = new List<Vector2>();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprivate List<Vector3> MeshVertices { get; set; } = new List<Vector3>();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprivate List<int> Triangles { get; set; } = new List<int>();</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic void ApplyMeshDetails(GameObject baseobject, Material material)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMesh mesh = new Mesh</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspname = $"MyMesh {DateTime.Now.ToShortDateString()}"</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp};</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspbaseobject.GetComponent<MeshFilter>().mesh = mesh;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmesh.vertices = MeshVertices.ToArray();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmesh.uv = MeshUVs.ToArray();</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRenderer r = baseobject.GetComponent<Renderer>();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspr.sharedMaterial = material;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmesh.SetTriangles(Triangles.ToArray(), 0);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmesh.subMeshCount = 1;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmesh.RecalculateNormals();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspmesh.RecalculateBounds();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic void BuildQuad(Vector3 a, Vector3 b, Vector3 c, Vector3 d, UVSet uvset)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspint indexA = AddVectorUVSets(a, uvset.BR);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspint indexB = AddVectorUVSets(b, uvset.TR);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspint indexC = AddVectorUVSets(c, uvset.BL);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspint indexD = AddVectorUVSets(d, uvset.TL);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTriangles.AddRange(new int[] { indexA, indexB, indexC });</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTriangles.AddRange(new int[] { indexD, indexC, indexB });</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspprivate int AddVectorUVSets(Vector3 points, Vector2 uvs)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMeshVertices.Add(points);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMeshUVs.Add(uvs);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn MeshVertices.Count - 1;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>UVSet.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using UnityEngine;</br></br>namespace eWolf.CodeExamples.ProceduralGeneration</br>{</br>&nbsp&nbsp&nbsp&nbsppublic class UVSet</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// The Bottom left position</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// </summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic Vector2 BL;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// The bottom right postion</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// </summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic Vector2 BR;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// The top left position</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// </summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic Vector2 TL;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// The top right position</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// </summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic Vector2 TR;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// The Standard constructor</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// </summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <param name="topLeft">The top left UV</param></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <param name="topRight">The top right UV</param></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <param name="botLeft">The bottom left uv</param></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <param name="botRight">The bottom right uv</param></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic UVSet(Vector2 topLeft, Vector2 topRight, Vector2 botLeft, Vector3 botRight)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTL = topLeft;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTR = topRight;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBL = botLeft;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBR = botRight;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// The Standard constructor</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// </summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic UVSet()</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// The Standard constructor</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// </summary></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <param name="x">The X position</param></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp/// <param name="y">The Y position</param></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic UVSet(float x, float y)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTL = new Vector2(0, 0);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTR = new Vector2(0, y);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBL = new Vector2(x, 0);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspBR = new Vector2(x, y);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br></div></div>
+<div class='text-center'>CreateMesh.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using UnityEngine;
+
+namespace eWolf.CodeExamples.ProceduralGeneration
+{
+    public class CreateMesh : MonoBehaviour
+    {
+        public Material material;
+        private MeshBuilder _meshBuilder = new MeshBuilder();
+
+        public void BuildMesh()
+        {
+            _meshBuilder = new MeshBuilder();
+            UVSet uvSet = new UVSet(1, 1);
+
+            float size = 1f;
+            float width = 0.1f;
+
+            Vector3 xy = new Vector3(0, 0, 0);
+            Vector3 xytop = xy + Vector3.up * size;
+            Vector3 xyFar = xy + Vector3.forward * size;
+            Vector3 xytopFar = xytop + Vector3.forward * size;
+            _meshBuilder.BuildQuad(xy, xyFar, xytop, xytopFar, uvSet);
+
+            xy = new Vector3(width, 0, 0);
+            xytop = xy + Vector3.up * size;
+            xyFar = xy + Vector3.forward * size;
+            xytopFar = xytop + Vector3.forward * size;
+            _meshBuilder.BuildQuad(xytop, xytopFar, xy, xyFar, uvSet);
+
+            UVSet uvSetEnd = new UVSet(width, 1);
+            xy = new Vector3(0, 0, 0);
+            xytop = xy + Vector3.up * size;
+            xyFar = xy + Vector3.right * width;
+            xytopFar = xytop + Vector3.right * width;
+            _meshBuilder.BuildQuad(xytop, xytopFar, xy, xyFar, uvSetEnd);
+
+
+            _meshBuilder.ApplyMeshDetails(gameObject, material);
+        }
+
+        public void ClearMesh()
+        {
+            _meshBuilder = new MeshBuilder();
+            _meshBuilder.ApplyMeshDetails(gameObject, material);
+        }
+    }
+}</code></pre></div></div></br></br>MeshBuilder.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace eWolf.CodeExamples.ProceduralGeneration
+{
+    public class MeshBuilder
+    {
+        private List&lt;Vector2&gt; MeshUVs { get; set; } = new List&lt;Vector2&gt;();
+        private List&lt;Vector3&gt; MeshVertices { get; set; } = new List&lt;Vector3&gt;();
+        private List&lt;int&gt; Triangles { get; set; } = new List&lt;int&gt;();
+
+        public void ApplyMeshDetails(GameObject baseobject, Material material)
+        {
+            Mesh mesh = new Mesh
+            {
+                name = $&quot;MyMesh {DateTime.Now.ToShortDateString()}&quot;
+            };
+            baseobject.GetComponent&lt;MeshFilter&gt;().mesh = mesh;
+
+            mesh.vertices = MeshVertices.ToArray();
+            mesh.uv = MeshUVs.ToArray();
+
+            Renderer r = baseobject.GetComponent&lt;Renderer&gt;();
+            r.sharedMaterial = material;
+
+            mesh.SetTriangles(Triangles.ToArray(), 0);
+
+            mesh.subMeshCount = 1;
+
+            mesh.RecalculateNormals();
+            mesh.RecalculateBounds();
+        }
+
+        public void BuildQuad(Vector3 a, Vector3 b, Vector3 c, Vector3 d, UVSet uvset)
+        {
+            int indexA = AddVectorUVSets(a, uvset.BR);
+            int indexB = AddVectorUVSets(b, uvset.TR);
+            int indexC = AddVectorUVSets(c, uvset.BL);
+            int indexD = AddVectorUVSets(d, uvset.TL);
+
+            Triangles.AddRange(new int[] { indexA, indexB, indexC });
+            Triangles.AddRange(new int[] { indexD, indexC, indexB });
+        }
+
+        private int AddVectorUVSets(Vector3 points, Vector2 uvs)
+        {
+            MeshVertices.Add(points);
+            MeshUVs.Add(uvs);
+            return MeshVertices.Count - 1;
+        }
+    }
+}</code></pre></div></div></br></br>UVSet.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using UnityEngine;
+
+namespace eWolf.CodeExamples.ProceduralGeneration
+{
+    public class UVSet
+    {
+        /// &lt;summary&gt;
+        /// The Bottom left position
+        /// &lt;/summary&gt;
+        public Vector2 BL;
+
+        /// &lt;summary&gt;
+        /// The bottom right postion
+        /// &lt;/summary&gt;
+        public Vector2 BR;
+
+        /// &lt;summary&gt;
+        /// The top left position
+        /// &lt;/summary&gt;
+        public Vector2 TL;
+
+        /// &lt;summary&gt;
+        /// The top right position
+        /// &lt;/summary&gt;
+        public Vector2 TR;
+
+        /// &lt;summary&gt;
+        /// The Standard constructor
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;topLeft&quot;&gt;The top left UV&lt;/param&gt;
+        /// &lt;param name=&quot;topRight&quot;&gt;The top right UV&lt;/param&gt;
+        /// &lt;param name=&quot;botLeft&quot;&gt;The bottom left uv&lt;/param&gt;
+        /// &lt;param name=&quot;botRight&quot;&gt;The bottom right uv&lt;/param&gt;
+        public UVSet(Vector2 topLeft, Vector2 topRight, Vector2 botLeft, Vector3 botRight)
+        {
+            TL = topLeft;
+            TR = topRight;
+            BL = botLeft;
+            BR = botRight;
+        }
+
+        /// &lt;summary&gt;
+        /// The Standard constructor
+        /// &lt;/summary&gt;
+        public UVSet()
+        {
+        }
+
+        /// &lt;summary&gt;
+        /// The Standard constructor
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;x&quot;&gt;The X position&lt;/param&gt;
+        /// &lt;param name=&quot;y&quot;&gt;The Y position&lt;/param&gt;
+        public UVSet(float x, float y)
+        {
+            TL = new Vector2(0, 0);
+            TR = new Vector2(0, y);
+            BL = new Vector2(x, 0);
+            BR = new Vector2(x, y);
+        }
+    }
+}</code></pre></div></div></br></br></div></div>
 </div>
 </div>
 <br />

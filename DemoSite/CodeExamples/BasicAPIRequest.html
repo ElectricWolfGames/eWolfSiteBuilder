@@ -37,7 +37,7 @@
 </ul>
 </div>
 </nav>
-<Body><!--01/05/2026--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--08/07/2026--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>API: Basic API request</h1>
@@ -71,7 +71,32 @@
 <div class='section-title'>
 <div class='text-left'><h2>Files</h2>
 </div>
-<div class='text-center'>ExchangerateAPIS.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using APITests;</br>using APITests.Model;</br>using Newtonsoft.Json;</br></br>// Demo API request</br>// https://www.exchangerate-api.com/docs/c-sharp-currency-api</br></br>namespace APIs</br>{</br>&nbsp&nbsp&nbsp&nbsppublic class ExchangeEateAPIS</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic void MakeRequest()</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstring urlString = $"https://v6.exchangerate-api.com/v6/{Consts.APIKey}/latest/USD";</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspusing (var webClient = new System.Net.WebClient())</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar json = webClient.DownloadString(urlString);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar exchangerateRates = JsonConvert.DeserializeObject<ExchangerateRateResponse>(json);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConsole.WriteLine($"BaseCode: {exchangerateRates.base_code}");</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConsole.WriteLine($"GBP: {exchangerateRates.conversion_rates.GBP}");</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspConsole.WriteLine($"EUR: {exchangerateRates.conversion_rates.EUR}");</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br></div></div>
+<div class='text-center'>ExchangerateAPIS.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using APITests;
+using APITests.Model;
+using Newtonsoft.Json;
+
+// Demo API request
+// https://www.exchangerate-api.com/docs/c-sharp-currency-api
+
+namespace APIs
+{
+    public class ExchangeEateAPIS
+    {
+        public void MakeRequest()
+        {
+            string urlString = $&quot;https://v6.exchangerate-api.com/v6/{Consts.APIKey}/latest/USD&quot;;
+            using (var webClient = new System.Net.WebClient())
+            {
+                var json = webClient.DownloadString(urlString);
+                var exchangerateRates = JsonConvert.DeserializeObject&lt;ExchangerateRateResponse&gt;(json);
+
+                Console.WriteLine($&quot;BaseCode: {exchangerateRates.base_code}&quot;);
+                Console.WriteLine($&quot;GBP: {exchangerateRates.conversion_rates.GBP}&quot;);
+                Console.WriteLine($&quot;EUR: {exchangerateRates.conversion_rates.EUR}&quot;);
+            }
+        }
+    }
+}</code></pre></div></div></br></br></div></div>
 </div>
 </div>
 <br />

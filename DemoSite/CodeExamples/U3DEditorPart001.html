@@ -37,7 +37,7 @@
 </ul>
 </div>
 </nav>
-<Body><!--01/05/2026--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--08/07/2026--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>Customizing the inspector for your game objects</h1>
@@ -71,7 +71,98 @@
 <div class='section-title'>
 <div class='text-left'><h2>Files</h2>
 </div>
-<div class='text-center'>ShowInspector.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System;</br>using UnityEngine;</br></br>public class ShowInspector : MonoBehaviour</br>{</br>&nbsp&nbsp&nbsp&nbsp[Range(1, 10)]</br>&nbsp&nbsp&nbsp&nbsppublic float Price = 5;</br></br>&nbsp&nbsp&nbsp&nbsppublic ExtraData ExtraData = new ExtraData();</br>&nbsp&nbsp&nbsp&nbsppublic UsableItems UsableItems = UsableItems.None;</br></br>&nbsp&nbsp&nbsp&nbsppublic void ResetValues()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspUsableItems = UsableItems.None;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspPrice = 5;</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></br>[Serializable]</br>public class ExtraData</br>{</br>&nbsp&nbsp&nbsp&nbsppublic bool ShowIcon = true;</br></br>&nbsp&nbsp&nbsp&nbsp[Range(32.0f, 256)]</br>&nbsp&nbsp&nbsp&nbsppublic float IconSize = 96;</br></br>}</br></br></div></div></div></br></br>ShowInspector_UI.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System.Collections;</br>using System.Collections.Generic;</br>using UnityEditor;</br>using UnityEngine;</br></br>[CustomEditor(typeof(ShowInspector)), CanEditMultipleObjects]</br>public class ShowInspector_UI : Editor</br>{</br>&nbsp&nbsp&nbsp&nbspprivate ShowInspector _showInspector;</br>&nbsp&nbsp&nbsp&nbspprivate string _oldName;</br>&nbsp&nbsp&nbsp&nbspprivate Texture2D _showItem = null;</br></br>&nbsp&nbsp&nbsp&nbspprivate static Texture2D GetTexture(string name)</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsptry</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTexture2D go = (Texture2D)Resources.Load(name);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn go;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspcatch</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn null;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br></br></br>&nbsp&nbsp&nbsp&nbsppublic override void OnInspectorGUI()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDrawDefaultInspector();</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_showInspector.ExtraData.ShowIcon)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_showItem == null ||</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_oldName != _showInspector.UsableItems.ToString())</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_showItem = GetTexture(_showInspector.UsableItems.ToString());</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_oldName = _showInspector.UsableItems.ToString();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_showItem != null)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGUILayout.Label(</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_showItem,</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGUILayout.Width(_showInspector.ExtraData.IconSize),</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGUILayout.Height(_showInspector.ExtraData.IconSize));</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (_showInspector.UsableItems != UsableItems.None)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGUI.color = Color.green;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (GUILayout.Button("Reset Values"))</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_showInspector.ResetValues();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbspprivate void OnEnable()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_showInspector = (ShowInspector)target;</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></br></div></div></div></br></br></div></div>
+<div class='text-center'>ShowInspector.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using System;
+using UnityEngine;
+
+public class ShowInspector : MonoBehaviour
+{
+    [Range(1, 10)]
+    public float Price = 5;
+
+    public ExtraData ExtraData = new ExtraData();
+    public UsableItems UsableItems = UsableItems.None;
+
+    public void ResetValues()
+    {
+        UsableItems = UsableItems.None;
+        Price = 5;
+    }
+}
+
+[Serializable]
+public class ExtraData
+{
+    public bool ShowIcon = true;
+
+    [Range(32.0f, 256)]
+    public float IconSize = 96;
+
+}
+</code></pre></div></div></br></br>ShowInspector_UI.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using System.Collections;
+using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+[CustomEditor(typeof(ShowInspector)), CanEditMultipleObjects]
+public class ShowInspector_UI : Editor
+{
+    private ShowInspector _showInspector;
+    private string _oldName;
+    private Texture2D _showItem = null;
+
+    private static Texture2D GetTexture(string name)
+    {
+        try
+        {
+            Texture2D go = (Texture2D)Resources.Load(name);
+            return go;
+        }
+        catch
+        {
+            return null;
+        }
+    }
+
+
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+        if (_showInspector.ExtraData.ShowIcon)
+        {
+            if (_showItem == null ||
+            _oldName != _showInspector.UsableItems.ToString())
+            {
+                _showItem = GetTexture(_showInspector.UsableItems.ToString());
+                _oldName = _showInspector.UsableItems.ToString();
+            }
+
+            if (_showItem != null)
+            {
+                GUILayout.Label(
+                    _showItem,
+                    GUILayout.Width(_showInspector.ExtraData.IconSize),
+                    GUILayout.Height(_showInspector.ExtraData.IconSize));
+            }
+        }
+
+        if (_showInspector.UsableItems != UsableItems.None)
+        {
+            GUI.color = Color.green;
+            if (GUILayout.Button(&quot;Reset Values&quot;))
+            {
+                _showInspector.ResetValues();
+            }
+        }
+
+    }
+
+    private void OnEnable()
+    {
+        _showInspector = (ShowInspector)target;
+    }
+}
+</code></pre></div></div></br></br></div></div>
 </div>
 </div>
 <br />

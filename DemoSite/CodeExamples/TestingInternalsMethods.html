@@ -37,7 +37,7 @@
 </ul>
 </div>
 </nav>
-<Body><!--01/05/2026--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--08/07/2026--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>Testing Internals Methods</h1>
@@ -71,7 +71,74 @@
 <div class='section-title'>
 <div class='text-left'><h2>Files</h2>
 </div>
-<div class='text-center'>Calculator.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System.Runtime.CompilerServices;</br></br>[assembly: InternalsVisibleTo("Code.UnitTest")]</br></br>namespace Code</br>{</br>&nbsp&nbsp&nbsp&nbsppublic class Calculator</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic string ProcessCalculation(string line)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspstring[] parts = line.Split(new[] { '+', '-' });</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfloat valueA = float.Parse(parts[0]);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfloat valueB = float.Parse(parts[1]);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (line.Contains('+'))</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn Add(valueA, valueB).ToString();</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (line.Contains('-'))</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn Sub(valueA, valueB).ToString();</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn "ERROR:";</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspinternal float Add(float a, float b)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn a + b;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspinternal float Sub(float a, float b)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn a - b;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>CalculatorTests.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">namespace Code.UnitTest</br>{</br>&nbsp&nbsp&nbsp&nbsppublic class Tests</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp[TestCase("1+2", "3")]</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp[TestCase("123-23", "100")]</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp[TestCase("1-2", "-1")]</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic void ShouldAddNumbers(string process, string expectedResult)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar code = new Calculator();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar result = code.ProcessCalculation(process);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAssert.That(result, Is.EqualTo(expectedResult));</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp[Test]</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic void ShouldAddReturnAddedValues()</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar code = new Calculator();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar result = code.Add(1, 1);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAssert.That(result, Is.EqualTo(2));</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp[Test]</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic void ShouldSubReturnSubValues()</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar code = new Calculator();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar result = code.Sub(1, 1);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAssert.That(result, Is.EqualTo(0));</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br></div></div>
+<div class='text-center'>Calculator.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo(&quot;Code.UnitTest&quot;)]
+
+namespace Code
+{
+    public class Calculator
+    {
+        public string ProcessCalculation(string line)
+        {
+            string[] parts = line.Split(new[] { &#39;+&#39;, &#39;-&#39; });
+
+            float valueA = float.Parse(parts[0]);
+            float valueB = float.Parse(parts[1]);
+
+            if (line.Contains(&#39;+&#39;))
+                return Add(valueA, valueB).ToString();
+
+            if (line.Contains(&#39;-&#39;))
+                return Sub(valueA, valueB).ToString();
+
+            return &quot;ERROR:&quot;;
+        }
+
+        internal float Add(float a, float b)
+        {
+            return a + b;
+        }
+
+        internal float Sub(float a, float b)
+        {
+            return a - b;
+        }
+    }
+}</code></pre></div></div></br></br>CalculatorTests.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>namespace Code.UnitTest
+{
+    public class Tests
+    {
+        [TestCase(&quot;1+2&quot;, &quot;3&quot;)]
+        [TestCase(&quot;123-23&quot;, &quot;100&quot;)]
+        [TestCase(&quot;1-2&quot;, &quot;-1&quot;)]
+        public void ShouldAddNumbers(string process, string expectedResult)
+        {
+            var code = new Calculator();
+            var result = code.ProcessCalculation(process);
+
+            Assert.That(result, Is.EqualTo(expectedResult));
+        }
+
+        [Test]
+        public void ShouldAddReturnAddedValues()
+        {
+            var code = new Calculator();
+            var result = code.Add(1, 1);
+
+            Assert.That(result, Is.EqualTo(2));
+        }
+
+        [Test]
+        public void ShouldSubReturnSubValues()
+        {
+            var code = new Calculator();
+            var result = code.Sub(1, 1);
+
+            Assert.That(result, Is.EqualTo(0));
+        }
+    }
+}</code></pre></div></div></br></br></div></div>
 </div>
 </div>
 <br />

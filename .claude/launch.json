@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "demo-site",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["-y", "serve", "DemoSite", "-l", "8420"],
+      "port": 8420
+    }
+  ]
+}

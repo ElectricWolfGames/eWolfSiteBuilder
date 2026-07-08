@@ -37,7 +37,7 @@
 </ul>
 </div>
 </nav>
-<Body><!--01/05/2026--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--08/07/2026--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>Attributes: Adding extra data on to Enums</h1>
@@ -71,7 +71,58 @@
 <div class='section-title'>
 <div class='text-left'><h2>Files</h2>
 </div>
-<div class='text-center'>TitleAttribute.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System;</br></br>namespace eWolf.CodeExamples.EnumnAttributes</br>{</br>&nbsp&nbsp&nbsp&nbsp[AttributeUsage(AttributeTargets.All)]</br>&nbsp&nbsp&nbsp&nbsppublic class TitleAttribute : Attribute</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic TitleAttribute(string title)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTitle = title;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic string Title { get; set; }</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>EnumHelper.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System.ComponentModel;</br>using System.Linq;</br>using System.Reflection;</br>using UnityEngine;</br></br>namespace eWolf.CodeExamples.EnumnAttributes</br>{</br>&nbsp&nbsp&nbsp&nbsppublic class EnumHelper : MonoBehaviour</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic static string GetEnumDescription(System.Enum value)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFieldInfo fi = value.GetType().GetField(value.ToString());</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (attributes != null && attributes.Any())</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn attributes.First().Description;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn value.ToString();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsppublic static string GetEnumTitle(System.Enum value)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFieldInfo fi = value.GetType().GetField(value.ToString());</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTitleAttribute[] attributes =</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfi.GetCustomAttributes(typeof(TitleAttribute), false) as TitleAttribute[];</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (attributes != null && attributes.Any())</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn attributes.First().Title;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn value.ToString();</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br></div></div>
+<div class='text-center'>TitleAttribute.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using System;
+
+namespace eWolf.CodeExamples.EnumnAttributes
+{
+    [AttributeUsage(AttributeTargets.All)]
+    public class TitleAttribute : Attribute
+    {
+        public TitleAttribute(string title)
+        {
+            Title = title;
+        }
+
+        public string Title { get; set; }
+    }
+}</code></pre></div></div></br></br>EnumHelper.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
+using UnityEngine;
+
+namespace eWolf.CodeExamples.EnumnAttributes
+{
+    public class EnumHelper : MonoBehaviour
+    {
+        public static string GetEnumDescription(System.Enum value)
+        {
+            FieldInfo fi = value.GetType().GetField(value.ToString());
+
+            DescriptionAttribute[] attributes = fi.GetCustomAttributes(typeof(DescriptionAttribute), false) as DescriptionAttribute[];
+
+            if (attributes != null &amp;&amp; attributes.Any())
+            {
+                return attributes.First().Description;
+            }
+
+            return value.ToString();
+        }
+
+        public static string GetEnumTitle(System.Enum value)
+        {
+            FieldInfo fi = value.GetType().GetField(value.ToString());
+            TitleAttribute[] attributes =
+                    fi.GetCustomAttributes(typeof(TitleAttribute), false) as TitleAttribute[];
+
+            if (attributes != null &amp;&amp; attributes.Any())
+            {
+                return attributes.First().Title;
+            }
+
+            return value.ToString();
+        }
+    }
+}</code></pre></div></div></br></br></div></div>
 </div>
 </div>
 <br />

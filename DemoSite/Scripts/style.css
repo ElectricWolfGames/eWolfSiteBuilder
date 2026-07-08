@@ -749,6 +749,30 @@ section {
   text-decoration: none;
 }
 
+/*--------------------------------------------------------------
+# Code blocks
+--------------------------------------------------------------*/
+.code-block {
+  background: #1e1e2e;
+  color: #d4d4dc;
+  font-family: "Consolas", "SFMono-Regular", "Menlo", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 20px;
+  border-radius: 8px;
+  overflow-x: auto;
+  white-space: pre;
+  margin: 15px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.code-block code {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  padding: 0;
+}
+
 #footer .copyright {
   text-align: center;
   float: left;

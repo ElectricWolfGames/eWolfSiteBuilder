@@ -37,7 +37,7 @@
 </ul>
 </div>
 </nav>
-<Body><!--01/05/2026--><div class='container mt-12'><div class='jumbotron'>
+<Body><!--08/07/2026--><div class='container mt-12'><div class='jumbotron'>
 <div class='row'>
 <div class='col-md-12'>
 <h1>Enhance your unity editor with Handles</h1>
@@ -71,7 +71,117 @@
 <div class='section-title'>
 <div class='text-left'><h2>Files</h2>
 </div>
-<div class='text-center'>ShowHandles.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using UnityEngine;</br></br>public class ShowHandles : MonoBehaviour</br>{</br>&nbsp&nbsp&nbsp&nbsppublic float Size = 1;</br>&nbsp&nbsp&nbsp&nbsppublic Vector3 LastPos { get; set; } = new Vector3(1, 0, 0);</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnDrawGizmosSelected()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGizmos.DrawWireSphere(transform.position, Size);</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>ShowHandles_UI.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using Unity.VisualScripting;</br>using UnityEditor;</br>using UnityEngine;</br></br>[CustomEditor(typeof(ShowHandles))]</br>[CanEditMultipleObjects]</br>public class ShowHandles_UI : Editor</br>{</br>&nbsp&nbsp&nbsp&nbspprivate ShowHandles _node;</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnEnable()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node = target.GetComponent<ShowHandles>();</br>&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsppublic void OnSceneGUI()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspvar handlePosition = _node.gameObject.transform.position + _node.LastPos;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 newpos = Handles.FreeMoveHandle(</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphandlePosition,</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspQuaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (newpos != handlePosition)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node.LastPos = newpos - _node.gameObject.transform.position;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node.Size = _node.LastPos.magnitude;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp} </br></br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br></br></br>ShowPath.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using System.Collections.Generic;</br>using System.Linq;</br>using UnityEngine;</br></br>public class ShowPath : MonoBehaviour</br>{</br>&nbsp&nbsp&nbsp&nbsppublic bool EditPath = true;</br>&nbsp&nbsp&nbsp&nbsppublic List<Vector3> Nodes = new List<Vector3>();</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnDrawGizmosSelected()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (!EditPath)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (!Nodes.Any())</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 posLast = Nodes[0];</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor (int i = 1; i < Nodes.Count; i++)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGizmos.DrawLine(Nodes[i], posLast);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspposLast = Nodes[i];</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br>ShowPath_UI.cs</br><div class='col-md-12'><div class='text-left'><div class="p-3 mb-2 bg-secondary text-white">using Unity.VisualScripting;</br>using UnityEditor;</br>using UnityEngine;</br></br>[CustomEditor(typeof(ShowPath))]</br>[CanEditMultipleObjects]</br>public class ShowPath_UI : Editor</br>{</br>&nbsp&nbsp&nbsp&nbspprivate ShowPath _node;</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnEnable()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node = target.GetComponent<ShowPath>();</br>&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsppublic void OnSceneGUI()</br>&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (!_node.EditPath)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspreturn;</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 handlePosition = new Vector3(1, 0, 0);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspfor (int i = 0; i < _node.Nodes.Count; i++)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphandlePosition = _node.Nodes[i];</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVector3 newpos = Handles.FreeMoveHandle(</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   handlePosition,</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp   Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (newpos != handlePosition)</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspnewpos.y = 0;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node.Nodes[i] = newpos;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsphandlePosition.x += 2f;</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspQuaternion q = Quaternion.Euler(90, 0, 0);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspif (Handles.Button(handlePosition, q, 0.5f, 0.5f, Handles.CircleHandleCap))</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_node.Nodes.Add(handlePosition);</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp}</br></br>&nbsp&nbsp&nbsp&nbsp}</br>}</br></div></div></div></br></br></div></div>
+<div class='text-center'>ShowHandles.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using UnityEngine;
+
+public class ShowHandles : MonoBehaviour
+{
+    public float Size = 1;
+    public Vector3 LastPos { get; set; } = new Vector3(1, 0, 0);
+
+    public void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, Size);
+    }
+}</code></pre></div></div></br></br>ShowHandles_UI.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using Unity.VisualScripting;
+using UnityEditor;
+using UnityEngine;
+
+[CustomEditor(typeof(ShowHandles))]
+[CanEditMultipleObjects]
+public class ShowHandles_UI : Editor
+{
+    private ShowHandles _node;
+
+    public void OnEnable()
+    {
+        _node = target.GetComponent&lt;ShowHandles&gt;();
+    }
+    public void OnSceneGUI()
+    {
+        var handlePosition = _node.gameObject.transform.position + _node.LastPos;
+
+        Vector3 newpos = Handles.FreeMoveHandle(
+            handlePosition,
+            Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);
+
+        if (newpos != handlePosition)
+        {
+            _node.LastPos = newpos - _node.gameObject.transform.position;
+            _node.Size = _node.LastPos.magnitude;
+        } 
+
+    }
+}</code></pre></div></div></br></br></br></br>ShowPath.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
+
+public class ShowPath : MonoBehaviour
+{
+    public bool EditPath = true;
+    public List&lt;Vector3&gt; Nodes = new List&lt;Vector3&gt;();
+
+    public void OnDrawGizmosSelected()
+    {
+        if (!EditPath)
+            return;
+
+        if (!Nodes.Any())
+            return;
+
+        Vector3 posLast = Nodes[0];
+        
+        for (int i = 1; i &lt; Nodes.Count; i++)
+        {
+            Gizmos.DrawLine(Nodes[i], posLast);
+            posLast = Nodes[i];
+        }
+    }
+}</code></pre></div></div></br></br>ShowPath_UI.cs</br><div class='col-md-12'><div class='text-left'><pre class='code-block'><code>using Unity.VisualScripting;
+using UnityEditor;
+using UnityEngine;
+
+[CustomEditor(typeof(ShowPath))]
+[CanEditMultipleObjects]
+public class ShowPath_UI : Editor
+{
+    private ShowPath _node;
+
+    public void OnEnable()
+    {
+        _node = target.GetComponent&lt;ShowPath&gt;();
+    }
+
+    public void OnSceneGUI()
+    {
+        if (!_node.EditPath)
+            return;
+
+        Vector3 handlePosition = new Vector3(1, 0, 0);
+
+        for (int i = 0; i &lt; _node.Nodes.Count; i++)
+        {
+            handlePosition = _node.Nodes[i];
+
+            Vector3 newpos = Handles.FreeMoveHandle(
+               handlePosition,
+               Quaternion.identity, 0.5f, Vector3.zero, Handles.RectangleHandleCap);
+
+            if (newpos != handlePosition)
+            {
+                newpos.y = 0;
+                _node.Nodes[i] = newpos;
+            }
+        }
+
+        handlePosition.x += 2f;
+        Quaternion q = Quaternion.Euler(90, 0, 0);
+        if (Handles.Button(handlePosition, q, 0.5f, 0.5f, Handles.CircleHandleCap))
+        {
+            _node.Nodes.Add(handlePosition);
+        }
+
+    }
+}</code></pre></div></div></br></br></div></div>
 </div>
 </div>
 <br />
