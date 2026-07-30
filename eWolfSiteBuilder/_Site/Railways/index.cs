@@ -5,7 +5,7 @@ using eWolfBootstrap.SiteBuilder.Enums;
 namespace eWolfSiteBuilder._Site.Railways
 {
     [PageTitle("index.html")]
-    [Navigation(NavigationTypes.Main, 2)]
+    [Navigation(NavigationTypes.Main, 3)]
     public class Index : PageDetails
     {
         public Index()
