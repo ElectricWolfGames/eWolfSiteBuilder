@@ -9,6 +9,7 @@ namespace eWolfSiteBuilder._Site.Games.ThreeNumberProblems
     [PageTitle("index.html")]
     public class Index : PageDetailsWolfSite
     {
+        private const string HeaderImage = "FeatureGraphic-1024x500.png";
         private const string ImageFolder = "Images";
 
         public Index()
@@ -90,9 +91,9 @@ namespace eWolfSiteBuilder._Site.Games.ThreeNumberProblems
         {
             HTMLBuilder outer = new HTMLBuilder();
 
-            outer.Jumbotron(DisplayTitle, "Three numbers, a handful of operators and a target to hit.");
-            outer.ImagePath($"{ImageFolder}/ThreeNumberProblemLogo.png", 35);
+            outer.ImagePath($"{ImageFolder}/{HeaderImage}", 100);
             outer.NewLine();
+            outer.Jumbotron(DisplayTitle, "Three numbers, a handful of operators and a target to hit.");
 
             return outer.Output();
         }
