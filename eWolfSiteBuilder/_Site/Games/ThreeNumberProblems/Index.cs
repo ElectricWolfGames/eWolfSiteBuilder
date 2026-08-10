@@ -11,6 +11,7 @@ namespace eWolfSiteBuilder._Site.Games.ThreeNumberProblems
     {
         private const string HeaderImage = "FeatureGraphic-1024x500.png";
         private const string ImageFolder = "Images";
+        private const string PlayStoreLink = "https://play.google.com/store/apps/details?id=com.threenumberproblem.game";
 
         public Index()
         {
@@ -60,7 +61,7 @@ namespace eWolfSiteBuilder._Site.Games.ThreeNumberProblems
             HTMLBuilder outer = new HTMLBuilder();
 
             outer.StartTextCenter();
-            outer.Text("A quick fire maths puzzle game for Android. Every round deals you three number tiles and a set of operator tiles, and gives you a target to hit.");
+            outer.Text("A quick fire maths puzzle game for Android, out now on Google Play. Every round deals you three number tiles and a set of operator tiles, and gives you a target to hit.");
             outer.NewLine();
             outer.Text("Drag the tiles into the five slots to build a sum that lands exactly on the target, then hit Submit. The sum is worked out left to right, so it is the order you choose that matters.");
             outer.NewLine();
@@ -80,7 +81,10 @@ namespace eWolfSiteBuilder._Site.Games.ThreeNumberProblems
             outer.NewLine();
             outer.NewLine();
             outer.StartTextCenter();
-            outer.Text("Three Number Problem is in development and heading for Google Play.");
+            outer.Text("Three Number Problem is free to download and play on any Android phone or tablet.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.Text(PlayStoreButton());
             outer.NewLine();
             outer.EndTextCenter();
 
@@ -93,7 +97,12 @@ namespace eWolfSiteBuilder._Site.Games.ThreeNumberProblems
 
             outer.ImagePath($"{ImageFolder}/{HeaderImage}", 100);
             outer.NewLine();
-            outer.Jumbotron(DisplayTitle, "Three numbers, a handful of operators and a target to hit.");
+            outer.Jumbotron(DisplayTitle, "Three numbers, a handful of operators and a target to hit. Out now on Google Play.");
+
+            outer.StartTextCenter();
+            outer.Text(PlayStoreButton());
+            outer.NewLine();
+            outer.EndTextCenter();
 
             return outer.Output();
         }
@@ -134,6 +143,11 @@ namespace eWolfSiteBuilder._Site.Games.ThreeNumberProblems
             outer.NewLine();
 
             return outer.Output();
+        }
+
+        private string PlayStoreButton()
+        {
+            return $"<a href='{PlayStoreLink}' target='_blank' class='btn btn-success btn-lg'>Get it on Google Play</a>";
         }
     }
 }
