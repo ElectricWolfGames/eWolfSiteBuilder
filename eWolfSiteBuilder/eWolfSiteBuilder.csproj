@@ -11,6 +11,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="_Site\Games\NumberTrail\" />
 	  <Folder Include="_Site\Unity\NewFolder\" />
 	</ItemGroup>
 
