@@ -59,7 +59,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
             Question(outer, "What's the title card?",
                 "An animated opening card with the name, the place and the date. It's filled in from the folder name (for example \"2026-04-11 Bletchley Park\"). Click <em>Title card…</em> to change it, or to turn it off.");
             Question(outer, "How are portrait photos shown?",
-                "Videos are wide, so a portrait photo can't fit whole. The first time you make a video with portrait photos, the app asks which part of each to show, and the video pans gently across it. To turn a photo the right way up, hover over it and click <em>Edit</em>.");
+                "Videos are wide, so a portrait photo can't fit whole. The first time you make a video with portrait photos, the app asks which part of each to show, and the video pans gently across it. To change it later, right-click the photo and choose <em>Adjust crop…</em>. To turn a photo the right way up, hover over it and click <em>Edit</em>; you can adjust its crop there too.");
 
             outer.Text("<h4>Photos and music</h4>");
             Question(outer, "My iPhone (HEIC) photos can't be read.",
