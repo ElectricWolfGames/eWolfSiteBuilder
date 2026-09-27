@@ -158,7 +158,7 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             HTMLBuilder outer = new HTMLBuilder();
             outer.StartTextCenter();
             outer.NewLine();
-            outer.Text("To start creating random buildings you just need to add the prefab of your chosen building type from the selection in the prefab folder.");
+            outer.Text("To start creating random buildings you just need to add the prefab of your chosen building type from the selection in the Prefabs folder (use the ones in Prefabs/URP if your project uses the Universal Render Pipeline).");
             outer.NewLine();
             outer.NewLine();
             outer.Text("Building builder is ideal for any low poly games that need a lot of buildings, or just as a background building for higher detail games.");
@@ -273,6 +273,10 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             outer.TextBoldText("Below the main list there are two more lists, ", "Unkept Materials", " and ");
             outer.TextBoldText("", "Unused Materials", ". These hold the weathered version of each material, matched by position in the list. You do not normally need to fill these in: the first time you press a weathering button the builder finds them for you by name.");
 
+            outer.NewLine();
+            outer.NewLine();
+            outer.TextBoldText("", "Universal Render Pipeline (URP)", " - the materials in Materials/Clean, Unkept and Unused use the built-in Standard shader. The same set is provided for URP in Materials/URP (named <Name>_URP, <Name>_URP_Unkept and <Name>_URP_Unused) on the Universal Render Pipeline/Lit shader. In a URP project use the prefabs in Prefabs/URP, which are the same six prefabs already set up with the _URP materials - or put the _URP materials in any Builder's material list yourself; the weathering buttons find the matching versions in the same way. The demo scene DemoScenes/V2/MoreTextures_URP is the URP version of MoreTextures - a street of buildings in all three conditions using the _URP materials, so you can see everything working straight away. In a built-in pipeline project the URP materials show a missing shader - ignore or delete the Materials/URP folder.");
+
             outer.EndTextCenter();
             return outer.Output();
         }
@@ -306,9 +310,13 @@ namespace eWolfSiteBuilder._Site.Unity.BuildingBuilder
             outer.OtherDetails("16 new texture styles", "brick, stone, render, timber, log and more - 21 styles in all, each in all three conditions.");
             outer.OtherDetails("Random weather", "tick which conditions 'Randomize Building' may pick, plus a 'Randomize Weather' button.");
             outer.OtherDetails("Texture letters", "door styles B and C and the garage door X can now be set by hand and are kept when you rebuild.");
+            outer.OtherDetails("URP support", "every material, each prefab and a demo scene are also provided for the Universal Render Pipeline (Materials/URP, Prefabs/URP and DemoScenes/V2/MoreTextures_URP).");
             outer.OtherDetails("Fixes", "garages now sit flush with the house on odd sized buildings, the terrain modifier covers the garage as well, and the package builds cleanly in player builds.");
             outer.NewLine();
             outer.Text("Existing scenes and prefabs carry on working: the materials you have set up are untouched and are simply used as the Clean condition.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.YouTubeLinkBig("v0FACqL0W4Y");
 
             outer.EndTextCenter();
             return outer.Output();
