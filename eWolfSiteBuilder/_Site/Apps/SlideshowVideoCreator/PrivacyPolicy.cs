@@ -17,7 +17,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
     public class PrivacyPolicy : PageDetailsWolfSite
     {
         public const string Page = "privacy-policy.html";
-        private const string LastUpdated = "27 September 2026";
+        private const string LastUpdated = "30 September 2026";
 
         public PrivacyPolicy()
         {
@@ -51,7 +51,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
         {
             HTMLBuilder outer = new HTMLBuilder();
 
-            outer.Jumbotron("Privacy policy", $"Slideshow Video Creator, by Electric Wolf. Last updated {LastUpdated}.");
+            outer.Jumbotron("Privacy policy", $"Slideshow Video Creator, by ElectricWolf. Last updated {LastUpdated}.");
 
             Section(outer, "In short",
                 "Slideshow Video Creator works entirely on your PC. It doesn't collect, store or send any personal data. There are no accounts, no adverts, no analytics and no tracking, and your photos are never uploaded anywhere.");
@@ -87,7 +87,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
                 "If this policy changes (for example, if the app ever adds optional crash reporting), we'll update this page and the date at the top before the change reaches the app.");
 
             Section(outer, "Contact",
-                "Electric Wolf, Contact@electricWolf.co.uk");
+                "ElectricWolf, Contact@electricWolf.co.uk");
 
             outer.NewLine();
             return outer.Output();

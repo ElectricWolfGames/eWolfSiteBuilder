@@ -7,16 +7,17 @@ using eWolfSiteBuilder.Helpers;
 namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
 {
     [PageTitle("index.html")]
+    [AddGallery]
     public class Index : PageDetailsWolfSite
     {
         private const string HeaderImage = "FeatureGraphic-1024x500.png";
         private const string ImageFolder = "Images";
 
         /// <summary>
-        /// The app's Store page. Replace with the real address from Partner Center
-        /// (Product identity → "URL for Windows 10 and later") when it goes live.
+        /// The app's Store page, from its Store ID in Partner Center (9PGSZP5G2W4X). It only works
+        /// once the app is live, which is when Released below is switched on.
         /// </summary>
-        private const string StoreLink = "https://apps.microsoft.com/";
+        private const string StoreLink = "https://apps.microsoft.com/detail/9PGSZP5G2W4X";
 
         /// <summary>
         /// The app isn't in the Microsoft Store yet, so a store button would lead nowhere.
@@ -81,9 +82,13 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
             WebPage.Output();
         }
 
+        // Clicking a screenshot opens it full size, with its caption, in the gallery viewer
+        // (AddGallery); the arrow keys step through the rest, and Esc or a click closes it.
         private void AddScreenShot(HTMLSection section, string imageName, string caption)
         {
+            section.Text($"<a class='lightbox' href='{ImageFolder}/{imageName}' data-caption='{caption}' title='Click to see it full size' style='cursor: zoom-in'>");
             section.ImagePath($"{ImageFolder}/{imageName}", 90);
+            section.Text("</a>");
             section.StartTextCenter();
             section.Text(caption);
             section.EndTextCenter();
@@ -180,8 +185,14 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
 
             outer.StartTextCenter();
             outer.Text("<h3>Screen shots</h3>");
+            outer.Text("Click a screen shot to see it full size.");
+            outer.NewLine();
             outer.NewLine();
             outer.EndTextCenter();
+
+            // The gallery viewer's own styles (AddGallery adds only its script); same version
+            outer.Text("<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css'>");
+            outer.Text("<section class='grid-gallery'>");
 
             for (int row = 0; row < Screenshots.Length; row += 3)
             {
@@ -199,6 +210,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
                 outer.NewLine();
             }
 
+            outer.Text("</section>");
             return outer.Output();
         }
     }
