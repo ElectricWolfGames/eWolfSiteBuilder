@@ -74,6 +74,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
 
             WebPage.Append(CreateHero());
             WebPage.Append(CreateDescription());
+            WebPage.Append(CreateDemoVideos());
             WebPage.Append(CreateScreenShots());
             WebPage.Append(CreateRequirements());
 
@@ -112,6 +113,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
             outer.InspectorDetails("Preview", "Watch a short preview of the title card and first photos in seconds, before making the whole video");
             outer.InspectorDetails("Video settings", "720p, 1080p or 4K, at 24 to 60 frames per second");
             outer.InspectorDetails("Big folders", "Hundreds of photos, including OneDrive folders");
+            outer.InspectorDetails("No watermarks", "Your videos are yours: no watermark, logo or advert is added to them, and there's nothing extra to pay to remove one");
             outer.InspectorDetails("Private", $"Everything happens on your PC. Nothing is uploaded, and the app collects no personal data (<a href='{PrivacyPolicy.Page}'>privacy policy</a>)");
 
             outer.NewLine();
@@ -151,6 +153,54 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
                 outer.EndTextCenter();
             }
 
+            return outer.Output();
+        }
+
+        /// <summary>
+        /// Two videos made by the app itself (see CreateSlideShow Packaging\StoreListing\YouTube.md).
+        /// They're shown side by side in players that scale to the screen (the builder's
+        /// YouTubeLink helpers are a fixed width, which is too wide for a phone), from YouTube's
+        /// privacy-enhanced address, which sets no YouTube cookies until a video is played.
+        /// </summary>
+        private static readonly (string Id, string Caption)[] DemoVideos = new (string, string)[]
+        {
+            ("lY0Mu1fCclA", "A spring day out: dark title card, series title and random transitions"),
+            ("UIJv0_LHJh8", "A walk by the lake: cream title card and gentle fades"),
+        };
+
+        private static void AddDemoVideo(HTMLSection section, string id, string caption)
+        {
+            section.Text("<div class='embed-responsive embed-responsive-16by9'>");
+            section.Text($"<iframe class='embed-responsive-item' src='https://www.youtube-nocookie.com/embed/{id}?rel=0' " +
+                         $"title='{caption}' allow='accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen' " +
+                         "allowfullscreen loading='lazy'></iframe>");
+            section.Text("</div>");
+            section.StartTextCenter();
+            section.Text(caption);
+            section.EndTextCenter();
+            section.NewLine();
+        }
+
+        private string CreateDemoVideos()
+        {
+            HTMLBuilder outer = new HTMLBuilder();
+
+            outer.StartTextCenter();
+            outer.Text("<h3>See it in action</h3>");
+            outer.Text("Two videos made by Slideshow Video Creator itself, with nothing edited afterwards and no watermark.");
+            outer.NewLine();
+            outer.NewLine();
+            outer.EndTextCenter();
+
+            HTMLBuilder options = new HTMLBuilder();
+            HTMLSection left = new HTMLSection("col-md-6");
+            HTMLSection right = new HTMLSection("col-md-6");
+            options.SetTwoSections(left, right);
+            AddDemoVideo(left, DemoVideos[0].Id, DemoVideos[0].Caption);
+            AddDemoVideo(right, DemoVideos[1].Id, DemoVideos[1].Caption);
+
+            outer.Text(options.Output());
+            outer.NewLine();
             return outer.Output();
         }
 

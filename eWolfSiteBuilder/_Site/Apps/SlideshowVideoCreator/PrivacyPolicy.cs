@@ -17,7 +17,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
     public class PrivacyPolicy : PageDetailsWolfSite
     {
         public const string Page = "privacy-policy.html";
-        private const string LastUpdated = "30 September 2026";
+        private const string LastUpdated = "2 October 2026";
 
         public PrivacyPolicy()
         {
@@ -81,7 +81,7 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
                 "The app doesn't collect any information from anyone, including children.");
 
             Section(outer, "This website",
-                "This policy covers the app. Pages on electricwolf.co.uk use Google Analytics, which sets cookies, to count visitors.");
+                "This policy covers the app. Pages on electricwolf.co.uk use Google Analytics, which sets cookies, to count visitors. The demo videos on the app's page are played by YouTube, in its privacy-enhanced mode: YouTube sets no cookies until you play one, and then its own privacy policy applies.");
 
             Section(outer, "Changes",
                 "If this policy changes (for example, if the app ever adds optional crash reporting), we'll update this page and the date at the top before the change reaches the app.");
