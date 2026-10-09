@@ -14,17 +14,17 @@ namespace eWolfSiteBuilder._Site.Apps.SlideshowVideoCreator
         private const string ImageFolder = "Images";
 
         /// <summary>
-        /// The app's Store page, from its Store ID in Partner Center (9PGSZP5G2W4X). It only works
-        /// once the app is live, which is when Released below is switched on.
+        /// The app's Store page, from its Store ID in Partner Center (9PGSZP5G2W4X). The locale
+        /// bits Microsoft puts on the end of the link it gives you (?hl=en-GB&gl=GB) are left off,
+        /// so visitors see the listing in their own language and region.
         /// </summary>
         private const string StoreLink = "https://apps.microsoft.com/detail/9PGSZP5G2W4X";
 
         /// <summary>
-        /// The app isn't in the Microsoft Store yet, so a store button would lead nowhere.
-        /// Flip this to true (and set StoreLink) on the day it goes live; the Apps page, the
-        /// heading, the wording and the buttons all follow it.
+        /// The app went live in the Microsoft Store on 9 October 2026. The Apps page, the
+        /// heading, the wording and the buttons all follow this.
         /// </summary>
-        public static readonly bool Released = false;
+        public static readonly bool Released = true;
 
         /// <summary>
         /// The same pictures as the Microsoft Store listing. They're taken from the real app by
